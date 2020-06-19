@@ -1,84 +1,31 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
 
 use Illuminate\Http\Request;
 
 class ProfesionalController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+    public function mostrarPerfil($id){
+    	//$profesional = DB::table('profesionales')->find($id);
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+    	$profesional = DB::table('profesionales')
+            ->join('rubros', 'rubros.id', '=', 'profesionales.rubro_id')
+            ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
+            ->select('profesionales.nombre',
+            		 'profesionales.apellido',
+            		 'rubros.nombre as rubro',
+            		 'profesionales.direccion',
+            		 'localidades.nombre as localidad',
+            		 'profesionales.ubicacion_actual',
+            		 'profesionales.telefono',
+            		 'profesionales.web',
+            	     )
+            ->where('profesionales.id', $id)
+            ->first();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    	return view('profesionalPerfil', ['profesional' => $profesional]);
+            //echo $profesional;
     }
 }

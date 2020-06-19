@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCertificacionesTable extends Migration
+class CreateRubrosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateCertificacionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('certificaciones', function (Blueprint $table) {
+        Schema::create('rubros', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
-            $table->string('titulo');
-            $table->string('institucion');
-            $table->date('fecha');
+            $table->string('nombre');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -32,6 +27,6 @@ class CreateCertificacionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('certificaciones');
+        Schema::dropIfExists('rubros');
     }
 }

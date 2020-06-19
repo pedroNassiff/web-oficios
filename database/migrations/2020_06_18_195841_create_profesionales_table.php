@@ -17,20 +17,20 @@ class CreateProfesionalesTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('localidad_id')->unsigned();
-            $table->bigInteger('categoria_id')->unsigned();
+            $table->bigInteger('rubro_id')->unsigned();
             $table->string('nombre');
             $table->string('apellido');
             $table->string('dni');
             $table->string('direccion');
+            $table->string('ubicacion_actual');
             $table->string('telefono');
             $table->string('web');
-            $table->string('actividad');
             $table->boolean('certificado')->default(false);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('localidad_id')->references('id')->on('localidades');
-            $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->foreign('rubro_id')->references('id')->on('rubros');
         });
     }
 

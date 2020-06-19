@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+## 
+Route::get('/', 'HomeController@ListarTodos');
+
+Route::post('/buscar', 'HomeController@ListarFiltrados');
+
+Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
