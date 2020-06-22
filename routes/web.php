@@ -15,16 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 
 ## 
-Route::get('/', 'HomeController@ListarTodos')->name('home');
+Route::get('/', 'HomeController@ListarTodos');
 
 Route::post('/buscar', 'HomeController@ListarFiltrados');
 
+
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
-Route::get('/about', function() {
-    return view ('about');
-}) ->name('about');
 
-Route::get('/contact', function() {
-    return view ('contact');
-}) ->name('contact');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
+
+Auth::routes();
+
