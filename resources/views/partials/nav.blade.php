@@ -1,7 +1,9 @@
-<nav class="navbar navbar-light navbar-expand-lg py-3 shadow-sm ">
+<section class="pt-5 pb-5 inner-header" style="background-color: #252533;">
+<nav class="navbar navbar-light navbar-expand-lg py-3 ">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home')}}">
-            {{ config('app.name')}}
+            <img src="/svg/logo.png" class="rounded"
+                    alt="">
         </a>
         <button class="navbar-toggler" type="button" 
         data-toggle="collapse" 
@@ -32,3 +34,4 @@
         </div>
     </div>
 </nav>
+</section>
