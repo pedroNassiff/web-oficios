@@ -11,6 +11,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
+Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
+
 Auth::routes();
 
 

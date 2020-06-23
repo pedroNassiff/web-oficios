@@ -28,7 +28,7 @@
 		</ul>
 	@endauth
 	<form action="/buscar" method="POST">
-		<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		@csrf
 		<label for="categoria">Selecciona un Rubro</label>
 		<select name="rubro_id">
 			
@@ -57,6 +57,7 @@
 		@endforeach
 	</ul>
 
+	<a href="/inscripcion">¡Inscribite aca!</a>
 	{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
 		* Redirige a la ruta /logout con el método POST, ahí el controlador
 		  del logout borra los datos de sesión 
