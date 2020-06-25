@@ -27,6 +27,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
+Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
+
+Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
+
 Auth::routes();
 
 Route::get('/gmaps', 'MapController@gmaps');

@@ -12,6 +12,7 @@ return [
     | and used as needed; however, this mailer will be used by default.
     |
     */
+    
 
     'default' => env('MAIL_MAILER', 'smtp'),
 
@@ -69,6 +70,12 @@ return [
         'array' => [
             'transport' => 'array',
         ],
+
+        'mailers' => [
+        'sendgrid' => [
+            'transport' => 'sendgrid',
+        ],
+    ],
     ],
 
     /*
@@ -83,8 +90,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'empleos@chaco.com'),
+        'name' => env('MAIL_FROM_NAME', 'Web Oficios'),
     ],
 
     /*
