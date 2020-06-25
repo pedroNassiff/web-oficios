@@ -13,6 +13,8 @@ Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
 Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
 
+Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
+
 Auth::routes();
 
 
