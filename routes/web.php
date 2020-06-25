@@ -29,3 +29,4 @@ Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
 Auth::routes();
 
+Route::get('/gmaps', 'MapController@gmaps');

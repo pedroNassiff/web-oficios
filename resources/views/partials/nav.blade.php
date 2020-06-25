@@ -1,7 +1,7 @@
 <section class="pt-5 pb-5 inner-header" style="background-color: #252533;">
 <nav class="navbar navbar-light navbar-expand-lg py-3 ">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home')}}">
+        <a class="navbar-brand" href="">
             <img src="/svg/logo.png" class="rounded"
                     alt="">
         </a>
@@ -24,14 +24,38 @@
                 <li class="nav-item">
                     <a class="nav-link {{ setActive('contact') }}" href="/contact">Contacto</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Entrar</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link uppercase  outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true" style="color: white; font-size: x-large;"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @auth
+                            <a class="dropdown-item " href="">Hola {{ auth()->user()->name }} </a>
+                            <a class="dropdown-item " href="#">Editar Perfil</a>
+                            <a class="dropdown-item "  href="#"  onclick="
+                                event.preventDefault();
+                                document.getElementById('form-post').submit();">Salir</a>
+                            @endauth
+
+                            @guest
+                                <a class="dropdown-item" href="/login">Ingresar</a>
+                                <a class="dropdown-item" href="/register">Registrarse</a>
+                            @endguest
+                        </div>
+                    </li>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Registrarse</a>
-                </li>
+
+                
             </ul>
         </div>
     </div>
 </nav>
+		{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
+		* Redirige a la ruta /logout con el método POST, ahí el controlador
+		  del logout borra los datos de sesión 
+		* Rediirige a la ruta /home con la sesión cerrada
+	--}}
+	<form id="form-post" action="/logout" method="POST" style="display: none;">
+		@csrf
+	</form>
 </section>

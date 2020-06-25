@@ -20,7 +20,7 @@ class ProfesionalController extends Controller
             		 'localidades.nombre as localidad',
             		 'profesionales.ubicacion_actual',
             		 'profesionales.telefono',
-            		 'profesionales.web',
+            		 'profesionales.web'
             	     )
             ->where('profesionales.id', $id)
             ->first();
