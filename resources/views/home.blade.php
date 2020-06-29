@@ -66,5 +66,7 @@
 	<form id="form-post" action="/logout" method="POST" style="display: none;">
 		@csrf
 	</form>
+
+	
 </body>
 </html>
