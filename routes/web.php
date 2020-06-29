@@ -31,6 +31,12 @@ Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
 
 Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
 
+Route::group(['middleware'=>'admin'], function(){
+	Route::get('/admin/alta', 'AdminController@formAlta');
+	Route::post('/admin/alta', 'AdminController@altaUsuario');
+	Route::get('/admin/usuarios', 'AdminController@usuarios');
+});
+
 Auth::routes();
 
 Route::get('/gmaps', 'MapController@gmaps');
