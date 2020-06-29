@@ -24,7 +24,7 @@ class InscripcionController extends Controller
     		'telefono' => 'required',
     	]);
 
-    	Mail::to('sebasrz.rcia@gmail.com')->send(new mailInscripcion($datos));
+    	Mail::to('joselynr794@gmail.com')->send(new mailInscripcion($datos));
     	return redirect()->back()->with('mensaje', 'Solicitud enviada, en breve nos pondremos en contacto contigo');
     }
 }
