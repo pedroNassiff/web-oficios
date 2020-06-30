@@ -2,7 +2,7 @@
 @section('title', 'Inicio')
 
 @section('content')
-<section class="py-4">
+<section class="py-3">
 	<div class="container text-center">
 		<h2 class="my-4"> ¿Qué estás buscando?</h2>
         <div class="row mb-5">
@@ -38,7 +38,8 @@
                     <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
+                        <th scope="col" style="text-align: left;
+						margin-left: 19%;">Nombre</th>
                         <th scope="col">Ver más</th>
                     </tr>
                     </thead>
@@ -64,7 +65,7 @@
 			</div>
 			<br>
 			<div class="col-md-12 my-auto">
-				<a class="btn btn-default btn-lg" href="/inscripcion" style="margin-top: 2%;">¡Inscribite aca!</a>
+				<a class="btn btn-default btn-lg" href="/inscripcion" style="margin-top: 2%;">¡Inscribite!</a>
 				{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
 					* Redirige a la ruta /logout con el método POST, ahí el controlador
 					  del logout borra los datos de sesión 

@@ -10986,6 +10986,14 @@ a.text-dark:focus {
   color: white;
 }
 
+a.btn:hover {
+  background: #78bc57;
+}
+
+button:hover {
+  background: #78bc57;
+}
+
 label {
   margin-bottom: 0%;
 }

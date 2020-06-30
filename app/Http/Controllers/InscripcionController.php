@@ -25,6 +25,6 @@ class InscripcionController extends Controller
     	]);
 
     	Mail::to('joselynr794@gmail.com')->send(new mailInscripcion($datos));
-    	return redirect()->back()->with('mensaje', 'Solicitud enviada, en breve nos pondremos en contacto contigo');
+    	return redirect()->back()->with('mensaje', 'Solicitud enviada, en breve nos pondremos en contacto contigo.');
     }
 }
