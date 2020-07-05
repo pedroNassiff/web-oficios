@@ -57,6 +57,8 @@
 		@endforeach
 	</ul>
 
+	<div id="mapa" style="width: 450px; height: 350px;"> </div>
+
 	<a href="/inscripcion">¡Inscribite aca!</a>
 	{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
 		* Redirige a la ruta /logout con el método POST, ahí el controlador
@@ -66,7 +68,45 @@
 	<form id="form-post" action="/logout" method="POST" style="display: none;">
 		@csrf
 	</form>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX4NPHQOStt_DHvGVDbkbAWfL8XiG01s&callback"
+  type="text/javascript"></script>
+<script type="text/javascript">
 	
+	const profesionales = @json($profesionales);
+
+	var mapa = new google.maps.Map(document.getElementById('mapa'),{
+		center: {lat: -27.450977, lng: -58.986980}, 
+		scrollwheel: false,
+	    zoom: 15,
+	    zoomControl: true,
+	    rotateControl : false,
+	    mapTypeControl: true,
+	    streetViewControl: false,
+	})
+
+	const geocoder = new google.maps.Geocoder();
+
+	profesionales.map(profesional => {
+		var direccion = profesional.direccion;
+		var localidad = profesional.localidad;
+		const address = direccion + ' ' + localidad + ' ' + 'chaco argentina';
+
+		console.log(address)
+		const marker = new google.maps.Marker();
+
+		geocoder.geocode({'address': address}, function(results, status){
+			if(status == 'OK')
+			{
+				marker.setPosition(results[0].geometry.location)
+				marker.setMap(mapa)
+			}else{
+				console.log('Ocurrio un error')
+			}
+		})
+		
+	})
+
+
+</script>
 </body>
 </html>

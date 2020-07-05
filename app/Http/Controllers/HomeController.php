@@ -13,7 +13,20 @@ class HomeController extends Controller
     	//$categorias = DB::table('categorias')->get();
     	$localidades = DB::table('localidades')->get();
     	$rubros = DB::table('rubros')->get();
-    	$profesionales = DB::table('profesionales')->get();
+    	$profesionales = DB::table('profesionales')
+            ->join('rubros', 'rubros.id', '=', 'profesionales.rubro_id')
+            ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
+            ->select('profesionales.id',
+                     'profesionales.nombre',
+                     'profesionales.apellido',
+                     'rubros.nombre as rubro',
+                     'profesionales.direccion',
+                     'localidades.nombre as localidad',
+                     'profesionales.ubicacion_actual',
+                     'profesionales.telefono',
+                     'profesionales.web',
+                     )
+            ->get();
     	
     	return view(
     		'home', 
