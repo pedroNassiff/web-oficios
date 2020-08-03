@@ -1,32 +1,106 @@
-<h2>Crea tu perfil</h2>
+@extends('layout')
+@section('title', 'Nuevo usuario')
 
-<form action="/perfil/guardar" method="POST">
-	<label>Nombres</label> <br>
-	<input type="text" name="nombre" required=""> <br>
-	<label>Apellido</label> <br>
-	<input type="text" name="apellido" required=""> <br>
-	<label>Dni</label> <br>
-	<input type="text" name="dni" required=""> <br>
-	<label>Teléfono</label> <br>
-	<input type="text" name="telefono" required=""> <br>
-	<label>Email</label> <br>
-	<input type="text" name="email" value="{{ auth()->user()->email }}"required=""> <br>
-	<label>Dirección</label> <br>
-	<input type="text" name="direccion" required=""> <br>
-	<label>Localidad</label> <br>
-	<select name="localidad_id">
-		@foreach ($localidades as $localidad)
-			<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
-		@endforeach
-	</select> <br>
-	<label>Rubro</label> <br>
-	<select name="rubro_id">
-		@foreach ($rubros as $rubro)
-			<option value="{{ $rubro->id }}">{{ $rubro->nombre }}</option>
-		@endforeach
-	</select> <br>
-	<label>Web</label> <br>
-	<input type="text" name="web" required=""> <br>
-	<input type="submit" value="Guardar">
-	@csrf
-</form>
+@section('content')
+<section class="py-4">
+	<div class="container">
+		<h2>Crea tu perfil</h2>
+		
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<form action="/perfil/guardar" method="POST">
+					<div class="row">
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="nombre" class="">Nombres</label>
+								<input type="text" id="name" name="nombre" value="{{ auth()->user()->name }}" class="form-control" required>
+							</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="apellido" class="">Apellido</label>
+								<input type="text" id="apellido" name="apellido" class="form-control" required>
+							</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="dni" class="">DNI</label>
+								<input type="text" id="dni" name="dni" class="form-control" required>
+						</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="telefono" class="">Teléfono</label>
+								<input type="text" id="telefono" name="telefono" class="form-control" required>
+							</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="email" class="">Email</label>
+								<input type="text" id="email" name="email" value="{{ auth()->user()->email }}" class="form-control" required>
+							</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="direccion" class="">Dirección</label>
+								<input type="text" id="direccion" name="direccion" class="form-control" required>
+							</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="localidad" class="">Localidad</label>
+								<select class="browser-default custom-select" name="localidad_id">
+									<option value="">Seleccionar:</option>
+									@foreach ($localidades as $localidad)
+										<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
+									@endforeach
+								</select>
+							</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="rubro" class="">Tipo de servicio (Rubro)</label>
+								<select class="browser-default custom-select" name="rubro_id">
+									<option value="">Seleccionar:</option>
+									@foreach ($rubros as $rubro)
+										<option value="{{ $rubro->id }}">{{ $rubro->nombre }}</option>
+									@endforeach
+								</select>
+							</div>
+						</div>
+						<!--Grid column-->
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-3">
+								<label for="web" class="">Página Web</label>
+								<input type="text" id="web" name="web" class="form-control" required>
+							</div>
+						</div>
+						<!--Grid column-->
+					</div>
+			</div>	
+			<div class="col-md-10" style="text-align: right;">
+				<button class="btn mx-auto" type="submit">Guardar</button>
+			</div>
+					
+					@csrf
+				</form>
+		</div>
+	</div>
+</section>
+@endsection

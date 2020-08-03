@@ -36,7 +36,7 @@
                             <a class="dropdown-item" href="/admin/usuarios">Lista de usuarios</a>
                             @endif
                             @if(auth()->user()->rol_id != 1)
-                            <a class="dropdown-item " href="#">Editar Perfil</a>
+                            <a class="dropdown-item " href="/perfil">Mi Perfil</a>
                             @endif
                             <a class="dropdown-item "  href="#"  onclick="
                                 event.preventDefault();

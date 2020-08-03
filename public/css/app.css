@@ -10948,6 +10948,20 @@ a.text-dark:focus {
   color: white;
 }
 
+.bases {
+  text-align: justify;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
 .ec-stars-wrapper {
   /* Espacio entre los inline-block (los hijos, los `a`) 
      http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */

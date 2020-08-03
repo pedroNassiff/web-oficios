@@ -46,7 +46,7 @@ class ProfesionalController extends Controller
                      'localidades.nombre as localidad',
                      'profesionales.ubicacion_actual',
                      'profesionales.telefono',
-                     'profesionales.web',
+                     'profesionales.web'
                      )
             ->where('profesionales.user_id', $id)
             ->first();
@@ -79,7 +79,7 @@ class ProfesionalController extends Controller
 
         $perfil->save();
 
-        return redirect()->route('perfil')->with('message', 'Perfil guardado correctamente');
+        return redirect()->route('perfil')->with('message', 'Perfil guardado correctamente.');
     }
 
     public function editarPerfil(){
@@ -108,6 +108,6 @@ class ProfesionalController extends Controller
 
         $profesional->save();
 
-        return redirect()->route('perfil')->with('message', 'Perfil actualizado correctamente');
+        return redirect()->route('perfil')->with('message', 'Perfil actualizado correctamente.');
     }
 }

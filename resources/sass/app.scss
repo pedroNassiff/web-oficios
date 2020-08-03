@@ -7,6 +7,7 @@
 //Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
 .h-screen {
     height: 100vh;
 }
@@ -24,6 +25,21 @@
     color: white;
 }
 
+.bases {
+	text-align: justify;
+}
+
+//Paginación inicio
+.my-custom-scrollbar {
+	position: relative;
+	height: 500px;
+	overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+	display: block;
+}
+	
 //Comentarios y calificación perfil
 .ec-stars-wrapper {
 	/* Espacio entre los inline-block (los hijos, los `a`) 

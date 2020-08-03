@@ -6,12 +6,13 @@
 <section class="py-4">
 	<div class="container">
 		<h2>Alta de Usuario</h2>
-		<div class="row mt-3 mb-3 justify-content-center">
-			@if(Session::has('mensaje'))
+		@if(Session::has('mensaje'))
 				<div class="alert alert-success">
 					{{ Session::get('mensaje') }}
 				</div>	
 			@endif
+		<div class="row mt-3 mb-3 justify-content-center">
+			
 			<div class="col-md-8">
 				<form action="/admin/alta" method="POST">
 					<div class="form-group row">

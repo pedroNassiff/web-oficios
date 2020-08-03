@@ -31,6 +31,10 @@ Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
 
 Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
 
+Route::get('/acuerdo', function(){
+	return view ('terminos_y_condiciones');
+});
+
 Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil', 'ProfesionalController@miPerfil')->name('perfil');
 	Route::get('/perfil/crear', 'ProfesionalController@crearPerfil');
@@ -48,3 +52,6 @@ Route::group(['middleware'=>'admin'], function(){
 Auth::routes();
 
 Route::get('/gmaps', 'MapController@gmaps');
+Route::get('/mapa',function(){
+	return view ('mapa');
+});

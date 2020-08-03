@@ -60,7 +60,7 @@
 						<!--Grid column-->
 						<div class="col-md-6">
 							<div class="md-form mb-3">
-								<label for="rubro" class="">Tipo de servicio</label>
+								<label for="rubro" class="">Tipo de servicio (Rubro)</label>
 								<input type="text" id="rubro" name="rubro" class="form-control" required>
 							</div>
 						</div>
@@ -81,6 +81,16 @@
 							</div>
 						</div>
 					<!--Grid column-->
+					<!--Grid column-->
+					<div class="col-md-6">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck">
+							<label class="form-check-label" for="gridCheck">
+							  He leído y acepto los <a href="/acuerdo">términos y condiciones.</a>
+							</label>
+						  </div>
+					</div>
+				<!--Grid column-->
 					</div>
 			</div>	
 			<div class="col-md-10 mt-2" style="text-align: right;">
