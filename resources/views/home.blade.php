@@ -3,6 +3,7 @@
 
 @section('content')
 
+<<<<<<< HEAD
 <section class="py-3">
 	<div class="container text-center">
 		<h2 class="my-4"> ¿Qué estás buscando?</h2>
@@ -83,7 +84,7 @@
 		</div>
 </div>
 </section>
-<script>
+<!-- <script>
 	var mymap = L.map('mapid').setView([-27.450917,  -58.978996], 13);
 	var marker = L.marker([-27.450869,  -58.979071]).addTo(mymap);
 	marker.bindPopup("<b>Hello world!</b><br>I am a popup.")
@@ -100,9 +101,51 @@
 	}).addTo(mymap);
 
 	
-</script>
+</script> -->
 
     
-@endsection
 
-<!-- 	 -->
+
+	<div id="mapa" style="width: 450px; height: 350px;"> </div> 
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX4NPHQOStt_DHvGVDbkbAWfL8XiG01s&callback"
+  type="text/javascript"></script>
+<script type="text/javascript">
+	
+	const profesionales = @json($profesionales);
+
+	var mapa = new google.maps.Map(document.getElementById('mapa'),{
+		center: {lat: -27.450977, lng: -58.986980}, 
+		scrollwheel: false,
+	    zoom: 15,
+	    zoomControl: true,
+	    rotateControl : false,
+	    mapTypeControl: true,
+	    streetViewControl: false,
+	})
+
+	const geocoder = new google.maps.Geocoder();
+
+	profesionales.map(profesional => {
+		var direccion = profesional.direccion;
+		var localidad = profesional.localidad;
+		const address = direccion + ' ' + localidad + ' ' + 'chaco argentina';
+
+		console.log(address)
+		const marker = new google.maps.Marker();
+
+		geocoder.geocode({'address': address}, function(results, status){
+			if(status == 'OK')
+			{
+				marker.setPosition(results[0].geometry.location)
+				marker.setMap(mapa)
+			}else{
+				console.log('Ocurrio un error')
+			}
+		})
+		
+	})
+
+
+</script>
+@endsection
