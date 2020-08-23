@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Inicio')
+@section('title', 'Ingresar')
 
 @section('content')
 <section class="py-4">

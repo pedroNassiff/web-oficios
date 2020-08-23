@@ -1,5 +1,5 @@
 @extends('layout')
-
+@section('title', 'Recuperar contraseña')
 @section('content')
 <section class="py-4">
     
@@ -15,7 +15,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <span>Ingrese su correo electrónico, le enviaremos un correo con las instrucciones para recuperar su contraseña. Si no lo encuentra, revise la casilla de spam.</span>
+                    <span>Ingrese su correo electrónico, le enviaremos un correo con las instrucciones para recuperar su contraseña. Si no lo encuentra revise la casilla de spam.</span>
                         <br>
                     <form class="mt-4" method="POST" action="{{ route('password.email') }}">
                         @csrf

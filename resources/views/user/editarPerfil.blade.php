@@ -7,22 +7,22 @@
 <section class="py-4">
 	<div class="container">
 		<div class="row mb-3">
-			<div class="col-md-6" style="text-align: left;">
+			<div class="col-md-6">
 				<h2> Editar perfil </h2>
 			</div>
 		</div>
 
-		<div class="row  justify-content-center">
+		<div class="row">
 			<div class="col-sm-4"><!--left col-->					
 				<div class="text-center">
 					<img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
 					<h6>Cambiar foto de perfil</h6>
         			<input type="file" class="text-center center-block file-upload">
-				</div></hr><br>	
+				</div>
 			</div>
 
 			<div class="col-sm-8">
-				<div class="row justify-content-center">
+				<div class="row">
 					<div class="col-md-10">
 						<form action="/perfil/actualizar/{{ auth()->user()->id }}" method="POST">
 							<div class="row">
@@ -100,7 +100,7 @@
 								<!--Grid column-->
 							</div>
 					</div>	
-					<div class="col-md-10" style="text-align: right;">
+					<div class="col-md-10 centrar-der">
 						<button class="btn mx-auto" type="submit">Guardar</button>
 					</div>
 							
@@ -111,36 +111,5 @@
 		</div>
 	</div>
 </section>					
-
-{{-- <h2>Edita tu perfil</h2>
-
-<form action="/perfil/actualizar/{{ auth()->user()->id }}" method="POST">
-	<label>Nombres</label> <br>
-	<input type="text" name="nombre" value="{{ $profesional->nombre }}" required=""> <br>
-	<label>Apellido</label> <br>
-	<input type="text" name="apellido" value="{{ $profesional->apellido }}" required=""> <br>
-	<label>Teléfono</label> <br>
-	<input type="text" name="telefono" value="{{ $profesional->telefono }}" required=""> <br>
-	<label>Email</label> <br>
-	<input type="text" name="email" value="{{ auth()->user()->email }}"required=""> <br>
-	<label>Dirección</label> <br>
-	<input type="text" name="direccion" value="{{ $profesional->direccion }}" required=""> <br>
-	<label>Localidad</label> <br>
-	<select name="localidad_id">
-		@foreach ($localidades as $localidad)
-			<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
-		@endforeach
-	</select> <br>
-	<label>Rubro</label> <br>
-	<select name="rubro_id">
-		@foreach ($rubros as $rubro)
-			<option value="{{ $rubro->id }}">{{ $rubro->nombre }}</option>
-		@endforeach
-	</select> <br>
-	<label>Web</label> <br>
-	<input type="text" name="web" value="{{ $profesional->web }}" required=""> <br>
-	<input type="submit" value="Guardar">
-	@csrf
-</form> --}}
 
 @endsection

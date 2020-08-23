@@ -1,9 +1,8 @@
-<section class="pt-5 pb-5 inner-header" style="background-color: #252533;">
+<section class="pt-5 pb-5 inner-header">
 <nav class="navbar navbar-light navbar-expand-lg py-3 ">
     <div class="container">
         <a class="navbar-brand" href="">
-            <img src="/svg/logo.png" class="rounded"
-                    alt="">
+            <img src="/img/logo.png" class="rounded" alt="Logo oficios">
         </a>
         <button class="navbar-toggler" type="button" 
         data-toggle="collapse" 
@@ -27,7 +26,7 @@
 
                 <li class="nav-item">
                     <li class="nav-item dropdown">
-                        <a class="nav-link uppercase  outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true" style="color: white; font-size: x-large;"></i></a>
+                        <a class="nav-link uppercase  outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             @auth
                             <a class="dropdown-item " href="">Hola {{ auth()->user()->name }} </a>
@@ -45,7 +44,6 @@
 
                             @guest
                                 <a class="dropdown-item" href="/login">Ingresar</a>
-                                <a class="dropdown-item" href="/register">Registrarse</a>
                             @endguest
                         </div>
                     </li>

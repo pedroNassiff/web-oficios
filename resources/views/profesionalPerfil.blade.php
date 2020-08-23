@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layout')
 @section('title', 'Perfil')
 
@@ -7,23 +6,24 @@
 <div class="container">
     <div class="row">
         <div class="col-12 my-3 py-3 shadow">
-            <div class="row text-center">
-                <div class="col-md-6">
-                    <img style="width: 70%;" src="/svg/oficios.jpg" alt="">
+            <div class="row text-center d-flex">
+               
+                <div class="col-md-6 contenedor-datos">
+                    <div class="datos-perfil">
+                        <h2>{{ $profesional->nombre }} {{ $profesional->apellido }}</h2>
+                        <p>Rubro: {{ $profesional->rubro }}</p>
+                        <p>Localidad: {{ $profesional->localidad }}</p>
+                        <p>Direccion: {{ $profesional->direccion }}</p>
+                        <p>Ubicación Actual: {{ $profesional->ubicacion_actual }}</p>
+                        <p>Teléfono: {{ $profesional->telefono }}</p>
+                        <p>Sitio Web: {{ $profesional->web }}</p>
+                    </div>
                 </div>
-                <div class="col-md-6" style="text-align: left;">
-                    <h2>{{ $profesional->nombre }} {{ $profesional->apellido }}</h2>
-
-                    <p>Rubro: {{ $profesional->rubro }}</p>
-                    <p>Localidad: {{ $profesional->localidad }}</p>
-                    <p>Direccion: {{ $profesional->direccion }}</p>
-                    <p>Ubicación Actual: {{ $profesional->ubicacion_actual }}</p>
-                    <p>Teléfono: {{ $profesional->telefono }}</p>
-                    <p>Sitio Web: {{ $profesional->web }}</p>
+                <div class="col-md-6">
+                    <div id="mapa"> </div>
                 </div>
             </div>
         </div>
-        
         <div class="col-md-12">
            <h2>Calificación y opiniones</h2>
             <div class="ec-stars-wrapper">
@@ -39,9 +39,6 @@
     </div>
 </div>
 
-
-
-<div id="mapa" style="width: 450px; height: 350px;"> </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX4NPHQOStt_DHvGVDbkbAWfL8XiG01s&callback"
   type="text/javascript"></script>

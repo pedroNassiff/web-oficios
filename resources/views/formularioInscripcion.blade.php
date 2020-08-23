@@ -93,7 +93,7 @@
 				<!--Grid column-->
 					</div>
 			</div>	
-			<div class="col-md-10 mt-2" style="text-align: right;">
+			<div class="col-md-10 mt-2 centrar-der">
 						<button class="btn mx-auto" type="submit">Enviar</button>
 			</div>
 					
