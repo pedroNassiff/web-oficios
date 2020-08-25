@@ -1,79 +1,126 @@
 @extends('layout')
-
 @section('title', 'Inicio')
 
 @section('content')
 
-<div class="container my-5">
-    <div class="filter-panel">
-        <h3>¿Qué servicio estás buscando?</h3>
-        <div class="row">
-            <div class="col-6">
-                <div>
-                    {{-- <select class="browser-default custom-select">
-                        <option selected>Categorías</option>
-                        <option value="1">Oficios</option>
-                        <option value="2">Títulos</option>
-                        <option value="3">Ubicación y zona</option>
-                    </select> --}}
-                    <select class="browser-default custom-select"  name="cars" id="cars">
-                        <option selected>Categorías</option>
-                        <optgroup label="Oficios">
-                          <option value="volvo">Electricidad</option>
-                          <option value="saab">Plomeria</option>
-                          <option value="saab">Carpintería</option>
-                          <option value="saab">...</option>
-                        </optgroup>
-                        <optgroup label="Títulos">
-                          <option value="mercedes">Abogados</option>
-                          <option value="audi">Contadores</option>
-                          <option value="audi">Odontologos</option>
-                          <option value="saab">...</option>
-                        </optgroup>
-                      </select>
-                </div>
-            </div>
-            <div class="col-6 lista2">
-                <div style="width: 50%;">
-                    <select class="browser-default custom-select" name="" id="">
-                        <option selected>Ubicación</option>
-                        <option value="1">Ubicación</option>
-                        <option value="2"></option>
-                        <option value="3"></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="row my-5 text-center">
-            <div class="col-6">
-                <table class="table table-hover">
+<section class="py-3">
+	<div class="container text-center">
+		<h2 class="my-4"> ¿Qué estás buscando?</h2>
+        <div class="row mb-5">
+			<div class="col-md-4">
+				<form action="/buscar" method="POST">
+					
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<label for="categoria">Seleccioná un servicio</label>
+					<select class="browser-default custom-select" name="rubro_id">
+						<option value="" disabled>Seleccionar</option>
+						@foreach ($rubros as $rubro)
+							<option value="{{ $rubro->id }}">{{ $rubro->nombre }}</option>
+						@endforeach
+					</select>
+			</div>
+			<div class="col-md-4">
+						<label for="localidad">Seleccioná una localidad</label>
+						<select class="browser-default custom-select" name="localidad_id" placeholder="Localidades">
+							<option value="" disabled>Seleccionar</option>
+							@foreach ($localidades as $localidad)
+							<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
+						@endforeach
+						</select>
+			</div>
+			<div class="col-md-4">			
+						<button class="btn btn-default btn-buscar" type="submit">Buscar</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 centrar">
+				<h2>Servicios</h2>
+				<div class="table-wrapper-scroll-y my-custom-scrollbar">
+				<table  class="table table-hover">
                     <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
+                        <th scope="col" style="text-align: left;
+						margin-left: 19%;">Nombre</th>
                         <th scope="col">Ver más</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td><i class="fa fa-plus-circle" aria-hidden="true"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td><i class="fa fa-plus-circle" aria-hidden="true"></i></td>
-                    </tr>
+					@foreach ($profesionales as $profesional)
+						<tr>
+							<th scope="row">{{ $loop->iteration }}</th>
+							<td class="td-nya">{{ $profesional->nombre}} {{ $profesional->apellido}}</td>
+							<td><a href="/profesional/{{ $profesional->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></td>
+						</tr>
+					@endforeach
                     </tbody>
-                </table>
-            </div>
-            <div class="col-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829375.5611834687!2d-61.557819432941336!3d-26.423504238923677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9440effae3c87247%3A0x4eaf96c0979eec95!2sChaco!5e0!3m2!1ses-419!2sar!4v1592342057768!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </div>
-
-    </div>
+				</table>
+			</div>
+			</div>
+			<div class="col-md-6 mt-5">
+				<div id="mapa"> </div> 
+			</div>
+			
+		<div class="row my-5">
+			<div class="col-md-12">
+				<img class="img-registro" src="/img/brindar.png" alt="">
+			</div>
+			<br>
+			<div class="col-md-12 my-auto">
+				<a class="btn btn-default btn-lg btn-inscribite" href="/inscripcion">¡Inscribite!</a>
+				{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
+					* Redirige a la ruta /logout con el método POST, ahí el controlador
+					  del logout borra los datos de sesión 
+					* Rediirige a la ruta /home con la sesión cerrada
+				--}}
+				<form id="form-post" action="/logout" method="POST" style="display: none;">
+					@csrf
+				</form>
+			</div>
+		</div>
 </div>
-    
+</section>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX4NPHQOStt_DHvGVDbkbAWfL8XiG01s&callback"
+  type="text/javascript"></script>
+<script type="text/javascript">
+	
+	const profesionales = @json($profesionales);
+
+	var mapa = new google.maps.Map(document.getElementById('mapa'),{
+		center: {lat: -27.450977, lng: -58.986980}, 
+		scrollwheel: false,
+	    zoom: 15,
+	    zoomControl: true,
+	    rotateControl : false,
+	    mapTypeControl: true,
+	    streetViewControl: false,
+	})
+
+	const geocoder = new google.maps.Geocoder();
+
+	profesionales.map(profesional => {
+		var direccion = profesional.direccion;
+		var localidad = profesional.localidad;
+		const address = direccion + ' ' + localidad + ' ' + 'chaco argentina';
+
+		console.log(address)
+		const marker = new google.maps.Marker();
+
+		geocoder.geocode({'address': address}, function(results, status){
+			if(status == 'OK')
+			{
+				marker.setPosition(results[0].geometry.location)
+				marker.setMap(mapa)
+			}else{
+				console.log('Ocurrio un error')
+			}
+		})
+		
+	})
+
+
+</script>
 @endsection

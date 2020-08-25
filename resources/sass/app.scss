@@ -6,10 +6,70 @@
 
 //Bootstrap
 @import '~bootstrap/scss/bootstrap';
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+	margin: 0;
+	font-family: 'Noto Serif', serif;
+}
+//Generales
+
+.btn {
+    background-color: #30204d;
+    border: #78bc57;
+    color: white;
+}
+a.btn:hover{
+	background: #78bc57;
+}
+
+button:hover {
+	background:#78bc57 ;
+}
+
+label {
+	margin-bottom: 0%;
+}
+.centrar-izq{
+	text-align: left;
+}
+.centrar-der {
+	text-align: right;
+}
+.centrar {
+	text-align: center;
+}
+.centrar-flex {
+	display: flex;
+	justify-content: center;
+}
 
 .h-screen {
     height: 100vh;
 }
+
+
+//nav
+.inner-header{
+	background-color: #252533;
+}
+.nav-link {
+    color: white;
+}
+.nav-link:hover{
+	color: #78bc57;
+}
+
+.fa-user{
+	color: white; 
+	font-size: x-large;
+}
+.fa-user:hover {
+	color: #78bc57;
+}
+//footer
 .logob {
     height: 10vh;
 }
@@ -20,6 +80,83 @@
     background: #eae9e9;
 }
 
-.navbar {
-    background: #eae9e9;
+
+//Paginación inicio
+.my-custom-scrollbar {
+	position: relative;
+	height: 500px;
+	overflow: auto;
 }
+
+.table-wrapper-scroll-y {
+	display: block;
+}
+.btn-buscar {
+	margin-top: 8%;
+}
+.td-nya {
+	text-align: left;
+	margin-left: 19%;
+}
+#mapa {
+	width: 450px; 
+	height: 350px;
+}
+.img-registro{
+	width: 50%; 
+	border-radius: 1.25rem
+}
+.btn-inscribite{
+	margin-top: 2%;
+}
+
+//profesionalPerfil
+.contenedor-datos {
+	padding-top: 3%;
+	text-align: left;
+}
+.datos-perfil {
+	width: 70%;
+	padding-left: 100px;
+}
+
+
+//Comentarios y calificación perfil
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo, 
+		pero de esta manera (siempre que no le demos padding), 
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+	
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+//Fin perfil profesional
+
+
+//TErminos y condiciones que el prestador de servicio debe aceptar
+.bases {
+	text-align: justify;
+}
+
+//perfil que solo ve el usuario
