@@ -83,20 +83,29 @@
 					<!--Grid column-->
 					<!--Grid column-->
 					<div class="col-md-6">
+						<div class="md-form mb-3">
+							<label for="descripcion" class="">Descripción del servicio que presta:</label>
+							<textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control" required></textarea>
+						</div>
+					</div>
+				<!--Grid column-->
+					<!--Grid column-->
+					<div class="col-md-6">
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" id="gridCheck">
 							<label class="form-check-label" for="gridCheck">
 							  He leído y acepto los <a href="/acuerdo">términos y condiciones.</a>
 							</label>
-						  </div>
+						</div>
+						<div class="centrar mt-5">
+							<button class="btn" type="submit">Enviar</button>
+						</div>
 					</div>
 				<!--Grid column-->
+				
 					</div>
 			</div>	
-			<div class="col-md-10 mt-2 centrar-der">
-						<button class="btn mx-auto" type="submit">Enviar</button>
-			</div>
-					
+								
 					@csrf					
 				<!--Grid row-->			
 				</form>

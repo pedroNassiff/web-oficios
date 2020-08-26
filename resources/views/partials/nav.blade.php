@@ -44,6 +44,7 @@
 
                             @guest
                                 <a class="dropdown-item" href="/login">Ingresar</a>
+                                <a class="dropdown-item" href="/register">Registrarse</a>
                             @endguest
                         </div>
                     </li>

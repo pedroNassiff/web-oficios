@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Perfil')
+@section('title', 'Prestador')
 
 @section('content')
 
@@ -17,6 +17,7 @@
                         <p>Ubicación Actual: {{ $profesional->ubicacion_actual }}</p>
                         <p>Teléfono: {{ $profesional->telefono }}</p>
                         <p>Sitio Web: {{ $profesional->web }}</p>
+                        
                     </div>
                 </div>
                 <div class="col-md-6">
