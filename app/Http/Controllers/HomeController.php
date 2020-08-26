@@ -27,15 +27,15 @@ class HomeController extends Controller
                      'profesionales.web'
                      )
             ->get();
-    	
+
     	return view(
-    		'home', 
+    		'home',
     		[
-    		 'localidades'   => $localidades, 
-    		 'rubros'    => $rubros, 
+    		 'localidades'   => $localidades,
+    		 'rubros'    => $rubros,
     		 'profesionales' => $profesionales
     		]
-    	);	
+    	);
     }
 
     public function listarFiltrados(Request $request)
@@ -54,10 +54,10 @@ class HomeController extends Controller
     	->get();
 
     	return view(
-    		'home', 
+    		'home',
     		[
-    		 'localidades'   => $localidades, 
-    		 'rubros'    => $rubros, 
+    		 'localidades'   => $localidades,
+    		 'rubros'    => $rubros,
     		 'profesionales' => $profesionales
     		]
     	);
