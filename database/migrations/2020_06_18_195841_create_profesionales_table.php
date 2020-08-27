@@ -20,8 +20,9 @@ class CreateProfesionalesTable extends Migration
             $table->bigInteger('rubro_id')->unsigned();
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('dni');
+            $table->string('descripcion');
             $table->string('direccion');
+            $table->string('dni');
             $table->string('ubicacion_actual');
             $table->string('telefono');
             $table->string('web');
