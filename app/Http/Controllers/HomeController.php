@@ -19,6 +19,7 @@ class HomeController extends Controller
             ->select('profesionales.id',
                      'profesionales.nombre',
                      'profesionales.apellido',
+                     'profesionales.descripcion',
                      'rubros.nombre as rubro',
                      'profesionales.direccion',
                      'localidades.nombre as localidad',
