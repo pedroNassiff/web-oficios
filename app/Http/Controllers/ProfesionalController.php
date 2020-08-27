@@ -19,6 +19,7 @@ class ProfesionalController extends Controller
             ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
             ->select('profesionales.nombre',
             		 'profesionales.apellido',
+            		 'profesionales.descripcion',
             		 'rubros.nombre as rubro',
             		 'profesionales.direccion',
             		 'localidades.nombre as localidad',
@@ -41,6 +42,7 @@ class ProfesionalController extends Controller
             ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
             ->select('profesionales.nombre',
                      'profesionales.apellido',
+                     'profesionales.descripcion',
                      'rubros.nombre as rubro',
                      'profesionales.direccion',
                      'localidades.nombre as localidad',
@@ -71,6 +73,7 @@ class ProfesionalController extends Controller
         $perfil->rubro_id = $request['rubro_id'];
         $perfil->nombre = $request['nombre'];
         $perfil->apellido = $request['apellido'];
+        $perfil->descripcion = $request['descripcion'];
         $perfil->dni = $request['dni'];
         $perfil->direccion = $request['direccion'];
         $perfil->ubicacion_actual = "Av. 9 de Julio 222";
