@@ -19,6 +19,7 @@ class ProfesionalController extends Controller
             ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
             ->select('profesionales.nombre',
             		 'profesionales.apellido',
+            		 'profesionales.descripcion',
             		 'rubros.nombre as rubro',
             		 'profesionales.direccion',
             		 'localidades.nombre as localidad',
@@ -41,6 +42,7 @@ class ProfesionalController extends Controller
             ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
             ->select('profesionales.nombre',
                      'profesionales.apellido',
+                     'profesionales.descripcion',
                      'rubros.nombre as rubro',
                      'profesionales.direccion',
                      'localidades.nombre as localidad',

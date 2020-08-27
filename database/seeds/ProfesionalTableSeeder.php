@@ -18,7 +18,7 @@ class ProfesionalTableSeeder extends Seeder
         $profesional->rubro_id = 2;
         $profesional->nombre = "Joselina";
         $profesional->apellido = "Ramirez";
-        $profesional->descripcion = "descripcion 1";
+        $profesional->descripcion = "Discurso oral o escrito en el que se explica cómo es una cosa, una persona o un lugar para ofrecer una imagen o una idea completa de ellos en la primera versión de la novela aparecen dilatadas descripciones acerca de la mala vida de la ciudad";
         $profesional->dni = "37343232";
         $profesional->direccion = "Av. 9 de Mayo 234";
         $profesional->ubicacion_actual = "Av. 9 de Mayo 234";

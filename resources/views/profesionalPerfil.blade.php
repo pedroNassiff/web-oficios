@@ -57,8 +57,7 @@
                     <p>Localidad: {{ $profesional->localidad }}</p>
                     <p>Direccion: {{ $profesional->direccion }}</p>
                     <p>Ubicación Actual: {{ $profesional->ubicacion_actual }}</p>
-                    <p class="card-text">Descripción: Some quick example text to build on the card title and make up the bulk of the card's content.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nam ullam id neque sapiente distinctio aperiam hic ratione saepe, animi delectus quis aut, expedita tempora voluptates maiores! Tenetur, quidem adipisci?
+                    <p class="card-text">Descripción:  {{ $profesional->descripcion }}
                     </p>
                     <div class="botones">
                         <div class="opcion consultar">
