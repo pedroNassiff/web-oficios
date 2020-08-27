@@ -2,44 +2,89 @@
 @section('title', 'Prestador')
 
 @section('content')
+<style>
+    .titulo-detalle {
+        border-bottom: solid 0.1px #78bc57;
+        margin-bottom: 3%;
+    }
+    .avatar {
+        margin-right: 2%;
+    }
+    .user-avatar{
+        height: 200px;
+    }
+    .user-avatar-icon {
+        font-size: 200px; 
+        color: #252533;
+    }
+    .datos-prestador {
+        margin-left: 2%;
+    }
+    .ficha {
+        display: flex;
+        justify-content: center;
+    }
+    .opcion a {
+        color: white;
+        width: 200px;
+       
+    }
+    .consultar {
+        margin-bottom: 3%;
+    }
 
+</style>
 <div class="container">
     <div class="row">
         <div class="col-12 my-3 py-3 shadow">
-            <div class="row text-center d-flex">
-               
-                <div class="col-md-6 contenedor-datos">
-                    <div class="datos-perfil">
-                        <h2>{{ $profesional->nombre }} {{ $profesional->apellido }}</h2>
-                        <p>Rubro: {{ $profesional->rubro }}</p>
-                        <p>Localidad: {{ $profesional->localidad }}</p>
-                        <p>Direccion: {{ $profesional->direccion }}</p>
-                        <p>Ubicación Actual: {{ $profesional->ubicacion_actual }}</p>
-                        <p>Teléfono: {{ $profesional->telefono }}</p>
-                        <p>Sitio Web: {{ $profesional->web }}</p>
+            <h1 class="titulo-detalle">Detalles del prestador</h1>
+            <div class="ficha">
+                <div class="avatar">
+                    <div class="card" style="width: 18rem;">
+                        <div class="user-avatar mx-auto">
+                            <i class="fa fa-user user-avatar-icon"></i>
+                        </div>
+                        <div class="card-body">
+                        <h2 class="card-title">{{ $profesional->nombre }} {{ $profesional->apellido }}</h2>
+                        <h5>Teléfono: {{ $profesional->telefono }}</h5>
+                        <h5>Sitio Web: {{ $profesional->web }}</h5>
                         
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div id="mapa"> </div>
+                <div class="datos-prestador">
+                    <h2>{{ $profesional->rubro }}</h2>
+                    <p>Localidad: {{ $profesional->localidad }}</p>
+                    <p>Direccion: {{ $profesional->direccion }}</p>
+                    <p>Ubicación Actual: {{ $profesional->ubicacion_actual }}</p>
+                    <p class="card-text">Descripción: Some quick example text to build on the card title and make up the bulk of the card's content.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nam ullam id neque sapiente distinctio aperiam hic ratione saepe, animi delectus quis aut, expedita tempora voluptates maiores! Tenetur, quidem adipisci?
+                    </p>
+                    <div class="botones">
+                        <div class="opcion consultar">
+                            <a class="btn" href=""><i class="fa fa-comment"></i>   Realizar una consulta</a>
+                        </div>
+                        <div class="opcion denunciar">
+                            <a class="btn" href=""><i class="fa fa-user-times"></i>   Denunciar prestador</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-           <h2>Calificación y opiniones</h2>
-            <div class="ec-stars-wrapper">
-                <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-                <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-                <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-                <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-                <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-            </div>
-            <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-        </div>
 
+        <div class="col-md-12">
+            <h2 class="titulo-detalle">Calificación y opiniones</h2>
+                <div class="ec-stars-wrapper">
+                    <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+                    <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+                    <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+                    <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+                    <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+                </div>
+                <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
+        </div>
     </div>
 </div>
-
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX4NPHQOStt_DHvGVDbkbAWfL8XiG01s&callback"
   type="text/javascript"></script>
