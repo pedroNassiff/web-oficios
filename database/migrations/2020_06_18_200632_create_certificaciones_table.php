@@ -18,6 +18,7 @@ class CreateCertificacionesTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->string('titulo');
             $table->string('institucion');
+            $table->string('img_certificacion')->nullable();
             $table->date('fecha');
             $table->timestamps();
 
