@@ -29,5 +29,14 @@ class AddressTableSeeder extends Seeder
         $especialidad->depto_num = "2";
         $especialidad->depto_letra = "E";
         $especialidad->save();
+
+        $especialidad = new Address();
+        $especialidad->users_id = 3;
+        $especialidad->localidad = "Resistencia";
+        $especialidad->calle = "Salta";
+        $especialidad->num_calle = "27";
+        $especialidad->depto_num = "2";
+        $especialidad->depto_letra = "E";
+        $especialidad->save();
     }
 }

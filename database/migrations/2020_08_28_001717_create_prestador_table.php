@@ -17,7 +17,6 @@ class CreatePrestadorTable extends Migration
             $table->id();
 
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('oficio_id')->unsigned();
             
             $table->string('descripcion');
 
@@ -30,8 +29,7 @@ class CreatePrestadorTable extends Migration
            
             $table->boolean('habilitado')->default(false);
 
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('oficio_id')->references('id')->on('oficio');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });
