@@ -17,6 +17,7 @@ class InscripcionController extends Controller
     		'apellido' => 'required',
     		'dni' => 'required',
     		'direccion' => 'required',
+    		'descripcion' => 'required',
     		'localidad' => 'required',
     		'rubro' => 'required',
     		'email' => 'required|email',
