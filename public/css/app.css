@@ -140,9 +140,6 @@ dd {
   margin-left: 0;
 }
 
-
-
-
 blockquote {
   margin: 0 0 1rem;
 }
@@ -8677,7 +8674,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 0rem !important;
+  padding-top: 3rem !important;
 }
 
 .pr-5,
@@ -8687,7 +8684,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 0rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .pl-5,
@@ -10935,9 +10932,16 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Noto Serif", serif;
+  margin-bottom: 60px;
+  /* Margin bottom by footer height */
 }
 
 .btn {
@@ -11012,6 +11016,16 @@ label {
   background: #eae9e9;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 105px;
+  /* Set the fixed height of the footer here */
+  line-height: 60px;
+  /* Vertically center the text there */
+}
+
 .my-custom-scrollbar {
   position: relative;
   height: 500px;
@@ -11053,6 +11067,14 @@ label {
 .datos-perfil {
   width: 70%;
   padding-left: 100px;
+}
+
+.ficha {
+  display: flex;
+}
+
+.cont-inscrip {
+  margin-bottom: 50px;
 }
 
 .ec-stars-wrapper {
