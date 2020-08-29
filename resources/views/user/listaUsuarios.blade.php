@@ -5,11 +5,6 @@
 @section('content')
 
 
-<li class="breadcrumb-item">
-	<i class="fas fa-users-friends"></i><span>Usuarios</span>
-</li>
-
-
 @section('content')
 
 @if (session()->has('flash_notification.message'))
