@@ -21,13 +21,21 @@ class HomeController extends Controller
 		$especialidad = DB::table('especialidad')->get();
 		
 		$profesionales = DB::table('users')
-			->join('roles', 'roles.id', '=', 'users.rol_id')
-
-			->join('address', 'address.users_id', '=', 'users.id')
-			->join('prestador', 'prestador.user_id', '=', 'users.id')
-			->join('oficio', 'oficio.id', '=', 'prestador.oficio_id')
-			//falta extraer las especialidades
-			->get();
+		->join('address', 'address.users_id', '=', 'users.id')
+		->join('prestador', 'prestador.user_id', '=', 'users.id')
+		->join('habilidades', 'habilidades.prestador_id', '=', 'prestador.id')
+		->join('oficio', 'oficio.id', '=', 'habilidades.oficio_id')
+		->leftjoin('especialidad', 'especialidad.id', '=', 'habilidades.especialidad_id')->get()
+		->groupBy('_ID')
+		->select(
+			'users.id as _ID',
+			'users.name as nombre',
+			'users.lastname as apellido',
+			'prestador.descripcion as descripcion',
+			'prestador.matriculado as matriculado',
+			'oficio.nombre as oficioNombre',
+			'especialidad.nombre as especialidadNombre',
+		)->get();
 			
 		return dd($profesionales);
 
