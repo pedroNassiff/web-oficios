@@ -2,38 +2,7 @@
 @section('title', 'Prestador')
 
 @section('content')
-<style>
-    .titulo-detalle {
-        border-bottom: solid 0.1px #78bc57;
-        margin-bottom: 3%;
-    }
-    .avatar {
-        margin-right: 2%;
-    }
-    .user-avatar{
-        height: 200px;
-    }
-    .user-avatar-icon {
-        font-size: 200px; 
-        color: #252533;
-    }
-    .datos-prestador {
-        margin-left: 2%;
-    }
-    .ficha {
-        display: flex;
-        justify-content: center;
-    }
-    .opcion a {
-        color: white;
-        width: 200px;
-       
-    }
-    .consultar {
-        margin-bottom: 3%;
-    }
 
-</style>
 <div class="container">
     <div class="row">
         <div class="col-12 my-3 py-3 shadow">

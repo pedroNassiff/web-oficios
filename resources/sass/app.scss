@@ -77,7 +77,10 @@ label {
     height: 7vh;
 }
 .page-footer {
-    background: #eae9e9;
+	background: #eae9e9;
+	position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -122,6 +125,35 @@ label {
 
 .ficha {
 	display: flex;
+}
+.titulo-detalle {
+	border-bottom: solid 0.1px #78bc57;
+	margin-bottom: 3%;
+}
+.avatar {
+	margin-right: 2%;
+}
+.user-avatar{
+	height: 200px;
+}
+.user-avatar-icon {
+	font-size: 200px; 
+	color: #252533;
+}
+.datos-prestador {
+	margin-left: 2%;
+}
+.ficha {
+	display: flex;
+	justify-content: center;
+}
+.opcion a {
+	color: white;
+	width: 200px;
+   
+}
+.consultar {
+	margin-bottom: 3%;
 }
 
 //Comentarios y calificación perfil
