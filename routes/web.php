@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+//Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
 ## 
 Route::get('/', 'HomeController@ListarTodos');
 
@@ -46,7 +46,7 @@ Route::group(['middleware'=>'auth'], function(){
 Route::group(['middleware'=>'admin'], function(){
 	Route::get('/admin/alta', 'AdminController@formAlta');
 	Route::post('/admin/alta', 'AdminController@altaUsuario');
-	Route::get('/admin/usuarios', 'AdminController@usuarios');
+	Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
 });
 
 Auth::routes();
