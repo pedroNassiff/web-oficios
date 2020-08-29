@@ -10,22 +10,10 @@ class HomeController extends Controller
     public function listarTodos()
     {
 		
-		$localidades = DB::table('localidades')->get();
-		
-		$oficio = DB::table('oficio')
-		->join('especialidad', function ($join) {
-			$join->on('especialidad.oficio_id', '=', 'oficio.id');
-        })
-		->get();
-		
-		$especialidad = DB::table('especialidad')->get();
-		
-		$profesionales = DB::table('users')	
-			
-			->get();
-			
-
-
+		$localidades = [];
+		$oficio = [];
+		$especialidad = [];
+		$profesionales = [];
 
     	return view(
     		'home',
