@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRubrosTable extends Migration
+class CreateEspecialidadTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,15 @@ class CreateRubrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('rubros', function (Blueprint $table) {
+        Schema::create('especialidad', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('oficio_id')->default(1)->unsigned();
+
             $table->string('nombre');
+            $table->string('descripcion')->nullable();
             $table->timestamps();
+
+            $table->foreign('oficio_id')->references('id')->on('oficio')->onDelete('cascade');
         });
     }
 
@@ -27,6 +32,6 @@ class CreateRubrosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rubros');
+        Schema::dropIfExists('especialidad');
     }
 }

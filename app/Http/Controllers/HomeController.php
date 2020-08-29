@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Categoria;
-use App\Localidad;
+
 use Illuminate\Http\Request;
 use DB;
 
@@ -10,30 +9,42 @@ class HomeController extends Controller
 {
     public function listarTodos()
     {
-    	//$categorias = DB::table('categorias')->get();
-    	$localidades = DB::table('localidades')->get();
-    	$rubros = DB::table('rubros')->get();
-    	$profesionales = DB::table('profesionales')
-            ->join('rubros', 'rubros.id', '=', 'profesionales.rubro_id')
-            ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
-            ->select('profesionales.id',
-                     'profesionales.nombre',
-                     'profesionales.apellido',
-                     'profesionales.descripcion',
-                     'rubros.nombre as rubro',
-                     'profesionales.direccion',
-                     'localidades.nombre as localidad',
-                     'profesionales.ubicacion_actual',
-                     'profesionales.telefono',
-                     'profesionales.web'
-                     )
-            ->get();
+		
+		$localidades = DB::table('localidades')->get();
+		
+		$oficio = DB::table('oficio')
+		->join('especialidad', function ($join) {
+			$join->on('especialidad.oficio_id', '=', 'oficio.id');
+        })
+		->get();
+		
+		$especialidad = DB::table('especialidad')->get();
+		
+		$profesionales = DB::table('users')	
+			->join('address', 'address.users_id', '=', 'users.id')
+			->join('prestador', 'prestador.user_id', '=', 'users.id')
+			->join('habilidades', 'habilidades.prestador_id', '=', 'prestador.id')
+			->join('oficio', 'oficio.id', '=', 'habilidades.oficio_id')
+			->leftjoin('especialidad', 'especialidad.id', '=', 'habilidades.especialidad_id')
+			->select(
+				'users.name as nombre',
+				'users.lastname as apellido',
+				'prestador.descripcion as descripcion',
+				'prestador.matriculado as matriculado',
+				'oficio.nombre as oficioNombre',
+				'especialidad.nombre as especialidadNombre',
+			)
+			//falta extraer las especialidades
+			->get();
+			
+		return dd($profesionales);
 
     	return view(
     		'home',
     		[
     		 'localidades'   => $localidades,
-    		 'rubros'    => $rubros,
+    		 'rubros'    => $oficio,
+    		 'especialidad'    => $especialidad,
     		 'profesionales' => $profesionales
     		]
     	);
