@@ -140,9 +140,6 @@ dd {
   margin-left: 0;
 }
 
-
-
-
 blockquote {
   margin: 0 0 1rem;
 }
@@ -8677,7 +8674,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 0rem !important;
+  padding-top: 3rem !important;
 }
 
 .pr-5,
@@ -8687,7 +8684,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 0rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .pl-5,
@@ -11010,6 +11007,9 @@ label {
 
 .page-footer {
   background: #eae9e9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .my-custom-scrollbar {
@@ -11053,6 +11053,10 @@ label {
 .datos-perfil {
   width: 70%;
   padding-left: 100px;
+}
+
+.ficha {
+  display: flex;
 }
 
 .ec-stars-wrapper {
