@@ -16,8 +16,8 @@ class CreateAddressTable extends Migration
         Schema::create('address', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('users_id')->unsigned();
+            $table->bigInteger('localidades_id')->unsigned();
 
-            $table->string('localidad');
             $table->string('calle');
             $table->string('num_calle');
             $table->string('depto_num')->nullable();
@@ -25,6 +25,7 @@ class CreateAddressTable extends Migration
             $table->timestamps();
 
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('localidades_id')->references('id')->on('localidades');
         });
     }
 
