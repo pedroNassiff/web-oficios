@@ -1,4 +1,4 @@
-<section class="pt-5 pb-5 inner-header">
+<section class="inner-header">
 <nav class="navbar navbar-light navbar-expand-lg py-3 ">
     <div class="container">
         <a class="navbar-brand" href="">

@@ -10,10 +10,16 @@
     box-sizing: border-box;
   }
   
-body {
+html {
+	position: relative;
+	min-height: 100%;
+  }
+  body {
 	margin: 0;
 	font-family: 'Noto Serif', serif;
-}
+	margin-bottom: 60px; /* Margin bottom by footer height */
+  }
+  
 //Generales
 
 .btn {
@@ -78,10 +84,16 @@ label {
 }
 .page-footer {
 	background: #eae9e9;
+
+
+}
+.footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-}
+	height: 105px; /* Set the fixed height of the footer here */
+	line-height: 60px; /* Vertically center the text there */
+  }
 
 
 //Paginación inicio
@@ -126,7 +138,9 @@ label {
 .ficha {
 	display: flex;
 }
-
+.cont-inscrip{
+	margin-bottom: 50px;
+}
 //Comentarios y calificación perfil
 .ec-stars-wrapper {
 	/* Espacio entre los inline-block (los hijos, los `a`) 

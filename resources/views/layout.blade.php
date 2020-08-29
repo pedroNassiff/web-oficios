@@ -20,7 +20,7 @@
         <main>
             @yield('content')
         </main>
-        <footer class="border-top page-footer font-small shadow p-3">
+        <footer class="footer border-top page-footer font-small shadow">
                 <!-- Footer Elements -->
             <div class="container mt-3">
             
