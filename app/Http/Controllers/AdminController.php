@@ -20,5 +20,12 @@ class AdminController extends Controller
     	$user->save();
 
     	return redirect()->back()->with('mensaje', 'El usuario se dió de alta correctamente');
-    }
+	}
+	
+	
+	
+		public function getAdministracion(){
+			return view('admin.administracion');
+		}
+	
 }
