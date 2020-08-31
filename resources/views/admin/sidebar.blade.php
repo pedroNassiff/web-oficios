@@ -1,8 +1,6 @@
 <div class="sidebar shadow col-2">
     <div class="section-top">
-        <div class="logo">
-            <img src="{{ url('assets/images/logo-misia.svg') }}" class="img-fluid">
-        </div>
+        
 
         <div class="user">
             
@@ -29,7 +27,7 @@
                 <a href="{{ url('/oficios') }}"><i class="fas fa-box"></i>Oficios</a>
             </li>
             <li>
-                <a href="{{ url('/localidades') }}"><i class="fas fa-box"></i>Localidades</a>
+                <a href="{{ url('/admin/indexLocalidad') }}"><i class="fas fa-box"></i>Localidades</a>
             </li>
         </ul>
     </div>
