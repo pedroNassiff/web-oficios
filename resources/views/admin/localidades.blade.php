@@ -14,15 +14,18 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
+      <th scope="col"><a class="icon-action"  href="{{ route('localidades.storeLocalidad') }}" onclick="return confirm('¿Desea agregar el localidad?')" onkeypress="return confirm('¿agregar nueva localidad?')" data-toggle="tooltip" data-placement="top" title="nueva localidad">
+        <i class="fa fa-plus"></i>
+    </a></th>
     </tr>
   </thead>
   <tbody>
 		@foreach($localidades as $localidad)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">{{$localidad->id}}</th>
       <td>{{ $localidad->nombre }}</td>
       <td>
-		    <a class="icon-action"  href="{{ route('localidades.destroyLocalidad', $localidad->id) }}" onclick="return confirm('¿Desea eliminar el usuario?')" onkeypress="return confirm('¿Desea eliminar el usuario?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
+		    <a class="icon-action"  href="{{ route('localidades.destroyLocalidad', $localidad->id) }}" onclick="return confirm('¿Desea eliminar el localidad?')" onkeypress="return confirm('¿Desea eliminar el localidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
 						<i class="fa fa-remove"></i>
 				</a>
 			</td>
