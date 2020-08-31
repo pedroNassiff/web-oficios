@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Especialidad;
+use App\Models\Oficio;
 
 class EspecialidadController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,17 +19,25 @@ class EspecialidadController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        //listar todas las especialidades
+        $oficios = Oficio::get();
+        $listaoficio = [];
+        foreach ($oficios as $oficio) {
+            if($oficio->id != 1){
+                $listaespecialidades = [];
+                $especialidades = Oficio::find($oficio->id)->especialidad;
+                
+                foreach($especialidades as $especialidad){
+                    array_push($listaespecialidades, ['nombre' => $especialidad->nombre, 'descripcion' => $especialidad->descripcion]);
+                }
+    
+                array_push($listaoficio, ['Oficio'=>$oficio->nombre ,'Especialidades'=>$listaespecialidades]);
+            }
+        }
+        //return dd($listaoficio);
+        return view('admin.especialidades', [
+            'listaoficio' => $listaoficio
+        ]);
     }
 
     /**
@@ -34,29 +48,16 @@ class EspecialidadController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        /* $oficio = Oficio::where('nombre', $request['oficio'])->get();
+        
+        $especialidad = new Especialidad();
+        $especialidad->nombre =  $request['nombre'];
+        $especialidad->descripcion =  $request['descripcion'];
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+        $especialidad->oficio_id =  2;
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        $especialidad->save();
+        return redirect()->route('admin.especialidades')->with('message', 'Guardado con Exito.')->with('typealert', 'success'); */
     }
 
     /**

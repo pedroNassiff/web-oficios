@@ -57,7 +57,11 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/indexOficio', 'OficioController@index')->name('oficio.indexOficio');
 		Route::post('/admin/storeOficio', 'OficioController@store')->name('oficio.storeOficio');
 		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('oficio.destroyOficio');
-		
+
+		//Especialidad
+		Route::get('/admin/indexEspecialidad', 'EspecialidadController@index')->name('especialidad.indexEspecialidad');
+		Route::post('/admin/storeEspecialidad', 'EspecialidadController@store')->name('especialidad.storeEspecialidad');
+		Route::get('/admin/destroyEspecialidad/{id}', 'EspecialidadController@destroy')->name('especialidad.destroyEspecialidad');
 	});
 
 });
