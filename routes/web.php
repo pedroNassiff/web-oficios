@@ -54,9 +54,9 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/destroyLocalidad/{id}', 'LocalidadesController@destroy')->name('localidades.destroyLocalidad');
 
 		//Oficio
-		Route::get('/admin/indexOficio', 'OficioController@index')->name('destroyOficio.indexOficio');
-		Route::post('/admin/storeOficio', 'OficioController@store')->name('destroyOficio.storeOficio');
-		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('destroyOficio');
+		Route::get('/admin/indexOficio', 'OficioController@index')->name('oficio.indexOficio');
+		Route::post('/admin/storeOficio', 'OficioController@store')->name('oficio.storeOficio');
+		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('oficio.destroyOficio');
 		
 	});
 
