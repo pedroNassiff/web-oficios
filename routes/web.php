@@ -49,14 +49,15 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
 
 		//localidades
-		Route::post('/admin/storeLocalidad', 'LocalidadesController@store');
-		Route::get('/admin/indexLocalidad', 'LocalidadesController@index');
-		Route::delete('/admin/destroyLocalidad/{id}', 'LocalidadesController@index');
+		Route::get('/admin/indexLocalidad', 'LocalidadesController@index')->name('perfil');
+		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('perfil');
+		Route::get('/admin/destroyLocalidad/{id}', 'LocalidadesController@destroy')->name('localidades.destroyLocalidad');
 
 		//Oficio
-		Route::post('/admin/storeOficio', 'OficioController@store');
-		Route::get('/admin/indexOficio', 'OficioController@index');
-		Route::delete('/admin/destroyOficio/{id}', 'OficioController@index');
+		Route::get('/admin/indexOficio', 'OficioController@index')->name('perfil');
+		Route::post('/admin/storeOficio', 'OficioController@store')->name('perfil');
+		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('destroyOficio');
+		
 	});
 
 });

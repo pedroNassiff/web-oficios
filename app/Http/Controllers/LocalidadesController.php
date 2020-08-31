@@ -16,7 +16,6 @@ class LocalidadesController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('AdminMiddleware');
     }
 
     /**
@@ -26,7 +25,11 @@ class LocalidadesController extends Controller
      */
     public function index()
     {
-        // retorno lista de localidades
+        $localidades = Localidad::get();
+
+        return view('admin.localidades', [
+            'localidades' => $localidades
+        ]);
     }
 
     /**
@@ -62,7 +65,7 @@ class LocalidadesController extends Controller
             $localidad->delete();
             return back()->with('message', 'Borrado exitosamente')->with('typealert', 'success');
         } catch (\Throwable $th) {
-            return back()->with('message', 'Error al borrar')->with('typealert', 'danger');
+            return back()->with('message', 'Error al borrar (No se puede borrar una localidad que se encuentra asignada a algún usuario)')->with('typealert', 'danger');
         }
 
        

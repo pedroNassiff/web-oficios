@@ -33,6 +33,7 @@
                             @if(auth()->user()->rol_id == 2)
                             <a class="dropdown-item" href="/admin/alta">Agregar usuario</a>
                             <a class="dropdown-item" href="/admin/usuarios">Lista de usuarios</a>
+                            <a class="dropdown-item" href="/admin/indexLocalidad">Lista de localidades</a>
                             @endif
                             @if(auth()->user()->rol_id != 2)
                             <a class="dropdown-item " href="/perfil">Mi Perfil</a>
