@@ -15,13 +15,14 @@ class CreateCertificacionesTable extends Migration
     {
         Schema::create('certificaciones', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('prestador_id')->unsigned();
             $table->string('titulo');
             $table->string('institucion');
+            $table->string('img_certificacion')->nullable();
             $table->date('fecha');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('prestador_id')->references('id')->on('prestador');
         });
     }
 

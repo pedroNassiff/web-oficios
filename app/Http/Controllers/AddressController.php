@@ -3,25 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User; 
-class UsuariosController extends Controller
+
+class AddressController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function listaUsuarios()
+    public function index()
     {
-        try{
-
-            $records = User::orderBy('id', 'desc')->paginate(10);           
-            return view('user/listaUsuarios', ['users' => $records]);
-
-        }catch (\Exception $e) {
-
-            return redirect()->route('users.main');       
-        }
+        //
     }
 
     /**

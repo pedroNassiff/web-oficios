@@ -67,7 +67,7 @@
 				<img class="img-registro" src="/img/brindar.png" alt="">
 			</div>
 			<br>
-			<div class="col-md-12 my-auto">
+			<div class="col-md-12 cont-inscrip">
 				<a class="btn btn-default btn-lg btn-inscribite" href="/inscripcion">¡Inscribite!</a>
 				{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
 					* Redirige a la ruta /logout con el método POST, ahí el controlador

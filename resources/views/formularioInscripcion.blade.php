@@ -20,7 +20,7 @@
 						<div class="col-md-6">
 							<div class="md-form mb-3">
 								<label for="nombre" class="">Nombres</label>
-								<input type="text" id="name" name="nombre" class="form-control" required>
+								<input disabled type="text" id="name" name="nombre" value={{auth()->user()->name}} class="form-control" required>
 							</div>
 						</div>
 						<!--Grid column-->

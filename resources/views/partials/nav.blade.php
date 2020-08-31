@@ -1,4 +1,4 @@
-<section class="pt-5 pb-5 inner-header">
+<section class="inner-header">
 <nav class="navbar navbar-light navbar-expand-lg py-3 ">
     <div class="container">
         <a class="navbar-brand" href="">
@@ -30,11 +30,12 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             @auth
                             <a class="dropdown-item " href="">Hola {{ auth()->user()->name }} </a>
-                            @if(auth()->user()->rol_id == 1)
+                            @if(auth()->user()->rol_id == 2)
                             <a class="dropdown-item" href="/admin/alta">Agregar usuario</a>
                             <a class="dropdown-item" href="/admin/usuarios">Lista de usuarios</a>
+                            <a class="dropdown-item" href="/admin/indexLocalidad">Lista de localidades</a>
                             @endif
-                            @if(auth()->user()->rol_id != 1)
+                            @if(auth()->user()->rol_id != 2)
                             <a class="dropdown-item " href="/perfil">Mi Perfil</a>
                             @endif
                             <a class="dropdown-item "  href="#"  onclick="

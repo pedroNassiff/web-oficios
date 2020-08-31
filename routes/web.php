@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+//Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
 ## 
 Route::get('/', 'HomeController@ListarTodos');
 
@@ -41,13 +41,28 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::post('/perfil/guardar', 'ProfesionalController@guardarPerfil');
 	Route::get('/perfil/editar', 'ProfesionalController@editarPerfil');
 	Route::post('/perfil/actualizar/{id}', 'ProfesionalController@actualizarPerfil');
+
+
+	Route::group(['middleware'=>'admin'], function(){
+		Route::get('/admin/alta', 'AdminController@formAlta');
+		Route::post('/admin/alta', 'AdminController@altaUsuario');
+		Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
+
+		//localidades
+		Route::get('/admin/indexLocalidad', 'LocalidadesController@index')->name('localidades.indexLocalidad');
+		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('localidades.storeLocalidad');
+		Route::get('/admin/destroyLocalidad/{id}', 'LocalidadesController@destroy')->name('localidades.destroyLocalidad');
+
+		//Oficio
+		Route::get('/admin/indexOficio', 'OficioController@index')->name('oficio.indexOficio');
+		Route::post('/admin/storeOficio', 'OficioController@store')->name('oficio.storeOficio');
+		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('oficio.destroyOficio');
+		
+	});
+
 });
 
-Route::group(['middleware'=>'admin'], function(){
-	Route::get('/admin/alta', 'AdminController@formAlta');
-	Route::post('/admin/alta', 'AdminController@altaUsuario');
-	Route::get('/admin/usuarios', 'AdminController@usuarios');
-});
+
 
 Auth::routes();
 
