@@ -68,8 +68,10 @@ Route::group(['middleware'=>'auth'], function(){
 Auth::routes();
 
 Route::get('/gmaps', 'MapController@gmaps');
-Route::get('/mapa',function(){
-	return view ('mapa');
+
+// borrar cuando esten los controladores
+Route::get('admin/oficios',function(){
+	return view ('admin/oficios');
 });
 
  /*usuarios*/
