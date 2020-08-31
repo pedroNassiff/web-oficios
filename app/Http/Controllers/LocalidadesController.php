@@ -63,7 +63,7 @@ class LocalidadesController extends Controller
         try {
             $localidad = Localidad::find($id);
             $localidad->delete();
-            return back()->with('message', 'Borrado exitosamente')->with('typealert', 'success');
+            return back()->with('message', 'Se borro exitosamente: '.$localidad->nombre)->with('typealert', 'success');
         } catch (\Throwable $th) {
             return back()->with('message', 'Error al borrar (No se puede borrar una localidad que se encuentra asignada a algún usuario)')->with('typealert', 'danger');
         }

@@ -62,9 +62,9 @@ class OficioController extends Controller
         try {
             $oficio = Oficio::find($id);
             $oficio->delete();
-            return back()->with('message', 'Borrado exitosamente')->with('typealert', 'success');
+            return back()->with('message', 'Se borro exitosamente: '.$oficio->nombre)->with('typealert', 'success');
         } catch (\Throwable $th) {
-            return back()->with('message', 'Error al borrar')->with('typealert', 'danger');
+            return back()->with('message', 'Error al borrar (No se puede borrar ub oficio que se encuentra asignado)')->with('typealert', 'danger');
         }
     }
 }
