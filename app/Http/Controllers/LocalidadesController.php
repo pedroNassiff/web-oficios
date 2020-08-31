@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Oficio;
+use App\Localidad;
 
-class OficioController extends Controller
+class LocalidadesController extends Controller
 {
 
-    
     /**
     * Create a new controller instance.
     *
@@ -27,7 +26,7 @@ class OficioController extends Controller
      */
     public function index()
     {
-        //
+        // retorno lista de localidades
     }
 
     /**
@@ -44,13 +43,12 @@ class OficioController extends Controller
         ]);
 
         // crear un nuevo recurso
-        $oficio = new Oficio();
-    	$oficio->nombre = $request['nombre'];
-    	$oficio->save();
+        $localidad = new Localidad();
+    	$localidad->nombre = $request['nombre'];
+    	$localidad->save();
         //retorn
         return back()->with('message', 'Guardado con Exito.')->with('typealert', 'success');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -60,11 +58,13 @@ class OficioController extends Controller
     public function destroy($id)
     {
         try {
-            $oficio = Oficio::find($id);
-            $oficio->delete();
+            $localidad = Localidad::find($id);
+            $localidad->delete();
             return back()->with('message', 'Borrado exitosamente')->with('typealert', 'success');
         } catch (\Throwable $th) {
             return back()->with('message', 'Error al borrar')->with('typealert', 'danger');
         }
+
+       
     }
 }

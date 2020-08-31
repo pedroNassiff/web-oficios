@@ -41,13 +41,27 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::post('/perfil/guardar', 'ProfesionalController@guardarPerfil');
 	Route::get('/perfil/editar', 'ProfesionalController@editarPerfil');
 	Route::post('/perfil/actualizar/{id}', 'ProfesionalController@actualizarPerfil');
+
+
+	Route::group(['middleware'=>'admin'], function(){
+		Route::get('/admin/alta', 'AdminController@formAlta');
+		Route::post('/admin/alta', 'AdminController@altaUsuario');
+		Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
+
+		//localidades
+		Route::post('/admin/storeLocalidad', 'LocalidadesController@store');
+		Route::get('/admin/indexLocalidad', 'LocalidadesController@index');
+		Route::delete('/admin/destroyLocalidad/{id}', 'LocalidadesController@index');
+
+		//Oficio
+		Route::post('/admin/storeOficio', 'OficioController@store');
+		Route::get('/admin/indexOficio', 'OficioController@index');
+		Route::delete('/admin/destroyOficio/{id}', 'OficioController@index');
+	});
+
 });
 
-Route::group(['middleware'=>'admin'], function(){
-	Route::get('/admin/alta', 'AdminController@formAlta');
-	Route::post('/admin/alta', 'AdminController@altaUsuario');
-	Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
-});
+
 
 Auth::routes();
 
