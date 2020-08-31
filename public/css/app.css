@@ -11014,6 +11014,9 @@ label {
 
 .page-footer {
   background: #eae9e9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer {
@@ -11072,11 +11075,9 @@ label {
 .ficha {
   display: flex;
 }
-
 .cont-inscrip {
   margin-bottom: 50px;
 }
-
 .ec-stars-wrapper {
   /* Espacio entre los inline-block (los hijos, los `a`) 
      http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
