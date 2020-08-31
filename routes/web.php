@@ -47,16 +47,17 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/alta', 'AdminController@formAlta');
 		Route::post('/admin/alta', 'AdminController@altaUsuario');
 		Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
+		Route::get('/admin/administracion', 'AdminController@getAdministracion');
 
 		//localidades
-		Route::get('/admin/indexLocalidad', 'LocalidadesController@index')->name('localidades.indexLocalidad');
-		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('localidades.storeLocalidad');
+		Route::get('/admin/indexLocalidad', 'LocalidadesController@index')->name('perfil');
+		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('perfil');
 		Route::get('/admin/destroyLocalidad/{id}', 'LocalidadesController@destroy')->name('localidades.destroyLocalidad');
 
 		//Oficio
-		Route::get('/admin/indexOficio', 'OficioController@index')->name('oficio.indexOficio');
-		Route::post('/admin/storeOficio', 'OficioController@store')->name('oficio.storeOficio');
-		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('oficio.destroyOficio');
+		Route::get('/admin/indexOficio', 'OficioController@index')->name('perfil');
+		Route::post('/admin/storeOficio', 'OficioController@store')->name('perfil');
+		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('destroyOficio');
 		
 	});
 
