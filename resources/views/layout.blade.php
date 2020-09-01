@@ -20,48 +20,7 @@
         <main>
             @yield('content')
         </main>
-        <footer class="footer border-top page-footer font-small shadow">
-                <!-- Footer Elements -->
-            <div class="container mt-3">
-            
-                <!--Grid row-->
-                <div class="row grey" style="margin-bottom: -20px;">
-            
-                    <!--Grid column-->
-                    <div class="col-lg-4 col-md-12 mb-4">            
-                        <!--Image-->
-                        <div class="view overlay z-depth-1-half text-center">
-                            <img src="/img/logo_subsec.png" class="img-fluid logsubsec" alt="Logo Subsecretaría de Empleo">
-                        </div>            
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">            
-                        <!--Image-->
-                        <div class="view overlay z-depth-1-half text-center">
-                            <img src="/img/logo_industria.png" class="img-fluid" alt="Logo Ministerio de Industria">
-                        </div>            
-                    </div>
-           
-                    <!--Grid column-->
-                    <div class="col-lg-4 col-md-6 mb-4">         
-                        <!--Image-->
-                        <div class="view overlay z-depth-1-half text-center">
-                            <img src="/img/logo_gob.png" class="img-fluid logob" alt="Logo Gobierno del Chaco">
-                        </div>
-                    </div>
-            
-                </div>
-                <!--Grid row-->
-            
-            </div>
-            <!-- Footer Elements -->
-            
-                <!-- Copyright 
-            <div class="footer-copyright text-center">
-                    {{ config('app.name')}} | {{ date('Y') }}
-            </div>
-             Copyright -->
-
-        </footer>
+        @include('partials.footer')
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 

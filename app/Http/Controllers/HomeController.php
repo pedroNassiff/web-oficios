@@ -35,7 +35,7 @@ class HomeController extends Controller
 		->select(
 			'users.id as id',
 			'users.name as nombre',
-			'users.lastname as apellido',
+			'users.lastname as apellido'
 		)
 		->get();
 

@@ -1,11 +1,11 @@
-@extends('layout')
+@extends('admin/administracion')
 
 @section('title', 'Oficios')
 @section('content')
 
 <section class="py-3 mb-5">
 	<div class="container">
-        <h2 class="my-4"> Lista de oficios</h2>
+        <h2 class="my-4"> Oficios</h2>
         <table class="table table-striped">
             <thead>
               <tr>
