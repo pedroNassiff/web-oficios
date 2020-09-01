@@ -1,42 +1,80 @@
-@extends('layout')
+@extends('admin/administracion')
 
 @section('title', 'Especialidades')
 @section('content')
-    @if (session()->has('message'))
-        <div class="alert alert-{{ session('typealert') }}">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            {!! session('message') !!}
-        </div>
-    @endif
-    <div>
-        @foreach ($listaoficio as $oficio)
-            <ul>
-                <li>
-                    {{ $oficio['Oficio']->nombre }}
-                    @if ($oficio['Especialidades'])
+<section class="py-3 mb-5">
+	<div class="container">
+        <h2 class="my-4"> Oficios</h2>
+        @if (session()->has('message'))
+            <div class="alert alert-{{ session('typealert') }}">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {!! session('message') !!}
+            </div>
+        @endif
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">Oficio</th>
+                  <th scope="col">Especialidad</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($listaoficio as $oficio)
+                <tr>
+                    <td> {{ $oficio['Oficio']->nombre }}</td>
+                    <td>
+                        @if ($oficio['Especialidades'])
                         @foreach ($oficio['Especialidades'] as $especialidad)
-                            <ul>
-                                <li>
-                                    {{ $especialidad->nombre }}
-                                    <a class="icon-action"  href="{{ route('especialidad.destroyEspecialidad', $especialidad->id) }}" onclick="return confirm('¿Desea eliminar el localidad?')" onkeypress="return confirm('¿Desea eliminar el localidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
-                                        <i class="fa fa-remove"></i>
-                                    </a>
-                                    <ul>
-                                        @if ($especialidad->descripcion)
-                                            <li>
-                                                {{ $especialidad->descripcion }}
-                                            </li>
-                                        @endif
-                                    </ul>
-                                </li>
-                            </ul>
+                        {{ $especialidad->nombre }}
                         @endforeach
-                    @endif
-                </li>
-            </ul>
-        @endforeach
+                        @endif
+                    </td>
+                    <td>
+                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Ver"><i class="fa fa-eye"></i></a> 
+                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a> 
+                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Cambiar contraseña"><i class="fa fa-key"></i></a>
+                        <a class="icon-action"  href="" onclick="return confirm('¿Desea eliminar el localidad?')" onkeypress="return confirm('¿Desea eliminar el localidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <div>
+            @foreach ($listaoficio as $oficio)
+                <ul>
+                    <li>
+                        {{ $oficio['Oficio']->nombre }}
+                        @if ($oficio['Especialidades'])
+                            @foreach ($oficio['Especialidades'] as $especialidad)
+                                <ul>
+                                    <li>
+                                        {{ $especialidad->nombre }}
+                                        <a class="icon-action"  href="{{ route('especialidad.destroyEspecialidad', $especialidad->id) }}" onclick="return confirm('¿Desea eliminar el localidad?')" onkeypress="return confirm('¿Desea eliminar el localidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                            <i class="fa fa-remove"></i>
+                                        </a>
+                                        <ul>
+                                            @if ($especialidad->descripcion)
+                                                <li>
+                                                    {{ $especialidad->descripcion }}
+                                                </li>
+                                            @endif
+                                        </ul>
+                                    </li>
+                                </ul>
+                            @endforeach
+                        @endif
+                    </li>
+                </ul>
+            @endforeach
+        </div>
     </div>
+</section>
 
+
+ {{-- agregar nueva la especialidad  --}}   
     <div>
         <form id="contact-form" name="contact-form" action="/admin/storeEspecialidad" method="POST"
             enctype="multipart/form-data">

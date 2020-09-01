@@ -40,10 +40,13 @@
                 <a class="nav-link {{ Request::segment(1) === 'usuarios' ? 'active' : null }}" href="{{ url('/admin/usuarios') }}"> Usuarios </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ Request::segment(1) === 'oficios' ? 'active' : null }}" href="{{ url('/admin/oficios') }}"> Oficios </a>
+                <a class="nav-link {{ Request::segment(1) === 'oficios' ? 'active' : null }}" href="{{ url('/admin/indexEspecialidad') }}"> Oficios </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ Request::segment(1) === 'localidades' ? 'active' : null }}" href="{{ url('/admin/indexLocalidad') }}"> Localidad </a>
+              </li>
+              <li>
+                <a class="nav-link" href="">Solicitudes</a>
               </li>
             </ul>
           </div>
