@@ -7,28 +7,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Rubro;
 use App\Localidad;
-use App\Profesional;
+use App\Models\Prestador;
 
 class ProfesionalController extends Controller
 {
     public function mostrarPerfil($id){
     	//$profesional = DB::table('profesionales')->find($id);
 
-    	$profesional = DB::table('profesionales')
-            ->join('rubros', 'rubros.id', '=', 'profesionales.rubro_id')
-            ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
-            ->select('profesionales.nombre',
-            		 'profesionales.apellido',
-            		 'profesionales.descripcion',
-            		 'rubros.nombre as rubro',
-            		 'profesionales.direccion',
-            		 'localidades.nombre as localidad',
-            		 'profesionales.ubicacion_actual',
-            		 'profesionales.telefono',
-            		 'profesionales.web'
-            	     )
-            ->where('profesionales.id', $id)
-            ->first();
+    	$profesional = [
+            'nombre' => 'profesionales.nombre',
+            'apellido' => 'profesionales.apellido',
+            'descripcion' => 'profesionales.descripcion',
+            'rubro' => 'rubros.nombre as rubro',
+            'direccion' => 'profesionales.direccion',
+            'localidad' => 'localidades.nombre as localidad',
+            'ubicacion_actual' => 'profesionales.ubicacion_actual',
+            'telefono' => 'profesionales.telefono',
+            'web' => 'profesionales.web'];
 
     	return view('profesionalPerfil', ['profesional' => $profesional]);
             //echo $profesional;
