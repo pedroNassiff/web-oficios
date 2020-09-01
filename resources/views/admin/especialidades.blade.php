@@ -25,9 +25,28 @@
                     <td> {{ $oficio['Oficio']->nombre }}</td>
                     <td>
                         @if ($oficio['Especialidades'])
-                        @foreach ($oficio['Especialidades'] as $especialidad)
-                        {{ $especialidad->nombre }}
-                        @endforeach
+                             @foreach ($oficio['Especialidades'] as $especialidad)
+                                <option>
+                                     <p>  
+                                        <a class="btn-descripcion" data-toggle="collapse" href="#collapseExample" role="button"             aria-expanded="false" aria-controls="collapseExample">
+                                         {{ $especialidad->nombre }}
+                                            <a class="icon-action"  href="{{ route('especialidad.destroyEspecialidad', $especialidad->id) }}" onclick="return confirm('¿Desea eliminar la especialidad?')" onkeypress="return confirm('¿Desea eliminar la especialidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                            <i class="fa fa-remove"></i>
+                                         </a>
+                                        </a>
+                                        
+                                    </p>
+                                        @if ($especialidad->descripcion)
+                                             <div class="collapse" id="collapseExample">
+                                                <div class="card card-body">
+                                                    <li>
+                                                         {{ $especialidad->descripcion }}
+                                                    </li>
+                                         @endif
+                                                 </div>
+                                            </div>
+                                </option>
+                              @endforeach                            
                         @endif
                     </td>
                     <td>
@@ -42,34 +61,6 @@
                 @endforeach
             </tbody>
         </table>
-        <div>
-            @foreach ($listaoficio as $oficio)
-                <ul>
-                    <li>
-                        {{ $oficio['Oficio']->nombre }}
-                        @if ($oficio['Especialidades'])
-                            @foreach ($oficio['Especialidades'] as $especialidad)
-                                <ul>
-                                    <li>
-                                        {{ $especialidad->nombre }}
-                                        <a class="icon-action"  href="{{ route('especialidad.destroyEspecialidad', $especialidad->id) }}" onclick="return confirm('¿Desea eliminar el localidad?')" onkeypress="return confirm('¿Desea eliminar el localidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
-                                            <i class="fa fa-remove"></i>
-                                        </a>
-                                        <ul>
-                                            @if ($especialidad->descripcion)
-                                                <li>
-                                                    {{ $especialidad->descripcion }}
-                                                </li>
-                                            @endif
-                                        </ul>
-                                    </li>
-                                </ul>
-                            @endforeach
-                        @endif
-                    </li>
-                </ul>
-            @endforeach
-        </div>
     </div>
 </section>
 
