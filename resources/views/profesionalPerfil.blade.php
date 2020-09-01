@@ -14,19 +14,19 @@
                             <i class="fa fa-user user-avatar-icon"></i>
                         </div>
                         <div class="card-body">
-                        <h2 class="card-title">{{ $profesional->nombre }} {{ $profesional->apellido }}</h2>
-                        <h5>Teléfono: {{ $profesional->telefono }}</h5>
-                        <h5>Sitio Web: {{ $profesional->web }}</h5>
+                        <h2 class="card-title">$profesional->nombre }}  $profesional->apellido }}</h2>
+                        <h5>Teléfono:  $profesional->telefono }}</h5>
+                        <h5>Sitio Web:  $profesional->web }}</h5>
                         
                         </div>
                     </div>
                 </div>
                 <div class="datos-prestador">
-                    <h2>{{ $profesional->rubro }}</h2>
-                    <p>Localidad: {{ $profesional->localidad }}</p>
-                    <p>Direccion: {{ $profesional->direccion }}</p>
-                    <p>Ubicación Actual: {{ $profesional->ubicacion_actual }}</p>
-                    <p class="card-text">Descripción:  {{ $profesional->descripcion }}
+                    <h2> $profesional->rubro }}</h2>
+                    <p>Localidad:  $profesional->localidad }}</p>
+                    <p>Direccion:  $profesional->direccion }}</p>
+                    <p>Ubicación Actual: $profesional->ubicacion_actual }}</p>
+                    <p class="card-text">Descripción:   $profesional->descripcion }}
                     </p>
                     <div class="botones">
                         <div class="opcion consultar">

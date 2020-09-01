@@ -17,7 +17,6 @@ class OficioController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('AdminMiddleware');
     }
 
     /**
@@ -48,7 +47,7 @@ class OficioController extends Controller
     	$oficio->nombre = $request['nombre'];
     	$oficio->save();
         //retorn
-        return back()->with('message', 'Guardado con Exito.')->with('typealert', 'success');
+        return back()->with('message', 'Guardado con Éxito.')->with('typealert', 'success');
     }
 
     /**
@@ -62,9 +61,9 @@ class OficioController extends Controller
         try {
             $oficio = Oficio::find($id);
             $oficio->delete();
-            return back()->with('message', 'Se borro exitosamente: '.$oficio->nombre)->with('typealert', 'success');
+            return back()->with('message', 'Se borró exitosamente : '.$oficio->nombre)->with('typealert', 'success');
         } catch (\Throwable $th) {
-            return back()->with('message', 'Error al borrar (No se puede borrar ub oficio que se encuentra asignado)')->with('typealert', 'danger');
+            return back()->with('message', 'Error al borrar (No se puede borrar un oficio que se encuentra asignado)')->with('typealert', 'danger');
         }
     }
 }

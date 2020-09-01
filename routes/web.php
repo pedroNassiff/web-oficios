@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
 ## 
-Route::get('/', 'HomeController@ListarTodos');
+Route::get('/', 'HomeController@ListarTodos')->name('home');
 
 Route::post('/buscar', 'HomeController@ListarFiltrados');
 
@@ -23,7 +23,7 @@ Route::post('/buscar', 'HomeController@ListarFiltrados');
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
@@ -55,10 +55,14 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/destroyLocalidad/{id}', 'LocalidadesController@destroy')->name('localidades.destroyLocalidad');
 
 		//Oficio
-		Route::get('/admin/indexOficio', 'OficioController@index')->name('perfil');
-		Route::post('/admin/storeOficio', 'OficioController@store')->name('perfil');
-		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('destroyOficio');
-		
+		Route::get('/admin/indexOficio', 'OficioController@index')->name('oficio.indexOficio');
+		Route::post('/admin/storeOficio', 'OficioController@store')->name('oficio.storeOficio');
+		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('oficio.destroyOficio');
+
+		//Especialidad
+		Route::get('/admin/indexEspecialidad', 'EspecialidadController@index')->name('especialidad.indexEspecialidad');
+		Route::post('/admin/storeEspecialidad', 'EspecialidadController@store')->name('especialidad.storeEspecialidad');
+		Route::get('/admin/destroyEspecialidad/{id}', 'EspecialidadController@destroy')->name('especialidad.destroyEspecialidad');
 	});
 
 });

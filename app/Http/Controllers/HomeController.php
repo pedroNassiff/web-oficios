@@ -3,24 +3,49 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+
+use App\Models\Prestador;
+use App\Models\Especialidad;
+use App\Models\Oficio;
+use App\Localidad;
 
 class HomeController extends Controller
 {
     public function listarTodos()
     {
 		
-		$localidades = [];
-		$oficio = [];
-		$especialidad = [];
-		$profesionales = [];
+		$localidades = Localidad::get();
 
+		$oficios = Oficio::get();
+
+        $listaoficio = [];
+        foreach ($oficios as $oficio) {
+            if($oficio->id != 1){
+                $listaespecialidades = [];
+                $especialidades = Oficio::find($oficio->id)->especialidad;
+                foreach($especialidades as $especialidad){
+                    array_push($listaespecialidades, $especialidad);
+                }
+                array_push($listaoficio, ['Oficio'=>$oficio ,'Especialidades'=>$listaespecialidades]);
+            }
+		}
+		
+		$prestadores = Prestador::where('habilitado', 1)
+		->join('users', 'users.id', "prestador.user_id")
+		->select(
+			'users.id as id',
+			'users.name as nombre',
+			'users.lastname as apellido',
+		)
+		->get();
+
+		$profesionales = [];
     	return view(
     		'home',
     		[
     		 'localidades'   => $localidades,
-    		 'rubros'    => $oficio,
-    		 'especialidad'    => $especialidad,
+    		 'listaoficio'    => $listaoficio,
+    		 'prestadores' => $prestadores,
     		 'profesionales' => $profesionales
     		]
     	);
