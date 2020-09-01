@@ -45,8 +45,12 @@
                     <div class="md-form mb-3">
                         <label for="oficio" class="">Oficio</label>
                         {{-- debe mandarse el nombre d la profesión a la que se agregara la especialidad  --}}
-                        <input type="text" id="oficio" name="oficio" value='Plomería' readonly
-                            class="form-control" required>
+                        <select class="browser-default custom-select" name="oficio" required>
+							<option value="" selected disabled>Seleccionar un oficio</option>
+							@foreach ($listaoficio as $oficio)
+							    <option value="{{ $oficio['Oficio']->id}}">{{ $oficio['Oficio']->nombre }}</option>
+						    @endforeach
+						</select>
                     </div>
                 </div>
                 <div class="col-md-6">

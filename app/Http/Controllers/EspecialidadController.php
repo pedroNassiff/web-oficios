@@ -47,7 +47,7 @@ class EspecialidadController extends Controller
     public function store(Request $request)
     {
         try {
-            $oficio = Oficio::where('nombre', $request['oficio'])->first();
+            $oficio = Oficio::find($request['oficio']);
             $especialidad = new Especialidad();
             $especialidad->nombre =  $request['nombre'];
             $especialidad->oficio_id =  $oficio->id;
