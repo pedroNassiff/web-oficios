@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
 ## 
-Route::get('/', 'HomeController@ListarTodos');
+Route::get('/', 'HomeController@ListarTodos')->name('home');
 
 Route::post('/buscar', 'HomeController@ListarFiltrados');
 
@@ -23,7 +23,7 @@ Route::post('/buscar', 'HomeController@ListarFiltrados');
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 

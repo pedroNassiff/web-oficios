@@ -2,7 +2,12 @@
 @section('title', 'Inicio')
 
 @section('content')
-
+@if (session()->has('message'))
+	<div class="alert alert-{{ session('typealert') }}">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		{!! session('message') !!}
+	</div>
+@endif
 <section class="py-3">
 	<div class="container text-center">
 		<h2 class="my-4"> ¿Qué estás buscando?</h2>
@@ -14,8 +19,8 @@
 					<label for="categoria">Seleccioná un servicio</label>
 					<select class="browser-default custom-select" name="rubro_id">
 						<option value="" disabled>Seleccionar</option>
-						@foreach ($rubros as $rubro)
-							<option value="{{ $rubro->id }}">{{ $rubro->nombre }}</option>
+						@foreach ($listaoficio as $lista)
+							<option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
 						@endforeach
 					</select>
 			</div>
@@ -47,11 +52,11 @@
                     </tr>
                     </thead>
                     <tbody>
-					@foreach ($profesionales as $profesional)
+					@foreach ($prestadores as $prestador)
 						<tr>
 							<th scope="row">{{ $loop->iteration }}</th>
-							<td class="td-nya">{{ $profesional->nombre}} {{ $profesional->apellido}}</td>
-							<td><a href="/profesional/{{ $profesional->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></td>
+							<td class="td-nya">{{ $prestador->nombre}} {{ $prestador->apellido}}</td>
+							<td><a href="/profesional/{{ $prestador->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></td>
 						</tr>
 					@endforeach
                     </tbody>
@@ -87,7 +92,7 @@
   type="text/javascript"></script>
 <script type="text/javascript">
 	
-	const profesionales = @json($profesionales);
+	//const profesionales = @json($profesionales);
 
 	var mapa = new google.maps.Map(document.getElementById('mapa'),{
 		center: {lat: -27.450977, lng: -58.986980}, 
@@ -101,7 +106,7 @@
 
 	const geocoder = new google.maps.Geocoder();
 
-	profesionales.map(profesional => {
+	/* profesionales.map(profesional => {
 		var direccion = profesional.direccion;
 		var localidad = profesional.localidad;
 		const address = direccion + ' ' + localidad + ' ' + 'chaco argentina';
@@ -119,7 +124,7 @@
 			}
 		})
 		
-	})
+	}) */
 
 
 </script>
