@@ -12,16 +12,19 @@
         @foreach ($listaoficio as $oficio)
             <ul>
                 <li>
-                    {{ $oficio['Oficio'] }}
+                    {{ $oficio['Oficio']->nombre }}
                     @if ($oficio['Especialidades'])
                         @foreach ($oficio['Especialidades'] as $especialidad)
                             <ul>
                                 <li>
-                                    {{ $especialidad['nombre'] }}
+                                    {{ $especialidad->nombre }}
+                                    <a class="icon-action"  href="{{ route('especialidad.destroyEspecialidad', $especialidad->id) }}" onclick="return confirm('¿Desea eliminar el localidad?')" onkeypress="return confirm('¿Desea eliminar el localidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                        <i class="fa fa-remove"></i>
+                                    </a>
                                     <ul>
-                                        @if ($especialidad['descripcion'])
+                                        @if ($especialidad->descripcion)
                                             <li>
-                                                {{ $especialidad['descripcion'] }}
+                                                {{ $especialidad->descripcion }}
                                             </li>
                                         @endif
                                     </ul>
@@ -41,6 +44,7 @@
                 <div class="col-md-6">
                     <div class="md-form mb-3">
                         <label for="oficio" class="">Oficio</label>
+                        {{-- debe mandarse el nombre d la profesión a la que se agregara la especialidad  --}}
                         <input type="text" id="oficio" name="oficio" value='Plomería' readonly
                             class="form-control" required>
                     </div>

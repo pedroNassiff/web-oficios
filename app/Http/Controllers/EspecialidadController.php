@@ -26,12 +26,10 @@ class EspecialidadController extends Controller
             if($oficio->id != 1){
                 $listaespecialidades = [];
                 $especialidades = Oficio::find($oficio->id)->especialidad;
-                
                 foreach($especialidades as $especialidad){
-                    array_push($listaespecialidades, ['nombre' => $especialidad->nombre, 'descripcion' => $especialidad->descripcion]);
+                    array_push($listaespecialidades, $especialidad);
                 }
-    
-                array_push($listaoficio, ['Oficio'=>$oficio->nombre ,'Especialidades'=>$listaespecialidades]);
+                array_push($listaoficio, ['Oficio'=>$oficio ,'Especialidades'=>$listaespecialidades]);
             }
         }
         //return dd($listaoficio);
@@ -48,28 +46,20 @@ class EspecialidadController extends Controller
      */
     public function store(Request $request)
     {
-        /* $oficio = Oficio::where('nombre', $request['oficio'])->get();
+        try {
+            $oficio = Oficio::where('nombre', $request['oficio'])->first();
+            $especialidad = new Especialidad();
+            $especialidad->nombre =  $request['nombre'];
+            $especialidad->oficio_id =  $oficio->id;
+            $especialidad->descripcion =  $request['descripcion'];
+            $especialidad->save();
+            return back()
+                ->with('message', 'Guardado con Éxito.')->with('typealert', 'success'); 
+        } catch (\Throwable $th) {
+            return back()
+                ->with('message', 'fallo en la operación.')->with('typealert', 'danger'); 
+        }
         
-        $especialidad = new Especialidad();
-        $especialidad->nombre =  $request['nombre'];
-        $especialidad->descripcion =  $request['descripcion'];
-
-        $especialidad->oficio_id =  2;
-
-        $especialidad->save();
-        return redirect()->route('admin.especialidades')->with('message', 'Guardado con Exito.')->with('typealert', 'success'); */
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
@@ -80,6 +70,12 @@ class EspecialidadController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $especialidad = Especialidad::find($id);
+            $especialidad->delete();
+            return back()->with('message', 'Se borró exitosamente: '.$especialidad->nombre)->with('typealert', 'success');
+        } catch (\Throwable $th) {
+            return back()->with('message', 'Error al borrar (No se puede borrar una especialidad se encuentra asignado)')->with('typealert', 'danger');
+        }
     }
 }
