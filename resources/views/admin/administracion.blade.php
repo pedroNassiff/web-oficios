@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,8 +6,9 @@
       <title>@yield('title') Administración</title>
       <meta name="csrf-token" content="{{ csrf_token() }}">
       <meta name="routeName" content="{{ Route::currentRouteName() }}">
-      
+      <link rel="shortcut icon" href="/logo-oficios.png" />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/app.css">
       <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}"/> 
       <!-- <link rel="stylesheet" href="{{ url('/static/css/admin.css?v='.time()) }}"> -->
       <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}"/> 
@@ -22,20 +22,15 @@
   <body>
 
     <!-- Main Nav -->
-    <nav class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow">
-      
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap logout">
-          {{ Auth::user()->name }}  <a class="nav-link" href="{{ url('/logout') }}"> <i class="fas fa-sign-out-alt"></i> </a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      @include('partials.nav')
+    </header>
 
     <!-- Page -->
     <div class="container-fluid">
       <div class="row">
         <!-- Second Nav -->
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
           <div class="sidebar-sticky pt-5">
             <ul class="nav flex-column">
               <li class="nav-item">
@@ -55,13 +50,13 @@
         </nav>
 
         <!-- Main section-->
-        <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-         
+        <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 contenido-tabla">
           @section('content')
           @show
         </main>
 
       </div>
     </div>
+    @include('partials.footer')
   </body>
 </html>

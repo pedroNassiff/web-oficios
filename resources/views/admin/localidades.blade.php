@@ -1,11 +1,11 @@
-@extends('layout')
+@extends('admin/administracion')
 
-@section('title', 'Localidades')
+
 @section('content')
 
 <section class="py-3 mb-5">
 	<div class="container">
-		<h2 class="my-4"> Lista de localidades</h2>
+		<h2 class="my-4"> Localidades</h2>
     @if (session()->has('message'))
       <div class="alert alert-{{ session('typealert') }}">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

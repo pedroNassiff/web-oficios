@@ -11029,6 +11029,16 @@ label {
   /* Vertically center the text there */
 }
 
+.sidebar {
+  background-color: #252533;
+  height: 75vh;
+}
+
+.contenido-tabla {
+  overflow: scroll;
+  height: 425px;
+}
+
 .my-custom-scrollbar {
   position: relative;
   height: 500px;
@@ -11075,9 +11085,47 @@ label {
 .ficha {
   display: flex;
 }
+
+.titulo-detalle {
+  border-bottom: solid 0.1px #78bc57;
+  margin-bottom: 3%;
+}
+
+.avatar {
+  margin-right: 2%;
+}
+
+.user-avatar {
+  height: 200px;
+}
+
+.user-avatar-icon {
+  font-size: 200px;
+  color: #252533;
+}
+
+.datos-prestador {
+  margin-left: 2%;
+}
+
+.ficha {
+  display: flex;
+  justify-content: center;
+}
+
+.opcion a {
+  color: white;
+  width: 200px;
+}
+
+.consultar {
+  margin-bottom: 3%;
+}
+
 .cont-inscrip {
   margin-bottom: 50px;
 }
+
 .ec-stars-wrapper {
   /* Espacio entre los inline-block (los hijos, los `a`) 
      http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */

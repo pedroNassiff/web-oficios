@@ -1,11 +1,10 @@
-@extends('layout')
-
+@extends('admin/administracion')
 @section('title', 'Usuarios')
 
 @section('content')
 <section class="py-3">
 	<div class="container">
-		<h2 class="my-4"> Lista de usuarios</h2>
+		<h2 class="my-4"> Usuarios</h2>
       @if (session()->has('flash_notification.message'))
         <div class="alert alert-{{ session('flash_notification.level') }}">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
