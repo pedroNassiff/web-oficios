@@ -34,19 +34,19 @@
           <div class="sidebar-sticky pt-5">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link {{ Request::segment(1) === 'admin' ? 'active' : null }}" href="{{ url('/admin/administracion') }}"> <i class="fas fa-home"></i> Dashboard </a>
+                <a class="nav-link {{ Request::segment(1) === 'admin' ? 'active' : null }}" href="{{ url('/admin/dashboard') }}"> <i class="fas fa-home"></i> Dashboard </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ Request::segment(1) === 'usuarios' ? 'active' : null }}" href="{{ url('/admin/usuarios') }}"> Usuarios </a>
+                <a class="nav-link {{ Request::segment(1) === 'usuarios' ? 'active' : null }}" href="{{ url('/admin/usuarios') }}"><i class="fas fa-users"></i> Usuarios </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ Request::segment(1) === 'oficios' ? 'active' : null }}" href="{{ url('/admin/indexEspecialidad') }}"> Oficios </a>
+                <a class="nav-link {{ Request::segment(1) === 'oficios' ? 'active' : null }}" href="{{ url('/admin/indexEspecialidad') }}"><i class="fas fa-hard-hat"></i> Oficios </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ Request::segment(1) === 'localidades' ? 'active' : null }}" href="{{ url('/admin/indexLocalidad') }}"> Localidad </a>
+                <a class="nav-link {{ Request::segment(1) === 'localidades' ? 'active' : null }}" href="{{ url('/admin/indexLocalidad') }}"><i class="fas fa-map-marker-alt"></i>  Localidad </a>
               </li>
               <li>
-                <a class="nav-link" href="">Solicitudes</a>
+                <a class="nav-link" href=""><i class="fas fa-user-plus"></i> Solicitudes</a>
               </li>
             </ul>
           </div>

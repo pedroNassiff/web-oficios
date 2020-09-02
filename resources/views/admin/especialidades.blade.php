@@ -50,9 +50,7 @@
                         @endif
                     </td>
                     <td>
-                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Ver"><i class="fa fa-eye"></i></a> 
-                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a> 
-                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Cambiar contraseña"><i class="fa fa-key"></i></a>
+                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Cambiar contraseña"><i class="fas fa-plus-circle"></i></a>
                         <a class="icon-action"  href="" onclick="return confirm('¿Desea eliminar el localidad?')" onkeypress="return confirm('¿Desea eliminar el localidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
                             <i class="fa fa-remove"></i>
                         </a>
