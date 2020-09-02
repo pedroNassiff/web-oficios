@@ -11035,7 +11035,7 @@ label {
 }
 
 .contenido-tabla {
-  overflow: scroll;
+  overflow-y: scroll;
   height: 425px;
 }
 
