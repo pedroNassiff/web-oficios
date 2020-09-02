@@ -26,7 +26,23 @@ class OficioController extends Controller
      */
     public function index()
     {
-        //
+         //listar todas las especialidades
+         $oficios = Oficio::get();
+         $listaoficio = [];
+         foreach ($oficios as $oficio) {
+             if($oficio->id != 1){
+                 $listaespecialidades = [];
+                 $especialidades = Oficio::find($oficio->id)->especialidad;
+                 foreach($especialidades as $especialidad){
+                     array_push($listaespecialidades, $especialidad);
+                 }
+                 array_push($listaoficio, ['Oficio'=>$oficio ,'Especialidades'=>$listaespecialidades]);
+             }
+         }
+         //return dd($listaoficio);
+         return view('admin.altaOficio', [
+             'listaoficio' => $listaoficio
+         ]);
     }
 
     /**

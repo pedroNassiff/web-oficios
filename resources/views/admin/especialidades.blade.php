@@ -50,7 +50,7 @@
                         @endif
                     </td>
                     <td>
-                        <a class="icon-action" href="" data-toggle="tooltip" data-placement="top" title="Añadir oficio/Esp"><i class="fas fa-plus-circle"></i></a>
+                        <a class="icon-action" href="{{ route('admin.altaOficio') }}" data-toggle="tooltip" data-placement="top" title="Añadir oficio/Esp"><i class="fas fa-plus-circle"></i></a>
                         <a class="icon-action"  href="" onclick="return confirm('¿Desea eliminar la especialidad?')" onkeypress="return confirm('¿Desea eliminar la especialidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
                             <i class="fa fa-remove"></i>
                         </a>
