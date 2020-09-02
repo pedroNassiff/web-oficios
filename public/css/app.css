@@ -11039,6 +11039,14 @@ label {
   height: 425px;
 }
 
+.col-oficio {
+  width: 30%;
+}
+
+.col-acciones {
+  width: 30%;
+}
+
 .my-custom-scrollbar {
   position: relative;
   height: 500px;
