@@ -14,9 +14,9 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                  <th scope="col">Oficio</th>
+                  <th class="col-oficio" scope="col">Oficio</th>
                   <th scope="col">Especialidad</th>
-                  <th scope="col">Acciones</th>
+                  <th class="col-acciones centrar" scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,16 +25,24 @@
                     <td> {{ $oficio['Oficio']->nombre }}</td>
                     <td>
                         @if ($oficio['Especialidades'])
+<<<<<<< HEAD
                              @foreach ($oficio['Especialidades'] as $especialidad)
                                 
                                      <p>  
                                         <a class="btn-descripcion" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                         {{ $especialidad->nombre }}
+=======
+                             @foreach ($oficio['Especialidades'] as $especialidad)                                
+                                     <div>  
+                                        <a class="btn-descripcion" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                         {{ $especialidad->nombre }}
+>>>>>>> 2eb51f05f6c758ac0009fd87ec276df760e02de7
                                             <a class="icon-action"  href="{{ route('especialidad.destroyEspecialidad', $especialidad->id) }}" onclick="return confirm('¿Desea eliminar la especialidad?')" onkeypress="return confirm('¿Desea eliminar la especialidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
                                             <i class="fa fa-remove"></i>
                                          </a>
                                         </a>
                                         
+<<<<<<< HEAD
                                     </p>
                                    
                                     @if ($especialidad->descripcion)
@@ -52,10 +60,14 @@
                                             
                          
                                          
+=======
+                                    </div>
+                                        
+>>>>>>> 2eb51f05f6c758ac0009fd87ec276df760e02de7
                               @endforeach                            
                         @endif
                     </td>
-                    <td>
+                    <td class="centrar">
                         <a class="icon-action" href="{{ route('admin.altaOficio') }}" data-toggle="tooltip" data-placement="top" title="Añadir oficio/Esp"><i class="fas fa-plus-circle"></i></a>
                         <a class="icon-action"  href="" onclick="return confirm('¿Desea eliminar la especialidad?')" onkeypress="return confirm('¿Desea eliminar la especialidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
                             <i class="fa fa-remove"></i>
