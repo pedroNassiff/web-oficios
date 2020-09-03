@@ -1,42 +1,17 @@
-<footer class="footer border-top page-footer font-small shadow">
-    <!-- Footer Elements -->
-<div class="container mt-3">
 
-    <!--Grid row-->
-    <div class="row grey" style="margin-bottom: -20px;">
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">            
-            <!--Image-->
-            <div class="view overlay z-depth-1-half text-center">
+<footer class="footer py-4 border-top page-footer font-small shadow">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 logos">
                 <img src="/img/logo_subsec.png" class="img-fluid logsubsec" alt="Logo Subsecretaría de Empleo">
-            </div>            
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">            
-            <!--Image-->
-            <div class="view overlay z-depth-1-half text-center">
-                <img src="/img/logo_industria.png" class="img-fluid" alt="Logo Ministerio de Industria">
-            </div>            
-        </div>
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4">         
-            <!--Image-->
-            <div class="view overlay z-depth-1-half text-center">
+                <img src="/img/logo_industria.png" class="img-fluid logsubsec" alt="Logo Ministerio de Industria">
                 <img src="/img/logo_gob.png" class="img-fluid logob" alt="Logo Gobierno del Chaco">
             </div>
+            <div class="col-lg-3 my-3 my-lg-0 sin_subrayar">
+                <a class="btn-dark btn-social mx-2" href="#!"><i class="fa fa-twitter"></i></a>
+                <a class="btn-dark btn-social mx-2" href="#!"><i class="fa fa-facebook-f"></i></a>
+                <a class="btn-dark btn-social mx-2" href="#!"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
         </div>
-
     </div>
-    <!--Grid row-->
-
-</div>
-<!-- Footer Elements -->
-
-    <!-- Copyright 
-<div class="footer-copyright text-center">
-        {{ config('app.name')}} | {{ date('Y') }}
-</div>
- Copyright -->
-
 </footer>
