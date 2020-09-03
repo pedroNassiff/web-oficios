@@ -26,26 +26,32 @@
                     <td>
                         @if ($oficio['Especialidades'])
                              @foreach ($oficio['Especialidades'] as $especialidad)
-                                <option>
+                                
                                      <p>  
-                                        <a class="btn-descripcion" data-toggle="collapse" href="#collapseExample" role="button"             aria-expanded="false" aria-controls="collapseExample">
-                                         {{ $especialidad->nombre }}
+                                        <a class="btn-descripcion" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        {{ $especialidad->nombre }}
                                             <a class="icon-action"  href="{{ route('especialidad.destroyEspecialidad', $especialidad->id) }}" onclick="return confirm('¿Desea eliminar la especialidad?')" onkeypress="return confirm('¿Desea eliminar la especialidad?')" data-toggle="tooltip" data-placement="top" title="Eliminar">
                                             <i class="fa fa-remove"></i>
                                          </a>
                                         </a>
                                         
                                     </p>
-                                        @if ($especialidad->descripcion)
+                                   
+                                    @if ($especialidad->descripcion)
                                              <div class="collapse" id="collapseExample">
                                                 <div class="card card-body">
                                                     <li>
+                                                    {{ $especialidad->nombre }}
                                                          {{ $especialidad->descripcion }}
                                                     </li>
-                                         @endif
-                                                 </div>
+                                                    </div>
                                             </div>
-                                </option>
+                                  
+                                    
+                                    @endif
+                                            
+                         
+                                         
                               @endforeach                            
                         @endif
                     </td>
