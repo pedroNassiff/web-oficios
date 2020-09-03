@@ -42,51 +42,61 @@
 			<div class="col-md-6 centrar">
 				<h2>Servicios</h2>
 				<div class="table-wrapper-scroll-y my-custom-scrollbar">
-				<table  class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col" style="text-align: left;
-						margin-left: 19%;">Nombre</th>
-                        <th scope="col">Ver más</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-					@foreach ($prestadores as $prestador)
+					<table  class="table table-hover">
+						<thead>
 						<tr>
-							<th scope="row">{{ $loop->iteration }}</th>
-							<td class="td-nya">{{ $prestador->nombre}} {{ $prestador->apellido}}</td>
-							<td><a href="/profesional/{{ $prestador->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></td>
+							<th scope="col">#</th>
+							<th scope="col" style="text-align: left;
+							margin-left: 19%;">Nombre</th>
+							<th scope="col">Ver más</th>
 						</tr>
-					@endforeach
-                    </tbody>
-				</table>
-			</div>
+						</thead>
+						<tbody>
+						@foreach ($prestadores as $prestador)
+							<tr>
+								<th scope="row">{{ $loop->iteration }}</th>
+								<td class="td-nya">{{ $prestador->nombre}} {{ $prestador->apellido}}</td>
+								<td><a href="/profesional/{{ $prestador->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></td>
+							</tr>
+						@endforeach
+						</tbody>
+					</table>
+				</div>
 			</div>
 			<div class="col-md-6 mt-5">
 				<div id="mapa"> </div> 
 			</div>
+		</div>
+	</div>
+</section>
 			
-		<div class="row my-5">
-			<div class="col-md-12">
-				<img class="img-registro" src="/img/brindar.png" alt="">
-			</div>
-			<br>
-			<div class="col-md-12 cont-inscrip">
-				<a class="btn btn-default btn-lg btn-inscribite" href="/inscripcion">¡Inscribite!</a>
-				{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
+<!-- nuevo -->
+
+<section class="shop-banner mb-5">
+	<div class="container">
+		<div class="sale-percent">Sumate a nuestra 
+			<br> Red de prestadores
+		</div>
+		<p class="my-4">
+			La promoción de tus servicios es fundamental para la gestión de futuros trabajos.
+			Contanos dónde y cómo trabajás para que podamos acompañarte en tu vida laboral 
+			 con espacios de <strong> promoción y comercialización. </strong> <br>
+			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.
+     		¡Conseguí nuevos clientes y aumentá tus ingresos!</p>
+		<a href="/inscripcion" class="btn cart-btn btn-lg">Quiero ser parte</a>
+	</div>
+</section>
+			
+<!-- nuevo -->
+
+	{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
 					* Redirige a la ruta /logout con el método POST, ahí el controlador
 					  del logout borra los datos de sesión 
 					* Rediirige a la ruta /home con la sesión cerrada
 				--}}
-				<form id="form-post" action="/logout" method="POST" style="display: none;">
-					@csrf
-				</form>
-			</div>
-		</div>
-</div>
-</section>
-
+<form id="form-post" action="/logout" method="POST" style="display: none;">
+	@csrf
+</form>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX4NPHQOStt_DHvGVDbkbAWfL8XiG01s&callback"
   type="text/javascript"></script>
