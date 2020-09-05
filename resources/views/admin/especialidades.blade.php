@@ -1,7 +1,7 @@
 @extends('admin/administracion')
-
-@section('title', 'Especialidades')
+@section('title', 'Oficios')
 @section('content')
+
 <section class="py-3 mb-5">
 	<div class="container">
         <h2 class="my-4"> Oficios</h2>

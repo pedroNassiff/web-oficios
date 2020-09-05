@@ -101,7 +101,7 @@
 							</div>
 					</div>	
 					<div class="col-md-10 centrar-der">
-						<button class="btn mx-auto" type="submit">Guardar</button>
+						<button class="btn btn-own mx-auto" type="submit">Guardar</button>
 					</div>
 							
 							@csrf

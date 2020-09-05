@@ -9,6 +9,10 @@ class AdminController extends Controller
 {
     public function formAlta(){
     	return view('admin.formAlta');
+	}
+
+	public function index(){
+    	return view('admin.dashboard');
     }
 
     public function altaUsuario(Request $request){
@@ -28,4 +32,7 @@ class AdminController extends Controller
 			return view('admin.administracion');
 		}
 	
+		public function solicitudes(){
+			return view('admin.solicitudes');
+		}
 }

@@ -23,7 +23,7 @@
 					<h2> Mi Perfil </h2>
 				</div>
 				<div class="col-md-6 centrar-der">
-					<a class="btn" href="/perfil/editar">Editar Perfil</a>
+					<a class="btn btn-own" href="/perfil/editar">Editar Perfil</a>
 				</div>
 			</div>
 		

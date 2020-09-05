@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="centrar mt-5">
-                            <button class="btn" type="submit">Enviar</button>
+                            <button class="btn btn-own" type="submit">Enviar</button>
                         </div>
                     </div>
     
