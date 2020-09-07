@@ -59,7 +59,8 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/indexOficio', 'OficioController@index')->name('oficio.indexOficio');
 		Route::post('/admin/storeOficio', 'OficioController@store')->name('oficio.storeOficio');
 		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('oficio.destroyOficio');
-		Route::get('/admin/altaOficio', 'OficioController@index')->name('admin.altaOficio');
+		Route::get('/admin/altaOficio', 'OficioController@index')->name('admin.altaOficio');//La misma ruta para añadir especialidad
+
 		//Especialidad
 		Route::get('/admin/indexEspecialidad', 'EspecialidadController@index')->name('especialidad.indexEspecialidad');
 		Route::post('/admin/storeEspecialidad', 'EspecialidadController@store')->name('especialidad.storeEspecialidad');

@@ -8,6 +8,22 @@
 		{!! session('message') !!}
 	</div>
 @endif
+
+ <!-- Page Header -->
+	<div class="overlay"></div>
+	
+    <div class="containter container-principal">
+	<img src="" class="img-fluid" alt="Responsive image">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1></h1>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
 <section class="py-3">
 	<div class="container text-center">
 		<h2 class="my-4"> ¿Qué estás buscando?</h2>
