@@ -10984,7 +10984,7 @@ label {
 }
 
 .inner-header {
-  background-color: #252533;
+  background-color: #02093b;
 }
 
 .nav-link {
@@ -11108,6 +11108,14 @@ label {
 
 .col-acciones {
   width: 30%;
+}
+
+.img-fluid {
+  width: auto;
+  background-image: url(/images/img_back.svg?afb71a42581fb4858df2458b3abb53e3);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .my-custom-scrollbar {

@@ -59,7 +59,7 @@ label {
 
 //nav
 .inner-header{
-	background-color: #252533;
+	background-color: #02093b;
 }
 .nav-link {
     color: white;
@@ -166,6 +166,16 @@ label {
 }
 
 //Paginación inicio
+.img-fluid{
+	
+	width: auto;
+    background-image: url(../../public/img/img_back.svg);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	
+}
 .my-custom-scrollbar {
 	position: relative;
 	height: 500px;

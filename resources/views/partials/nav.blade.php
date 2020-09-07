@@ -25,6 +25,10 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link {{ setActive('contact') }}" href="/contact">Ingresar | Registrarse</a>
+                </li>
+
+                <li class="nav-item">
                     <li class="nav-item dropdown">
                         <a class="nav-link uppercase  outline" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
