@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>@yield('title') Administración</title>
+      <title>Administración | @yield('title')</title>
       <meta name="csrf-token" content="{{ csrf_token() }}">
       <meta name="routeName" content="{{ Route::currentRouteName() }}">
       <link rel="shortcut icon" href="/logo-oficios.png" />
@@ -34,7 +34,7 @@
           <div class="sidebar-sticky pt-5">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link {{ Request::segment(1) === 'admin' ? 'active' : null }}" href="{{ url('/admin/dashboard') }}"> <i class="fas fa-home"></i> Dashboard </a>
+                <a class="nav-link {{ Request::segment(1) === 'admin' ? 'active' : null }}" href="{{ url('/admin/inicio') }}"> <i class="fas fa-home"></i> Dashboard </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ Request::segment(1) === 'usuarios' ? 'active' : null }}" href="{{ url('/admin/usuarios') }}"><i class="fas fa-users"></i> Usuarios </a>
@@ -46,7 +46,7 @@
                 <a class="nav-link {{ Request::segment(1) === 'localidades' ? 'active' : null }}" href="{{ url('/admin/indexLocalidad') }}"><i class="fas fa-map-marker-alt"></i>  Localidad </a>
               </li>
               <li>
-                <a class="nav-link" href=""><i class="fas fa-user-plus"></i> Solicitudes</a>
+                <a class="nav-link" href="{{ url('/admin/solicitudes') }}"><i class="fas fa-user-plus"></i> Solicitudes</a>
               </li>
             </ul>
           </div>

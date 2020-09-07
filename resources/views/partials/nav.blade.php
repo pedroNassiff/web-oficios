@@ -35,10 +35,7 @@
                             @auth
                             <a class="dropdown-item " href="">Hola {{ auth()->user()->name }} </a>
                             @if(auth()->user()->rol_id == 2)
-                            <a class="dropdown-item" href="/admin/alta">Agregar usuario</a>
-                            <a class="dropdown-item" href="/admin/usuarios">Lista de usuarios</a>
-                            <a class="dropdown-item" href="/admin/indexLocalidad">Lista de localidades</a>
-                            <a class="dropdown-item" href="/admin/indexEspecialidad">Lista de Especialidades</a>
+                            <a class="dropdown-item" href="/admin/inicio">Dashboard</a>
                             @endif
                             @if(auth()->user()->rol_id != 2)
                             <a class="dropdown-item " href="/perfil">Mi Perfil</a>

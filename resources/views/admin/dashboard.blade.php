@@ -1,5 +1,5 @@
 @extends('admin/administracion')
-
+@section('title', 'Inicio')
 @section('content')
 <section class="py-3 mb-5">
 	<div class="container">

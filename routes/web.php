@@ -44,6 +44,7 @@ Route::group(['middleware'=>'auth'], function(){
 
 
 	Route::group(['middleware'=>'admin'], function(){
+		Route::get('/admin/inicio', 'AdminController@index')->name('admin.inicio');
 		Route::get('/admin/alta', 'AdminController@formAlta');
 		Route::post('/admin/alta', 'AdminController@altaUsuario');
 		Route::get('/admin/usuarios', 'UsuariosController@listaUsuarios');
@@ -64,6 +65,8 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/indexEspecialidad', 'EspecialidadController@index')->name('especialidad.indexEspecialidad');
 		Route::post('/admin/storeEspecialidad', 'EspecialidadController@store')->name('especialidad.storeEspecialidad');
 		Route::get('/admin/destroyEspecialidad/{id}', 'EspecialidadController@destroy')->name('especialidad.destroyEspecialidad');
+		//solicitudes
+		Route::get('/admin/solicitudes', 'AdminController@solicitudes')->name('admin.solicitudes');
 	});
 
 });
