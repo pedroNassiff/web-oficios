@@ -75,6 +75,10 @@ label {
 .fa-user:hover {
 	color: #78bc57;
 }
+
+#Ini-reg{
+	border-radius: 1px solid white!important; 
+}
 //footer
 .logob {
     height: 8vh;
@@ -317,15 +321,64 @@ label {
 // fin solicitudes
 
 //Paginación inicio
-.img-fluid{
-	
-	width: auto;
-    background-image: url(../../public/img/img_back.svg);
-	height: 100vh;
-	background-repeat: no-repeat;
-	background-size: cover;
+#hero-container{
+	height: 600px;
+	background-color: #060c3e;
+}
 
+#hero-background{
+	background-color: #02093b;
+	position: absolute;
+	width: 0;
+	height: 600px;
+	transition: .2s ease-in-out;
+}
+
+.display-1 {
+    font-size: 4rem;
+    font-weight: 300;
+	line-height: 1.2;
+	margin-left: -1em;
+}
+.my-4 {
+    margin-bottom: 1.5rem !important;
+    margin-left: -1em;
+}
+.btn{
+	padding: .75rem 2rem;
 	
+}
+
+#boton1{
+	margin-left: 3em;
+	background: none;
+	border-color: white!important; 
+}
+
+
+#boton2{
+	margin-left: 4em;
+	background: none;
+	border-color: white!important; 
+
+}
+#boton1:hover{
+	color: black;
+	background: white!important;
+}
+#boton2:hover{
+	color: black;
+	background: white!important;
+}
+
+#hero-img{
+	margin: 0;
+	margin-top: 30%;
+
+}
+.img-fluid{
+	width: auto!important;
+	background-size: cover;
 }
 .my-custom-scrollbar {
 	position: relative;

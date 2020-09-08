@@ -10,22 +10,35 @@
 @endif
 
  <!-- Page Header -->
-	<div class="overlay"></div>
-	
-    <div class="containter container-principal">
-	<img src="" class="img-fluid" alt="Responsive image">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1></h1>
-           
-          </div>
-        </div>
-      </div>
-    </div>
+	<section id="hero-container">
+		<div id="hero-background"></div>
+		<div id="hero-content" class="container h-100">
+			<div class="row no-gutters h-100 d-flex">
+				<div id="hero-text"class="col-md-6 text-light align-self-center">
+					<h1 class="display-1  mb-4">RED DE OFICIOS</h1>
+					<p class="lead mb-5">¿Te gustaría Ofrecer o Contratar un oficio?</p>
+					<a href="#oferta" id="boton1" class="btn btn btn-success">Ofrecer</a>
+					<a href="#demanda" id="boton2" class="btn btn btn-success">Contratar</a>
+				</div>
+				<div class="col-md-6">
+					<img src="/img/img_back1.svg" id="hero-img" class="position-absolute">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script>
+		window.onload = function() {
+			setTimeout(function() {
+				document.getElementById('hero-background').style.width = '100%';
+			})
+		}
+	</script>
+
 
 <section class="py-3">
-	<div class="container text-center">
+	<div class="container text-center" id="demanda">
 		<h2 class="my-4"> ¿Qué estás buscando?</h2>
         <div class="row mb-5">
 			<div class="col-md-4">
@@ -89,7 +102,7 @@
 <!-- nuevo -->
 
 <section class="shop-banner mb-5">
-	<div class="container">
+	<div class="container" id="oferta">
 		<div class="sale-percent">Sumate a nuestra 
 			<br> Red de prestadores
 		</div>

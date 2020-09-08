@@ -38,6 +38,10 @@ Route::get('/contact', function(){
 	return view ('contact');
 });
 
+Route::get('/ayuda', function(){
+	return view('faq');
+});
+
 Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil', 'ProfesionalController@miPerfil')->name('perfil');
 	Route::get('/perfil/crear', 'ProfesionalController@crearPerfil');
