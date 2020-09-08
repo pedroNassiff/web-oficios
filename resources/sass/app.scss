@@ -317,15 +317,39 @@ label {
 // fin solicitudes
 
 //Paginación inicio
-.img-fluid{
-	
-	width: auto;
-    background-image: url(../../public/img/img_back.svg);
-	height: 100vh;
-	background-repeat: no-repeat;
-	background-size: cover;
+#hero-container{
+	height: 600px;
+	background-color: #060c3e;
+}
 
-	
+#hero-background{
+	background-color: #02093b;
+	position: absolute;
+	width: 0;
+	height: 600px;
+	transition: .2s ease-in-out;
+}
+
+.btn{
+	padding: .75rem 2rem; 
+}
+
+#boton1{
+	margin-left: 3em;
+}
+
+#boton2{
+	margin-left: 4em;
+}
+
+#hero-img{
+	margin: 0;
+	margin-top: 30%;
+
+}
+.img-fluid{
+	width: auto!important;
+	background-size: cover;
 }
 .my-custom-scrollbar {
 	position: relative;
