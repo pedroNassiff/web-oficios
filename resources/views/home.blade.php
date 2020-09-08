@@ -15,7 +15,7 @@
 		<div id="hero-content" class="container h-100">
 			<div class="row no-gutters h-100 d-flex">
 				<div id="hero-text"class="col-md-6 text-light align-self-center">
-					<h1 class="display-1 font-weight-bold mb-4">RED DE OFICIOS</h1>
+					<h1 class="display-1  mb-4">RED DE OFICIOS</h1>
 					<p class="lead mb-5">¿Te gustaría Ofrecer o Contratar un oficio?</p>
 					<a href="" id="boton1" class="btn btn btn-success">Ofrecer</a>
 					<a href="" id="boton2" class="btn btn btn-success">Contratar</a>
