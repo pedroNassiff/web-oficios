@@ -21,8 +21,8 @@
                         <div class="panel-body">
                             <div class="pull-right">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-success btn-filter" data-target="pagado">Pagado</button>
-                                    <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
+                                    <button type="button" class="btn btn-success btn-filter" data-target="pagado">Confirmados</button>
+                                    <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendientes</button>
                                     <button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
                                 </div>
                             </div>
