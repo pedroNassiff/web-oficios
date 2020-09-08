@@ -34,6 +34,9 @@ Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
 Route::get('/acuerdo', function(){
 	return view ('terminos_y_condiciones');
 });
+Route::get('/contact', function(){
+	return view ('contact');
+});
 
 Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil', 'ProfesionalController@miPerfil')->name('perfil');
