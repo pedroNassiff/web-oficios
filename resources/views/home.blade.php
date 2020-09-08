@@ -17,8 +17,8 @@
 				<div id="hero-text"class="col-md-6 text-light align-self-center">
 					<h1 class="display-1  mb-4">RED DE OFICIOS</h1>
 					<p class="lead mb-5">¿Te gustaría Ofrecer o Contratar un oficio?</p>
-					<a href="" id="boton1" class="btn btn btn-success">Ofrecer</a>
-					<a href="" id="boton2" class="btn btn btn-success">Contratar</a>
+					<a href="#oferta" id="boton1" class="btn btn btn-success">Ofrecer</a>
+					<a href="#demanda" id="boton2" class="btn btn btn-success">Contratar</a>
 				</div>
 				<div class="col-md-6">
 					<img src="/img/img_back1.svg" id="hero-img" class="position-absolute">
@@ -38,7 +38,7 @@
 
 
 <section class="py-3">
-	<div class="container text-center">
+	<div class="container text-center" id="demanda">
 		<h2 class="my-4"> ¿Qué estás buscando?</h2>
         <div class="row mb-5">
 			<div class="col-md-4">
@@ -102,7 +102,7 @@
 <!-- nuevo -->
 
 <section class="shop-banner mb-5">
-	<div class="container">
+	<div class="container" id="oferta">
 		<div class="sale-percent">Sumate a nuestra 
 			<br> Red de prestadores
 		</div>

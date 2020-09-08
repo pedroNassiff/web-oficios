@@ -11004,6 +11004,10 @@ label {
   color: #78bc57;
 }
 
+#Ini-reg {
+  border-radius: 1px solid white !important;
+}
+
 .logob {
   height: 8vh;
 }
@@ -11323,10 +11327,24 @@ label {
 
 #boton1 {
   margin-left: 3em;
+  background: none;
+  border-color: white !important;
 }
 
 #boton2 {
   margin-left: 4em;
+  background: none;
+  border-color: white !important;
+}
+
+#boton1:hover {
+  color: black;
+  background: white !important;
+}
+
+#boton2:hover {
+  color: black;
+  background: white !important;
 }
 
 #hero-img {

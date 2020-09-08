@@ -75,6 +75,10 @@ label {
 .fa-user:hover {
 	color: #78bc57;
 }
+
+#Ini-reg{
+	border-radius: 1px solid white!important; 
+}
 //footer
 .logob {
     height: 8vh;
@@ -341,15 +345,30 @@ label {
     margin-left: -1em;
 }
 .btn{
-	padding: .75rem 2rem; 
+	padding: .75rem 2rem;
+	
 }
 
 #boton1{
 	margin-left: 3em;
+	background: none;
+	border-color: white!important; 
 }
+
 
 #boton2{
 	margin-left: 4em;
+	background: none;
+	border-color: white!important; 
+
+}
+#boton1:hover{
+	color: black;
+	background: white!important;
+}
+#boton2:hover{
+	color: black;
+	background: white!important;
 }
 
 #hero-img{
