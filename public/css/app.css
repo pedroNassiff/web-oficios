@@ -10949,6 +10949,10 @@ body {
   color: white;
 }
 
+.btn-success {
+  background: none;
+}
+
 button:hover {
   background: #78bc57;
 }
@@ -11365,6 +11369,7 @@ label {
 #hero-img {
   margin: 0;
   margin-top: 30%;
+  margin-right: -149px;
 }
 
 .img-fluid {
@@ -11376,6 +11381,22 @@ label {
   position: relative;
   height: 500px;
   overflow: auto;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-top: 170px;
+  margin-left: -60px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 250px;
+  background: #000;
 }
 
 .table-wrapper-scroll-y {
