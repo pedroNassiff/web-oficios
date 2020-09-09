@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Contacto')
+@section('title', 'Ayuda')
 
 @section('content')
     <div class="row display-flex justify-content-center mt-5">
