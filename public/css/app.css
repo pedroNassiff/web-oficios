@@ -1,11 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;
 
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+0,700;1,500&family=Roboto:wght@300;500;700&display=swap);@charset "UTF-8";
 
 :root {
   --blue: #3490dc;
@@ -11221,8 +11216,8 @@ label {
 }
 
 .ckbox input[type=checkbox]:checked + label:before {
-  border-color: #2BBCDE;
-  background-color: #2BBCDE;
+  border-color: #2bbcde;
+  background-color: #2bbcde;
 }
 
 .ckbox input[type=checkbox]:checked + label:after {
@@ -11242,7 +11237,7 @@ label {
 }
 
 .table-filter .star.star-checked {
-  color: #F0AD4E;
+  color: #f0ad4e;
 }
 
 .table-filter .star:hover {
@@ -11250,7 +11245,7 @@ label {
 }
 
 .table-filter .star.star-checked:hover {
-  color: #F0AD4E;
+  color: #f0ad4e;
 }
 
 .table-filter .media-photo {
@@ -11268,7 +11263,7 @@ label {
 }
 
 .table-filter .media .title {
-  color: #2BBCDE;
+  color: #2bbcde;
   font-size: 14px;
   font-weight: bold;
   line-height: normal;
@@ -11381,6 +11376,44 @@ label {
   height: 350px;
 }
 
+.help-subtitle {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.help-btn {
+  height: 55px;
+  width: 100%;
+  border-radius: 30px;
+  background: transparent;
+  border-color: #02093b;
+  color: #02093b;
+}
+
+.help-btn:hover {
+  background: #02093b;
+  color: white;
+  border-color: white;
+}
+
+.help-btn:focus {
+  outline: none;
+}
+
+.question-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.question-body {
+  font-size: 16px;
+  font-weight: initial;
+}
+
+.btn-container {
+  margin-bottom: 20px;
+}
+
 .shop-banner {
   position: relative;
   background-color: #f5f5f5;
@@ -11473,12 +11506,12 @@ a.cart-btn {
 
 .ec-stars-wrapper {
   /* Espacio entre los inline-block (los hijos, los `a`) 
-     http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+    http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
   font-size: 0;
   /* Podríamos quitarlo, 
-  	pero de esta manera (siempre que no le demos padding), 
-  	sólo aplicará la regla .ec-stars-wrapper:hover a cuando
-  	también se esté haciendo hover a alguna estrella */
+  pero de esta manera (siempre que no le demos padding), 
+  sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+  también se esté haciendo hover a alguna estrella */
   display: inline-block;
 }
 
