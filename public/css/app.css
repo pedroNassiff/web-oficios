@@ -1,11 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;
 
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+0,700;1,500&family=Roboto:wght@300;500;700&display=swap);@charset "UTF-8";
 
 :root {
   --blue: #3490dc;
@@ -10946,16 +10941,35 @@ body {
 
 .btn-own {
   background-color: #343a40;
-  border: #78bc57;
   color: white;
 }
 
-a.btn:hover {
-  background: #78bc57;
+.btn-success {
+  background: none;
 }
 
 button:hover {
   background: #78bc57;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.9rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0.25rem;
 }
 
 label {
@@ -11221,8 +11235,8 @@ label {
 }
 
 .ckbox input[type=checkbox]:checked + label:before {
-  border-color: #2BBCDE;
-  background-color: #2BBCDE;
+  border-color: #2bbcde;
+  background-color: #2bbcde;
 }
 
 .ckbox input[type=checkbox]:checked + label:after {
@@ -11242,7 +11256,7 @@ label {
 }
 
 .table-filter .star.star-checked {
-  color: #F0AD4E;
+  color: #f0ad4e;
 }
 
 .table-filter .star:hover {
@@ -11250,7 +11264,7 @@ label {
 }
 
 .table-filter .star.star-checked:hover {
-  color: #F0AD4E;
+  color: #f0ad4e;
 }
 
 .table-filter .media-photo {
@@ -11268,7 +11282,7 @@ label {
 }
 
 .table-filter .media .title {
-  color: #2BBCDE;
+  color: #2bbcde;
   font-size: 14px;
   font-weight: bold;
   line-height: normal;
@@ -11350,6 +11364,7 @@ label {
 #hero-img {
   margin: 0;
   margin-top: 30%;
+  margin-right: -149px;
 }
 
 .img-fluid {
@@ -11361,6 +11376,22 @@ label {
   position: relative;
   height: 500px;
   overflow: auto;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-top: 170px;
+  margin-left: -60px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 250px;
+  background: #000;
 }
 
 .table-wrapper-scroll-y {
@@ -11379,6 +11410,44 @@ label {
 #mapa {
   width: 450px;
   height: 350px;
+}
+
+.help-subtitle {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.help-btn {
+  height: 55px;
+  width: 100%;
+  border-radius: 30px;
+  background: transparent;
+  border-color: #02093b;
+  color: #02093b;
+}
+
+.help-btn:hover {
+  background: #02093b;
+  color: white;
+  border-color: white;
+}
+
+.help-btn:focus {
+  outline: none;
+}
+
+.question-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.question-body {
+  font-size: 16px;
+  font-weight: initial;
+}
+
+.btn-container {
+  margin-bottom: 20px;
 }
 
 .shop-banner {
@@ -11415,72 +11484,6 @@ a.cart-btn {
   line-height: 1.2em;
   width: 50%;
   text-align: justify;
-}
-
-.contacto {
-  margin-top: 10%;
-}
-
-section#contact .section-heading {
-  font-family: "Roboto", sans-serif;
-  font-size: 43px;
-}
-
-section#contact .section-subheading {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  width: 75%;
-  margin-left: 0px;
-}
-
-section#contact .form-control {
-  display: block;
-  box-sizing: border-box;
-  width: 75%;
-  height: 2.21591rem;
-  margin: 0 0 -1.09091rem;
-  padding: 0.45455rem;
-  border: 1px solid #BBBDC8;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  font-family: inherit;
-  font-size: 0.90909rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000;
-  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-}
-
-section#contact .form-control:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  border-color: #02093B;
-}
-
-section#contact .form-group-textarea .form-control {
-  height: 150px;
-}
-
-.hollow {
-  border: 1px solid #02093B;
-  color: #02093B;
-  margin-right: 25%;
-}
-
-.hollow:hover {
-  background-color: #02093B;
-  color: white;
-}
-
-.img-contact {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.img-contact img {
-  height: 100%;
-  margin-right: 4%;
 }
 
 .contenedor-datos {
@@ -11539,12 +11542,12 @@ section#contact .form-group-textarea .form-control {
 
 .ec-stars-wrapper {
   /* Espacio entre los inline-block (los hijos, los `a`) 
-     http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+    http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
   font-size: 0;
   /* Podríamos quitarlo, 
-  	pero de esta manera (siempre que no le demos padding), 
-  	sólo aplicará la regla .ec-stars-wrapper:hover a cuando
-  	también se esté haciendo hover a alguna estrella */
+  pero de esta manera (siempre que no le demos padding), 
+  sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+  también se esté haciendo hover a alguna estrella */
   display: inline-block;
 }
 

@@ -22,6 +22,18 @@
 				</div>
 				<div class="col-md-6">
 					<img src="/img/img_back1.svg" id="hero-img" class="position-absolute">
+							 <!--Slider -->
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									
+								<div class="swiper-slide" style="background-image:url(../public/img/inscribite.png)"></div>
+								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
+								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
+								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
+								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
+								<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+							
 				</div>
 			</div>
 		</div>
@@ -35,6 +47,31 @@
 			})
 		}
 	</script>
+
+ <!-- Inicio slider -->
+ <script>
+    var swiper = new Swiper ('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+	  
+      pagination: {
+        el: '.swiper-pagination',
+      },
+	  autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
 
 
 <section class="py-3">
