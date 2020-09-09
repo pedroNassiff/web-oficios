@@ -139,7 +139,7 @@ label {
   }
   .btn-dark:hover {
 	color: #fff;
-	background-color: #23272b;
+	background-color: #78bc57;
 	border-color: #1d2124;
   }
   .btn-dark:focus, .btn-dark.focus {
@@ -509,6 +509,10 @@ a.cart-btn {
 }
 
 //contact
+
+section#contact {
+  background-image: url(../../public/img/contact2.png);
+}
 .contacto {
   margin-top: 10%;
 }
@@ -564,16 +568,6 @@ section#contact .form-group-textarea .form-control {
   color: white;
 }
 
-.img-contact {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.img-contact img {
-  height: 100%;
-  margin-right: 4%;
-}
 
 //profesionalPerfil
 .contenedor-datos {

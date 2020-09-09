@@ -11067,7 +11067,7 @@ label {
 
 .btn-dark:hover {
   color: #fff;
-  background-color: #23272b;
+  background-color: #78bc57;
   border-color: #1d2124;
 }
 
@@ -11364,7 +11364,6 @@ label {
 #hero-img {
   margin: 0;
   margin-top: 30%;
-  margin-right: -149px;
 }
 
 .img-fluid {
@@ -11484,6 +11483,65 @@ a.cart-btn {
   line-height: 1.2em;
   width: 50%;
   text-align: justify;
+}
+
+section#contact {
+  background-image: url(/images/contact2.png?2d8f6591826d2f91a065a4da26def1b9);
+}
+
+.contacto {
+  margin-top: 10%;
+}
+
+section#contact .section-heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 43px;
+}
+
+section#contact .section-subheading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  width: 75%;
+  margin-left: 0px;
+}
+
+section#contact .form-control {
+  display: block;
+  box-sizing: border-box;
+  width: 75%;
+  height: 2.21591rem;
+  margin: 0 0 -1.09091rem;
+  padding: 0.45455rem;
+  border: 1px solid #BBBDC8;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  font-size: 0.90909rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+
+section#contact .form-control:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-color: #02093B;
+}
+
+section#contact .form-group-textarea .form-control {
+  height: 150px;
+}
+
+.hollow {
+  border: 1px solid #02093B;
+  color: #02093B;
+  margin-right: 25%;
+}
+
+.hollow:hover {
+  background-color: #02093B;
+  color: white;
 }
 
 .contenedor-datos {
