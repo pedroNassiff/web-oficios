@@ -7,7 +7,8 @@
 //Bootstrap
 @import '~bootstrap/scss/bootstrap';
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
   }
   
 html {
@@ -24,16 +25,35 @@ html {
 
 .btn-own {
     background-color: #343a40;
-    border: #78bc57;
+   
     color: white;
 }
 a.btn:hover{
-	background: #78bc57;
+	
 }
 
 button:hover {
 	background:#78bc57 ;
 }
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 10rem;
+	padding: 0.5rem 0;
+	margin: 0.125rem 0 0;
+	font-size: 0.9rem;
+	color: #212529;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: none;
+	border-radius: 0.25rem;
+  }
 
 label {
 	margin-bottom: 0%;
@@ -76,6 +96,7 @@ label {
 	color: #78bc57;
 }
 
+
 #Ini-reg{
 	border-radius: 1px solid white!important; 
 }
@@ -103,6 +124,7 @@ label {
 .sin_subrayar a {
 	text-decoration: none;
 }
+
 .btn-social {
 	height: 2.5rem;
 	width: 2.5rem;

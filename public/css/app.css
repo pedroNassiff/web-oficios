@@ -10946,16 +10946,31 @@ body {
 
 .btn-own {
   background-color: #343a40;
-  border: #78bc57;
   color: white;
-}
-
-a.btn:hover {
-  background: #78bc57;
 }
 
 button:hover {
   background: #78bc57;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.9rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0.25rem;
 }
 
 label {
