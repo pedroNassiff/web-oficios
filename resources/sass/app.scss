@@ -7,16 +7,9 @@
 //Bootstrap
 @import "~bootstrap/scss/bootstrap";
 * {
-<<<<<<< HEAD
-	box-sizing: border-box;
-	
-  }
-  
-=======
   box-sizing: border-box;
 }
 
->>>>>>> 24639302e3c5bf427f9d40c1698e51255c2674bb
 html {
   position: relative;
   min-height: 100%;
@@ -30,27 +23,72 @@ body {
 //Generales
 
 
-.btn-own {
-<<<<<<< HEAD
-    background-color: #343a40;
-   
-    color: white;
-}
-.btn-success{
-	background: none;
-=======
-  background-color: #343a40;
-  border: #78bc57;
-  color: white;
-}
-a.btn:hover {
-  background: #78bc57;
->>>>>>> 24639302e3c5bf427f9d40c1698e51255c2674bb
+
+
+
+
+
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  color: #e48f27;
+  font-weight: 500;
+  
 }
 
-button:hover {
-  background: #78bc57;
+//boton de ingresar
+#btn-logreg{
+  margin-right: -10em;
 }
+.btn{
+  background-color: transparent;
+  color: #e48f27;
+
+}
+.btn:hover{
+  border: 1px solid  #e48f27!important;
+  background-color: transparent;
+  color: white;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #e48f27;
+  background: #e48f27;
+  border-bottom: 1px solid #e48f27!important;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white!important;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 .dropdown-menu {
 	position: absolute;
 	top: 100%;
@@ -96,11 +134,15 @@ label {
 .inner-header {
   background-color: #02093b;
 }
+
 .nav-link {
   color: white;
+  font-weight: 500;
+  margin-left: 0;
+  margin-right: 2em;
 }
 .nav-link:hover {
-  color: #78bc57;
+  color: #e48f27;
 }
 
 .fa-user {
@@ -111,14 +153,8 @@ label {
   color: #78bc57;
 }
 
-<<<<<<< HEAD
-
-#Ini-reg{
-	border-radius: 1px solid white!important; 
-=======
 #Ini-reg {
   border-radius: 1px solid white !important;
->>>>>>> 24639302e3c5bf427f9d40c1698e51255c2674bb
 }
 //footer
 .logob {
@@ -368,11 +404,11 @@ label {
 //Paginación inicio
 #hero-container {
   height: 600px;
-  background-color: #060c3e;
+  background-color: #eaeaea;
 }
 
 #hero-background {
-  background-color: #02093b;
+  background-color: #eaeaea;
   position: absolute;
   width: 0;
   height: 600px;
@@ -381,20 +417,28 @@ label {
 
 .display-1 {
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.2;
-  margin-left: -1em;
+  margin-left: -2em;
+  color: #0e263e;
 }
 .my-4 {
   margin-bottom: 1.5rem !important;
   margin-left: -1em;
+  color: #0e263e;
 }
+.mb-5{
+  color: #0e263e;
+  margin-left: -3em;
+  font-weight: 400;
+}
+
 .btn {
   padding: 0.75rem 2rem;
 }
 
 #boton1 {
-  margin-left: 3em;
+  margin-left: -1.8em;
   background: none;
   border-color: white !important;
 }

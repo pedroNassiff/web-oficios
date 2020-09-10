@@ -15,20 +15,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav ml-auto">
                 <li class="nav-item ">
-                    <a class="nav-link {{ setActive('home') }}" href="/">Inicio</a>
+                    <a class="nav-link {{ setActive('home') }}" href="/">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ setActive('about') }}" href="/about">Acerca de</a>
+                    <a class="nav-link {{ setActive('about') }}" href="/about">ACERCA DE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ setActive('contact') }}" href="/contact">Contacto</a>
+                    <a class="nav-link {{ setActive('contact') }}" href="/contact">CONTACTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ setActive('contact') }}" href="/ayuda">AYUDA</a>
                 </li>
 
                 
 
                 <li class="nav-item">
                     <li class="nav-item dropdown">
-                        <a class="btn btn btn-success  outline"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ingresar | Registrarse</i></a>
+                        <a class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27!important; color:white;"   data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="btn-logreg">Ingresar | Registrarse</i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             @auth
                             <a class="dropdown-item " href="">Hola {{ auth()->user()->name }} </a>
