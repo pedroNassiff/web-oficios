@@ -96,62 +96,31 @@
 
 
 <section class="py-3">
-	<div class="container text-center" id="demanda">
-		<h2 class="my-4"> ¿Qué estás buscando?</h2>
-        <div class="row mb-5">
-			<div class="col-md-4">
-				<form action="/buscar" method="POST">
-					
-					<input type="hidden" name="_token" value="{{ csrf_token() }}">
-					<label for="categoria">Seleccioná un servicio</label>
-					<select class="browser-default custom-select" name="rubro_id">
-						<option value="" disabled>Seleccionar</option>
-						@foreach ($listaoficio as $lista)
-							<option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
-						@endforeach
-					</select>
-			</div>
-			<div class="col-md-4">
-						<label for="localidad">Seleccioná una localidad</label>
-						<select class="browser-default custom-select" name="localidad_id" placeholder="Localidades">
-							<option value="" disabled>Seleccionar</option>
-							@foreach ($localidades as $localidad)
-							<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
-						@endforeach
-						</select>
-			</div>
-			<div class="col-md-4">			
-						<button class="btn btn-own btn-default btn-buscar" type="submit">Buscar</button>
-				</form>
-			</div>
-		</div>
+	<div class="filter-bar">
+
+	</div>
+	<div class="container">
 		<div class="row">
-			<div class="col-md-6 centrar">
-				<h2>Servicios</h2>
-				<div class="table-wrapper-scroll-y my-custom-scrollbar">
-					<table  class="table table-hover">
-						<thead>
-						<tr>
-							<th scope="col">#</th>
-							<th scope="col" style="text-align: left;
-							margin-left: 19%;">Nombre</th>
-							<th scope="col">Ver más</th>
-						</tr>
-						</thead>
-						<tbody>
-						@foreach ($prestadores as $prestador)
-							<tr>
-								<th scope="row">{{ $loop->iteration }}</th>
-								<td class="td-nya">{{ $prestador->nombre}} {{ $prestador->apellido}}</td>
-								<td><a href="/profesional/{{ $prestador->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></td>
-							</tr>
-						@endforeach
-						</tbody>
-					</table>
-				</div>
+			<div class="col-md-6 cards">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+					  <div class="swiper-slide">Slide 1</div>
+					  <div class="swiper-slide">Slide 2</div>
+					  <div class="swiper-slide">Slide 3</div>
+					  <div class="swiper-slide">Slide 4</div>
+					  <div class="swiper-slide">Slide 5</div>
+					  <div class="swiper-slide">Slide 6</div>
+					  <div class="swiper-slide">Slide 7</div>
+					  <div class="swiper-slide">Slide 8</div>
+					  <div class="swiper-slide">Slide 9</div>
+					  <div class="swiper-slide">Slide 10</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				  </div>
 			</div>
-			<div class="col-md-6 mt-5">
-				<div id="mapa"> </div> 
+			<div class="col-md-6 map">
+
 			</div>
 		</div>
 	</div>
