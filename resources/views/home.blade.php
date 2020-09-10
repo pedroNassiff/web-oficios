@@ -21,7 +21,7 @@
 					<a href="#demanda" id="boton2" class="btn  hvr-sweep-to-right" style="border: 1px solid  #e48f27!important;">Contratar</a>
 				</div>
 				<div class="col-md-6">
-					<img src="/img/img_back1.svg" id="hero-img" class="position-absolute">
+					
 							 <!--Slider -->
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
