@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="page-section" id="contact">
+<section class="page-section mb-4" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -45,9 +45,6 @@
                         <button class="btn hollow" id="sendMessageButton" type="submit">Enviar</button>
                     </div>
                 </form>
-            </div>
-            <div class="col-md-6 img-contact">
-               <img class="" src="/img/contact.png" alt="">
             </div>
         </div>
     </div>

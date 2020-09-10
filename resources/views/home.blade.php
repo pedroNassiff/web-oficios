@@ -26,11 +26,32 @@
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									
-								<div class="swiper-slide" style="background-image:url(../public/img/inscribite.png)"></div>
-								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
-								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
-								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
-								<div class="swiper-slide" style="background-image:url(../../public/img/inscribite.png)"></div>
+								<div class="swiper-slide rounded shadow" style="background-image: url(/img/electricidad.png);">
+									<h2 class="titulo-card" >Electricidad</h2>
+									<h3 class="nombre-card">Roberto Díaz</h3>
+								</div>
+								<div class="swiper-slide rounded shadow" style="background-image: url(/img/cuidadora.png);">
+									<h2 class="titulo-card" >Cuidado de personas</h2>
+									<h3 class="nombre-card">Belén Perez</h3>
+								</div>
+								<div class="swiper-slide rounded shadow" style="background-image: url(/img/albanileria.png);">
+									<h2 class="titulo-card" >Albañilería</h2>
+									<h3 class="nombre-card">Pablo Ruíz</h3>
+								</div>
+								<div class="swiper-slide rounded shadow" style="background-image: url(/img/electronica.png);">
+									<h2 class="titulo-card" >Electrónica</h2>
+									<h3 class="nombre-card">Gonzalo Baéz</h3>
+								</div>
+								<div class="swiper-slide rounded shadow" style="background-image: url(/img/tapiceria.png);">
+									<h2 class="titulo-card" >Tapicería</h2>
+									<div class="text-center">
+										<h3 class="nombre-card">Diana Ortiz</h3>
+									</div>
+								</div>
+								<div class="swiper-slide rounded shadow" style="background-image: url(/img/mecanica.png);">
+									<h2 class="titulo-card" >Mecánica de autos</h2>
+									<h3 class="nombre-card">Franco Lopez</h3>
+								</div>
 								<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 							
