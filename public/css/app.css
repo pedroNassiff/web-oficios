@@ -11393,6 +11393,22 @@ label {
   background: #000;
 }
 
+.titulo-card {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+}
+
+.nombre-card {
+  position: absolute;
+  bottom: 25px;
+  left: 27px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
 .table-wrapper-scroll-y {
   display: block;
 }
