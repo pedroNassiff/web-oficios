@@ -10984,6 +10984,15 @@ body {
   transition-timing-function: ease-out;
 }
 
+.btn-own {
+  background-color: #343a40;
+  color: white;
+}
+
+.btn-success {
+  background: none;
+}
+
 .hvr-sweep-to-right:hover,
 .hvr-sweep-to-right:focus,
 .hvr-sweep-to-right:active {
@@ -11482,6 +11491,32 @@ label {
   height: 350px;
 }
 
+section#filter .filter-bar {
+  max-width: 1024px;
+}
+
+section#filter .swiper-container-filter {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#filter .swiper-slide-filter {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2);
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#filter .nya-filter {
+  border-radius: 34px;
+}
+
 .help-subtitle {
   font-size: 16px;
   font-weight: lighter;
@@ -11556,8 +11591,6 @@ a.cart-btn {
   text-align: justify;
 }
 
-<<<<<<< HEAD
-=======
 section#contact {
   background-image: url(/images/contact2.png?2d8f6591826d2f91a065a4da26def1b9);
 }
@@ -11617,7 +11650,6 @@ section#contact .form-group-textarea .form-control {
   color: white;
 }
 
->>>>>>> c55335eb955b2d979e07378d44b182b63c46ec04
 .contenedor-datos {
   padding-top: 3%;
   text-align: left;
