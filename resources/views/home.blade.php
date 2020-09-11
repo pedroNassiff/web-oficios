@@ -95,32 +95,78 @@
   </script>
 
 
-<section class="py-3">
-	<div class="filter-bar">
-
+<section class="py-3" id="filter">
+	<div class="filter-bar text-center">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<input class="nya-filter" type="text" placeholder="Nombre y apellido">
+			</div>
+			<div class="col-md-2">
+				<select class="browser-default custom-select" name="localidad_id" placeholder="Localidades">
+					<option value="" disabled>Seleccionar</option>
+					@foreach ($localidades as $localidad)
+					<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
+					@endforeach
+				</select>
+			</div>
+			<div class="col-md-2">
+				<select class="browser-default custom-select" name="rubro_id">
+					<option value="" disabled>Seleccionar</option>
+					@foreach ($listaoficio as $lista)
+						<option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
+					@endforeach
+				</select>
+			</div>
+			<div class="col-md-2">
+				<select class="browser-default custom-select" name="">
+					<option value="" disabled>Seleccionar</option>
+					<option value="">Esp 1</option>
+					<option value="">Esp 2</option>
+					<option value="">Esp 3</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-default" type="submit">Buscar</button>
+			</div>
+		</div>
 	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 cards">
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-					  <div class="swiper-slide">Slide 1</div>
-					  <div class="swiper-slide">Slide 2</div>
-					  <div class="swiper-slide">Slide 3</div>
-					  <div class="swiper-slide">Slide 4</div>
-					  <div class="swiper-slide">Slide 5</div>
-					  <div class="swiper-slide">Slide 6</div>
-					  <div class="swiper-slide">Slide 7</div>
-					  <div class="swiper-slide">Slide 8</div>
-					  <div class="swiper-slide">Slide 9</div>
-					  <div class="swiper-slide">Slide 10</div>
+				<div class="swiper-container-filter">
+					<div class="swiper-wrapper-filter">
+					  <div class="swiper-slide-filter">Slide 1</div>
+					  <div class="swiper-slide-filter">Slide 2</div>
+					  <div class="swiper-slide-filter">Slide 3</div>
+					  <div class="swiper-slide-filter">Slide 4</div>
+					  <div class="swiper-slide-filter">Slide 5</div>
+					  <div class="swiper-slide-filter">Slide 6</div>
+					  <div class="swiper-slide-filter">Slide 7</div>
+					  <div class="swiper-slide-filter">Slide 8</div>
+					  <div class="swiper-slide-filter">Slide 9</div>
+					  <div class="swiper-slide-filter">Slide 10</div>
 					</div>
 					<!-- Add Pagination -->
-					<div class="swiper-pagination"></div>
+					<div class="swiper-pagination-filter"></div>
 				  </div>
+				  <!-- Swiper JS -->
+				<script src="../package/swiper-bundle.min.js"></script>
+
+				<!-- Initialize Swiper -->
+				<script>
+					var swiper = new Swiper('.swiper-container-filter', {
+					slidesPerView: 2,
+					slidesPerColumn: 2,
+					spaceBetween: 30,
+					pagination: {
+						el: '.swiper-pagination-filter',
+						clickable: true,
+					},
+					});
+				</script>
 			</div>
 			<div class="col-md-6 map">
-
+				<div id="mapa"> </div> 
 			</div>
 		</div>
 	</div>
