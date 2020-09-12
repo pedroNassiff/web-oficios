@@ -11368,11 +11368,11 @@ label {
 
 #hero-container {
   height: 600px;
-  background-color: #eaeaea;
+  background-color: #02093b;
 }
 
 #hero-background {
-  background-color: #eaeaea;
+  background-color: #02093b;
   position: absolute;
   width: 0;
   height: 600px;
@@ -11384,17 +11384,17 @@ label {
   font-weight: 600;
   line-height: 1.2;
   margin-left: -2em;
-  color: #0e263e;
+  color: white;
 }
 
 .my-4 {
   margin-bottom: 1.5rem !important;
   margin-left: -1em;
-  color: #0e263e;
+  color: white;
 }
 
 .mb-5 {
-  color: #0e263e;
+  color: white;
   margin-left: -3em;
   font-weight: 400;
 }

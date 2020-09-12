@@ -8,17 +8,10 @@
 @import "~bootstrap/scss/bootstrap";
 
 * {
-<<<<<<< HEAD
-	box-sizing: border-box;
-	
-  }
-  
-=======
   box-sizing: border-box;
 }
 
 
->>>>>>> da638fa1de4c04f146458c8892f388c2792ace02
 html {
   position: relative;
   min-height: 100%;
@@ -32,8 +25,6 @@ body {
 //Generales
 
 
-<<<<<<< HEAD
-=======
 .hvr-sweep-to-right {
   display: inline-block;
   vertical-align: middle;
@@ -87,7 +78,6 @@ body {
   transition-timing-function: ease-out;
 }
 
->>>>>>> da638fa1de4c04f146458c8892f388c2792ace02
 .btn-own {
     background-color: #343a40;
    
@@ -414,11 +404,11 @@ label {
 //Paginación inicio
 #hero-container {
   height: 600px;
-  background-color: #0e263e;
+  background-color: #02093b;
 }
 
 #hero-background {
-  background-color: #0e263e;
+  background-color: #02093b;
   position: absolute;
   width: 0;
   height: 600px;
@@ -430,15 +420,15 @@ label {
   font-weight: 600;
   line-height: 1.2;
   margin-left: -2em;
-  color: #0e263e;
+  color: white;
 }
 .my-4 {
   margin-bottom: 1.5rem !important;
   margin-left: -1em;
-  color: #0e263e;
+  color: white;
 }
 .mb-5{
-  color: #0e263e;
+  color: white;
   margin-left: -3em;
   font-weight: 400;
 }
