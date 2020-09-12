@@ -11487,9 +11487,8 @@ label {
 }
 
 #mapa {
-  width: 450px;
-  height: 520px;
-  margin-top: 4%;
+  width: 540px;
+  height: 595px;
 }
 
 section#filter .swiper-container-filter {
@@ -11507,6 +11506,7 @@ section#filter .swiper-container-filter {
   margin-top: -11px;
   padding-top: 10px;
   padding-bottom: 15px;
+  max-width: 1364px;
 }
 
 .search-btn {
@@ -11526,17 +11526,6 @@ section#filter .swiper-container-filter {
   outline: none;
 }
 
-section#filter .swiper-slide-filter {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  height: calc((100% - 30px) / 2);
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 section#filter .nya-filter {
   border-radius: 34px;
   width: 100%;
@@ -11549,16 +11538,21 @@ section#filter .nya-filter {
   outline: none;
 }
 
-section#filter .carousel-indicators {
-  bottom: -30px;
-}
-
-section#filter .carousel-indicators li {
-  background-color: #0e263e;
-}
-
 section#filter .name-card {
   font-family: "Roboto", sans-serif;
+  color: white;
+  border-bottom: 1px solid #0e263e;
+  width: 90%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+section#filter .desc-card-filter p {
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  color: #e48f27;
 }
 
 section#filter .desc-card {
@@ -11568,6 +11562,172 @@ section#filter .desc-card {
 section#filter .icon-card-filter {
   font-size: 15px;
   color: #0e263e;
+}
+
+section#filter .imagen-card-filter {
+  width: 262px;
+  height: 182px;
+  border-radius: 15px;
+}
+
+.row-slider {
+  margin-bottom: 50px;
+}
+
+.slider {
+  max-width: 300px;
+  width: 262px;
+  height: 165px;
+  position: relative;
+}
+
+.slider-der {
+  margin-left: 140px;
+}
+
+.of-city {
+  margin-top: 165px;
+  margin-left: 15px;
+}
+
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  position: absolute;
+  width: 262px;
+  height: 165px;
+  border-radius: 15px;
+}
+
+.slide1 {
+  background: url(https://image.freepik.com/foto-gratis/electricista-herramientas-correa_23-2147743109.jpg) no-repeat center;
+  background-size: cover;
+  animation: fade 8s infinite;
+  -webkit-animation: fade 20s infinite;
+}
+
+.slide2 {
+  background: url(https://image.freepik.com/foto-gratis/primer-plano-manos-apoyo_53876-30583.jpg) no-repeat center;
+  background-size: cover;
+  animation: fade2 8s infinite;
+  -webkit-animation: fade2 20s infinite;
+}
+
+.slide3 {
+  background: url(https://image.freepik.com/foto-gratis/carpintero-trabaja-arbol_1157-18920.jpg) no-repeat center;
+  background-size: cover;
+  animation: fade3 8s infinite;
+  -webkit-animation: fade3 20s infinite;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  33.333% {
+    opacity: 0;
+  }
+
+  66.666% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  33.333% {
+    opacity: 0;
+  }
+
+  66.666% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+
+  33.333% {
+    opacity: 1;
+  }
+
+  66.666% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+
+  33.333% {
+    opacity: 1;
+  }
+
+  66.666% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade3 {
+  0% {
+    opacity: 0;
+  }
+
+  33.333% {
+    opacity: 0;
+  }
+
+  66.666% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade3 {
+  0% {
+    opacity: 0;
+  }
+
+  33.333% {
+    opacity: 0;
+  }
+
+  66.666% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .help-subtitle {

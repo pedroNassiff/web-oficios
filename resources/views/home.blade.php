@@ -135,104 +135,112 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 cards">
-				<!--Carousel Wrapper-->
-<div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
+				@for ($i = 1; $i <=3; $i++)
+				<div class="row row-slider">
+					<div class='col-md-3 slider slider-izq'>
+						<div class='slide1'>
+							<div class="desc-card-filter rounded-bottom text-left">
+								<h5 class="m-0 name-card">Carlos Rodriguez</h5>
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</p>
+							</div>
+							<div class="of-city">
+								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricista</p>
+								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+							</div>
+						</div>
+						<div class='slide2'>
+							<div class="desc-card-filter rounded-bottom text-left">
+								<h5 class="m-0 name-card">María Fernandez</h5>
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</p>
+							</div>
+							<div class="of-city">
+								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
+								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+							</div>
+						</div>
+						<div class='slide3'>
+							<div class="desc-card-filter rounded-bottom text-left">
+								<h5 class="m-0 name-card">José Gonzalez</h5>
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</p>
+							</div>
+							<div class="of-city">
+								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
+								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-3 slider slider-der'>
+						<div class='slide2'>
+							<div class="desc-card-filter rounded-bottom text-left">
+								<h5 class="m-0 name-card">María Fernandez</h5>
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</p>
+							</div>
+							<div class="of-city">
+								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
+								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+							</div>
+						</div>
+						<div class='slide3'>
+							<div class="desc-card-filter rounded-bottom text-left">
+								<h5 class="m-0 name-card">José Gonzalez</h5>
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</p>
+							</div>
+							<div class="of-city">
+								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
+								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+							</div>
+						</div>
+						<div class='slide1'>
+							<div class="desc-card-filter rounded-bottom text-left">
+								<h5 class="m-0 name-card">Carlos Rodriguez</h5>
+								<p>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</p>
+							</div>
+							<div class="of-city">
+								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricidad</p>
+								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				@endfor
+			</div>
 
-	<!--Controls-->
-	{{-- <div class="controls-top">
-	  <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev"><i
-		  class="fa fa-chevron-left"></i></a>
-	  <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next"><i
-		  class="fa fa-chevron-right"></i></a>
-	</div> --}}
-	<!--/.Controls-->
-  
-	<!--Indicators-->
-	<ol class="carousel-indicators">
-	  <li data-target="#carousel-with-lb" data-slide-to="0" class="active secondary-color"></li>
-	  <li data-target="#carousel-with-lb" data-slide-to="1" class="secondary-color"></li>
-	  <li data-target="#carousel-with-lb" data-slide-to="2" class="secondary-color"></li>
-	</ol>
-	<!--/.Indicators-->
-  
-	<!--Slides and lightbox-->
-  
-	<div class="carousel-inner mdb-lightbox" role="listbox">
-	  <div id="mdb-lightbox-ui"></div>
-	  <!--First slide-->
-	  <div class=" carousel-item active text-center">
-		
-		@for ($i = 1; $i <=6; $i++)
-    
-			<figure class="col-md-4 d-md-inline-block">
-				<div class="imagen-card-filter rounded-top">
-					<a href="https://image.freepik.com/foto-gratis/trabajo-tecnico-electrico_1426-1355.jpg"
-						data-size="1600x1067">
-						<img src="https://image.freepik.com/foto-gratis/trabajo-tecnico-electrico_1426-1355.jpg"
-						class="img-fluid rounded">
-					</a>
-				</div>
-				<div class="desc-card-filter rounded-bottom text-left">
-					<h5 class="m-0 name-card">Carlos Rodriguez</h5>
-					<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricista</p>
-					<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-				</div>
-			</figure>
-		@endfor
-  
-	  </div>
-	  <!--/.First slide-->
-  
-	  <!--Second slide-->
-	  <div class="carousel-item text-center">
-		@for ($i = 1; $i <=6; $i++)
-		<figure class="col-md-4 d-md-inline-block">
-			<div class="imagen-card-filter rounded-top">
-				<a href="https://image.freepik.com/foto-gratis/cerca-mano-reparador-constructor-profesional-trabajando-interiores-reparando_155003-7266.jpg"
-					data-size="1600x1067">
-					<img src="https://image.freepik.com/foto-gratis/cerca-mano-reparador-constructor-profesional-trabajando-interiores-reparando_155003-7266.jpg"
-					class="img-fluid rounded">
-				</a>
-			</div>
-			<div class="desc-card-filter rounded-bottom text-left">
-				<h5 class="m-0 name-card">José Gonzalez</h5>
-				<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricista</p>
-				<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-			</div>
-		</figure>
-		@endfor
-		
-	  </div>
-	  <!--/.Second slide-->
-  
-	  <!--Third slide-->
-	  <div class="carousel-item text-center">
-		@for ($i = 1; $i <=6; $i++)
-		<figure class="col-md-4 d-md-inline-block">
-			<div class="imagen-card-filter rounded-top">
-				<a href="https://image.freepik.com/foto-gratis/primer-plano-manos-apoyo_53876-30583.jpg"
-					data-size="1600x1067">
-					<img src="https://image.freepik.com/foto-gratis/primer-plano-manos-apoyo_53876-30583.jpg"
-					class="img-fluid rounded">
-				</a>
-			</div>
-			<div class="desc-card-filter rounded-bottom text-left">
-				<h5 class="m-0 name-card">María Fernandez</h5>
-				<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricista</p>
-				<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-			</div>
-		</figure>
-		@endfor
-  
-	  </div>
-	  <!--/.Third slide-->
-  
-	</div>
-	<!--/.Slides-->
-  
-  </div>
-  <!--/.Carousel Wrapper-->
-			</div>
 			<div class="col-md-6 map">
 				<div id="mapa"> </div> 
 			</div>
