@@ -10952,7 +10952,7 @@ body {
 }
 
 #btn-logreg {
-  margin-right: -10em;
+  margin-right: -7em;
 }
 
 .btn {
@@ -11488,10 +11488,11 @@ label {
 
 #mapa {
   width: 450px;
-  height: 350px;
+  height: 520px;
+  margin-top: 4%;
 }
 
-section#filter .filter-bar {
+section#filter .filter-bar-row {
   max-width: 1024px;
 }
 
@@ -11515,6 +11516,27 @@ section#filter .swiper-slide-filter {
 
 section#filter .nya-filter {
   border-radius: 34px;
+}
+
+section#filter .carousel-indicators {
+  bottom: -30px;
+}
+
+section#filter .carousel-indicators li {
+  background-color: #0e263e;
+}
+
+section#filter .name-card {
+  font-family: "Roboto", sans-serif;
+}
+
+section#filter .desc-card {
+  font-family: "Montserrat", sans-serif;
+}
+
+section#filter .icon-card-filter {
+  font-size: 15px;
+  color: #0e263e;
 }
 
 .help-subtitle {
