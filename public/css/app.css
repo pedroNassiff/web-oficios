@@ -11117,8 +11117,8 @@ label {
 
 .btn-dark {
   color: #fff;
-  background-color: #02093B;
-  border-color: #02093B;
+  background-color: #02093b;
+  border-color: #02093b;
 }
 
 .btn-dark:hover {
@@ -11492,15 +11492,38 @@ label {
   margin-top: 4%;
 }
 
-section#filter .filter-bar-row {
-  max-width: 1024px;
-}
-
 section#filter .swiper-container-filter {
   width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: white;
+}
+
+.filter-bar {
+  background-color: white;
+  border-bottom: 1px #d9d9d9;
+  margin-top: -11px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.search-btn {
+  width: 169px;
+  height: 37px;
+  background: #fffefe;
+  border: 1px solid #d9d9d9;
+  border-radius: 17px;
+}
+
+.search-btn:hover {
+  background-color: #e48f27;
+  color: white;
+}
+
+.search-btn:focus {
+  outline: none;
 }
 
 section#filter .swiper-slide-filter {
@@ -11516,6 +11539,14 @@ section#filter .swiper-slide-filter {
 
 section#filter .nya-filter {
   border-radius: 34px;
+  width: 100%;
+  height: 37px;
+  border: 1px solid #d0d0d0;
+  padding-left: 20px;
+}
+
+.nya-filter:focus {
+  outline: none;
 }
 
 section#filter .carousel-indicators {
@@ -11640,7 +11671,7 @@ section#contact .form-control {
   height: 2.21591rem;
   margin: 0 0 -1.09091rem;
   padding: 0.45455rem;
-  border: 1px solid #BBBDC8;
+  border: 1px solid #bbbdc8;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -11654,7 +11685,7 @@ section#contact .form-control {
 
 section#contact .form-control:hover {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  border-color: #02093B;
+  border-color: #02093b;
 }
 
 section#contact .form-group-textarea .form-control {
@@ -11662,13 +11693,13 @@ section#contact .form-group-textarea .form-control {
 }
 
 .hollow {
-  border: 1px solid #02093B;
-  color: #02093B;
+  border: 1px solid #02093b;
+  color: #02093b;
   margin-right: 25%;
 }
 
 .hollow:hover {
-  background-color: #02093B;
+  background-color: #02093b;
   color: white;
 }
 

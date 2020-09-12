@@ -96,37 +96,39 @@
 
 
 <section class="py-3" id="filter">
-	<div class="filter-bar justify-content-center d-flex">
-		<div class="row filter-bar-row">
-			<div class="col-md-4">
-				<input class="nya-filter" type="text" placeholder="Nombre y apellido">
-			</div>
-			<div class="col-md-2">
-				<select class="browser-default custom-select" name="localidad_id" placeholder="Localidades">
-					<option value="" disabled>Seleccionar</option>
-					@foreach ($localidades as $localidad)
-					<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
-					@endforeach
-				</select>
-			</div>
-			<div class="col-md-2">
-				<select class="browser-default custom-select" name="rubro_id">
-					<option value="" disabled>Seleccionar</option>
-					@foreach ($listaoficio as $lista)
-						<option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
-					@endforeach
-				</select>
-			</div>
-			<div class="col-md-2">
-				<select class="browser-default custom-select" name="">
-					<option value="" disabled>Seleccionar</option>
-					<option value="">Esp 1</option>
-					<option value="">Esp 2</option>
-					<option value="">Esp 3</option>
-				</select>
-			</div>
-			<div class="col-md-2">
-				<button class="btn btn-default" type="submit">Buscar</button>
+	<div class="filter-bar justify-content-center d-flex row">
+		<div class="col-md-10 filter-bar-row">
+			<div class="row filter-container">
+				<div class="col-md-4">
+					<input class="nya-filter" type="text" placeholder="Nombre y apellido">
+				</div>
+				<div class="col-md-2">
+					<select class="browser-default custom-select" name="localidad_id" placeholder="Localidades">
+						<option value="" disabled>Seleccionar</option>
+						@foreach ($localidades as $localidad)
+						<option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
+						@endforeach
+					</select>
+				</div>
+				<div class="col-md-2">
+					<select class="browser-default custom-select" name="rubro_id">
+						<option value="" disabled>Seleccionar</option>
+						@foreach ($listaoficio as $lista)
+							<option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
+						@endforeach
+					</select>
+				</div>
+				<div class="col-md-2">
+					<select class="browser-default custom-select" name="">
+						<option value="" disabled>Seleccionar</option>
+						<option value="">Esp 1</option>
+						<option value="">Esp 2</option>
+						<option value="">Esp 3</option>
+					</select>
+				</div>
+				<div class="col-md-2">
+					<button class="search-btn" type="submit">Buscar</button>
+				</div>
 			</div>
 		</div>
 	</div>
