@@ -255,13 +255,12 @@
 		<div class="sale-percent">Sumate a nuestra 
 			<br> Red de prestadores
 		</div>
-		<p class="text-inscrip my-4">
+		<p class="text-inscrip my-3">
 			La promoción de tus servicios es fundamental para la gestión de futuros trabajos.
 			Contanos dónde y cómo trabajás para que podamos acompañarte en tu vida laboral 
 			 con espacios de <strong> promoción y comercialización. </strong> <br>
-			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.
-     		¡Conseguí nuevos clientes y aumentá tus ingresos!</p>
-		<a href="/inscripcion" class="btn btn-own cart-btn btn-lg">Quiero ser parte</a>
+			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.</p>
+		<a href="/inscripcion" class="btn hvr-sweep-to-right">Quiero ser parte</a>
 	</div>
 </section>
 			

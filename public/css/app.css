@@ -10984,11 +10984,6 @@ body {
   transition-timing-function: ease-out;
 }
 
-.btn-own {
-  background-color: #343a40;
-  color: white;
-}
-
 .btn-success {
   background: none;
 }
@@ -11123,14 +11118,14 @@ label {
 
 .btn-dark:hover {
   color: #fff;
-  background-color: #78bc57;
+  background-color: #e48f27;
   border-color: #1d2124;
 }
 
 .btn-dark:focus,
 .btn-dark.focus {
   color: #fff;
-  background-color: #23272b;
+  background-color: #e48f27;
   border-color: #1d2124;
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
@@ -11473,19 +11468,6 @@ label {
   font-family: "Montserrat", sans-serif;
 }
 
-.table-wrapper-scroll-y {
-  display: block;
-}
-
-.btn-buscar {
-  margin-top: 8%;
-}
-
-.td-nya {
-  text-align: left;
-  margin-left: 19%;
-}
-
 #mapa {
   width: 540px;
   height: 595px;
@@ -11781,26 +11763,20 @@ section#filter .imagen-card-filter {
   position: relative;
   font-size: 60px;
   font-weight: 700;
-  color: #78bc57;
+  color: #0e263e;
   line-height: 70px;
 }
 
 .text-inscrip {
   font-family: "Montserrat", sans-serif;
-}
-
-a.cart-btn {
-  display: inline-block;
-  background-color: #343a40;
-  color: #fff;
-  padding: 10px 20px;
+  color: #000;
 }
 
 .shop-banner p {
   position: relative;
   font-size: 17px;
   line-height: 1.2em;
-  width: 50%;
+  width: 41%;
   text-align: justify;
 }
 
