@@ -11719,9 +11719,9 @@ section#filter .imagen-card-filter {
 }
 
 .img-container {
-  width: 100%;
+  width: 218vh;
   height: 40vh;
-  background-image: url("https://cdn.pixabay.com/photo/2020/09/07/04/12/tablet-5550695_960_720.jpg");
+  background-image: url(/images/help.png?2372f758f387b0d92c2fd708b74df4ac);
   background-size: cover;
   margin-top: -48px;
   color: white;
@@ -11729,6 +11729,7 @@ section#filter .imagen-card-filter {
 
 .faq-title {
   font-size: 60px;
+  text-shadow: -2px 3px #0e263e;
 }
 
 .faq-subtitle {
@@ -11769,8 +11770,22 @@ section#filter .imagen-card-filter {
 }
 
 .question-title {
-  text-decoration: none;
+  font-weight: 600;
   color: #6d6d6d;
+  border-bottom: solid 0.5px #e48f27;
+  margin-bottom: 6%;
+}
+
+.question-title-faq {
+  font-weight: 600;
+  color: #6d6d6d;
+  text-decoration: none;
+}
+
+.question-title-faq i {
+  position: absolute;
+  right: 20px;
+  font-size: 25px;
 }
 
 .question-body {
@@ -11781,6 +11796,24 @@ section#filter .imagen-card-filter {
 
 .btn-container {
   margin-bottom: 20px;
+}
+
+.whatsapp-flot {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  border-radius: 177px;
+  background: #00bb2d;
+  box-shadow: 5px 5px 10px #00a32766, -5px -5px 10px #00d33361;
+}
+
+.whatsapp-flot i {
+  font-size: 33px;
+  color: white;
+  line-height: 50px;
 }
 
 .shop-banner {

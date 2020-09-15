@@ -4,6 +4,9 @@
 
 @section('content')
 <section class="page-section my-5" id="">
+    <div class="whatsapp-flot">
+        <i class="fa fa-whatsapp"></i>
+    </div>
     <div class="row d-flex flex-column align-items-center justify-content-center img-container">
         <div class="row text-center">
             <h1 class="faq-title">¿Necesitas Ayuda?</h1>
@@ -12,38 +15,59 @@
             <p class="faq-subtitle">Estamos para ayudarte. Más abajo podrás ver las preguntas frecuentes</p>
         </div>
     </div>
+</section>
+<section>
     <div class="container">
         <div class="row display-flex justify-content-center mt-4">
-            <h3 style="{color: grey;}">¿Como funciona la web?</h3>
+            <h2 style="{color: grey;}">¿Como funciona la web?</h2>
         </div>
         <div class="row display-flex justify-content-center mt-4">
             <div class="col-2"> 
                 <div class="card-question">
-                    <span class="question-title">Who pays out my salary</span>
+                    <div class="question-title">
+                        <span class="">¿Necesito registrarme para ofrecer y/o contratar un servicio?</span>
+                    </div>
                     <p class="question-body font-weight-light">You are employed by meploy and we pay your salary. Your paycheck will be send to your e-Boks.</p>
                 </div>
             </div>
             <div class="col-2">
                 <div class="card-question">
-                    <span class="question-title">Is it free to sign up on meploy?</span>
+                    <div class="question-title">
+                        <span class="">¿Cómo es el procedimiento para contratar un servicio?</span>
+                    </div>
                     <p class="question-body font-weight-light">Yes! It's even free to upgrade your profile to Pro, which gives you access to our Community Bonus Program</p>
                 </div>
             </div>
             <div class="col-2">
-                <span class="question-title">How do I increase my chances of finding work on meploy?</span>
-                <p class="question-body font-weight-light">The best way to increase your chances of finding work via meploy is to have an inviting and updated profile.</p>
+                <div class="card-question">
+                    <div class="question-title">
+                        <span class="">¿Cómo me incorporo a la red de oficios para ofrecer un servicio?</span>
+                    </div>
+                    <p class="question-body font-weight-light">The best way to increase your chances of finding work via meploy is to have an inviting and updated profile.</p>
+                </div>
             </div>
             <div class="col-2">
-                <span class="question-title">How old do you have to be to sign up on meploy?</span>
-                <p class="question-body font-weight-light">You have to be at least 18 years old to create an account on meploy</span>
+                <div class="card-question">
+                    <div class="question-title">
+                        <span class="">¿Desde dónde puedo contratar/ofrecer un oficio?</span>
+                    </div>
+                    <p class="question-body font-weight-light">You have to be at least 18 years old to create an account on meploy</p>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
+<section class="my-5">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center">
             <div class="col-12 display-flex justify-content-center mt-4 mb-3">
-                <h3 style="{color: grey;}" class="text-center">Preguntas Frecuentes</h3>
+                <h2 style="{color: grey;}" class="text-center">Preguntas Frecuentes</h2>
             </div>
             <div class="col-10 fq-container mb-3">
                 <p>
-                    <a data-toggle="collapse" href="#collapseExampleOne" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title">
-                        <h5>¿Necesito registrarme para ofrecer y/o contratar un servicio?</h5>
+                    <a data-toggle="collapse" href="#collapseExampleOne" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title-faq">
+                        <h5>¿Necesito registrarme para ofrecer y/o contratar un servicio? <i class="fa fa-angle-down"></i></h5>
+                        
                     </a>
                 </p>
                 <div class="collapse" id="collapseExampleOne">
@@ -52,12 +76,11 @@
                     </div>
                 </div>
             </div>
-
             
             <div class="col-10 fq-container mb-3">
                 <p>
-                    <a data-toggle="collapse" href="#collapseExampleTwo" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title">
-                        <h5>¿Cómo es el procedimiento para contratar un servicio?</h5>
+                    <a data-toggle="collapse" href="#collapseExampleTwo" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title-faq">
+                        <h5>¿Cómo es el procedimiento para contratar un servicio?  <i class="fa fa-angle-down"></i></h5>
                     </a>
                 </p>
                 <div class="collapse" id="collapseExampleTwo">
@@ -66,10 +89,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-10 fq-container mb-3">
                 <p>
-                    <a data-toggle="collapse" href="#collapseExampleThree" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title">
-                        <h5>¿Como me incorporo a la red de oficios para ofrecer un servicio?</h5>
+                    <a data-toggle="collapse" href="#collapseExampleThree" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title-faq">
+                        <h5>¿Como me incorporo a la red de oficios para ofrecer un servicio?  <i class="fa fa-angle-down"></i></h5>
                     </a>
                 </p>
                 <div class="collapse" id="collapseExampleThree">
@@ -78,10 +102,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-10 fq-container">
+
+            <div class="col-10 fq-container mb-3">
                 <p>
-                    <a data-toggle="collapse" href="#collapseExampleFour" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title">
-                        <h5>¿Desde dónde puedo contratar/ofrecer un oficio?</h5>
+                    <a data-toggle="collapse" href="#collapseExampleFour" role="button" aria-expanded="false" aria-controls="collapseExample" class="question-title-faq">
+                        <h5>¿Desde dónde puedo contratar/ofrecer un oficio? <i class="fa fa-angle-down"></i></h5>
                     </a>
                 </p>
                 <div class="collapse" id="collapseExampleFour">
@@ -91,14 +116,14 @@
                 </div>
             </div>
         </div>
-        <div class="row display-flex justify-content-center mt-4 mb-5 btn-container">
+    </div>
+        {{-- <div class="row display-flex justify-content-center mt-4 mb-5 btn-container">
             <div class="col-3">
                 <a href="/contact"><button class="help-btn"> Realiza una pregunta</button></a>
             </div>
             <div class="col-3">
                 <button class="help-btn"> Realiza una pregunta</button>
             </div>
-        </div>
-    </div>
+        </div> --}}
 </section>
 @endsection
