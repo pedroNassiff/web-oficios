@@ -260,7 +260,7 @@
 			Contanos dónde y cómo trabajás para que podamos acompañarte en tu vida laboral 
 			 con espacios de <strong> promoción y comercialización. </strong> <br>
 			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.</p>
-		<a href="/inscripcion" class="btn hvr-sweep-to-right">Quiero ser parte</a>
+		<a href="/inscripcion" class="btn btn-2 hvr-sweep-to-right">Quiero ser parte</a>
 	</div>
 </section>
 			

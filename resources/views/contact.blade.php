@@ -42,7 +42,7 @@
                     </div>
                     <div class="text-right mb-5">
                         <div id="success"></div>
-                        <button class="btn hollow" id="sendMessageButton" type="submit">Enviar</button>
+                        <button class="btn btn-2 hvr-sweep-to-right hollow" id="sendMessageButton" type="submit">Enviar</button>
                     </div>
                 </form>
             </div>

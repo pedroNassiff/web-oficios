@@ -10960,6 +10960,12 @@ body {
   color: #e48f27;
 }
 
+.btn-2 {
+  background-color: transparent;
+  color: #e48f27;
+  border: solid 1px #e48f27;
+}
+
 .btn:hover {
   border: 1px solid #e48f27 !important;
   background-color: transparent;
@@ -11856,14 +11862,7 @@ section#contact .form-group-textarea .form-control {
 }
 
 .hollow {
-  border: 1px solid #02093b;
-  color: #02093b;
   margin-right: 25%;
-}
-
-.hollow:hover {
-  background-color: #02093b;
-  color: white;
 }
 
 .contenedor-datos {
