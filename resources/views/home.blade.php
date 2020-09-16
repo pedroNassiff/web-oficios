@@ -16,7 +16,7 @@
 			<div class="row no-gutters h-100 d-flex">
 				<div id="hero-text"class="col-md-6 text-light align-self-center">
 					<h1 class="display-1  mb-4">RED DE OFICIOS</h1>
-					<p class="lead mb-5">¿Te gustaría Ofrecer o Contratar un oficio?</p>
+					<p class="lead sub-principal">¿Te gustaría Ofrecer o Contratar un oficio?</p>
 					<a href="#oferta" id="boton1" class="btn hvr-sweep-to-right" style="border: 1px solid  #e48f27!important;">Ofrecer</a>
 					<a href="#demanda" id="boton2" class="btn  hvr-sweep-to-right" style="border: 1px solid  #e48f27!important;">Contratar</a>
 				</div>
@@ -99,10 +99,10 @@
 	<div class="filter-bar justify-content-center d-flex row">
 		<div class="col-md-10 filter-bar-row">
 			<div class="row filter-container">
-				<div class="col-md-4">
+				<div class="col-md-6 col-lg-4 ">
 					<input class="nya-filter" type="text" placeholder="Nombre y apellido">
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-6 col-lg-2">
 					<select class="browser-default custom-select" name="localidad_id" placeholder="Localidades">
 						<option value="" disabled>Seleccionar</option>
 						@foreach ($localidades as $localidad)
@@ -110,7 +110,7 @@
 						@endforeach
 					</select>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-6 col-lg-2">
 					<select class="browser-default custom-select" name="rubro_id">
 						<option value="" disabled>Seleccionar</option>
 						@foreach ($listaoficio as $lista)
@@ -118,7 +118,7 @@
 						@endforeach
 					</select>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-6 col-lg-2">
 					<select class="browser-default custom-select" name="">
 						<option value="" disabled>Seleccionar</option>
 						<option value="">Esp 1</option>
@@ -126,7 +126,7 @@
 						<option value="">Esp 3</option>
 					</select>
 				</div>
-				<div class="col-md-2">
+				<div class="col-lg-2 bot">
 					<button class="search-btn" type="submit">Buscar</button>
 				</div>
 			</div>
@@ -134,106 +134,148 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 cards">
+			<div class="col-sm-12 col-md-12 col-lg-6 cards">
 				@for ($i = 1; $i <=3; $i++)
 				<div class="row row-slider">
-					<div class='col-md-3 slider slider-izq'>
+					<div class='col-12 col-md-3 slider slider-izq'>
 						<div class='slide1'>
 							<div class="desc-card-filter rounded-bottom text-left">
-								<h5 class="m-0 name-card">Carlos Rodriguez</h5>
-								<p>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</p>
+								<div class="fondo-enc">
+									<h5 class="m-0 name-card">Carlos Rodriguez</h5>
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</p>
+								</div>
 							</div>
 							<div class="of-city">
-								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricista</p>
-								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								<div class="clasificaciones">
+									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricista</p>
+									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								</div>
+								<div class="mt-2 mr-1">
+									<a href="" class="plus">IR AL PERFIL</a>
+								</div>
 							</div>
 						</div>
 						<div class='slide2'>
 							<div class="desc-card-filter rounded-bottom text-left">
-								<h5 class="m-0 name-card">María Fernandez</h5>
-								<p>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</p>
+								<div class="fondo-enc">
+									<h5 class="m-0 name-card">María Fernandez</h5>
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</p>
+								</div>
 							</div>
 							<div class="of-city">
-								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
-								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								<div class="clasificaciones">
+									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
+									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								</div>
+								<div class="mt-2 mr-1">
+									<a href="" class="plus">IR AL PERFIL</a>
+								</div>
 							</div>
 						</div>
 						<div class='slide3'>
 							<div class="desc-card-filter rounded-bottom text-left">
-								<h5 class="m-0 name-card">José Gonzalez</h5>
-								<p>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</p>
+								<div class="fondo-enc">
+									<h5 class="m-0 name-card">José Gonzalez</h5>
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</p>
+								</div>
 							</div>
 							<div class="of-city">
-								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
-								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								<div class="clasificaciones">
+									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
+									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								</div>
+								<div class="mt-2 mr-1">
+									<a href="" class="plus">IR AL PERFIL</a>
+								</div>								
 							</div>
 						</div>
 					</div>
-					<div class='col-md-3 slider slider-der'>
+					<div class='col-12 col-md-3 slider slider-der'>
 						<div class='slide2'>
 							<div class="desc-card-filter rounded-bottom text-left">
-								<h5 class="m-0 name-card">María Fernandez</h5>
-								<p>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</p>
+								<div class="fondo-enc">
+									<h5 class="m-0 name-card">María Fernandez</h5>
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</p>
+								</div>
 							</div>
 							<div class="of-city">
-								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
-								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								<div class="clasificaciones">
+									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
+									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								</div>
+								<div class="mt-2 mr-1">
+									<a href="" class="plus">IR AL PERFIL</a>
+								</div>
 							</div>
 						</div>
 						<div class='slide3'>
 							<div class="desc-card-filter rounded-bottom text-left">
-								<h5 class="m-0 name-card">José Gonzalez</h5>
-								<p>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</p>
+								<div class="fondo-enc">
+									<h5 class="m-0 name-card">José Gonzalez</h5>
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</p>
+								</div>
 							</div>
 							<div class="of-city">
-								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
-								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								<div class="clasificaciones">
+									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
+									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								</div>
+								<div class="mt-2 mr-1">
+									<a href="" class="plus">IR AL PERFIL</a>
+								</div>								
 							</div>
 						</div>
 						<div class='slide1'>
 							<div class="desc-card-filter rounded-bottom text-left">
-								<h5 class="m-0 name-card">Carlos Rodriguez</h5>
-								<p>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</p>
+								<div class="fondo-enc">
+									<h5 class="m-0 name-card">Carlos Rodriguez</h5>
+									<p>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</p>
+								</div>
 							</div>
 							<div class="of-city">
-								<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricidad</p>
-								<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								<div class="clasificaciones">
+									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricidad</p>
+									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
+								</div>
+								<div class="mt-2 mr-1">
+									<a href="" class="plus">IR AL PERFIL</a>
+								</div>	
 							</div>
 						</div>
 					</div>
@@ -241,7 +283,7 @@
 				@endfor
 			</div>
 
-			<div class="col-md-6 map">
+			<div class="col-sm-12 col-md-12 col-lg-6 map">
 				<div id="mapa"> </div> 
 			</div>
 		</div>

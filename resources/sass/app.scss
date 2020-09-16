@@ -164,12 +164,7 @@ label {
 }
 
 //footer
-.logob {
-  height: 8vh;
-}
-.logsubsec {
-  height: 7vh;
-}
+
 .page-footer {
   position: absolute;
   bottom: 0;
@@ -429,12 +424,8 @@ label {
   margin-left: -2em;
   color: white;
 }
-.my-4 {
-  margin-bottom: 1.5rem !important;
-  margin-left: -1em;
-  color: white;
-}
-.mb-5 {
+
+.sub-principal {
   color: white;
   margin-left: -3em;
   font-weight: 400;
@@ -469,10 +460,7 @@ label {
   margin-top: 30%;
   //margin-right: -149px;
 }
-.img-fluid {
-  width: auto !important;
-  background-size: cover;
-}
+
 .my-custom-scrollbar {
   position: relative;
   height: 500px;
@@ -515,6 +503,7 @@ label {
   width: 540px;
   height: 595px;
 }
+
 section#filter .swiper-container-filter {
   width: 100%;
   height: 100%;
@@ -564,7 +553,7 @@ section#filter .nya-filter {
 
 section#filter .name-card {
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: black;
   border-bottom: 1px solid #0e263e;
   width: 90%;
   position: absolute;
@@ -576,6 +565,12 @@ section#filter .desc-card-filter p {
   left: 15px;
   top: 40px;
   color: #e48f27;
+  
+}
+
+section#filter .fondo-enc{
+  background-color: #ffffff7d;
+  height: 60px;
 }
 
 section#filter .desc-card {
@@ -606,8 +601,15 @@ section#filter .imagen-card-filter {
   margin-left: 140px;
 }
 .of-city {
-  margin-top: 165px;
+  margin-top: 106px;
   margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plus{
+  color: #e48f27;
+  font-size: 12px;
 }
 
 .slide1,
@@ -956,4 +958,94 @@ section#contact .form-group-textarea .form-control {
 //login
 .cont-login {
   margin-top: 5%;
+}
+
+
+//media queries
+
+//tablet
+@media (max-width: 780px) {
+  .footer{
+    height: 175px;
+  }
+  footer .sin_subrayar{
+    text-align: center;
+  }
+  .footer .logos img{
+    width: 250px;
+  }
+
+  .filter-bar{
+    max-width: 768px;
+  }
+  .filter-container div{
+    margin: 5px 0;
+  }
+  .filter-container .bot{
+    text-align: center;
+  }
+  .shop-banner{
+    text-align: center;
+    padding: 20px 0px 90px;
+  }
+  .shop-banner p {
+    width: 100%;
+    text-align: center;
+    padding: 10px 45px;
+  }
+  #mapa{
+    margin: 0 auto;
+  }
+
+  section#contact .container{
+    margin-bottom: 105px;
+  }
+
+}
+
+//telefono
+@media (max-width: 576px){
+  .footer{
+    height: 300px;
+    width: 100%;
+  }
+  footer .logos{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer .logos img{
+    width: 350px;
+    margin: 5px;
+  }
+  
+  .filter-bar{
+    margin: 10px;
+  }
+
+  .row-slider{
+    margin-bottom: 0px;
+    justify-content: center;
+  }
+  .slider{
+    margin-bottom: 50px;
+  }
+  .slider-der{
+    margin-left: 0px;
+  }
+  
+  .shop-banner .container {
+    margin-bottom: 40%;
+  }
+  .shop-banner .container .sale-percent{
+    margin: 10px;
+    font-size: 50px;
+    line-height: 55px;
+  }
+  section#contact .container{
+    margin-bottom: 220px;
+  }
+  #mapa {
+    width: 300px;
+    height: 400px;
+  }
 }
