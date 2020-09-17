@@ -11532,6 +11532,7 @@ section#filter .desc-card-filter p {
 section#filter .fondo-enc {
   background-color: #ffffff7d;
   height: 60px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 section#filter .desc-card {
@@ -11578,13 +11579,14 @@ section#filter .imagen-card-filter {
 
 .slide1,
 .slide2,
-.slide3,
-.slide4,
-.slide5 {
+.slide3 {
   position: absolute;
   width: 262px;
   height: 165px;
   border-radius: 15px;
+  box-shadow: 0px 0px 0px grey;
+  -webkit-transition: box-shadow 0.6s ease-out;
+  box-shadow: 0.8px 0.9px 3px grey;
 }
 
 .slide1 {
@@ -11606,6 +11608,51 @@ section#filter .imagen-card-filter {
   background-size: cover;
   animation: fade3 8s infinite;
   -webkit-animation: fade3 20s infinite;
+}
+
+.how-work {
+  background-color: #e48f27;
+  margin-top: -49px;
+  min-height: 90vh;
+}
+
+.how-work > .row {
+  width: 100%;
+}
+
+.hw-title-container {
+  padding-top: 52px;
+}
+
+.hw-title-container .hw-title {
+  font-size: 2.8rem;
+  color: #02093b;
+}
+
+.hw-title-container .hw-btn {
+  border-color: white;
+  color: white;
+}
+
+.hw-btn {
+  background-color: transparent;
+  color: #02093b;
+  border: solid 1px #02093b;
+}
+
+.slide1:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.3s ease-in;
+}
+
+.slide2:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.3s ease-in;
+}
+
+.slide3:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.3s ease-in;
 }
 
 @-webkit-keyframes fade {
@@ -11739,6 +11786,7 @@ section#filter .imagen-card-filter {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 5px 20px 20px -1px rgba(0, 0, 0, 0.13);
+  min-height: 250px;
 }
 
 .fq-container {
@@ -11772,6 +11820,8 @@ section#filter .imagen-card-filter {
   color: #6d6d6d;
   border-bottom: solid 0.5px #e48f27;
   margin-bottom: 6%;
+  font-size: 16px;
+  text-align: center;
 }
 
 .question-title-faq {
@@ -11788,7 +11838,7 @@ section#filter .imagen-card-filter {
 
 .question-body {
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
   color: #6d6d6d;
 }
 
@@ -11827,20 +11877,20 @@ section#filter .imagen-card-filter {
   position: relative;
   font-size: 60px;
   font-weight: 700;
-  color: #0e263e;
+  color: #e48f27;
   line-height: 70px;
 }
 
 .text-inscrip {
   font-family: "Montserrat", sans-serif;
-  color: #000;
+  color: #6d6d6d;
 }
 
 .shop-banner p {
   position: relative;
   font-size: 17px;
   line-height: 1.2em;
-  width: 41%;
+  width: 46%;
   text-align: justify;
 }
 
@@ -12033,6 +12083,10 @@ section#contact .form-group-textarea .form-control {
   section#contact .container {
     margin-bottom: 105px;
   }
+
+  .how-work {
+    min-height: 115vh;
+  }
 }
 
 @media (max-width: 576px) {
@@ -12085,6 +12139,19 @@ section#contact .form-group-textarea .form-control {
   #mapa {
     width: 300px;
     height: 400px;
+  }
+
+  .how-work > .container > .row > .col-9 {
+    margin: 5%;
+  }
+
+  .mresp {
+    margin-bottom: 64%;
+  }
+
+  .hw-title {
+    width: 80%;
+    text-align: center;
   }
 }
 
