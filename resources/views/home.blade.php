@@ -15,13 +15,8 @@
 		<div id="hero-content" class="container h-100">
 			<div class="row no-gutters h-100 d-flex">
 				<div id="hero-text"class="col-md-6 text-light align-self-center">
-<<<<<<< HEAD
-					<h1 class="display-1  mb-4">Red de Oficios</h1>
-					<p class="lead mb-5" id="subtitulo1">¿Te gustaría Ofrecer o Contratar un oficio?</p>
-=======
 					<h1 class="display-1  mb-4">RED DE OFICIOS</h1>
 					<p class="lead sub-principal">¿Te gustaría Ofrecer o Contratar un oficio?</p>
->>>>>>> c0c69a3d3a58f072280baa487f23734dcef63eaa
 					<a href="#oferta" id="boton1" class="btn hvr-sweep-to-right" style="border: 1px solid  #e48f27!important;">Ofrecer</a>
 					<a href="#demanda" id="boton2" class="btn  hvr-sweep-to-right" style="border: 1px solid  #e48f27!important;">Contratar</a>
 				</div>
