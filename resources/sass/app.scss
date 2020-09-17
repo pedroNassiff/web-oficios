@@ -620,14 +620,16 @@ section#filter .imagen-card-filter {
 
 .slide1,
 .slide2,
-.slide3,
-.slide4,
-.slide5 {
+.slide3 {
   position: absolute;
   width: 262px;
   height: 165px;
   border-radius: 15px;
+  box-shadow: 0px 0px 0px grey;
+  -webkit-transition:  box-shadow .6s ease-out;
+  box-shadow: .8px .9px 3px grey;
 }
+
 .slide1 {
   background: url(https://image.freepik.com/foto-gratis/electricista-herramientas-correa_23-2147743109.jpg)
     no-repeat center;
@@ -649,6 +651,20 @@ section#filter .imagen-card-filter {
   animation: fade3 8s infinite;
   -webkit-animation: fade3 20s infinite;
 }
+.slide1:hover{
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition:  box-shadow .3s ease-in;
+}
+.slide2:hover{
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition:  box-shadow .3s ease-in;
+}
+.slide3:hover{
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition:  box-shadow .3s ease-in;
+}
+
+
 @keyframes fade {
   0% {
     opacity: 1;
