@@ -11609,6 +11609,32 @@ section#filter .imagen-card-filter {
   -webkit-animation: fade3 20s infinite;
 }
 
+.how-work {
+  background-color: #e48f27;
+  margin-top: -49px;
+  min-height: 85vh;
+}
+
+.hw-title-container {
+  padding-top: 52px;
+}
+
+.hw-title-container .hw-title {
+  font-size: 2.8rem;
+  color: #02093b;
+}
+
+.hw-title-container .hw-btn {
+  border-color: white;
+  color: white;
+}
+
+.hw-btn {
+  background-color: transparent;
+  color: #02093b;
+  border: solid 1px #02093b;
+}
+
 .slide1:hover {
   box-shadow: 1px 8px 20px grey;
   -webkit-transition: box-shadow 0.3s ease-in;
@@ -11755,6 +11781,7 @@ section#filter .imagen-card-filter {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 5px 20px 20px -1px rgba(0, 0, 0, 0.13);
+  min-height: 250px;
 }
 
 .fq-container {
@@ -11788,6 +11815,8 @@ section#filter .imagen-card-filter {
   color: #6d6d6d;
   border-bottom: solid 0.5px #e48f27;
   margin-bottom: 6%;
+  font-size: 16px;
+  text-align: center;
 }
 
 .question-title-faq {
@@ -11804,7 +11833,7 @@ section#filter .imagen-card-filter {
 
 .question-body {
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
   color: #6d6d6d;
 }
 
