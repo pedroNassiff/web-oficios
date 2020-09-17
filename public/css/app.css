@@ -11578,13 +11578,14 @@ section#filter .imagen-card-filter {
 
 .slide1,
 .slide2,
-.slide3,
-.slide4,
-.slide5 {
+.slide3 {
   position: absolute;
   width: 262px;
   height: 165px;
   border-radius: 15px;
+  box-shadow: 0px 0px 0px grey;
+  -webkit-transition: box-shadow 0.6s ease-out;
+  box-shadow: 0.8px 0.9px 3px grey;
 }
 
 .slide1 {
@@ -11632,6 +11633,21 @@ section#filter .imagen-card-filter {
   background-color: transparent;
   color: #02093b;
   border: solid 1px #02093b;
+}
+
+.slide1:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.3s ease-in;
+}
+
+.slide2:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.3s ease-in;
+}
+
+.slide3:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.3s ease-in;
 }
 
 @-webkit-keyframes fade {
