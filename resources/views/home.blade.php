@@ -302,7 +302,7 @@
 			Contanos dónde y cómo trabajás para que podamos acompañarte en tu vida laboral 
 			 con espacios de <strong> promoción y comercialización. </strong> <br>
 			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.</p>
-		<a href="/inscripcion" class="btn btn-2 hvr-sweep-to-right">Quiero ser parte</a>
+		<a href="/inscripcion" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
 	</div>
 </section>
 			
@@ -313,7 +313,7 @@
             <h2 class="hw-title">¿Cómo funciona la web?</h2>
         </div>
         <div class="row display-flex justify-content-center mt-4">
-            <div class="col-3"> 
+            <div class="col-9 col-md-3"> 
                 <div class="card-question">
                     <div class="question-title">
                         <span class="">¿Necesito registrarme para ofrecer y/o contratar un servicio?</span>
@@ -321,7 +321,7 @@
                     <p class="question-body font-weight-light">You are employed by meploy and we pay your salary. Your paycheck will be send to your e-Boks.</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-9 col-md-3">
                 <div class="card-question">
                     <div class="question-title">
                         <span class="">¿Cómo es el procedimiento para contratar un servicio?</span>
@@ -329,7 +329,7 @@
                     <p class="question-body font-weight-light">Yes! It's even free to upgrade your profile to Pro, which gives you access to our Community Bonus Program</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-9 col-md-3">
                 <div class="card-question">
                     <div class="question-title">
                         <span class="">¿Cómo me incorporo a la red de oficios para ofrecer un servicio?</span>
@@ -337,7 +337,7 @@
                     <p class="question-body font-weight-light">The best way to increase your chances of finding work via meploy is to have an inviting and updated profile.</p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-9 col-md-3">
                 <div class="card-question">
                     <div class="question-title">
                         <span class="">¿Desde dónde puedo contratar/ofrecer un oficio?</span>
@@ -348,7 +348,7 @@
         </div>
 	</div>
 	<div class="row d-flex justify-content-center mb-5 mt-5">
-		<a href="/ayuda" class="btn hw-btn">Necesito Ayuda</a>
+		<a href="/ayuda" class="mresp btn hw-btn">Necesito Ayuda</a>
 	</div>
 </section>
 

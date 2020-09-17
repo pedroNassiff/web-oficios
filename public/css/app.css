@@ -11532,6 +11532,7 @@ section#filter .desc-card-filter p {
 section#filter .fondo-enc {
   background-color: #ffffff7d;
   height: 60px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 section#filter .desc-card {
@@ -11612,7 +11613,11 @@ section#filter .imagen-card-filter {
 .how-work {
   background-color: #e48f27;
   margin-top: -49px;
-  min-height: 85vh;
+  min-height: 90vh;
+}
+
+.how-work > .row {
+  width: 100%;
 }
 
 .hw-title-container {
@@ -12078,6 +12083,10 @@ section#contact .form-group-textarea .form-control {
   section#contact .container {
     margin-bottom: 105px;
   }
+
+  .how-work {
+    min-height: 115vh;
+  }
 }
 
 @media (max-width: 576px) {
@@ -12130,6 +12139,19 @@ section#contact .form-group-textarea .form-control {
   #mapa {
     width: 300px;
     height: 400px;
+  }
+
+  .how-work > .container > .row > .col-9 {
+    margin: 5%;
+  }
+
+  .mresp {
+    margin-bottom: 64%;
+  }
+
+  .hw-title {
+    width: 80%;
+    text-align: center;
   }
 }
 
