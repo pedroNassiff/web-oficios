@@ -7,7 +7,7 @@
 <section class="page-section mb-4" id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12 col-lg-6">
                 <div class="contacto">
                     <h1 class="section-heading">Contacto</h1>
                     <h3 class="section-subheading my-4">¿Tenés alguna pregunta? Comunícate con nosotros, responderemos tan pronto como sea posible.</h3>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="text-right mb-5">
                         <div id="success"></div>
-                        <button class="btn hollow" id="sendMessageButton" type="submit">Enviar</button>
+                        <button class="btn btn-2 hvr-sweep-to-right hollow" id="sendMessageButton" type="submit">Enviar</button>
                     </div>
                 </form>
             </div>

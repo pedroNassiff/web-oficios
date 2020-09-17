@@ -1,5 +1,5 @@
 <section class="inner-header">
-<nav class="navbar navbar-light navbar-expand-lg py-3 ">
+<nav class="navbar navbar-dark navbar-expand-lg py-3 ">
     <div class="container">
         <a class="navbar-brand" href="">
             <img src="/img/logo.png" class="rounded" alt="Logo oficios">
