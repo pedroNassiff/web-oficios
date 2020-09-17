@@ -50,7 +50,7 @@ body {
 .btn-2 {
   background-color: transparent;
   color: #e48f27;
-  border: solid 1px  #e48f27;
+  border: solid 1px #e48f27;
 }
 .btn:hover {
   border: 1px solid #e48f27 !important;
@@ -425,23 +425,13 @@ label {
   color: white;
   margin-top: -1em;
 }
-<<<<<<< HEAD
-.my-4 {
-  color: black;
-  margin-bottom: 1.5rem !important;
-  margin-left: -1em;
-}
-.mb-5 {
-  
-=======
 
 .sub-principal {
   color: white;
->>>>>>> c0c69a3d3a58f072280baa487f23734dcef63eaa
   margin-left: -3em;
   font-weight: 400;
 }
-#subtitulo1{
+#subtitulo1 {
   color: white;
   margin-left: -1em;
 }
@@ -464,11 +454,9 @@ label {
 }
 #boton1:hover {
   color: black;
-  
 }
 #boton2:hover {
   color: black;
-  
 }
 
 #hero-img {
@@ -581,10 +569,9 @@ section#filter .desc-card-filter p {
   left: 15px;
   top: 40px;
   color: #e48f27;
-  
 }
 
-section#filter .fondo-enc{
+section#filter .fondo-enc {
   background-color: #ffffff7d;
   height: 60px;
 }
@@ -623,7 +610,7 @@ section#filter .imagen-card-filter {
   justify-content: space-between;
 }
 
-.plus{
+.plus {
   color: #e48f27;
   font-size: 12px;
 }
@@ -659,6 +646,35 @@ section#filter .imagen-card-filter {
   animation: fade3 8s infinite;
   -webkit-animation: fade3 20s infinite;
 }
+
+// como funciona la web
+
+.how-work {
+  background-color: #e48f27;
+  margin-top: -49px;
+  min-height: 85vh;
+}
+
+.hw-title-container {
+  padding-top: 52px;
+}
+
+.hw-title-container .hw-title {
+  font-size: 2.8rem;
+  color: #02093b;
+}
+
+.hw-title-container .hw-btn {
+  border-color: white;
+  color: white;
+}
+
+.hw-btn {
+  background-color: transparent;
+  color: #02093b;
+  border: solid 1px #02093b;
+}
+
 @keyframes fade {
   0% {
     opacity: 1;
@@ -714,7 +730,7 @@ section#filter .imagen-card-filter {
 
 .faq-title {
   font-size: 60px;
-  text-shadow: -2px 3px #0e263e
+  text-shadow: -2px 3px #0e263e;
 }
 
 .faq-subtitle {
@@ -728,6 +744,7 @@ section#filter .imagen-card-filter {
   -webkit-box-shadow: 5px 20px 20px -1px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: 5px 20px 20px -1px rgba(0, 0, 0, 0.13);
   box-shadow: 5px 20px 20px -1px rgba(0, 0, 0, 0.13);
+  min-height: 250px;
 }
 
 .fq-container {
@@ -759,15 +776,17 @@ section#filter .imagen-card-filter {
 }
 
 .question-title {
-    font-weight: 600;
-    color: #6d6d6d;
-    border-bottom: solid 0.5px #e48f27;
-    margin-bottom: 6%;
-}
-.question-title-faq{
   font-weight: 600;
-    color: #6d6d6d;
-    text-decoration: none;
+  color: #6d6d6d;
+  border-bottom: solid 0.5px #e48f27;
+  margin-bottom: 6%;
+  font-size: 16px;
+  text-align: center;
+}
+.question-title-faq {
+  font-weight: 600;
+  color: #6d6d6d;
+  text-decoration: none;
 }
 
 .question-title-faq i {
@@ -778,7 +797,7 @@ section#filter .imagen-card-filter {
 
 .question-body {
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
   color: #6d6d6d;
 }
 
@@ -786,19 +805,18 @@ section#filter .imagen-card-filter {
   margin-bottom: 20px;
 }
 
-.whatsapp-flot{
+.whatsapp-flot {
   width: 50px;
   height: 50px;
   text-align: center;
   position: fixed;
   bottom: 15px;
-  right: 25px; 
+  right: 25px;
   border-radius: 177px;
   background: #00bb2d;
-  box-shadow:  5px 5px 10px #00a32766, 
-             -5px -5px 10px #00d33361
+  box-shadow: 5px 5px 10px #00a32766, -5px -5px 10px #00d33361;
 }
-.whatsapp-flot i{
+.whatsapp-flot i {
   font-size: 33px;
   color: white;
   line-height: 50px;
@@ -885,7 +903,6 @@ section#contact .form-group-textarea .form-control {
 .hollow {
   margin-right: 25%;
 }
-
 
 //profesionalPerfil
 .contenedor-datos {
@@ -976,31 +993,30 @@ section#contact .form-group-textarea .form-control {
   margin-top: 5%;
 }
 
-
 //media queries
 
 //tablet
 @media (max-width: 780px) {
-  .footer{
+  .footer {
     height: 175px;
   }
-  footer .sin_subrayar{
+  footer .sin_subrayar {
     text-align: center;
   }
-  .footer .logos img{
+  .footer .logos img {
     width: 250px;
   }
 
-  .filter-bar{
+  .filter-bar {
     max-width: 768px;
   }
-  .filter-container div{
+  .filter-container div {
     margin: 5px 0;
   }
-  .filter-container .bot{
+  .filter-container .bot {
     text-align: center;
   }
-  .shop-banner{
+  .shop-banner {
     text-align: center;
     padding: 20px 0px 90px;
   }
@@ -1009,55 +1025,54 @@ section#contact .form-group-textarea .form-control {
     text-align: center;
     padding: 10px 45px;
   }
-  #mapa{
+  #mapa {
     margin: 0 auto;
   }
 
-  section#contact .container{
+  section#contact .container {
     margin-bottom: 105px;
   }
-
 }
 
 //telefono
-@media (max-width: 576px){
-  .footer{
+@media (max-width: 576px) {
+  .footer {
     height: 300px;
     width: 100%;
   }
-  footer .logos{
+  footer .logos {
     flex-direction: column;
     justify-content: center;
   }
-  .footer .logos img{
+  .footer .logos img {
     width: 350px;
     margin: 5px;
   }
-  
-  .filter-bar{
+
+  .filter-bar {
     margin: 10px;
   }
 
-  .row-slider{
+  .row-slider {
     margin-bottom: 0px;
     justify-content: center;
   }
-  .slider{
+  .slider {
     margin-bottom: 50px;
   }
-  .slider-der{
+  .slider-der {
     margin-left: 0px;
   }
-  
+
   .shop-banner .container {
     margin-bottom: 40%;
   }
-  .shop-banner .container .sale-percent{
+  .shop-banner .container .sale-percent {
     margin: 10px;
     font-size: 50px;
     line-height: 55px;
   }
-  section#contact .container{
+  section#contact .container {
     margin-bottom: 220px;
   }
   #mapa {

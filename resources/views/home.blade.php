@@ -15,13 +15,8 @@
 		<div id="hero-content" class="container h-100">
 			<div class="row no-gutters h-100 d-flex">
 				<div id="hero-text"class="col-md-6 text-light align-self-center">
-<<<<<<< HEAD
-					<h1 class="display-1  mb-4">Red de Oficios</h1>
-					<p class="lead mb-5" id="subtitulo1">¿Te gustaría Ofrecer o Contratar un oficio?</p>
-=======
 					<h1 class="display-1  mb-4">RED DE OFICIOS</h1>
 					<p class="lead sub-principal">¿Te gustaría Ofrecer o Contratar un oficio?</p>
->>>>>>> c0c69a3d3a58f072280baa487f23734dcef63eaa
 					<a href="#oferta" id="boton1" class="btn hvr-sweep-to-right" style="border: 1px solid  #e48f27!important;">Ofrecer</a>
 					<a href="#demanda" id="boton2" class="btn  hvr-sweep-to-right" style="border: 1px solid  #e48f27!important;">Contratar</a>
 				</div>
@@ -311,7 +306,53 @@
 	</div>
 </section>
 			
-<!-- nuevo -->
+<!-- ¿Como funciona la web? -->
+<section class="how-work">
+	<div class="container">
+        <div class="row display-flex justify-content-center hw-title-container">
+            <h2 class="hw-title">¿Cómo funciona la web?</h2>
+        </div>
+        <div class="row display-flex justify-content-center mt-4">
+            <div class="col-3"> 
+                <div class="card-question">
+                    <div class="question-title">
+                        <span class="">¿Necesito registrarme para ofrecer y/o contratar un servicio?</span>
+                    </div>
+                    <p class="question-body font-weight-light">You are employed by meploy and we pay your salary. Your paycheck will be send to your e-Boks.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-question">
+                    <div class="question-title">
+                        <span class="">¿Cómo es el procedimiento para contratar un servicio?</span>
+                    </div>
+                    <p class="question-body font-weight-light">Yes! It's even free to upgrade your profile to Pro, which gives you access to our Community Bonus Program</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-question">
+                    <div class="question-title">
+                        <span class="">¿Cómo me incorporo a la red de oficios para ofrecer un servicio?</span>
+                    </div>
+                    <p class="question-body font-weight-light">The best way to increase your chances of finding work via meploy is to have an inviting and updated profile.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card-question">
+                    <div class="question-title">
+                        <span class="">¿Desde dónde puedo contratar/ofrecer un oficio?</span>
+                    </div>
+                    <p class="question-body font-weight-light">You have to be at least 18 years old to create an account on meploy</p>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="row d-flex justify-content-center mb-5 mt-5">
+		<a href="/ayuda" class="btn hw-btn">Necesito Ayuda</a>
+	</div>
+</section>
+
+
 
 	{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
 					* Redirige a la ruta /logout con el método POST, ahí el controlador
