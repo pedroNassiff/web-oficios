@@ -11378,20 +11378,25 @@ label {
   font-size: 4rem;
   font-weight: 600;
   line-height: 1.2;
-  margin-left: -2em;
+  margin-left: -1em;
   color: white;
+  margin-top: -1em;
 }
 
 .my-4 {
+  color: black;
   margin-bottom: 1.5rem !important;
   margin-left: -1em;
-  color: white;
 }
 
 .mb-5 {
-  color: white;
   margin-left: -3em;
   font-weight: 400;
+}
+
+#subtitulo1 {
+  color: white;
+  margin-left: -1em;
 }
 
 .btn {
@@ -11399,9 +11404,10 @@ label {
 }
 
 #boton1 {
-  margin-left: -1.8em;
+  margin-left: 10px;
   background: none;
   border-color: white !important;
+  transition: 0.5 ease-in-out;
 }
 
 #boton2 {
@@ -11412,12 +11418,10 @@ label {
 
 #boton1:hover {
   color: black;
-  background: white !important;
 }
 
 #boton2:hover {
   color: black;
-  background: white !important;
 }
 
 #hero-img {
@@ -11440,8 +11444,8 @@ label {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 50px;
-  margin-top: 170px;
-  margin-left: -60px;
+  margin-top: 110px;
+  margin-left: 50px;
 }
 
 .swiper-slide {
