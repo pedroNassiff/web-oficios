@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Models\Prestador;
 
 use Illuminate\Http\Request;
 
@@ -26,13 +27,19 @@ class AdminController extends Controller
     	return redirect()->back()->with('mensaje', 'El usuario se dió de alta correctamente');
 	}
 	
+	public function getAdministracion(){
+		return view('admin.administracion');
+	}
 	
-	
-		public function getAdministracion(){
-			return view('admin.administracion');
-		}
-	
-		public function solicitudes(){
-			return view('admin.solicitudes');
-		}
+	public function solicitudes(){
+
+        $prestadores = Prestador::join('users', 'users.id', '=', 'prestador.user_id')->get();
+
+		//dd($prestadores);
+        return view('admin.solicitudes', 
+        [ 
+			'prestadores' => $prestadores,
+        ]);
+
+	}
 }
