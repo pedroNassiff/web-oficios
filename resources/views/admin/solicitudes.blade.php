@@ -29,6 +29,7 @@
                             <div class="table-container">
                                 <table class="table table-filter">
                                     <tbody>
+                                        @foreach ($prestadores as $prestador)
                                         <tr data-status="pagado">
                                             <td>
                                                 <div class="ckbox">
@@ -47,17 +48,22 @@
                                                         <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
                                                     </a>
                                                     <div class="media-body">
-                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                        <span class="media-meta pull-right">{{date('d-m-Y H:i:s', strtotime($prestador->created_at))}}</span>
                                                         <h4 class="title">
-                                                            Lorem Impsum
+                                                            {{$prestador->name}} {{$prestador->lastname}}
                                                             <span class="pull-right pagado">(Pagado)</span>
+                                                            <span class="pull-right {{$prestador->habilitado? 'pagado' : 'pendiente'}}">{{$prestador->habilitado? 'Habilitado' : 'Deshabilitado'}}</span>
                                                         </h4>
-                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                    <p class="summary">{{$prestador->descripcion}}</p>
                                                     </div>
                                                 </div>
                                             </td>
+                                            <td class="centrar">
+                                                <a class="icon-action" href="#" data-toggle="tooltip" data-placement="top" title="Habilitar"><i class="fas fa-plus-circle"></i></a>
+                                            </td>
                                         </tr>
-                                        <tr data-status="pendiente">
+                                        @endforeach
+                                        {{-- <tr data-status="pendiente">
                                             <td>
                                                 <div class="ckbox">
                                                     <input type="checkbox" id="checkbox3">
@@ -168,7 +174,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr> --}}
                                     </tbody>
                                 </table>
                             </div>

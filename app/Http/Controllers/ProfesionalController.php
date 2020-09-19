@@ -26,7 +26,7 @@ class ProfesionalController extends Controller
             'web' => 'profesionales.web'];
 
     	return view('profesionalPerfil', ['profesional' => $profesional]);
-            //echo $profesional;
+        //echo $profesional;
     }
 
     public function miPerfil(){
