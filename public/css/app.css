@@ -11550,6 +11550,10 @@ section#filter .imagen-card-filter {
   border-radius: 15px;
 }
 
+.card-registro {
+  margin: 0;
+}
+
 .row-slider {
   margin-bottom: 50px;
 }
@@ -11761,6 +11765,41 @@ section#filter .imagen-card-filter {
   100% {
     opacity: 0;
   }
+}
+
+.form-control {
+  border-top: 0px solid #ced4da;
+  border-right: 0px solid #ced4da;
+  border-left: 0px solid #ced4da;
+  border-bottom: 1px solid #e48f27;
+}
+
+.card-register {
+  width: 39em;
+}
+
+.register-swiper {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-top: 70px;
+  margin-left: -3px;
+}
+
+.card-header-register {
+  margin-right: 2em;
+  margin-left: 55em;
+}
+
+.card-register {
+  border: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
 }
 
 .img-container {
@@ -12090,9 +12129,66 @@ section#contact .form-group-textarea .form-control {
 }
 
 @media (max-width: 576px) {
-  .footer {
-    height: 300px;
+  .card-register {
+    margin-left: -15em;
+    width: 27em;
+  }
+
+  .register-swiper {
     width: 100%;
+    padding-top: 212px;
+    padding-left: 0em;
+    margin-left: 200px !important;
+    margin-bottom: 105px !important;
+  }
+
+  #boton-registrar {
+    margin-left: 9em;
+    border: 1px solid #e48f27;
+  }
+
+  .display-1 {
+    font-size: 2.2rem;
+    margin-left: 0.8em;
+    margin-top: 1.5em;
+  }
+
+  #subtitulo1 {
+    margin-left: 0.6em;
+    font-size: 1em;
+    margin-top: 1.5em;
+  }
+
+  .footer {
+    height: 197px;
+    width: 100%;
+  }
+
+  #boton1 {
+    width: 89%;
+    margin-left: 15px;
+    margin-top: -1em;
+  }
+
+  #boton2 {
+    width: 89%;
+    margin-left: 1.1em;
+    margin-top: 3em;
+  }
+
+  .swiper-container {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+
+  .tituloServicios {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    padding-left: 0.6em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    color: #e48f27;
+    font-weight: 700;
   }
 
   footer .logos {
