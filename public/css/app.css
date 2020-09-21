@@ -12036,8 +12036,36 @@ section#contact .form-group-textarea .form-control {
   text-align: justify;
 }
 
+.modal-content-color {
+  background-color: #eaeaea;
+  border-top: solid 5px #e48f27;
+}
+
 .cont-login {
   margin-top: 5%;
+}
+
+.input-login {
+  border-style: hidden hidden solid hidden;
+  border-bottom: solid 1px #e48f27;
+  background-color: transparent;
+  border-radius: 0%;
+}
+
+.prefix {
+  color: #e48f27;
+  font-size: 25px;
+  margin: 5px;
+}
+
+.login-links {
+  margin: 20px auto;
+}
+
+.modal-title,
+.login-links > span,
+.modal-body > .md-form > label {
+  color: #02093b;
 }
 
 @media (max-width: 780px) {

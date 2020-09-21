@@ -26,35 +26,94 @@
                 <li class="nav-item">
                     <a class="nav-link {{ setActive('contact') }}" href="/ayuda">AYUDA</a>
                 </li>
-
-                
-
+                @guest
                 <li class="nav-item">
-                    <li class="nav-item dropdown">
-                        <a class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27!important; color:white;"   data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="btn-logreg">Ingresar | Registrarse</i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            @auth
-                            <a class="dropdown-item " href="">Hola {{ auth()->user()->name }} </a>
-                            @if(auth()->user()->rol_id == 2)
-                            <a class="dropdown-item" href="/admin/inicio">Dashboard</a>
-                            @endif
-                            @if(auth()->user()->rol_id != 2)
-                            <a class="dropdown-item " href="/perfil">Mi Perfil</a>
-                            @endif
-                            <a class="dropdown-item "  href="#"  onclick="
-                                event.preventDefault();
-                                document.getElementById('form-post').submit();">Salir</a>
-                            @endauth
-
-                            @guest
-                                <a class="dropdown-item" href="/login">Ingresar</a>
-                                <a class="dropdown-item" href="/register">Registrarse</a>
-                            @endguest
-                        </div>
-                    </li>
-                </li>
-
+                    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content modal-content-color">
+                                <div class="modal-header text-center">
+                                    <h4 class="modal-title w-100 font-weight-bold">Iniciar sesión</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
+                                    <div class="modal-body mx-3">
+                                        <div class="md-form mb-5">
+                                            <div class="d-flex ">
+                                                <i class="fa fa-envelope prefix"></i>
+                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror input-login validate" name="email" value="{{ old('email') }}" required>
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <label data-error="wrong" data-success="right" for="email">Correo electrónico</label>
+                                        </div>
+                                    
+                                        <div class="md-form mb-4">
+                                            <div class="d-flex ">
+                                                <i class="fa fa-lock prefix"></i>
+                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror input-login validate" name="password" required>
+                                                @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <label data-error="wrong" data-success="right" for="password">Contraseña</label>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                 
+                                                    <label class="form-check-label" for="remember">
+                                                        {{ __('Recordar') }}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center flex-column">
+                                        <button type="submit" class="btn hw-btn hvr-sweep-to-right">Entrar</button>
+                                        @if (Route::has('password.request'))
+                                            <a class="btn-link" href="{{ route('password.request') }}">
+                                                {{ __('¿Olvidaste tu contraseña?') }}
+                                            </a>
+                                        @endif
+                                    </div>
+                                    <div class="login-links text-center">
+                                        <span>¿Todavía no tenés una cuenta?</span>
+                                        <a href="">Registrate</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#" class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27!important; color:white;" data-toggle="modal" data-target="#modalLoginForm" role="button" aria-haspopup="true" aria-expanded="false" id="btn-logreg">Ingresar | Registrarse</a>
+                    </div>
+                </li>
+                @endguest
+                @auth
+                <li class="nav-item dropdown">
+                    <a class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27; color:white;"   data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">¡HOLA {{ auth()->user()->name }}!  <i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @if(auth()->user()->rol_id == 2)
+                                <a class="dropdown-item" href="/admin/inicio">Dashboard</a>
+                                @endif
+                                @if(auth()->user()->rol_id != 2)
+                                <a class="dropdown-item " href="/perfil">Mi Perfil</a>
+                                @endif
+                                <a class="dropdown-item "  href="#"  onclick="event.preventDefault(); document.getElementById('form-post').submit();">Salir</a>
+                        </div>
+                </li>
+                @endauth
             </ul>
         </div>
     </div>
