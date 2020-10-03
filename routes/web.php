@@ -34,6 +34,11 @@ Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
 Route::get('/acuerdo', function(){
 	return view ('terminos_y_condiciones');
 });
+
+Route::get('/about', function(){
+	return view ('about');
+});
+
 Route::get('/contact', function(){
 	return view ('contact');
 });

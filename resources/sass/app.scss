@@ -878,6 +878,23 @@ background-clip: border-box;
   line-height: 50px;
 }
 
+//about 
+.img-about{
+  width: 100%;
+    height: 40vh;
+    background-image: url(../../public/img/about.png);
+    background-size: cover;
+    color: white;
+    margin: 0px auto;
+}
+
+.img-about > .row > .faq-title {
+  margin-left: 365px;
+}
+.text-about p{
+  text-align: justify;
+}
+
 // inicio - inscribite
 .shop-banner {
   position: relative;
