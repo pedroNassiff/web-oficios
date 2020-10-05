@@ -11460,6 +11460,16 @@ label {
   font-family: "Montserrat", sans-serif;
 }
 
+section#filter .tituloServicios {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  padding-left: 0.6em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  color: #e48f27;
+  font-weight: 700;
+}
+
 #mapa {
   width: 540px;
   height: 595px;
@@ -11481,6 +11491,7 @@ section#filter .swiper-container-filter {
   padding-top: 10px;
   padding-bottom: 15px;
   max-width: 1364px;
+  margin-bottom: 3%;
 }
 
 .search-btn {
@@ -12224,16 +12235,6 @@ section#contact .form-group-textarea .form-control {
   .swiper-container {
     margin-top: 15px;
     margin-left: 0px;
-  }
-
-  .tituloServicios {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
-    padding-left: 0.6em;
-    padding-bottom: 2em;
-    padding-top: 2em;
-    color: #e48f27;
-    font-weight: 700;
   }
 
   footer .logos {
