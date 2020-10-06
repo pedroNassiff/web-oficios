@@ -95,7 +95,7 @@
   </script>
 
 
-<section class="py-3" id="filter">
+<section class="py-3 oficios-section" id="filter">
 	<div class="filter-bar justify-content-center d-flex row">
 		<div class="col-md-10 filter-bar-row">
 			<div class="row filter-container">
@@ -135,162 +135,59 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-6 cards">
-				@for ($i = 1; $i <=3; $i++)
-				<div class="row row-slider">
-					<div class='col-12 col-md-3 slider slider-izq'>
-						<div class='slide1'>
-							<div class="desc-card-filter rounded-bottom text-left">
-								<div class="fondo-enc">
-									<h5 class="m-0 name-card">Carlos Rodriguez</h5>
-									<p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</p>
-								</div>
-							</div>
-							<div class="of-city">
-								<div class="clasificaciones">
-									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricista</p>
-									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-								</div>
-								<div class="mt-2 mr-1">
-									<a href="" class="plus">IR AL PERFIL</a>
-								</div>
-							</div>
-						</div>
-						<div class='slide2'>
-							<div class="desc-card-filter rounded-bottom text-left">
-								<div class="fondo-enc">
-									<h5 class="m-0 name-card">María Fernandez</h5>
-									<p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</p>
-								</div>
-							</div>
-							<div class="of-city">
-								<div class="clasificaciones">
-									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
-									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-								</div>
-								<div class="mt-2 mr-1">
-									<a href="" class="plus">IR AL PERFIL</a>
-								</div>
-							</div>
-						</div>
-						<div class='slide3'>
-							<div class="desc-card-filter rounded-bottom text-left">
-								<div class="fondo-enc">
-									<h5 class="m-0 name-card">José Gonzalez</h5>
-									<p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</p>
-								</div>
-							</div>
-							<div class="of-city">
-								<div class="clasificaciones">
-									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
-									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-								</div>
-								<div class="mt-2 mr-1">
-									<a href="" class="plus">IR AL PERFIL</a>
-								</div>								
-							</div>
-						</div>
+	<div class="container mt-3">
+		<div class="row oficios-card-container d-flex justify-content-center">
+			<div class="col-md-3">
+				<div class="oficios-card pt-3">
+					<div class="card-img-container d-flex justify-content-center">
+						<div class="card-image"></div>
 					</div>
-					<div class='col-12 col-md-3 slider slider-der'>
-						<div class='slide2'>
-							<div class="desc-card-filter rounded-bottom text-left">
-								<div class="fondo-enc">
-									<h5 class="m-0 name-card">María Fernandez</h5>
-									<p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</p>
-								</div>
-							</div>
-							<div class="of-city">
-								<div class="clasificaciones">
-									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Cuidado de personas</p>
-									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-								</div>
-								<div class="mt-2 mr-1">
-									<a href="" class="plus">IR AL PERFIL</a>
-								</div>
-							</div>
-						</div>
-						<div class='slide3'>
-							<div class="desc-card-filter rounded-bottom text-left">
-								<div class="fondo-enc">
-									<h5 class="m-0 name-card">José Gonzalez</h5>
-									<p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</p>
-								</div>
-							</div>
-							<div class="of-city">
-								<div class="clasificaciones">
-									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Carpintería</p>
-									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-								</div>
-								<div class="mt-2 mr-1">
-									<a href="" class="plus">IR AL PERFIL</a>
-								</div>								
-							</div>
-						</div>
-						<div class='slide1'>
-							<div class="desc-card-filter rounded-bottom text-left">
-								<div class="fondo-enc">
-									<h5 class="m-0 name-card">Carlos Rodriguez</h5>
-									<p>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</p>
-								</div>
-							</div>
-							<div class="of-city">
-								<div class="clasificaciones">
-									<p class="m-0 desc-card"><i class="fa fa-user icon-card-filter" aria-hidden="true"></i> Electricidad</p>
-									<p class="m-0 desc-card"><i class="fa fa-map-marker icon-card-filter" aria-hidden="true"></i> Resistencia</p>
-								</div>
-								<div class="mt-2 mr-1">
-									<a href="" class="plus">IR AL PERFIL</a>
-								</div>	
-							</div>
-						</div>
+					<div class="card-info-container d-flex flex-column align-items-center">
+						<span class="card-name">Sebastián Rodriguez</span>
+						<span class="card-oficio">Electricista</span>
+						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
 					</div>
 				</div>
-				@endfor
 			</div>
-
-			<div class="col-sm-12 col-md-12 col-lg-6 map">
-				<div id="mapa"> </div> 
+			<div class="col-md-3">
+				<div class="oficios-card pt-3">
+					<div class="card-img-container d-flex justify-content-center">
+						<div class="card-image"></div>
+					</div>
+					<div class="card-info-container d-flex flex-column align-items-center">
+						<span class="card-name">Sebastián Rodriguez</span>
+						<span class="card-oficio">Electricista</span>
+						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="oficios-card pt-3">
+					<div class="card-img-container d-flex justify-content-center">
+						<div class="card-image"></div>
+					</div>
+					<div class="card-info-container d-flex flex-column align-items-center">
+						<span class="card-name">Sebastián Rodriguez</span>
+						<span class="card-oficio">Electricista</span>
+						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="oficios-card pt-3">
+					<div class="card-img-container d-flex justify-content-center">
+						<div class="card-image"></div>
+					</div>
+					<div class="card-info-container d-flex flex-column align-items-center">
+						<span class="card-name">Sebastián Rodriguez</span>
+						<span class="card-oficio">Electricista</span>
+						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	
 </section>
 			
 <!-- nuevo -->
