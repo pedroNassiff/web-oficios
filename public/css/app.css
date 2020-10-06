@@ -11562,7 +11562,7 @@ section#filter .imagen-card-filter {
 }
 
 .oficios-section {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 
 .oficios-card {
@@ -11570,15 +11570,17 @@ section#filter .imagen-card-filter {
   width: 262px;
   background-color: white;
   border-radius: 15px;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
 }
 
 .card-img-container .card-image {
   background-image: url("https://gitlab.com/uploads/-/system/user/avatar/6025439/avatar.png?width=400");
   background-size: cover;
-  border: solid 6px #FAAA10;
+  border: solid 6px #faaa10;
   border-radius: 50px;
   width: 101px;
   height: 101px;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
 }
 
 .card-info-container {
@@ -11594,7 +11596,7 @@ section#filter .imagen-card-filter {
 }
 
 .card-oficio {
-  color: #FAAA10;
+  color: #faaa10;
   font-size: 12px;
   margin-bottom: -2px;
   font-weight: lighter;

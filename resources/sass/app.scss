@@ -603,58 +603,64 @@ section#filter .imagen-card-filter {
 }
 
 // nuevas cards de oficios - Home
-.oficios-section{
-  background-color: #EAEAEA;
+.oficios-section {
+  background-color: #eaeaea;
 }
 
-.oficios-card{
+.oficios-card {
   height: 198px;
   width: 262px;
   background-color: white;
   border-radius: 15px;
+  -webkit-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+  -moz-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
 }
 
-.card-img-container .card-image{
-  background-image: url('https://gitlab.com/uploads/-/system/user/avatar/6025439/avatar.png?width=400');
+.card-img-container .card-image {
+  background-image: url("https://gitlab.com/uploads/-/system/user/avatar/6025439/avatar.png?width=400");
   background-size: cover;
-  border: solid 6px #FAAA10;
+  border: solid 6px #faaa10;
   border-radius: 50px;
   width: 101px;
   height: 101px;
+  -webkit-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+  -moz-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
 }
 
-.card-info-container{
+.card-info-container {
   height: 65px;
   margin-top: 4px;
 }
 
-.card-name{
+.card-name {
   color: #636363;
   font-size: 12px;
   margin-bottom: -2px;
   font-weight: bold;
 }
 
-.card-oficio{
-  color: #FAAA10;
+.card-oficio {
+  color: #faaa10;
   font-size: 12px;
   margin-bottom: -2px;
   font-weight: lighter;
 }
 
-.card-localidad{
+.card-localidad {
   color: #636363;
   font-size: 12px;
   margin-bottom: -2px;
   font-weight: lighter;
 }
 
-.card-localidad img{
+.card-localidad img {
   margin-right: 2px;
 }
 
 //registro
-.card-registro{
+.card-registro {
   margin: 0;
 }
 //nwe slider
@@ -691,8 +697,8 @@ section#filter .imagen-card-filter {
   height: 165px;
   border-radius: 15px;
   box-shadow: 0px 0px 0px grey;
-  -webkit-transition:  box-shadow .6s ease-out;
-  box-shadow: .8px .9px 3px grey;
+  -webkit-transition: box-shadow 0.6s ease-out;
+  box-shadow: 0.8px 0.9px 3px grey;
 }
 
 .slide1 {
@@ -747,19 +753,18 @@ section#filter .imagen-card-filter {
   color: #02093b;
   border: solid 1px #02093b;
 }
-.slide1:hover{
+.slide1:hover {
   box-shadow: 1px 8px 20px grey;
-  -webkit-transition:  box-shadow .3s ease-in;
+  -webkit-transition: box-shadow 0.3s ease-in;
 }
-.slide2:hover{
+.slide2:hover {
   box-shadow: 1px 8px 20px grey;
-  -webkit-transition:  box-shadow .3s ease-in;
+  -webkit-transition: box-shadow 0.3s ease-in;
 }
-.slide3:hover{
+.slide3:hover {
   box-shadow: 1px 8px 20px grey;
-  -webkit-transition:  box-shadow .3s ease-in;
+  -webkit-transition: box-shadow 0.3s ease-in;
 }
-
 
 @keyframes fade {
   0% {
@@ -804,37 +809,36 @@ section#filter .imagen-card-filter {
   }
 }
 //registro
-.form-control{
+.form-control {
   border-top: 0px solid #ced4da;
-    border-right: 0px solid #ced4da;
-    border-left: 0px solid #ced4da;
-    border-bottom: 1px solid #e48f27;
+  border-right: 0px solid #ced4da;
+  border-left: 0px solid #ced4da;
+  border-bottom: 1px solid #e48f27;
 }
-.card-register{
+.card-register {
   width: 39em;
 }
 
-.register-swiper{
+.register-swiper {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 50px;
   margin-top: 70px;
   margin-left: -3px;
-
 }
-.card-header-register{
+.card-header-register {
   margin-right: 2em;
   margin-left: 55em;
 }
-.card-register{
+.card-register {
   border: inherit;
   position: relative;
-display: flex;
-flex-direction: column;
-min-width: 0;
-word-wrap: break-word;
-background-color: #fff;
-background-clip: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
 }
 // ayuda
 .img-container {
@@ -940,20 +944,20 @@ background-clip: border-box;
   line-height: 50px;
 }
 
-//about 
-.img-about{
+//about
+.img-about {
   width: 100%;
-    height: 40vh;
-    background-image: url(../../public/img/about.png);
-    background-size: cover;
-    color: white;
-    margin: 0px auto;
+  height: 40vh;
+  background-image: url(../../public/img/about.png);
+  background-size: cover;
+  color: white;
+  margin: 0px auto;
 }
 
 .img-about > .row > .faq-title {
   margin-left: 365px;
 }
-.text-about p{
+.text-about p {
   text-align: justify;
 }
 
@@ -1124,7 +1128,7 @@ section#contact .form-group-textarea .form-control {
 //perfil que solo ve el usuario
 
 //login
-.modal-content-color{
+.modal-content-color {
   background-color: #eaeaea;
   border-top: solid 5px #e48f27;
 }
@@ -1133,13 +1137,13 @@ section#contact .form-group-textarea .form-control {
   margin-top: 5%;
 }
 
-.input-login{
+.input-login {
   border-style: hidden hidden solid hidden;
   border-bottom: solid 1px #e48f27;
   background-color: transparent;
   border-radius: 0%;
 }
-.prefix{
+.prefix {
   color: #e48f27;
   font-size: 25px;
   margin: 5px;
@@ -1147,7 +1151,9 @@ section#contact .form-group-textarea .form-control {
 .login-links {
   margin: 20px auto;
 }
-.modal-title, .login-links > span, .modal-body > .md-form > label{
+.modal-title,
+.login-links > span,
+.modal-body > .md-form > label {
   color: #02093b;
 }
 
@@ -1190,16 +1196,15 @@ section#contact .form-group-textarea .form-control {
   section#contact .container {
     margin-bottom: 105px;
   }
-  .how-work{
+  .how-work {
     min-height: 115vh;
   }
 }
 
 //telefono
 @media (max-width: 576px) {
-
   //registro
-  .card-register{
+  .card-register {
     margin-left: -15em;
     width: 27em;
   }
@@ -1208,23 +1213,23 @@ section#contact .form-group-textarea .form-control {
     width: 100%;
     padding-top: 212px;
     padding-left: 0em;
-margin-left: 200px !important;
+    margin-left: 200px !important;
     margin-bottom: 105px !important;
   }
 
-  #boton-registrar{
+  #boton-registrar {
     margin-left: 9em;
     border: 1px solid #e48f27;
   }
   //header
   //Titulo
-  .display-1{
+  .display-1 {
     font-size: 2.2rem;
-    margin-left: .8em;
+    margin-left: 0.8em;
     margin-top: 1.5em;
   }
-  
-  #subtitulo1{
+
+  #subtitulo1 {
     margin-left: 0.6em;
     font-size: 1em;
     margin-top: 1.5em;
@@ -1249,7 +1254,6 @@ margin-left: 200px !important;
     margin-left: 0px;
   }
 
-  
   footer .logos {
     flex-direction: column;
     justify-content: center;
@@ -1293,13 +1297,11 @@ margin-left: 200px !important;
   .how-work > .container > .row > .col-9 {
     margin: 5%;
   }
-  .mresp{
+  .mresp {
     margin-bottom: 64%;
   }
-  .hw-title{
+  .hw-title {
     width: 80%;
     text-align: center;
   }
-
-  
 }
