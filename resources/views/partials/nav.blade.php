@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="login-links text-center">
                                         <span>¿Todavía no tenés una cuenta?</span>
-                                        <a href="">Registrate</a>
+                                        <a action="{{ route('register') }}" href="">Registrate</a>
                                     </div>
                                 </form>
                             </div>

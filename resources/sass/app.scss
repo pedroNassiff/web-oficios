@@ -88,6 +88,7 @@ body {
 .hvr-sweep-to-right:active {
   color: white !important;
 }
+
 .hvr-sweep-to-right:hover:before,
 .hvr-sweep-to-right:focus:before,
 .hvr-sweep-to-right:active:before {
@@ -1074,7 +1075,7 @@ section#contact .form-group-textarea .form-control {
 
 //login
 .modal-content-color{
-  background-color: #eaeaea;
+  background-color: white;
   border-top: solid 5px #e48f27;
 }
 
