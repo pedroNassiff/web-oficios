@@ -98,10 +98,8 @@
 <section class="py-3 oficios-section" id="filter">
 	<div class="filter-bar justify-content-center d-flex row">
 		<div class="col-md-10 filter-bar-row">
+			<div class="tituloServicios text-center"><h3>¿QUÉ OFICIO NECESITAS?</h3></div>
 			<div class="row filter-container">
-			<div class="tituloServicios">¿QUÉ OFICIO NECESITAS? 
-			
-		</div>
 				<div class="col-md-6 col-lg-4 ">
 					<input class="nya-filter" type="text" placeholder="Nombre y apellido">
 				</div>

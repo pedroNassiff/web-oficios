@@ -12,7 +12,7 @@
             <h1 class="faq-title">¿Necesitas Ayuda?</h1>
         </div>
         <div class="row text-center">
-            <p class="faq-subtitle">Estamos para ayudarte. Más abajo podrás ver las preguntas frecuentes</p>
+            <p class="faq-subtitle">Estamos para ayudarte. Aquí podrás ver las preguntas frecuentes</p>
         </div>
     </div>
 </section>
