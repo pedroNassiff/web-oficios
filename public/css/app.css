@@ -11561,6 +11561,58 @@ section#filter .imagen-card-filter {
   border-radius: 15px;
 }
 
+.oficios-section {
+  background-color: #eaeaea;
+}
+
+.oficios-card {
+  height: 198px;
+  width: 262px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+}
+
+.card-img-container .card-image {
+  background-image: url("https://gitlab.com/uploads/-/system/user/avatar/6025439/avatar.png?width=400");
+  background-size: cover;
+  border: solid 6px #faaa10;
+  border-radius: 50px;
+  width: 101px;
+  height: 101px;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+}
+
+.card-info-container {
+  height: 65px;
+  margin-top: 4px;
+}
+
+.card-name {
+  color: #636363;
+  font-size: 12px;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+
+.card-oficio {
+  color: #faaa10;
+  font-size: 12px;
+  margin-bottom: -2px;
+  font-weight: lighter;
+}
+
+.card-localidad {
+  color: #636363;
+  font-size: 12px;
+  margin-bottom: -2px;
+  font-weight: lighter;
+}
+
+.card-localidad img {
+  margin-right: 2px;
+}
+
 .card-registro {
   margin: 0;
 }
@@ -12104,7 +12156,7 @@ section#contact .form-group-textarea .form-control {
 }
 
 .modal-content-color {
-  background-color: white;
+  background-color: #eaeaea;
   border-top: solid 5px #e48f27;
 }
 
