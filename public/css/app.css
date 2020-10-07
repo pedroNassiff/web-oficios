@@ -11636,6 +11636,7 @@ section#filter .imagen-card-filter {
   height: 50px;
   border-radius: 23px;
   color: white;
+  line-height: 45px;
   background-color: #faaa10;
   border: 0px;
   font-family: "Montserrat";
@@ -11687,6 +11688,10 @@ section#filter .imagen-card-filter {
 
 .card-registro {
   margin: 0;
+}
+
+.links-formulario {
+  color: #e48f27;
 }
 
 .row-slider {
@@ -11777,6 +11782,12 @@ section#filter .imagen-card-filter {
   background-color: transparent;
   color: #02093b;
   border: solid 1px #02093b;
+}
+
+.hw-btn-orange {
+  background-color: transparent;
+  color: #e48f27;
+  border: solid 1px #e48f27;
 }
 
 .slide1:hover {

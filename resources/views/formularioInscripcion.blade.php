@@ -47,6 +47,7 @@
                                             <option value="{{ $oficio['Oficio']->id }}">{{ $oficio['Oficio']->nombre }}</option>
                                         @endforeach
                                     </select>
+                                    <a class="links-formulario" href="/OficioNuevo">¿No encontraste el oficio que buscabas?</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -86,7 +87,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="md-form mb-3">
+                                <div class="md-form mb-5">
                                     <label for="descripcion" class="">Descripción del servicio que presta:</label>
                                     <textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control"
                                         required>{{old('descripcion')}}</textarea>
@@ -96,11 +97,11 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="gridCheck">
                                     <label class="form-check-label" for="gridCheck">
-                                        He leído y acepto los <a href="/acuerdo">términos y condiciones.</a>
+                                        He leído y acepto los <a  class="links-formulario" href="/acuerdo">términos y condiciones.</a>
                                     </label>
                                 </div>
                                 <div class="centrar mt-5">
-                                    <button class="btn btn-own" type="submit">Enviar</button>
+                                    <button class="btn hw-btn-orange hvr-sweep-to-right" type="submit">Enviar</button>
                                 </div>
                             </div>
                         </div>

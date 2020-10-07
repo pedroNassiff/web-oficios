@@ -203,7 +203,7 @@
 				<h3 class="neo-title">
 					¿NO ENCONTRASTE EL OFICIO QUE BUSCABAS?
 				</h3>
-				<button class="neo-btn">Ingresá Aquí</button>
+				<a href="/OficioNuevo" class="neo-btn">Ingresá Aquí</a>
 			</div>
 			<div class="col-md-6 map-container">
 				<div id="mapa"></div>

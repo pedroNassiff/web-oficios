@@ -684,6 +684,7 @@ section#filter .imagen-card-filter {
   height: 50px;
   border-radius: 23px;
   color: white;
+  line-height: 45px;
   background-color: #faaa10;
   border: 0px;
   font-family: "Montserrat";
@@ -739,6 +740,11 @@ section#filter .imagen-card-filter {
 //registro
 .card-registro {
   margin: 0;
+}
+
+//Formulario de incripción para ser prestador
+.links-formulario {
+  color: #e48f27;
 }
 //nwe slider
 .row-slider {
@@ -829,6 +835,11 @@ section#filter .imagen-card-filter {
   background-color: transparent;
   color: #02093b;
   border: solid 1px #02093b;
+}
+.hw-btn-orange {
+  background-color: transparent;
+  color: #e48f27;
+  border: solid 1px #e48f27;
 }
 .slide1:hover {
   box-shadow: 1px 8px 20px grey;

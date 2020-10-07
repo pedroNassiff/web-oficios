@@ -31,6 +31,10 @@ Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
 
 Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
 
+Route::get('/OficioNuevo', function(){
+	return view ('solicitarOficio');
+});
+
 Route::get('/acuerdo', function(){
 	return view ('terminos_y_condiciones');
 });
