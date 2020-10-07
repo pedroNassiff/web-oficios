@@ -625,6 +625,7 @@ section#filter .imagen-card-filter {
   border-radius: 50px;
   width: 101px;
   height: 101px;
+  position: relative;
   -webkit-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
   -moz-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
   box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
@@ -659,6 +660,81 @@ section#filter .imagen-card-filter {
 .card-localidad img {
   margin-right: 2px;
 }
+
+.btn-neo-container {
+  height: 385px;
+
+}
+
+.map-container {
+  height: 385px;
+  padding-top: 20px;
+}
+
+.neo-title {
+  color: #faaa10;
+  font-weight: bold;
+}
+
+.neo-btn {
+  width: 50%;
+  margin-top: 31px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  border-radius: 23px;
+  color: white;
+  background-color: #faaa10;
+  border: 0px;
+  font-family: "Montserrat";
+  outline: none;
+  border: 1px solid #faaa10;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transform: perspective(1px) translateZ(0);
+}
+
+.neo-btn:hover{
+  color: #faaa10 !important;
+  background-color: white;
+}
+
+.card-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  background-color: #02093B;
+  opacity: 0.8;
+  overflow: hidden;
+  width: 262px;
+  border-radius: 15px;
+  height: 0;
+  transition: .5s ease;
+  cursor: pointer;
+}
+
+.card-btn{
+  color: white;
+  font-weight: lighter;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 35px;
+  width: 105px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.oficios-card:hover .card-overlay {
+  height: 100%;
+}
+
 
 //registro
 .card-registro {

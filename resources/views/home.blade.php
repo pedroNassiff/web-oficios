@@ -145,6 +145,9 @@
 						<span class="card-oficio">Electricista</span>
 						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
 					</div>
+					<div class="card-overlay">
+    					<button class="card-btn">ver perfil</button>
+  					</div>
 				</div>
 			</div>
 			<div class="col-md-3">
@@ -157,6 +160,9 @@
 						<span class="card-oficio">Electricista</span>
 						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
 					</div>
+					<div class="card-overlay">
+    					<button class="card-btn">ver perfil</button>
+  					</div>
 				</div>
 			</div>
 			<div class="col-md-3">
@@ -169,6 +175,9 @@
 						<span class="card-oficio">Electricista</span>
 						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
 					</div>
+					<div class="card-overlay">
+    					<button class="card-btn">ver perfil</button>
+  					</div>
 				</div>
 			</div>
 			<div class="col-md-3">
@@ -181,7 +190,23 @@
 						<span class="card-oficio">Electricista</span>
 						<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
 					</div>
+					<div class="card-overlay">
+    					<button class="card-btn">ver perfil</button>
+  					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 btn-neo-container d-flex flex-column justify-content-center text-center">
+				<h3 class="neo-title">
+					¿NO ENCONTRASTE EL OFICIO QUE BUSCABAS?
+				</h3>
+				<button class="neo-btn">Ingresá Aquí</button>
+			</div>
+			<div class="col-md-6 map-container">
+				<div id="mapa"></div>
 			</div>
 		</div>
 	</div>
