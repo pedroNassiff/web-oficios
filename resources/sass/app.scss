@@ -742,9 +742,21 @@ section#filter .imagen-card-filter {
   margin: 0;
 }
 
-//Formulario de incripción para ser prestador
+//Formulario de incripción para ser prestador y para solicitar nuevo oficio
 .links-formulario {
   color: #e48f27;
+}
+
+section#solicitudOficio , section#inscripcion{
+  color: #636363;
+}
+section#solicitudOficio h2, section#inscripcion h2{
+  color: #02093B;
+  font-family: "Roboto", sans-serif;
+}
+section#solicitudOficio .desc, section#inscripcion .desc{
+  width: 60%;
+  text-align: center;
 }
 //nwe slider
 .row-slider {

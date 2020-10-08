@@ -11694,6 +11694,23 @@ section#filter .imagen-card-filter {
   color: #e48f27;
 }
 
+section#solicitudOficio,
+section#inscripcion {
+  color: #636363;
+}
+
+section#solicitudOficio h2,
+section#inscripcion h2 {
+  color: #02093B;
+  font-family: "Roboto", sans-serif;
+}
+
+section#solicitudOficio .desc,
+section#inscripcion .desc {
+  width: 60%;
+  text-align: center;
+}
+
 .row-slider {
   margin-bottom: 50px;
 }

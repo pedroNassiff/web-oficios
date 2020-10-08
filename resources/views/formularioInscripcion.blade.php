@@ -8,14 +8,17 @@
 		{!! session('message') !!}
 	</div>
 @endif
-    <section class="py-4">
+    <section class="py-4" id="inscripcion">
         @if (session()->has('mensaje'))
             <div class="alert alert-success">
                 {{ session()->get('mensaje') }}
             </div>
         @endif
         <div class="container">
-            <h2>Dejanos tu datos</h2>
+            <h2 class="text-center my-3">Sumate a nuestra red de prestadores</h2>
+            <div class="justify-content-center d-flex">
+                <p class="desc">Te pedimos que rellenes el formulario con tus datos, analizaremos tus solicitud lo más pronto posible y te enviaremos una respuesta al correo electrónico asociado a tu cuenta de usuario.</p>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <form id="contact-form" name="contact-form" action="/inscripcion/enviar" method="POST"
@@ -39,7 +42,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="categoria">Seleccioná un Oficio</label>
+                                    <label for="categoria">Seleccioná un oficio</label>
                                     <select class="browser-default custom-select" name="oficio_id"
                                         onchange="selectEspecialidadHandler(event.target.value);">
                                         <option value="" disabled selected>Seleccionar</option>
@@ -52,7 +55,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="categoria">Seleccioná un Especialidad</label>
+                                    <label for="categoria">Seleccioná una especialidad</label>
                                     <select id="selectoption" class="browser-default custom-select" name="especialidad_id" disabled>
                                         <option value=""disabled selected>Seleccionar</option>
                                     </select>
@@ -74,21 +77,21 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="web" class="">WEB</label>
+                                    <label for="web" class="">Sitio web</label>
                                     <input type="text" id="web" name="web" class="form-control" value="{{old('web')}}">
                                     {!! $errors->first('web', '<small>:message</small><br>') !!}
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="matricula" class="">Matricula</label>
+                                    <label for="matricula" class="">Matrícula</label>
                                     <input type="text" id="matricula" name="matricula" class="form-control" value="{{old('matricula')}}">
                                     {!! $errors->first('matricula', '<small>:message</small><br>') !!}
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-5">
-                                    <label for="descripcion" class="">Descripción del servicio que presta:</label>
+                                    <label for="descripcion" class="">Descripción del servicio que brindás:</label>
                                     <textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control"
                                         required>{{old('descripcion')}}</textarea>
                                 </div>

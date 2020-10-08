@@ -224,8 +224,14 @@
 			La promoción de tus servicios es fundamental para la gestión de futuros trabajos.
 			Contanos dónde y cómo trabajás para que podamos acompañarte en tu vida laboral 
 			 con espacios de <strong> promoción y comercialización. </strong> <br>
-			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.</p>
-		<a href="/inscripcion" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
+			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.
+		</p>
+		@if (Auth::guest())
+			<a href="{{ route('register') }}" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
+		@else 
+			<a href="/inscripcion" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
+        @endif
+		
 	</div>
 </section>
 			
