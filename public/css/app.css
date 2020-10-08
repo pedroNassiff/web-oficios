@@ -10972,6 +10972,12 @@ body {
   color: white;
 }
 
+.btn2:hover {
+  border: 1px solid white !important;
+  background-color: transparent;
+  color: white;
+}
+
 .hvr-sweep-to-right:before {
   content: "";
   position: absolute;

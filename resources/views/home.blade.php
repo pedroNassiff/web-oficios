@@ -277,7 +277,7 @@
         </div>
 	</div>
 	<div class="row d-flex justify-content-center mb-5 mt-5">
-		<a href="/ayuda" class="mresp btn hw-btn">Necesito Ayuda</a>
+		<a href="/ayuda" class="mresp btn btn2 hw-btn">Necesito Ayuda</a>
 	</div>
 </section>
 
