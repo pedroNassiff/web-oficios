@@ -747,10 +747,10 @@ section#filter .imagen-card-filter {
   color: #e48f27;
 }
 
-section#solicitudOficio , section#inscripcion{
+section#solicitudOficio , section#inscripcion, section#contact{
   color: #636363;
 }
-section#solicitudOficio h2, section#inscripcion h2{
+section#solicitudOficio h1, section#inscripcion h1, section#contact h1{
   color: #02093B;
   font-family: "Roboto", sans-serif;
 }
@@ -1229,20 +1229,17 @@ section#contact .form-group-textarea .form-control {
 
 //login
 .modal-content-color {
-  background-color: #eaeaea;
+  background-color: white;
   border-top: solid 5px #e48f27;
+}
+.modal.show .modal-dialog{
+  margin-top: 6%;
 }
 
 .cont-login {
   margin-top: 5%;
 }
 
-.input-login {
-  border-style: hidden hidden solid hidden;
-  border-bottom: solid 1px #e48f27;
-  background-color: transparent;
-  border-radius: 0%;
-}
 .prefix {
   color: #e48f27;
   font-size: 25px;

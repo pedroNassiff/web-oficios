@@ -15,7 +15,7 @@
             </div>
         @endif
         <div class="container">
-            <h2 class="text-center my-3">¿No encontraste el oficio que buscabas?</h2>
+            <h1 class="text-center my-3">¿No encontraste el oficio que buscabas?</h1>
             <div class="justify-content-center d-flex">
                 <p class="desc">Te pedimos que rellenes el formulario así podemos saber que servicio buscabas en la Red de Oficios y no lo tenemos, ya que con tu ayuda iremos ampliando nuestra oferta lo antes posible.</p>
             </div>

@@ -15,7 +15,7 @@
             </div>
         @endif
         <div class="container">
-            <h2 class="text-center my-3">Sumate a nuestra red de prestadores</h2>
+            <h1 class="text-center my-3">Sumate a nuestra red de prestadores</h1>
             <div class="justify-content-center d-flex">
                 <p class="desc">Te pedimos que rellenes el formulario con tus datos, analizaremos tus solicitud lo más pronto posible y te enviaremos una respuesta al correo electrónico asociado a tu cuenta de usuario.</p>
             </div>

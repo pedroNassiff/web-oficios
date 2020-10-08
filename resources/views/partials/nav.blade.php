@@ -44,27 +44,26 @@
                                         <div class="md-form mb-5">
                                             <div class="d-flex ">
                                                 <i class="fa fa-envelope prefix"></i>
-                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror input-login validate" name="email" value="{{ old('email') }}" required>
+                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror validate" name="email" value="{{ old('email') }}"  placeholder="Email" required>
                                                 @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                                 @enderror
                                             </div>
-                                            <label data-error="wrong" data-success="right" for="email">Correo electrónico</label>
+                                            
                                         </div>
                                     
                                         <div class="md-form mb-4">
                                             <div class="d-flex ">
                                                 <i class="fa fa-lock prefix"></i>
-                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror input-login validate" name="password" required>
+                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror validate" name="password" placeholder="Contraseña" required>
                                                 @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                                 @enderror
                                             </div>
-                                            <label data-error="wrong" data-success="right" for="password">Contraseña</label>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-md-6">
@@ -81,14 +80,14 @@
                                     <div class="modal-footer d-flex justify-content-center flex-column">
                                         <button type="submit" class="btn hw-btn hvr-sweep-to-right">Entrar</button>
                                         @if (Route::has('password.request'))
-                                            <a class="btn-link" href="{{ route('password.request') }}">
+                                            <a class="btn-link links-formulario" href="{{ route('password.request') }}">
                                                 {{ __('¿Olvidaste tu contraseña?') }}
                                             </a>
                                         @endif
                                     </div>
                                     <div class="login-links text-center">
                                         <span>¿Todavía no tenés una cuenta?</span>
-                                        <a action="{{ route('register') }}" href="">Registrate</a>
+                                        <a class="links-formulario" action="{{ route('register') }}" href="">Registrate</a>
                                     </div>
                                 </form>
                             </div>
