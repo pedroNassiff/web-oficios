@@ -4,7 +4,7 @@
 @section('content')
 <section class="page-section mb-5" id="">
     <div class="row d-flex flex-column align-items-center img-about justify-content-center">
-        <div class="row">
+        <div class="row position-relative">
             <h1 class="faq-title">Acerca de la Red de Oficios</h1>
         </div>
     </div>
