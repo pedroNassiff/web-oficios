@@ -10972,6 +10972,12 @@ body {
   color: white;
 }
 
+.btn2:hover {
+  border: 1px solid white !important;
+  background-color: transparent;
+  color: white;
+}
+
 .hvr-sweep-to-right:before {
   content: "";
   position: absolute;
@@ -11561,8 +11567,156 @@ section#filter .imagen-card-filter {
   border-radius: 15px;
 }
 
+.oficios-section {
+  background-color: #eaeaea;
+}
+
+.oficios-card {
+  height: 198px;
+  width: 262px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+}
+
+.card-img-container .card-image {
+  background-image: url("https://gitlab.com/uploads/-/system/user/avatar/6025439/avatar.png?width=400");
+  background-size: cover;
+  border: solid 6px #faaa10;
+  border-radius: 50px;
+  width: 101px;
+  height: 101px;
+  position: relative;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+}
+
+.card-info-container {
+  height: 65px;
+  margin-top: 4px;
+}
+
+.card-name {
+  color: #636363;
+  font-size: 12px;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+
+.card-oficio {
+  color: #faaa10;
+  font-size: 12px;
+  margin-bottom: -2px;
+  font-weight: lighter;
+}
+
+.card-localidad {
+  color: #636363;
+  font-size: 12px;
+  margin-bottom: -2px;
+  font-weight: lighter;
+}
+
+.card-localidad img {
+  margin-right: 2px;
+}
+
+.btn-neo-container {
+  height: 385px;
+}
+
+.map-container {
+  height: 385px;
+  padding-top: 20px;
+}
+
+.neo-title {
+  color: #faaa10;
+  font-weight: bold;
+}
+
+.neo-btn {
+  width: 50%;
+  margin-top: 31px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  border-radius: 23px;
+  color: white;
+  line-height: 45px;
+  background-color: #faaa10;
+  border: 0px;
+  font-family: "Montserrat";
+  outline: none;
+  border: 1px solid #faaa10;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transform: perspective(1px) translateZ(0);
+}
+
+.neo-btn:hover {
+  color: #faaa10 !important;
+  background-color: white;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  background-color: #02093B;
+  opacity: 0.8;
+  overflow: hidden;
+  width: 262px;
+  border-radius: 15px;
+  height: 0;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-btn {
+  color: white;
+  font-weight: lighter;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 35px;
+  width: 105px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.oficios-card:hover .card-overlay {
+  height: 100%;
+}
+
 .card-registro {
   margin: 0;
+}
+
+.links-formulario {
+  color: #e48f27;
+}
+
+section#solicitudOficio,
+section#inscripcion,
+section#contact {
+  color: #636363;
+}
+
+section#solicitudOficio h1,
+section#inscripcion h1,
+section#contact h1 {
+  color: #02093B;
+  font-family: "Roboto", sans-serif;
+}
+
+section#solicitudOficio .desc,
+section#inscripcion .desc {
+  width: 60%;
+  text-align: center;
 }
 
 .row-slider {
@@ -11653,6 +11807,12 @@ section#filter .imagen-card-filter {
   background-color: transparent;
   color: #02093b;
   border: solid 1px #02093b;
+}
+
+.hw-btn-orange {
+  background-color: transparent;
+  color: #e48f27;
+  border: solid 1px #e48f27;
 }
 
 .slide1:hover {
@@ -11822,6 +11982,19 @@ section#filter .imagen-card-filter {
   color: white;
 }
 
+.img-container:before,
+.img-about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40vh;
+  margin-top: 87px;
+}
+
 .faq-title {
   font-size: 60px;
   text-shadow: -2px 3px #0e263e;
@@ -11917,14 +12090,10 @@ section#filter .imagen-card-filter {
 .img-about {
   width: 100%;
   height: 40vh;
-  background-image: url(/images/about.png?7e90809066cf8b8a022305a470cc1c94);
+  background-image: url(/images/about1.png?624e287a13c40fb74473010aca4506a0);
   background-size: cover;
   color: white;
   margin: 0px auto;
-}
-
-.img-about > .row > .faq-title {
-  margin-left: 365px;
 }
 
 .text-about p {
@@ -12104,19 +12273,16 @@ section#contact .form-group-textarea .form-control {
 }
 
 .modal-content-color {
-  background-color: #eaeaea;
+  background-color: white;
   border-top: solid 5px #e48f27;
+}
+
+.modal.show .modal-dialog {
+  margin-top: 6%;
 }
 
 .cont-login {
   margin-top: 5%;
-}
-
-.input-login {
-  border-style: hidden hidden solid hidden;
-  border-bottom: solid 1px #e48f27;
-  background-color: transparent;
-  border-radius: 0%;
 }
 
 .prefix {

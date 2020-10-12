@@ -8,14 +8,17 @@
 		{!! session('message') !!}
 	</div>
 @endif
-    <section class="py-4">
+    <section class="py-4" id="inscripcion">
         @if (session()->has('mensaje'))
             <div class="alert alert-success">
                 {{ session()->get('mensaje') }}
             </div>
         @endif
         <div class="container">
-            <h2>Dejanos tu datos</h2>
+            <h1 class="text-center my-3">Sumate a nuestra red de prestadores</h1>
+            <div class="justify-content-center d-flex">
+                <p class="desc">Te pedimos que rellenes el formulario con tus datos, analizaremos tus solicitud lo más pronto posible y te enviaremos una respuesta al correo electrónico asociado a tu cuenta de usuario.</p>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <form id="contact-form" name="contact-form" action="/inscripcion/enviar" method="POST"
@@ -39,7 +42,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="categoria">Seleccioná un Oficio</label>
+                                    <label for="categoria">Seleccioná un oficio</label>
                                     <select class="browser-default custom-select" name="oficio_id"
                                         onchange="selectEspecialidadHandler(event.target.value);">
                                         <option value="" disabled selected>Seleccionar</option>
@@ -47,11 +50,12 @@
                                             <option value="{{ $oficio['Oficio']->id }}">{{ $oficio['Oficio']->nombre }}</option>
                                         @endforeach
                                     </select>
+                                    <a class="links-formulario" href="/OficioNuevo">¿No encontraste el oficio que buscabas?</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="categoria">Seleccioná un Especialidad</label>
+                                    <label for="categoria">Seleccioná una especialidad</label>
                                     <select id="selectoption" class="browser-default custom-select" name="especialidad_id" disabled>
                                         <option value=""disabled selected>Seleccionar</option>
                                     </select>
@@ -73,21 +77,21 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="web" class="">WEB</label>
+                                    <label for="web" class="">Sitio web</label>
                                     <input type="text" id="web" name="web" class="form-control" value="{{old('web')}}">
                                     {!! $errors->first('web', '<small>:message</small><br>') !!}
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
-                                    <label for="matricula" class="">Matricula</label>
+                                    <label for="matricula" class="">Matrícula</label>
                                     <input type="text" id="matricula" name="matricula" class="form-control" value="{{old('matricula')}}">
                                     {!! $errors->first('matricula', '<small>:message</small><br>') !!}
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="md-form mb-3">
-                                    <label for="descripcion" class="">Descripción del servicio que presta:</label>
+                                <div class="md-form mb-5">
+                                    <label for="descripcion" class="">Descripción del servicio que brindás:</label>
                                     <textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control"
                                         required>{{old('descripcion')}}</textarea>
                                 </div>
@@ -96,11 +100,11 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="gridCheck">
                                     <label class="form-check-label" for="gridCheck">
-                                        He leído y acepto los <a href="/acuerdo">términos y condiciones.</a>
+                                        He leído y acepto los <a  class="links-formulario" href="/acuerdo">términos y condiciones.</a>
                                     </label>
                                 </div>
                                 <div class="centrar mt-5">
-                                    <button class="btn btn-own" type="submit">Enviar</button>
+                                    <button class="btn hw-btn-orange hvr-sweep-to-right" type="submit">Enviar</button>
                                 </div>
                             </div>
                         </div>

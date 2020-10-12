@@ -8,10 +8,10 @@
         <i class="fa fa-whatsapp"></i>
     </div>
     <div class="row d-flex flex-column align-items-center justify-content-center img-container">
-        <div class="row text-center">
+        <div class="row text-center position-relative">
             <h1 class="faq-title">¿Necesitas Ayuda?</h1>
         </div>
-        <div class="row text-center">
+        <div class="row text-center position-relative">
             <p class="faq-subtitle">Estamos para ayudarte. Aquí podrás ver las preguntas frecuentes</p>
         </div>
     </div>
