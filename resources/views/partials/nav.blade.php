@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="login-links text-center">
                                         <span>¿Todavía no tenés una cuenta?</span>
-                                        <a href="">Registrate</a>
+                                        <a href="/register">Registrate</a>
                                     </div>
                                 </form>
                             </div>
