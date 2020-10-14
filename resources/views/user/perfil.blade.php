@@ -37,17 +37,17 @@
 				<div class="col-sm-8">
 					<div class="row mt-4 justify-content-center">
 						<div class="col-md-6">
-							<p><strong>Nombres: </strong>{{ $profesional->nombre }}</p>
+							<p><strong>Nombres: </strong>aaa</p>
 							{{-- <p><strong>DNI: </strong>{{ $profesional->dni }}</p> --}}
-							<p><strong>Direccion: </strong>{{ $profesional->direccion }}</p>
-							<p><strong>Email: </strong>{{ auth()->user()->email }}</p>
-							<p><strong>Sitio Web: </strong>{{ $profesional->web }}</p>
+							<p><strong>Direccion: </strong>bbbb</p>
+							<p><strong>Email: </strong>cccc</p>
+							<p><strong>Sitio Web: </strong>dddd</p>
 						</div>
 						<div class="col-md-6">							
-							<p><strong>Apellido: </strong>{{ $profesional->apellido }}</p>				
-							<p><strong>Localidad: </strong>{{ $profesional->localidad }}</p>
-							<p><strong>Teléfono: </strong>{{ $profesional->telefono }}</p>
-							<p><strong>Rubro: </strong>{{ $profesional->rubro }}</p>					
+							<p><strong>Apellido: </strong>eeee</p>				
+							<p><strong>Localidad: </strong>ffff</p>
+							<p><strong>Teléfono: </strong>gggg</p>
+							<p><strong>Rubro: </strong>hhhhhh</p>					
 						</div>
 					</div>
 				</div>
