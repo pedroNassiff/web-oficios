@@ -6,7 +6,7 @@
 <section class="py-4">
 	<div class="container">
 	
-		@if(!$profesional)
+		@if(false)
 			<div class="row mt-3 mb-3 justify-content-center">
 				<div class="col-md-8" style="margin-top: 5%; margin-bottom: 10%;">
 					<h2>Todavia no tienes tu perfil creado, <a href="/perfil/crear">¡Créalo aquí!</a></h2>	
