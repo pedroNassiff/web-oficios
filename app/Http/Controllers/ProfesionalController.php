@@ -30,7 +30,7 @@ class ProfesionalController extends Controller
     }
 
     public function miPerfil(){
-        $id = Auth::user()->id;
+      /*   $id = Auth::user()->id;
 
         $profesional = DB::table('profesionales')
             ->join('rubros', 'rubros.id', '=', 'profesionales.rubro_id')
@@ -46,7 +46,7 @@ class ProfesionalController extends Controller
                      'profesionales.web'
                      )
             ->where('profesionales.user_id', $id)
-            ->first();
+            ->first(); */
 
         return view('user.perfil', ['profesional' => $profesional]);
     }
