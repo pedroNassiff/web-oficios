@@ -48,7 +48,7 @@ class ProfesionalController extends Controller
             ->where('profesionales.user_id', $id)
             ->first(); */
 
-        return view('user.perfil', ['profesional' => $profesional]);
+        return view('user.perfil');
     }
 
     public function crearPerfil(){
