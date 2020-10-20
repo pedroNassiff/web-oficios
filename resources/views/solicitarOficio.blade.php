@@ -51,6 +51,10 @@
                                     <label for="oficio">Ingresá un oficio *</label>
                                     <input type="text" id="oficio" name="oficio" class="form-control" required>
                                 </div>
+                                <div class="md-form mb-2">
+                                    <label for="oficio">email *</label>
+                                    <input type="email" id="oficio" name="email" class="form-control" required>
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="md-form mb-3">
@@ -62,7 +66,7 @@
                             
                             <div class="col-md-6">
                                 <div class="md-form mb-5">
-                                    <label for="descripcion" class="">Descripción del oficio que desea ingresar</label>
+                                    <label for="descripcion" class="">Descripción del oficio que desea ingresar *</label>
                                     <textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control"
                                         required>{{old('descripcion')}}</textarea>
                                 </div>
