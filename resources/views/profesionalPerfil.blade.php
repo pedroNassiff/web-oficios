@@ -30,10 +30,10 @@
                     </p>
                     <div class="botones">
                         <div class="opcion consultar">
-                            <a class="btn btn-own" href=""><i class="fa fa-comment"></i>   Realizar una consulta</a>
+                            <a class="btn hw-btn hvr-sweep-to-right" href=""><i class="fa fa-comment"></i>   Realizar una consulta</a>
                         </div>
                         <div class="opcion denunciar">
-                            <a class="btn btn-own" href=""><i class="fa fa-user-times"></i>   Denunciar prestador</a>
+                            <a class="btn hw-btn hvr-sweep-to-right" href=""><i class="fa fa-user-times"></i>   Denunciar prestador</a>
                         </div>
                     </div>
                 </div>
