@@ -84,16 +84,9 @@ class ProfesionalController extends Controller
     }
 
     public function editarPerfil(){
-        $id = Auth::user()->id;
-        $profesional = DB::table('profesionales')->where('user_id', $id)->first();
-        $localidades = Localidad::get();
-        $rubros = Rubro::get();
+        
 
-        return view('user.editarPerfil', 
-            [ 'profesional' => $profesional, 
-              'localidades' => $localidades,
-              'rubros' => $rubros
-            ]);
+        return view('user.editarPerfil');
     }
 
     public function actualizarPerfil(Request $request, $id){
