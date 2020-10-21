@@ -352,7 +352,7 @@
 				<h3 class="neo-title">
 					¿NO ENCONTRASTE EL OFICIO QUE BUSCABAS?
 				</h3>
-				<button class="neo-btn">Ingresá Aquí</button>
+				<a href="/OficioNuevo" class="neo-btn">Ingresá Aquí</a>
 			</div>
 			<div class="col-md-6 map-container">
 				<div id="mapa"></div>
@@ -373,8 +373,14 @@
 			La promoción de tus servicios es fundamental para la gestión de futuros trabajos.
 			Contanos dónde y cómo trabajás para que podamos acompañarte en tu vida laboral 
 			 con espacios de <strong> promoción y comercialización. </strong> <br>
-			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.</p>
-		<a href="/inscripcion" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
+			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.
+		</p>
+		@if (Auth::guest())
+			<a href="{{ route('register') }}" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
+		@else 
+			<a href="/inscripcion" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
+        @endif
+		
 	</div>
 </section>
 			
@@ -420,7 +426,7 @@
         </div>
 	</div>
 	<div class="row d-flex justify-content-center mb-5 mt-5">
-		<a href="/ayuda" class="mresp btn hw-btn">Necesito Ayuda</a>
+		<a href="/ayuda" class="mresp btn btn2 hw-btn">Necesito Ayuda</a>
 	</div>
 </section>
 

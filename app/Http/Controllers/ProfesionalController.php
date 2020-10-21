@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Rubro;
 use App\Localidad;
 use App\Models\Prestador;
+use App\User;
 
 class ProfesionalController extends Controller
 {
@@ -30,9 +31,11 @@ class ProfesionalController extends Controller
     }
 
     public function miPerfil(){
-        $id = Auth::user()->id;
 
-        $profesional = DB::table('profesionales')
+        $id = Auth::user()->id;
+        $records = User::find($id);
+
+        /* $profesional = DB::table('profesionales')
             ->join('rubros', 'rubros.id', '=', 'profesionales.rubro_id')
             ->join('localidades', 'localidades.id', '=', 'profesionales.localidad_id')
             ->select('profesionales.nombre',
@@ -46,9 +49,9 @@ class ProfesionalController extends Controller
                      'profesionales.web'
                      )
             ->where('profesionales.user_id', $id)
-            ->first();
+            ->first(); */
 
-        return view('user.perfil', ['profesional' => $profesional]);
+        return view('user.perfil');
     }
 
     public function crearPerfil(){
@@ -81,16 +84,9 @@ class ProfesionalController extends Controller
     }
 
     public function editarPerfil(){
-        $id = Auth::user()->id;
-        $profesional = DB::table('profesionales')->where('user_id', $id)->first();
-        $localidades = Localidad::get();
-        $rubros = Rubro::get();
+        
 
-        return view('user.editarPerfil', 
-            [ 'profesional' => $profesional, 
-              'localidades' => $localidades,
-              'rubros' => $rubros
-            ]);
+        return view('user.editarPerfil');
     }
 
     public function actualizarPerfil(Request $request, $id){

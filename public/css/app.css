@@ -10972,6 +10972,12 @@ body {
   color: white;
 }
 
+.btn2:hover {
+  border: 1px solid white !important;
+  background-color: transparent;
+  color: white;
+}
+
 .hvr-sweep-to-right:before {
   content: "";
   position: absolute;
@@ -11692,6 +11698,7 @@ section#filter .imagen-card-filter {
   height: 50px;
   border-radius: 23px;
   color: white;
+  line-height: 45px;
   background-color: #faaa10;
   border: 0px;
   font-family: "Montserrat";
@@ -11743,6 +11750,29 @@ section#filter .imagen-card-filter {
 
 .card-registro {
   margin: 0;
+}
+
+.links-formulario {
+  color: #e48f27;
+}
+
+section#solicitudOficio,
+section#inscripcion,
+section#contact {
+  color: #636363;
+}
+
+section#solicitudOficio h1,
+section#inscripcion h1,
+section#contact h1 {
+  color: #02093B;
+  font-family: "Roboto", sans-serif;
+}
+
+section#solicitudOficio .desc,
+section#inscripcion .desc {
+  width: 60%;
+  text-align: center;
 }
 
 .row-slider {
@@ -11831,8 +11861,14 @@ section#filter .imagen-card-filter {
 
 .hw-btn {
   background-color: transparent;
-  color: #02093b;
-  border: solid 1px #02093b;
+  color: #e48f27;
+  border: solid 1px #e48f27;
+}
+
+.hw-btn-orange {
+  background-color: transparent;
+  color: #e48f27;
+  border: solid 1px #e48f27;
 }
 
 .slide1:hover {
@@ -12002,6 +12038,19 @@ section#filter .imagen-card-filter {
   color: white;
 }
 
+.img-container:before,
+.img-about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40vh;
+  margin-top: 87px;
+}
+
 .faq-title {
   font-size: 60px;
   text-shadow: -2px 3px #0e263e;
@@ -12097,14 +12146,10 @@ section#filter .imagen-card-filter {
 .img-about {
   width: 100%;
   height: 40vh;
-  background-image: url(/images/about.png?7e90809066cf8b8a022305a470cc1c94);
+  background-image: url(/images/about1.png?624e287a13c40fb74473010aca4506a0);
   background-size: cover;
   color: white;
   margin: 0px auto;
-}
-
-.img-about > .row > .faq-title {
-  margin-left: 365px;
 }
 
 .text-about p {
@@ -12193,6 +12238,55 @@ section#contact .form-group-textarea .form-control {
   margin-right: 25%;
 }
 
+#prestador {
+  background-color: #f5f5f5;
+}
+
+#prestador-contenedor {
+  position: relative;
+  top: -100px;
+  justify-content: center;
+}
+
+section#prestador .placa {
+  background-color: white;
+  border: solid 0.1px #e48f27;
+  border-radius: 8px;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+}
+
+section#prestador .photo img {
+  width: 150px;
+  height: 150px;
+}
+
+section#prestador .name-prestador {
+  color: #0e263e;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+section#prestador .opciones-prestador .opc-prestador a {
+  width: 235px;
+  margin: 5%;
+}
+
+section#prestador .detalles-prestador {
+  border-bottom: solid 0.1px #e48f27;
+}
+
+section#prestador .detalles-prestador h1 {
+  color: #e48f27;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 0px 1px 2px black;
+  margin: 5% 0% 2%;
+}
+
+section#prestador .info-prestador {
+  color: #0e263e;
+  font-family: "Montserrat", sans-serif;
+}
+
 .contenedor-datos {
   padding-top: 3%;
   text-align: left;
@@ -12235,7 +12329,6 @@ section#contact .form-group-textarea .form-control {
 }
 
 .opcion a {
-  color: white;
   width: 200px;
 }
 
@@ -12268,7 +12361,7 @@ section#contact .form-group-textarea .form-control {
 }
 
 .ec-stars-wrapper:hover a {
-  color: #2782e4;
+  color: #e48f27;
 }
 
 /*
@@ -12284,19 +12377,16 @@ section#contact .form-group-textarea .form-control {
 }
 
 .modal-content-color {
-  background-color: #eaeaea;
+  background-color: white;
   border-top: solid 5px #e48f27;
+}
+
+.modal.show .modal-dialog {
+  margin-top: 6%;
 }
 
 .cont-login {
   margin-top: 5%;
-}
-
-.input-login {
-  border-style: hidden hidden solid hidden;
-  border-bottom: solid 1px #e48f27;
-  background-color: transparent;
-  border-radius: 0%;
 }
 
 .prefix {
