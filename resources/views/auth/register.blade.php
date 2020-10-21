@@ -122,7 +122,7 @@
                             </div>
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-own btn-default hvr-sweep-to-right" id="boton-registrar">
+                                    <button type="submit" class="btn hw-btn btn-default hvr-sweep-to-right" id="boton-registrar">
                                         {{ __('Registrarte') }}
                                     </button>
                                 </div>
