@@ -82,4 +82,8 @@ class OficioController extends Controller
             return back()->with('message', 'Error al borrar (No se puede borrar un oficio que se encuentra asignado)')->with('typealert', 'danger');
         }
     }
+    public function nuevo(){
+        
+        return back()->with('message', 'Guardado con Éxito.')->with('typealert', 'success');
+    }
 }
