@@ -30,28 +30,28 @@
 								<div class="col-md-6">
 									<div class="md-form mb-3">
 										<label for="nombre" class="">Nombres</label>
-										<input type="text" name="nombre" value="{{ $profesional->nombre }}" class="form-control" required="">
+										<input type="text" name="nombre" value="{{ $profesional ?? ''->nombre }}" class="form-control" required="">
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="md-form mb-3">
 										<label for="apellido" class="">Apellido</label>
-										<input type="text" id="apellido" name="apellido" value="{{ $profesional->apellido }}" class="form-control" required>
+										<input type="text" id="apellido" name="apellido" value="{{ $profesional ?? ''->apellido }}" class="form-control" required>
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="md-form mb-3">
 										<label for="dni" class="">DNI</label>
-										<input type="text" id="dni" name="dni" value="{{ $profesional->dni }}" class="form-control" required>
+										<input type="text" id="dni" name="dni" value="{{ $profesional ?? ''->dni }}" class="form-control" required>
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="md-form mb-3">
 										<label for="telefono" class="">Teléfono</label>
-										<input type="text" id="telefono" name="telefono" value="{{ $profesional->telefono }}" class="form-control" required>
+										<input type="text" id="telefono" name="telefono" value="{{ $profesional ?? ''->telefono }}" class="form-control" required>
 									</div>
 								</div>
 
@@ -65,7 +65,7 @@
 								<div class="col-md-6">
 									<div class="md-form mb-3">
 										<label for="direccion" class="">Dirección</label>
-										<input type="text" id="direccion" name="direccion" value="{{ $profesional->direccion }}" class="form-control" required>
+										<input type="text" id="direccion" name="direccion" value="{{ $profesional ?? ''->direccion }}" class="form-control" required>
 									</div>
 								</div>
 
@@ -94,7 +94,7 @@
 								<div class="col-md-6">
 									<div class="md-form mb-3">
 										<label for="web" class="">Sitio Web</label>
-										<input type="text" id="web" name="web" value="{{ $profesional->web }}" class="form-control" required>
+										<input type="text" id="web" name="web" value="{{ $profesional ?? ''->web }}" class="form-control" required>
 									</div>
 								</div>
 								<!--Grid column-->
