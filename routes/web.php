@@ -27,14 +27,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
-Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
-
-Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
-
-Route::get('/OficioNuevo', function(){
-	return view ('solicitarOficio');
-});
-
 Route::get('/acuerdo', function(){
 	return view ('terminos_y_condiciones');
 });
@@ -88,6 +80,17 @@ Route::group(['middleware'=>'auth'], function(){
 		//solicitudes
 		Route::get('/admin/solicitudes', 'AdminController@solicitudes')->name('admin.solicitudes');
 	});
+
+
+	//SOLICITAR ENVIO
+	Route::get('/OficioNuevo', function(){
+		return view ('solicitarOficio');
+	});
+	Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
+
+	Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
+
+	Route::post('/solicitarOficio/enviar', 'OficioController@nuevo');
 
 });
 
