@@ -64,7 +64,7 @@ Route::group(['middleware'=>'auth'], function(){
 
 		//localidades
 		Route::get('/admin/indexLocalidad', 'LocalidadesController@index')->name('perfil');
-		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('perfil');
+		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('perfil1');
 		Route::get('/admin/destroyLocalidad/{id}', 'LocalidadesController@destroy')->name('localidades.destroyLocalidad');
 
 		//Oficio
@@ -79,6 +79,8 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/destroyEspecialidad/{id}', 'EspecialidadController@destroy')->name('especialidad.destroyEspecialidad');
 		//solicitudes
 		Route::get('/admin/solicitudes', 'AdminController@solicitudes')->name('admin.solicitudes');
+		Route::get('/admin/solicitudAceptada', 'AdminController@solicitudAceptada');
+		Route::get('/admin/solicitudNegada', 'AdminController@solicitudNegada');
 	});
 
 
