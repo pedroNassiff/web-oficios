@@ -21,162 +21,127 @@
                         <div class="panel-body">
                             <div class="pull-right">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-success btn-filter" data-target="pagado">Confirmados</button>
-                                    <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendientes</button>
-                                    <button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a class="btn btn-warning btn-filter" data-toggle="tab" href="#Pendientes">Pendientes</a>
+                                        </li>
+                                        <li>
+                                            <a class="btn btn-success btn-filter"  data-toggle="tab" href="#Confirmados">Confirmados</a>
+                                        </li>
+                                        <li>
+                                            <a class="btn btn-default btn-filter" data-toggle="tab" href="#Todas">Todas</a>
+                                        </li>
+                                      </ul>
                                 </div>
                             </div>
-                            <div class="table-container">
-                                <table class="table table-filter">
-                                    <tbody>
-                                        @foreach ($prestadores as $prestador)
-                                        <tr data-status="pagado">
-                                            <td>
-                                                <div class="ckbox">
-                                                    <input type="checkbox" id="checkbox1">
-                                                    <label for="checkbox1"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;" class="star">
-                                                    <i class="glyphicon glyphicon-star"></i>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <div class="media">
-                                                    <a href="#" class="pull-left">
-                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <span class="media-meta pull-right">{{date('d-m-Y H:i:s', strtotime($prestador->created_at))}}</span>
-                                                        <h4 class="title">
-                                                            {{$prestador->name}} {{$prestador->lastname}}
-                                                            <span class="pull-right pagado">(Pagado)</span>
-                                                            <span class="pull-right {{$prestador->habilitado? 'pagado' : 'pendiente'}}">{{$prestador->habilitado? 'Habilitado' : 'Deshabilitado'}}</span>
-                                                        </h4>
-                                                    <p class="summary">{{$prestador->descripcion}}</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="centrar">
-                                                <a class="icon-action" href="#" data-toggle="tooltip" data-placement="top" title="Habilitar"><i class="fas fa-plus-circle"></i></a>
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                        {{-- <tr data-status="pendiente">
-                                            <td>
-                                                <div class="ckbox">
-                                                    <input type="checkbox" id="checkbox3">
-                                                    <label for="checkbox3"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;" class="star">
-                                                    <i class="glyphicon glyphicon-star"></i>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <div class="media">
-                                                    <a href="#" class="pull-left">
-                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
-                                                        <h4 class="title">
-                                                            Lorem Impsum
-                                                            <span class="pull-right pendiente">(Pendiente)</span>
-                                                        </h4>
-                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr data-status="cancelado">
-                                            <td>
-                                                <div class="ckbox">
-                                                    <input type="checkbox" id="checkbox2">
-                                                    <label for="checkbox2"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;" class="star">
-                                                    <i class="glyphicon glyphicon-star"></i>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <div class="media">
-                                                    <a href="#" class="pull-left">
-                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
-                                                        <h4 class="title">
-                                                            Lorem Impsum
-                                                            <span class="pull-right cancelado">(Cancelado)</span>
-                                                        </h4>
-                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr data-status="pagado" class="selected">
-                                            <td>
-                                                <div class="ckbox">
-                                                    <input type="checkbox" id="checkbox4" checked>
-                                                    <label for="checkbox4"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;" class="star star-checked">
-                                                    <i class="glyphicon glyphicon-star"></i>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <div class="media">
-                                                    <a href="#" class="pull-left">
-                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
-                                                        <h4 class="title">
-                                                            Lorem Impsum
-                                                            <span class="pull-right pagado">(Pagado)</span>
-                                                        </h4>
-                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr data-status="pendiente">
-                                            <td>
-                                                <div class="ckbox">
-                                                    <input type="checkbox" id="checkbox5">
-                                                    <label for="checkbox5"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:;" class="star">
-                                                    <i class="glyphicon glyphicon-star"></i>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <div class="media">
-                                                    <a href="#" class="pull-left">
-                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <span class="media-meta pull-right">Febrero 13, 2016</span>
-                                                        <h4 class="title">
-                                                            Lorem Impsum
-                                                            <span class="pull-right pendiente">(Pendiente)</span>
-                                                        </h4>
-                                                        <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr> --}}
-                                    </tbody>
-                                </table>
+                            <div class="tab-content">
+                                <div id="Pendientes" class="tab-pane fade in active">
+                                    <table class="table table-filter">
+                                        <tbody>
+                                            @foreach ($prestadores as $prestador)
+                                                @if ($prestador->habilitado == 0)
+                                                    <tr data-status="pagado">
+                                                        <td>
+                                                            <div class="media" data-toggle="collapse" data-target="#{{$prestador->name}}Pendientes">
+                                                                <a href="#" class="pull-left">
+                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <span class="media-meta pull-right">{{date('d-m-Y H:i:s', strtotime($prestador->created_at))}}</span>
+                                                                    <h4 class="title">
+                                                                        {{$prestador->name}} {{$prestador->lastname}}
+                                                                        <span class="pull-right pendiente">(Pendiente)</span>
+                                                                    </h4>
+                                                                    <p class="summary">{{$prestador->descripcion}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div id="{{$prestador->name}}Pendientes" class="collapse">
+                                                                <p class="summary">{{$prestador->descripcion}}</p>
+                                                                <div class="btn-group">
+                                                                    <button type="button" onclick="solicitud({{$prestador->id}}, true)" class="btn btn-success ">Aceptar</button>
+                                                                    <button type="button" onclick="solicitud({{$prestador->id}}, false)" class="btn btn-warning ">Negar</button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="centrar">
+                                                            <a class="icon-action" href="#" data-toggle="tooltip" data-placement="top" title="Habilitar"><i class="fas fa-plus-circle"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                @endif
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="Confirmados" class="tab-pane fade">
+                                    <table class="table table-filter">
+                                        <tbody>
+                                            @foreach ($prestadores as $prestador)
+                                                @if ($prestador->habilitado == 1)
+                                                    <tr data-status="pagado">
+                                                        <td>
+                                                            <div class="media" data-toggle="collapse" data-target="#{{$prestador->name}}Confirmados">
+                                                                <a href="#" class="pull-left">
+                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <span class="media-meta pull-right">{{date('d-m-Y H:i:s', strtotime($prestador->created_at))}}</span>
+                                                                    <h4 class="title">
+                                                                        {{$prestador->name}} {{$prestador->lastname}}
+                                                                        <span class="pull-right pagado">(Confirmado)</span>
+                                                                    </h4>
+                                                                <p class="summary">{{$prestador->descripcion}}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div id="{{$prestador->name}}Confirmados" class="collapse">
+                                                                <p class="summary">{{$prestador->descripcion}}</p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="centrar">
+                                                            <a class="icon-action" href="#" data-toggle="tooltip" data-placement="top" title="Habilitar"><i class="fas fa-plus-circle"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                @endif
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="Todas" class="tab-pane fade">
+                                    <table class="table table-filter">
+                                        <tbody>
+                                            @foreach ($prestadores as $prestador)
+                                                <tr data-status="pagado">
+                                                    <td>
+                                                        <div class="media" data-toggle="collapse" data-target="#{{$prestador->name}}">
+                                                            <a href="#" class="pull-left">
+                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <span class="media-meta pull-right">{{date('d-m-Y H:i:s', strtotime($prestador->created_at))}}</span>
+                                                                <h4 class="title">
+                                                                    {{$prestador->name}} {{$prestador->lastname}}
+                                                                    <span class="pull-right {{$prestador->habilitado? 'pagado' : 'pendiente'}}">({{$prestador->habilitado?'Confirmado':'Pendiente'}})</span>
+                                                                </h4>
+                                                            <p class="summary">{{$prestador->descripcion}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div id="{{$prestador->name}}" class="collapse">
+                                                            <p class="summary">{{$prestador->descripcion}}</p>
+                                                            @if (!$prestador->habilitado)
+                                                            <div class="btn-group">
+                                                                <button type="button" onclick="solicitud({{$prestador->id}}, true)" class="btn btn-success ">Aceptar</button>
+                                                                <button type="button" onclick="solicitud({{$prestador->id}}, false)" class="btn btn-warning ">Negar</button>
+                                                            </div>
+                                                            @endif
+                                                        </div>
+                                                    </td>
+                                                    <td class="centrar">
+                                                        <a class="icon-action" href="#" data-toggle="tooltip" data-placement="top" title="Habilitar"><i class="fas fa-plus-circle"></i></a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,6 +154,14 @@
                 </div>
             </section>
         </div>
+        <script>
+            function solicitud(id, aceptada) {
+                aceptada?
+                    window.location = "solicitudAceptada?id="+ id
+                :
+                    window.location = "solicitudNegada?id="+ id;
+            }
+        </script>
       <!-- nuevo -->
 </div>
 
