@@ -11567,8 +11567,64 @@ section#filter .imagen-card-filter {
   border-radius: 15px;
 }
 
+.filters-container {
+  margin-top: -16px;
+}
+
+.filter-title {
+  font-weight: bold;
+  color: orange;
+}
+
+.input-filter {
+  width: 354px;
+  border-radius: 4px;
+  border: solid 1px #D0D0D0D0;
+  height: 31px;
+  font-size: 12px;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+.input-filter:hover {
+  border: solid 1px orange;
+}
+
+.input-filter:focus {
+  border: solid 1.5px orange;
+}
+
+.btn-filter-buscar {
+  background-color: orange;
+  color: white;
+}
+
+.card-oficio-new {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-right: 20px;
+  max-width: 168px;
+}
+
+.card-logo-oficios {
+  width: 55px;
+  height: 49px;
+}
+
+.card-nombre-oficio {
+  color: #02093B;
+}
+
+.card-cantidad-prof {
+  font-weight: lighter;
+  font-style: italic;
+  color: orange;
+}
+
 .oficios-section {
   background-color: #eaeaea;
+  background-image: url("https://web3canvas.com/wp-content/uploads/2014/02/unsplash-high-quality-hd-banner-backgound-images-stock-photos-free-tab-iphone-mac-desk-topview-download.jpg");
 }
 
 .oficios-card {
@@ -12508,6 +12564,72 @@ section#prestador .info-prestador {
   .hw-title {
     width: 80%;
     text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  /* show 3 items */
+
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
   }
 }
 
