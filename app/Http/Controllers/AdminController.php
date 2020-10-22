@@ -52,7 +52,6 @@ class AdminController extends Controller
 	}
 
 	public function solicitudNegada(Request $request){
-		//preguntar qe hacer en este caso
 		//enviar mail informando de uqe no se acepto la solicitud
 		return back();
 	}
