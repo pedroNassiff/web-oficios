@@ -118,11 +118,119 @@
 								</div>
 							<div role="tab-panel" class="tab-pane" id="seguridad">
 								<h3>Seguridad</h3>
-								<p>Seguridad  seguridadseguridadseguridadseguridad seguridad seguridad seguridad</p>
+								<p>Cambiar contraseña:</p>	
+								<div class="row">  
+									<div class="col-md-8 col-md-offset-2">  
+									  <div class="panel panel-default">  
+										{{-- <div class="panel-heading">Cambiar contraseña:</div>   --}}
+										<div class="panel-body">  
+										  <form class="form-horizontal" method="POST" role="form" action="">  
+											@if (count($errors) > 0)  
+											  <div class="alert alert-danger">  
+												<ul>  
+												  @foreach ($errors->all() as $error)  
+													<li>{{ $error }}</li>  
+												  @endforeach  
+												</ul>  
+											  </div>  
+											@endif  
+											{{ csrf_field() }}  
+											{{-- Current password --}}  
+											<div class="form-group{{ $errors->has('current_password') ? ' has-error' : '' }}">  
+											  <label for="current_password" class="col-md-4 control-label">Contraseña actual</label>  
+								
+											  <div class="col-md-6">  
+												<input id="current_password" type="password" class="form-control" name="current_password" required autofocus>  
+								
+												@if ($errors->has('current_password'))  
+												  <span class="help-block">  
+												  <strong>{{ $errors->first('current_password') }}</strong>  
+												</span>  
+												@endif  
+											  </div>  
+											</div>  
+								
+											{{-- New password --}}  
+											<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">  
+											  <label for="password" class="col-md-4 control-label">Nueva contraseña</label>  
+								
+											  <div class="col-md-6">  
+												<input id="password" type="password" class="form-control" name="password" required>  
+								
+												@if ($errors->has('password'))  
+												  <span class="help-block">  
+												  <strong>{{ $errors->first('password') }}</strong>  
+												</span>  
+												@endif  
+											  </div>  
+											</div>  
+								
+											{{-- Confirm new password --}}  
+											<div class="form-group">  
+											  <label for="password-confirm" class="col-md-6 control-label">Confirmar contraseña</label>  
+								
+											  <div class="col-md-6">  
+												<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>  
+											  </div>  
+											</div>  
+								
+											{{-- Submit button --}}  
+											<div class="form-group">  
+											  <div class="col-md-6 col-md-offset-4">  
+												<button type="submit" class="btn hw-btn hvr-sweep-to-right">  
+												  Cambiar contraseña  
+												</button>  
+											  </div>  
+											</div>  
+								
+										  </form>  
+										</div>  
+										{{-- <div class="panel-footer">Hello</div>   --}}
+									  </div>  
+									</div>  
+								  </div>  							
 							</div>
 							<div role="tab-panel" class="tab-pane" id="documentos">
 								<h3>Documentos</h3>
-								<p>Seguridad  seguridadseguridadseguridadseguridad seguridad seguridad seguridad</p>
+								<div class="row">  
+									<div class="col-md-6">
+										<table class="table table-hover">
+											<thead>
+											  <tr>
+												<th>Certificaciones cargadas</th>
+												<th>Acciones</th>
+											  </tr>
+											</thead>
+											<tbody>
+											  <tr>
+												<td><a href="" target="blank">Matricula_Profesional.pdf</a></td>
+												<td class="acciones"><a href=""><i class="far fa-trash-alt"></i></a></td>
+											  </tr>
+											  <tr>
+												<td><a href="" target="blank">Curso_Electricidad.png</a></td>
+											    <td class="acciones"><a href=""><i class="far fa-trash-alt"></i></a></td>
+											  </tr>
+											  <tr>
+												<td><a href="" target="blank">Curso_de_Especializacion.pdf</a></td>
+												<td class="acciones"><a href=""><i class="far fa-trash-alt"></i></a></td>
+											  </tr>
+											</tbody>
+										  </table>
+									</div>
+									<div class="col-md-6 col-md-offset-2"> 
+										<div class="panel panel-default">
+											<div class="panel-body">
+												<form>
+													<div class="form-group">
+														<p>Nuevo archivo de certificación</p>
+														<input class="form-control" type="text" placeholder="Nombre del documento">
+														<input type="file" class="form-control-file mt-3" id="exampleFormControlFile1">
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>	
 							</div>
 							<div role="tab-panel" class="tab-pane" id="notificaciones">
 								<h3>Notificaciones</h3>

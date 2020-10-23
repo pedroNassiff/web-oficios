@@ -1281,6 +1281,21 @@ section#prestador .info-prestador{
   font-size: 0.8em;
 }
 
+//Editar perfil - Seguridad
+
+
+//Editar perfil - Documentos
+#documentos .panel {
+  padding: 2%;
+}
+#documentos .acciones{
+  justify-content: center;
+  display: flex;
+}
+#documentos .acciones a{
+  color: #0e263e;
+}
+
 //profesionalPerfil viejo
 .contenedor-datos {
   padding-top: 3%;
