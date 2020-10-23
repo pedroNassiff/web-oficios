@@ -11478,7 +11478,7 @@ section#filter .tituloServicios {
 
 #mapa {
   width: 540px;
-  height: 595px;
+  height: 350px;
 }
 
 section#filter .swiper-container-filter {
@@ -12573,11 +12573,6 @@ section#prestador .info-prestador {
 
   section#contact .container {
     margin-bottom: 220px;
-  }
-
-  #mapa {
-    width: 300px;
-    height: 400px;
   }
 
   .how-work > .container > .row > .col-9 {
