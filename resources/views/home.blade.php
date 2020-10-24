@@ -131,6 +131,121 @@
 		</div>
 			
 	</div>
+<!--  slider  2-->
+
+<style>
+	.contenedor-slider2 {
+		margin-top: 6em;
+		margin-bottom: 2em;
+		margin-left: 2em;
+	}
+    .swiper-container2 {
+      width: 50%;
+      height: 10%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+	<link rel="stylesheet" href="../package/swiper-bundle.min.css">
+
+	<!-- Swiper -->
+	<div class="contenedor-slider2">
+	<div class="swiper-container2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+	  <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+	  <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+	  <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+	  <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+	  <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+	  <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+	  <div class="swiper-slide">
+	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
+	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
+		  <span class="card-nombre-oficio">Electricista</span>
+			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
+	  	</div>
+	  </div>
+
+      
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  	</div>
+	</div>
+  <script src="../package/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container2', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+	 <!-- 
 	<div class="card-oficios-container row justify-content-center mt-2">
 		<div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
 			<img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
@@ -162,7 +277,7 @@
 			<span class="card-nombre-oficio">Electricista</span>
 			<span class="card-cantidad-prof"><strong>15</strong> profesionales</span>
 		</div>
-	</div>
+	</div> -->
 	<!-- <div class="filter-bar justify-content-center d-flex row">
 		<div class="col-md-10 filter-bar-row">
 			<div class="tituloServicios text-center"><h3>¿QUÉ OFICIO NECESITAS?</h3></div>
