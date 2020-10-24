@@ -100,7 +100,7 @@
 		<div class="row text-center">
 			<h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
 		</div>
-		<div class="row d-flex justify-content-center w-75 mb-3">
+		<div class="row d-flex justify-content-center w-75 mb-4">
 				<div class="col-md-4">
 					<input type="text" placeholder="Nombre y Apellido" class="form-control">
 				</div>
@@ -385,7 +385,7 @@
 				<h3 class="neo-title">
 					¿NO ENCONTRASTE EL OFICIO QUE BUSCABAS?
 				</h3>
-				<a href="/OficioNuevo" class="neo-btn">Ingresá Aquí</a>
+				<a href="/OficioNuevo" class="btn hw-btn neo-btn hvr-sweep-to-right w-50">Ingresá Aquí</a>
 			</div>
 			<div class="col-md-6 map-container">
 				<div id="mapa"></div>

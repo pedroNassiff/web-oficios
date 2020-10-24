@@ -11694,27 +11694,7 @@ section#filter .imagen-card-filter {
 }
 
 .neo-btn {
-  width: 50%;
-  margin-top: 31px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 50px;
-  border-radius: 23px;
-  color: white;
-  line-height: 45px;
-  background-color: #faaa10;
-  border: 0px;
-  font-family: "Montserrat";
-  outline: none;
-  border: 1px solid #faaa10;
-  transition-property: color;
-  transition-duration: 0.3s;
-  transform: perspective(1px) translateZ(0);
-}
-
-.neo-btn:hover {
-  color: #faaa10 !important;
-  background-color: white;
+  margin-left: 25%;
 }
 
 .card-overlay {
