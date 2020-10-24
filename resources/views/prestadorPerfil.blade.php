@@ -39,21 +39,25 @@
                 <div class="detalles-prestador">
                     <h1>INFORMACIÓN DEL PRESTADOR</h1>
                 </div>
-                <div class="info-prestador mt-3">
-                    <h3>Costurería</h3>
-                    <p>Arreglos en general</p>
-                    <p class="text-justify">Confeccionamos y arreglamos todo tipo de prendas. Recibimos tu idea u orden de producción; si es necesario desarrollamos el diseño del producto; compramos o recibimos los materiales, los cortamos y los cosemos. Además, podemos, planchar, doblar, empacar y etiquetar el producto final para su venta al público.</p>
-                </div>
                 <div class="row">
-                    <div class="col-4 contact-prestador">
-                        <p><i class="fas fa-map-marker-alt"></i> Resistencia, Chaco</p>                      
-                        <p><i class="fas fa-phone-alt"></i> 3624 123456</p>
-                        <p><i class="fas fa-envelope-open-text"></i> patricia@gmail.com</p>
-                    </div>
                     <div class="col-6">
+                        <div class="info-prestador mt-3">
+                            <h3>Costurería</h3>
+                            <p>Arreglos en general</p>
+                            <p class="text-justify">Confeccionamos y arreglamos todo tipo de prendas. Recibimos tu idea u orden de producción; si es necesario desarrollamos el diseño del producto; compramos o recibimos los materiales, los cortamos y los cosemos. Además, podemos, planchar, doblar, empacar y etiquetar el producto final para su venta al público.</p>
+                        </div>
+                    
+                        <div class="contact-prestador">
+                            <p><i class="fas fa-map-marker-alt"></i> Resistencia, Chaco</p>                      
+                            <p><i class="fas fa-phone-alt"></i> 3624 123456</p>
+                            <p><i class="fas fa-envelope-open-text"></i> patricia@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.5588033653703!2d-58.987743385432495!3d-27.451857422515648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450dfa218d60b1%3A0x5d28e8aeedb6460e!2sResistencia%20Chaco!5e0!3m2!1ses-419!2sar!4v1603202104333!5m2!1ses-419!2sar" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
-                </div>                
+                </div>
+
             </div>
         </div>
     </div>
