@@ -687,6 +687,7 @@ section#filter .imagen-card-filter {
   width: 210px;
   background-color: white;
   border-radius: 15px;
+  transition: .2s ease;
   margin-right: 10px;
   margin-bottom: 10px;
   -webkit-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
@@ -776,6 +777,7 @@ section#filter .imagen-card-filter {
   background-color: white;
 }
 
+
 .card-overlay{
   position: absolute;
   bottom: 0;
@@ -808,10 +810,19 @@ section#filter .imagen-card-filter {
   text-align: center;
 }
 
-.oficios-card:hover .card-overlay {
+/* .oficios-card:hover .card-overlay {
   height: 100%;
-}
+} */
 
+.oficios-card:hover{
+  border: solid 1px orange;
+  height: 187px;
+  width: 212px;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(140, 140, 140, 0.63);
+  -moz-box-shadow: 1px 3px 5px 0px rgba(140, 140, 140, 0.63);
+  box-shadow: 1px 3px 5px 0px rgba(140, 140, 140, 0.63);
+  cursor: pointer;
+}
 
 //registro
 .card-registro {
