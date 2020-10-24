@@ -102,16 +102,16 @@
 		</div>
 		<div class="row d-flex justify-content-center">
 				<div class="col-md-4">
-					<input type="text" placeholder="Nombre y Apellido" class="input-filter">
+					<input type="text" placeholder="Nombre y Apellido" class="form-control">
 				</div>
 				<div class="col-md-4">
-					<select class="input-filter">
+					<select class="form-control">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4">
-					<select class="input-filter">
+					<select class="form-control">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>					
@@ -120,7 +120,7 @@
 			
 		<div class="row d-flex justify-content-center">
 				<div class="col-md-4">
-					<select class="input-filter" style="margin-right:394px">
+					<select class="form-control" style="margin-right:394px">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
