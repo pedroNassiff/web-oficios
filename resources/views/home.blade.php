@@ -100,19 +100,19 @@
 		<div class="row text-center">
 			<h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
 		</div>
-		<div class="row d-flex justify-content-center">
+		<div class="row d-flex justify-content-center w-75 mb-3">
 				<div class="col-md-4">
 					<input type="text" placeholder="Nombre y Apellido" class="form-control">
 				</div>
 				<div class="col-md-4">
 					<select class="form-control">
-						<option value="value1">Option 1</option>
+						<option value="value2">Oficio</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4">
 					<select class="form-control">
-						<option value="value1">Option 1</option>
+						<option value="value1">Especialidad</option>
 						<option value="value2">Option 2</option>
 					</select>					
 				</div>
@@ -121,12 +121,12 @@
 		<div class="row d-flex justify-content-center">
 				<div class="col-md-4">
 					<select class="form-control" style="margin-right:394px">
-						<option value="value1">Option 1</option>
+						<option value="value1">Ubicación</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4">
-					<button class="input-filter btn-filter-buscar">Buscar</button>
+					<button class="btn hw-btn hvr-sweep-to-right w-100">Buscar</button>
 				</div>
 		</div>
 			
