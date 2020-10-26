@@ -138,16 +138,23 @@
 		margin-top: 6em;
 		margin-bottom: 2em;
 		margin-left: 2em;
+		overflow: hidden;
+		position: relative;
 	}
     .swiper-container2 {
       width: 50%;
-      height: 10%;
+	  height: 10%;
+	  
     }
 
     .swiper-slide {
-      text-align: center;
-      font-size: 18px;
+		
+		align-items: center;
+		justify-content: center;
+      	text-align: center;
+      	font-size: 18px;
       background: #fff;
+
 
       /* Center slide text vertically */
       display: -webkit-box;
@@ -171,6 +178,7 @@
 	<div class="swiper-container2">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
+	  
 	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
 	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
 		  <span class="card-nombre-oficio">Electricista</span>
@@ -230,13 +238,14 @@
       
     </div>
     <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
+    
   	</div>
 	</div>
   <script src="../package/swiper-bundle.min.js"></script>
 
   <script>
     var swiper = new Swiper('.swiper-container2', {
+		
       slidesPerView: 3,
       spaceBetween: 30,
       pagination: {
