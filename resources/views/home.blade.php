@@ -100,19 +100,19 @@
 		<div class="row text-center">
 			<h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
 		</div>
-		<div class="row d-flex justify-content-center">
+		<div class="row d-flex justify-content-center w-75 mb-4">
 				<div class="col-md-4">
-					<input type="text" placeholder="Nombre y Apellido" class="input-filter">
+					<input type="text" placeholder="Nombre y Apellido" class="form-control">
 				</div>
 				<div class="col-md-4">
-					<select class="input-filter">
-						<option value="value1">Option 1</option>
+					<select class="form-control">
+						<option value="value2">Oficio</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4">
-					<select class="input-filter">
-						<option value="value1">Option 1</option>
+					<select class="form-control">
+						<option value="value1">Especialidad</option>
 						<option value="value2">Option 2</option>
 					</select>					
 				</div>
@@ -120,13 +120,13 @@
 			
 		<div class="row d-flex justify-content-center">
 				<div class="col-md-4">
-					<select class="input-filter" style="margin-right:394px">
-						<option value="value1">Option 1</option>
+					<select class="form-control" style="margin-right:394px">
+						<option value="value1">Ubicación</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4">
-					<button class="input-filter btn-filter-buscar">Buscar</button>
+					<button class="btn hw-btn hvr-sweep-to-right w-100">Buscar</button>
 				</div>
 		</div>
 			
@@ -394,7 +394,7 @@
 				<h3 class="neo-title">
 					¿NO ENCONTRASTE EL OFICIO QUE BUSCABAS?
 				</h3>
-				<a href="/OficioNuevo" class="neo-btn">Ingresá Aquí</a>
+				<a href="/OficioNuevo" class="btn hw-btn neo-btn hvr-sweep-to-right w-50">Ingresá Aquí</a>
 			</div>
 			<div class="col-md-6 map-container">
 				<div id="mapa"></div>
