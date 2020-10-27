@@ -11689,8 +11689,10 @@ section#filter .imagen-card-filter {
 }
 
 .neo-title {
-  color: #faaa10;
   font-weight: bold;
+  font-size: 40px;
+  color: #0e263e;
+  margin-top: -5%;
 }
 
 .neo-btn {
@@ -11856,9 +11858,15 @@ section#inscripcion .desc {
   border: solid 1px #e48f27;
 }
 
+.hw-btn-blue {
+  background-color: #0e263e;
+  color: white;
+  border: solid 1px #0e263e;
+}
+
 .hw-btn-orange {
-  background-color: transparent;
-  color: #e48f27;
+  background-color: #e48f27;
+  color: white;
   border: solid 1px #e48f27;
 }
 

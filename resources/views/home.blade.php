@@ -126,7 +126,7 @@
 					</select>
 				</div>
 				<div class="col-md-4">
-					<button class="btn hw-btn hvr-sweep-to-right w-100">Buscar</button>
+					<button class="btn hw-btn-orange hvr-sweep-to-right w-100">Buscar</button>
 				</div>
 		</div>
 			
@@ -394,7 +394,7 @@
 				<h3 class="neo-title">
 					¿NO ENCONTRASTE EL OFICIO QUE BUSCABAS?
 				</h3>
-				<a href="/OficioNuevo" class="btn hw-btn neo-btn hvr-sweep-to-right w-50">Ingresá Aquí</a>
+				<a href="/OficioNuevo" class="btn hw-btn-blue neo-btn hvr-sweep-to-right w-50">Ingresá Aquí</a>
 			</div>
 			<div class="col-md-6 map-container">
 				<div id="mapa"></div>
