@@ -105,13 +105,13 @@
 					<input type="text" placeholder="Nombre y Apellido" class="input-filter">
 				</div>
 				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-					<select class="input-filter">
+					<select class="form-control">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-					<select class="input-filter">
+					<select class="form-control">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>					
@@ -120,13 +120,13 @@
 			
 		<div class="row d-flex justify-content-center">
 				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-					<select class="input-filter" id="inputID">
+					<select class="form-control" id="inputID">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-					<button class="input-filter btn-filter-buscar">Buscar</button>
+					<button class="btn hw-btn-orange hvr-sweep-to-right w-100">Buscar</button>
 				</div>
 		</div>
 			
@@ -138,16 +138,23 @@
 		margin-top: 6em;
 		margin-bottom: 2em;
 		margin-left: 2em;
+		overflow: hidden;
+		position: relative;
 	}
     .swiper-container2 {
       width: 50%;
-      height: 10%;
+	  height: 10%;
+	  
     }
 
     .swiper-slide {
-      text-align: center;
-      font-size: 18px;
+		
+		align-items: center;
+		justify-content: center;
+      	text-align: center;
+      	font-size: 18px;
       background: #fff;
+
 
       /* Center slide text vertically */
       display: -webkit-box;
@@ -171,6 +178,7 @@
 	<div class="swiper-container2">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
+	  
 	  <div class="card-oficio-new d-flex flex-column justify-content-center align-items-center col-md-2">
 	 	 <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
 		  <span class="card-nombre-oficio">Electricista</span>
@@ -230,13 +238,14 @@
       
     </div>
     <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
+    
   	</div>
 	</div>
   <script src="../package/swiper-bundle.min.js"></script>
 
   <script>
     var swiper = new Swiper('.swiper-container2', {
+		
       slidesPerView: 3,
       spaceBetween: 30,
       pagination: {
@@ -385,7 +394,7 @@
 				<h3 class="neo-title">
 					¿NO ENCONTRASTE EL OFICIO QUE BUSCABAS?
 				</h3>
-				<a href="/OficioNuevo" class="neo-btn">Ingresá Aquí</a>
+				<a href="/OficioNuevo" class="btn hw-btn-blue neo-btn hvr-sweep-to-right w-50">Ingresá Aquí</a>
 			</div>
 			<div class="col-md-6 map-container">
 				<div id="mapa"></div>
