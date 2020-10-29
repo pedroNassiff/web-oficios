@@ -96,21 +96,21 @@
 
 
 <section class="py-3 oficios-section" id="filter">
-	<div class="filters-container d-flex justify-content-center flex-column align-items-center" style="width: 100%; height: 205px; background-color: white;">
+	<div class="filters-container d-flex justify-content-center flex-column align-items-center">
 		<div class="row text-center">
 			<h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
 		</div>
 		<div class="row d-flex justify-content-center">
-				<div class="col-md-4">
+				<div class="col-md-4 d-flex justify-content-center">
 					<input type="text" placeholder="Nombre y Apellido" class="input-filter">
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
 					<select class="input-filter">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
 					<select class="input-filter">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
@@ -119,13 +119,13 @@
 		</div>		
 			
 		<div class="row d-flex justify-content-center">
-				<div class="col-md-4">
-					<select class="input-filter" style="margin-right:394px">
+				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
+					<select class="input-filter" id="inputID">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
 					<button class="input-filter btn-filter-buscar">Buscar</button>
 				</div>
 		</div>
