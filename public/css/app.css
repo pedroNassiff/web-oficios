@@ -11834,10 +11834,6 @@ section#inscripcion .desc {
   min-height: 90vh;
 }
 
-.how-work > .row {
-  width: 100%;
-}
-
 .hw-title-container {
   padding-top: 52px;
 }
@@ -12431,6 +12427,12 @@ section#prestador .info-prestador {
   color: #02093b;
 }
 
+@media (min-width: 1024px) {
+  .how-work > .row {
+    width: 100%;
+  }
+}
+
 @media (max-width: 780px) {
   .footer {
     height: 175px;
@@ -12469,6 +12471,11 @@ section#prestador .info-prestador {
 
   #mapa {
     margin: 0 auto;
+    width: 340px;
+  }
+
+  .neo-title {
+    font-size: 30px;
   }
 
   section#contact .container {
@@ -12512,7 +12519,7 @@ section#prestador .info-prestador {
   }
 
   .footer {
-    height: 197px;
+    height: 300px;
     width: 100%;
   }
 
@@ -12560,10 +12567,6 @@ section#prestador .info-prestador {
     margin-left: 0px;
   }
 
-  .shop-banner .container {
-    margin-bottom: 40%;
-  }
-
   .shop-banner .container .sale-percent {
     margin: 10px;
     font-size: 50px;
@@ -12585,6 +12588,12 @@ section#prestador .info-prestador {
   .hw-title {
     width: 80%;
     text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  #mapa {
+    width: 290px;
   }
 }
 

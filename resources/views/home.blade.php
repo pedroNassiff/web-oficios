@@ -418,7 +418,7 @@
 			Accedé a más contrataciones de acuerdo a tu especialidad y tu ubicación.
 		</p>
 		@if (Auth::guest())
-			<a href="{{ route('register') }}" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
+			<a href="{{ route('register') }}" class="btn hw-btn-orange hvr-sweep-to-right">Quiero ser parte</a>
 		@else 
 			<a href="/inscripcion" class="btn hw-btn hvr-sweep-to-right">Quiero ser parte</a>
         @endif
@@ -468,7 +468,7 @@
         </div>
 	</div>
 	<div class="row d-flex justify-content-center mb-5 mt-5">
-		<a href="/ayuda" class="mresp btn btn2 hw-btn">Necesito Ayuda</a>
+		<a href="/ayuda" class="mresp btn btn2 hw-btn-blue">Necesito Ayuda</a>
 	</div>
 </section>
 
