@@ -11569,6 +11569,11 @@ section#filter .imagen-card-filter {
 
 .filters-container {
   margin-top: -16px;
+  width: 100%;
+  min-height: 205px;
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .filter-title {
@@ -11584,6 +11589,10 @@ section#filter .imagen-card-filter {
   font-size: 12px;
   font-weight: lighter;
   margin-top: 10px;
+}
+
+#inputID {
+  margin-right: 394px;
 }
 
 .input-filter:hover {
@@ -12661,5 +12670,63 @@ section#prestador .info-prestador {
     display: block;
     visibility: visible;
   }
+}
+
+/* iPhone 4 ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  #inputID {
+    margin-right: 0px;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+  #inputID {
+    margin-right: 0px;
+  }
+
+  .input-filter {
+    width: 285px;
+  }
+
+  #hero-background {
+    height: 700px;
+  }
+
+  .filters-container {
+    margin-top: 82px;
+  }
+
+  .form-control {
+    width: 90%;
+    margin-bottom: 12px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  #inputID {
+    margin-right: 0px;
+  }
+
+  #hero-background {
+    height: 636px;
+  }
+
+  .filters-container {
+    margin-top: 20px;
+  }
+
+  .form-control {
+    width: 90%;
+    margin-bottom: 12px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
 }
 
