@@ -12700,7 +12700,7 @@ section#prestador .info-prestador {
   }
 
   .form-control {
-    width: 90%;
+    width: 100%;
     margin-bottom: 12px;
   }
 }
@@ -12711,15 +12711,15 @@ section#prestador .info-prestador {
   }
 
   #hero-background {
-    height: 636px;
+    height: 705px;
   }
 
   .filters-container {
-    margin-top: 20px;
+    margin-top: 89px;
   }
 
   .form-control {
-    width: 90%;
+    width: 100%;
     margin-bottom: 12px;
   }
 }
