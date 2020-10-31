@@ -7,18 +7,18 @@
 		<div class="row text-center">
 			<h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
 		</div>
-		<div class="row d-flex justify-content-center">
+		<div class="row d-flex justify-content-center  w-75 mb-4">
 				<div class="col-md-4">
-					<input type="text" placeholder="Nombre y Apellido" class="input-filter">
+					<input type="text" placeholder="Nombre y Apellido" class="form-control">
 				</div>
 				<div class="col-md-4">
-					<select class="input-filter">
+					<select class="form-control">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4">
-					<select class="input-filter">
+					<select class="form-control">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>					
@@ -27,20 +27,20 @@
 			
 		<div class="row d-flex justify-content-center">
 				<div class="col-md-4">
-					<select class="input-filter" style="margin-right:394px">
+					<select class="form-control">
 						<option value="value1">Option 1</option>
 						<option value="value2">Option 2</option>
 					</select>
 				</div>
 				<div class="col-md-4">
-					<button class="input-filter btn-filter-buscar">Buscar</button>
+					<button class="btn hw-btn-orange hvr-sweep-to-right w-100">Buscar</button>
 				</div>
 		</div>
 	</div>
-    <div class="container" style="margin-bottom: 25px">
+    <div class="container" style="margin-bottom: 25px" id="results-cards-container">
 		<div class="row">
-			<div class="col-md-7 d-flex justify-content-center mt-3">
-				<div class="row">
+			<div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
+				<div class="row d-flex justify-content-center">
                     <div class="oficios-card pt-3">
                         <div class="card-img-container d-flex justify-content-center">
                             <div class="card-image"></div>

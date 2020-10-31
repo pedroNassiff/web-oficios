@@ -12682,7 +12682,7 @@ section#prestador .info-prestador {
 
 /* Smartphones (portrait) ----------- */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 321px) {
   #inputID {
     margin-right: 0px;
   }
@@ -12703,6 +12703,10 @@ section#prestador .info-prestador {
     width: 100%;
     margin-bottom: 12px;
   }
+
+  .map-container {
+    margin-bottom: 60%;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
@@ -12721,6 +12725,14 @@ section#prestador .info-prestador {
   .form-control {
     width: 100%;
     margin-bottom: 12px;
+  }
+
+  .map-container {
+    margin-bottom: 51%;
+  }
+
+  #results-cards-container {
+    margin-top: 20%;
   }
 }
 
