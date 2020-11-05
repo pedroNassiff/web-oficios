@@ -106,13 +106,15 @@
 													</div>
 												</div>
 												<!--Grid column-->
+												<div class="col-md-6">
+													<div class="md-form mt-3 text-center">
+														<button class="btn hw-btn hvr-sweep-to-right mx-auto" type="submit">Guardar</button>
+													</div>
+												</div>
 										</div>
 								</div>	
-											<div class="col-md-10 centrar-der">
-												<button class="btn btn-own mx-auto" type="submit">Guardar</button>
-											</div>
-											
-											@csrf
+							
+										@csrf
 										</form>
 									</div>
 								</div>
