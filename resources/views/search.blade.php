@@ -25,7 +25,7 @@
 				</div>
 		</div>		
 			
-		<div class="row d-flex justify-content-center">
+		<div class="row d-flex justify-content-center w-75">
 				<div class="col-md-4">
 					<select class="form-control">
 						<option value="value1">Option 1</option>
