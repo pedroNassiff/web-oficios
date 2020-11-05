@@ -11584,7 +11584,7 @@ section#filter .imagen-card-filter {
 .input-filter {
   width: 354px;
   border-radius: 4px;
-  border: solid 1px #D0D0D0D0;
+  border: solid 1px #d0d0d0d0;
   height: 31px;
   font-size: 12px;
   font-weight: lighter;
@@ -11622,7 +11622,7 @@ section#filter .imagen-card-filter {
 }
 
 .card-nombre-oficio {
-  color: #02093B;
+  color: #02093b;
 }
 
 .card-cantidad-prof {
@@ -11713,7 +11713,7 @@ section#filter .imagen-card-filter {
   bottom: 0;
   left: 15px;
   right: 0;
-  background-color: #02093B;
+  background-color: #02093b;
   opacity: 0.8;
   overflow: hidden;
   width: 262px;
@@ -11743,10 +11743,10 @@ section#filter .imagen-card-filter {
 } */
 
 .oficios-card:hover {
+  transition: all 0.2s ease-out;
+  margin-top: -4px;
   border: solid 1px orange;
-  height: 187px;
-  width: 212px;
-  box-shadow: 1px 3px 5px 0px rgba(140, 140, 140, 0.63);
+  box-shadow: 1px 4px 5px 0px rgba(140, 140, 140, 0.63);
   cursor: pointer;
 }
 
@@ -11767,7 +11767,7 @@ section#contact {
 section#solicitudOficio h1,
 section#inscripcion h1,
 section#contact h1 {
-  color: #02093B;
+  color: #02093b;
   font-family: "Roboto", sans-serif;
 }
 
@@ -13069,7 +13069,7 @@ ul {
   }
 
   .map-container {
-    margin-bottom: 51%;
+    margin-bottom: 60%;
   }
 
   #results-cards-container {
