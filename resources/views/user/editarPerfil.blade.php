@@ -15,7 +15,18 @@
 		<div class="row">
 			<div class="col-sm-4"><!--left col-->					
 				<div class="text-center">
-					<img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+					<div class="oficios-card oficios-card-perfil pt-3">
+                        <div class="card-img-container d-flex justify-content-center">
+                            <div class="card-image"></div>
+                        </div>
+                        <div class="card-info-container d-flex flex-column align-items-center">
+                            <span class="card-name">Sebastián Rodriguez</span>
+                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="card-btn">ver perfil</button>
+                        </div>
+				    </div>
 					<h6>Cambiar foto de perfil</h6>
         			<input type="file" class="text-center center-block file-upload">
 				</div>
@@ -122,7 +133,7 @@
 								<h3>Seguridad</h3>
 								<p>Cambiar contraseña:</p>	
 								<div class="row">  
-									<div class="col-md-8 col-md-offset-2">  
+									<div class="col-md-12 col-md-offset-2">  
 									  <div class="panel panel-default">  
 										{{-- <div class="panel-heading">Cambiar contraseña:</div>   --}}
 										<div class="panel-body">  

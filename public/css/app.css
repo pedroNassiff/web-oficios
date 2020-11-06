@@ -11647,6 +11647,11 @@ section#filter .imagen-card-filter {
   box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
 }
 
+.oficios-card-perfil {
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
 .card-img-container .card-image {
   background-image: url("https://gitlab.com/uploads/-/system/user/avatar/6025439/avatar.png?width=400");
   background-size: cover;
