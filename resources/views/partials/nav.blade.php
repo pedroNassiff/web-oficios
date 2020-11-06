@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="text-center">
-                        <a href="#" class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27!important; color:white;" data-toggle="modal" data-target="#modalLoginForm" role="button" aria-haspopup="true" aria-expanded="false" id="btn-logreg">Ingresar | Registrarse</a>
+                        <a href="#" class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27; color:white;" data-toggle="modal" data-target="#modalLoginForm" role="button" aria-haspopup="true" aria-expanded="false" id="btn-logreg">Ingresar | Registrarse</a>
                     </div>
                 </li>
                 @endguest
