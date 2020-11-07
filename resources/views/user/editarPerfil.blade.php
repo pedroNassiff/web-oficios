@@ -262,7 +262,7 @@
 
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                <div class="card m-0">
+                <div class="card m-0 margCard">
 
                     <!-- Row start -->
                     <div class="row no-gutters">
@@ -365,8 +365,11 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="form-group mt-3 mb-0">
-                                    <textarea class="form-control" rows="3" placeholder="Type your message here..."></textarea>
+                                <div class="form-group mt-3 mb-0 d-flex justify-content-center align-items-center">
+									<textarea class="form-control w-75" rows="3" placeholder="Escribe un mensaje..."></textarea>
+									<a class="send-msn ml-3" href="">
+										<i class="fas fa-paper-plane"></i>
+									</a>
                                 </div>
                             </div>
                         </div>
