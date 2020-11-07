@@ -720,6 +720,10 @@ section#filter .imagen-card-filter {
   -moz-box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
   box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
 }
+.oficios-card-perfil{
+  margin-left: 25%;
+  margin-top: 10%;
+}
 
 .card-img-container .card-image {
   background-image: url("https://gitlab.com/uploads/-/system/user/avatar/6025439/avatar.png?width=400");
@@ -1322,6 +1326,29 @@ section#prestador .info-prestador {
   color: #0e263e;
 }
 //editar perfil - mensajes
+.send-msn{
+  height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 100%;
+    background-color: #e48f27;
+    text-decoration: none;
+}
+.send-msn:hover{
+  text-decoration: none;
+  background-color: #02093b;
+  transition-duration: 0.7s;
+}
+.send-msn i {
+  color: white;
+}
+
+.margCard .no-gutters{
+  border-bottom: 1px solid #e48f27;
+}
 .chat-search-box {
   -webkit-border-radius: 3px 0 0 0;
   -moz-border-radius: 3px 0 0 0;
@@ -1353,7 +1380,10 @@ section#prestador .info-prestador {
   line-height: 100%;
   vertical-align: middle;
 }
-
+.chatContainerScroll{
+  overflow-y: scroll;
+  height: 350px;
+}
 @media (max-width: 767px) {
   .chat-search-box {
     display: none;
@@ -1385,6 +1415,8 @@ section#prestador .info-prestador {
 
 .users {
   padding: 0;
+  height: 448px;
+  overflow-y: scroll;
 }
 
 .users .person {
@@ -1509,6 +1541,9 @@ section#prestador .info-prestador {
   .users .person p.name-time .time {
     display: none;
   }
+  .margCard{
+    padding-bottom: 50%;
+  }
 }
 
 /************************************************
@@ -1521,7 +1556,7 @@ section#prestador .info-prestador {
   width: 100%;
   padding: 0 15px;
   min-height: 64px;
-  line-height: 64px;
+  line-height: 76px;
   border-bottom: 1px solid #e48f27;
   -webkit-border-radius: 0 3px 0 0;
   -moz-border-radius: 0 3px 0 0;

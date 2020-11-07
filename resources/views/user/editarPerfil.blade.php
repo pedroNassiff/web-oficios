@@ -13,7 +13,28 @@
 		</div>
 
 		<div class="row">
+<<<<<<< HEAD
 			
+=======
+			<div class="col-sm-4"><!--left col-->					
+				<div class="text-center">
+					<div class="oficios-card oficios-card-perfil pt-3">
+                        <div class="card-img-container d-flex justify-content-center">
+                            <div class="card-image"></div>
+                        </div>
+                        <div class="card-info-container d-flex flex-column align-items-center">
+                            <span class="card-name">Sebastián Rodriguez</span>
+                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="card-btn">ver perfil</button>
+                        </div>
+				    </div>
+					<h6>Cambiar foto de perfil</h6>
+        			<input type="file" class="text-center center-block file-upload">
+				</div>
+			</div>
+>>>>>>> de85d928c9235799e28839361d92eb571c6b4bbb
 			
 			<div class="col-sm-8">
 				<div class="menu-perfil">
@@ -124,13 +145,19 @@
 												</div>
 												</div>
 												<!--Grid column-->
+<<<<<<< HEAD
 									</div>
+=======
+												<div class="col-md-6">
+													<div class="md-form mt-3 text-center">
+														<button class="btn hw-btn hvr-sweep-to-right mx-auto" type="submit">Guardar</button>
+													</div>
+												</div>
+										</div>
+>>>>>>> de85d928c9235799e28839361d92eb571c6b4bbb
 								</div>	
-											<div class="col-md-10 centrar-der">
-												<button class="btn btn-own mx-auto" type="submit">Guardar</button>
-											</div>
-											
-											@csrf
+							
+										@csrf
 										</form>
 									</div>
 								</div>
@@ -138,7 +165,7 @@
 								<h3>Seguridad</h3>
 								<p>Cambiar contraseña:</p>	
 								<div class="row">  
-									<div class="col-md-8 col-md-offset-2">  
+									<div class="col-md-12 col-md-offset-2">  
 									  <div class="panel panel-default">  
 										{{-- <div class="panel-heading">Cambiar contraseña:</div>   --}}
 										<div class="panel-body">  
@@ -267,7 +294,7 @@
 
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                <div class="card m-0">
+                <div class="card m-0 margCard">
 
                     <!-- Row start -->
                     <div class="row no-gutters">
@@ -370,8 +397,11 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="form-group mt-3 mb-0">
-                                    <textarea class="form-control" rows="3" placeholder="Type your message here..."></textarea>
+                                <div class="form-group mt-3 mb-0 d-flex justify-content-center align-items-center">
+									<textarea class="form-control w-75" rows="3" placeholder="Escribe un mensaje..."></textarea>
+									<a class="send-msn ml-3" href="">
+										<i class="fas fa-paper-plane"></i>
+									</a>
                                 </div>
                             </div>
                         </div>
