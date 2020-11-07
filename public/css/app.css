@@ -11203,6 +11203,24 @@ label {
   font-weight: bold;
 }
 
+.col-1-perfil {
+  display: flex;
+}
+
+.col-form-perf {
+  margin-left: 21em;
+  margin-top: -12em;
+  width: 42em;
+}
+
+.cont-fperfil {
+  margin-left: -6em;
+}
+
+#web-perfil {
+  margin-left: 1em;
+}
+
 /*	--------------------------------------------------
 	:: Table Filter
 	-------------------------------------------------- */
