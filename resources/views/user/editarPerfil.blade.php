@@ -13,28 +13,7 @@
 		</div>
 
 		<div class="row">
-<<<<<<< HEAD
 			
-=======
-			<div class="col-sm-4"><!--left col-->					
-				<div class="text-center">
-					<div class="oficios-card oficios-card-perfil pt-3">
-                        <div class="card-img-container d-flex justify-content-center">
-                            <div class="card-image"></div>
-                        </div>
-                        <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">Sebastián Rodriguez</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
-                        </div>
-                        <div class="card-overlay">
-                            <button class="card-btn">ver perfil</button>
-                        </div>
-				    </div>
-					<h6>Cambiar foto de perfil</h6>
-        			<input type="file" class="text-center center-block file-upload">
-				</div>
-			</div>
->>>>>>> de85d928c9235799e28839361d92eb571c6b4bbb
 			
 			<div class="col-sm-8">
 				<div class="menu-perfil">
@@ -63,14 +42,25 @@
 									<form action="/perfil/actualizar/{{ auth()->user()->id }}" method="POST">
 										<div class="row">
 											<div class="col-md-12 col-1-perfil">
-												<div class="col-md-6"><!--left col-->					
-													<div class="text-center cont-fperfil">
-														<img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-														<h6>Cambiar foto de perfil</h6>
-														<input type="file" class="text-center center-block file-upload">
+											<div class="col-md-6 cont-fperfil"><!--left col-->					
+												<div class="text-center">
+													<div class="oficios-card oficios-card-perfil pt-3">
+														<div class="card-img-container d-flex justify-content-center">
+															<div class="card-image"></div>
+														</div>
+														<div class="card-info-container d-flex flex-column align-items-center">
+															<span class="card-name">Sebastián Rodriguez</span>
+															<span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
+														</div>
+														<div class="card-overlay">
+															<button class="card-btn">ver perfil</button>
+														</div>
 													</div>
+													<h6>Cambiar foto de perfil</h6>
+													<input type="file" class="text-center center-block file-upload">
 												</div>
-												<div class="col-md-6">
+											</div>
+												<div class="col-md-6" id="row-1-perf">
 													<div class="md-form mb-3">
 														<label for="nombre" class="">Nombres</label>
 															<input type="text" name="nombre" value="profesionalnombre" class="form-control" required="">
@@ -145,16 +135,12 @@
 												</div>
 												</div>
 												<!--Grid column-->
-<<<<<<< HEAD
-									</div>
-=======
 												<div class="col-md-6">
 													<div class="md-form mt-3 text-center">
 														<button class="btn hw-btn hvr-sweep-to-right mx-auto" type="submit">Guardar</button>
 													</div>
 												</div>
 										</div>
->>>>>>> de85d928c9235799e28839361d92eb571c6b4bbb
 								</div>	
 							
 										@csrf
