@@ -11203,6 +11203,28 @@ label {
   font-weight: bold;
 }
 
+.col-1-perfil {
+  display: flex;
+}
+
+.col-form-perf {
+  margin-left: 21em;
+  margin-top: -12em;
+  width: 42em;
+}
+
+.cont-fperfil {
+  margin-left: -6em;
+}
+
+#row-1-perf {
+  margin-left: 6em;
+}
+
+#web-perfil {
+  margin-left: 1em;
+}
+
 /*	--------------------------------------------------
 	:: Table Filter
 	-------------------------------------------------- */
@@ -11584,7 +11606,7 @@ section#filter .imagen-card-filter {
 .input-filter {
   width: 354px;
   border-radius: 4px;
-  border: solid 1px #D0D0D0D0;
+  border: solid 1px #d0d0d0d0;
   height: 31px;
   font-size: 12px;
   font-weight: lighter;
@@ -11622,7 +11644,7 @@ section#filter .imagen-card-filter {
 }
 
 .card-nombre-oficio {
-  color: #02093B;
+  color: #02093b;
 }
 
 .card-cantidad-prof {
@@ -11645,6 +11667,11 @@ section#filter .imagen-card-filter {
   margin-right: 10px;
   margin-bottom: 10px;
   box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63);
+}
+
+.oficios-card-perfil {
+  margin-left: 25%;
+  margin-top: 10%;
 }
 
 .card-img-container .card-image {
@@ -11713,7 +11740,7 @@ section#filter .imagen-card-filter {
   bottom: 0;
   left: 15px;
   right: 0;
-  background-color: #02093B;
+  background-color: #02093b;
   opacity: 0.8;
   overflow: hidden;
   width: 262px;
@@ -11743,10 +11770,10 @@ section#filter .imagen-card-filter {
 } */
 
 .oficios-card:hover {
+  transition: all 0.2s ease-out;
+  margin-top: -4px;
   border: solid 1px orange;
-  height: 187px;
-  width: 212px;
-  box-shadow: 1px 3px 5px 0px rgba(140, 140, 140, 0.63);
+  box-shadow: 1px 4px 5px 0px rgba(140, 140, 140, 0.63);
   cursor: pointer;
 }
 
@@ -11767,7 +11794,7 @@ section#contact {
 section#solicitudOficio h1,
 section#inscripcion h1,
 section#contact h1 {
-  color: #02093B;
+  color: #02093b;
   font-family: "Roboto", sans-serif;
 }
 
@@ -12318,6 +12345,32 @@ section#prestador .info-prestador {
   color: #0e263e;
 }
 
+.send-msn {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 100%;
+  background-color: #e48f27;
+  text-decoration: none;
+}
+
+.send-msn:hover {
+  text-decoration: none;
+  background-color: #02093b;
+  transition-duration: 0.7s;
+}
+
+.send-msn i {
+  color: white;
+}
+
+.margCard .no-gutters {
+  border-bottom: 1px solid #e48f27;
+}
+
 .chat-search-box {
   border-radius: 3px 0 0 0;
   padding: 0.75rem 1rem;
@@ -12342,6 +12395,11 @@ section#prestador .info-prestador {
   font-size: 1.2rem;
   line-height: 100%;
   vertical-align: middle;
+}
+
+.chatContainerScroll {
+  overflow-y: scroll;
+  height: 350px;
 }
 
 @media (max-width: 767px) {
@@ -12373,6 +12431,8 @@ section#prestador .info-prestador {
 
 .users {
   padding: 0;
+  height: 448px;
+  overflow-y: scroll;
 }
 
 .users .person {
@@ -12473,6 +12533,10 @@ section#prestador .info-prestador {
   .users .person p.name-time .time {
     display: none;
   }
+
+  .margCard {
+    padding-bottom: 50%;
+  }
 }
 
 /************************************************
@@ -12485,7 +12549,7 @@ section#prestador .info-prestador {
   width: 100%;
   padding: 0 15px;
   min-height: 64px;
-  line-height: 64px;
+  line-height: 76px;
   border-bottom: 1px solid #e48f27;
   border-radius: 0 3px 0 0;
 }
@@ -13069,11 +13133,23 @@ ul {
   }
 
   .map-container {
-    margin-bottom: 51%;
+    margin-bottom: 60%;
   }
 
   #results-cards-container {
     margin-top: 20%;
+  }
+
+  .ml-auto,
+  .mx-auto {
+    margin-left: 0em !important;
+    margin-top: 3em;
+    display: block;
+  }
+
+  #btn-logreg {
+    margin-left: -18em;
+    border: none !important;
   }
 }
 
