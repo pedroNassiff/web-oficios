@@ -14,6 +14,11 @@
     <script src="https://kit.fontawesome.com/7fe355977f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/app.css">
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{-- livewire --}}
+    @livewireStyles
+    @livewireScripts
 </head>
 
 <body>
