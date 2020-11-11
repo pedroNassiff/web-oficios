@@ -1393,9 +1393,13 @@ section#prestador .info-prestador {
   overflow-y: scroll;
   height: 350px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .chat-search-box {
     display: none;
+  }
+  .panel-default{
+    margin-bottom: 60px;
+    width: 105%;
   }
 }
 
@@ -1995,14 +1999,27 @@ ul {
     width: 80%;
     text-align: center;
   }
+  .panel-default {
+    margin-bottom: 200px;
+    width: 100%;
+  }
+  .margCard .no-gutters{
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 320px) {
   #mapa {
     width: 290px;
   }
+  .form-control-file{
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 768px) {
+  .margCard .no-gutters{
+    margin-bottom: 100px;
+  }
   /* show 3 items */
   .carousel-inner .active,
   .carousel-inner .active + .carousel-item,
