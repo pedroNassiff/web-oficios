@@ -21,8 +21,7 @@
                         <ul class="users">
                             <li class="person" data-chat="person1">
                                 <div class="user">
-                                    <img src="https://image.freepik.com/foto-gratis/alegre-mujer-mediana-edad-cabello-rizado_1262-20859.jpg"
-                                        alt="Retail Admin">
+                                    <img src="https://image.freepik.com/foto-gratis/alegre-mujer-mediana-edad-cabello-rizado_1262-20859.jpg" alt="Retail Admin">
                                     <span class="status busy"></span>
                                 </div>
                                 <p class="name-time">
@@ -32,8 +31,7 @@
                             </li>
                             <li class="person" data-chat="person1">
                                 <div class="user">
-                                    <img src="https://image.freepik.com/foto-gratis/hombre-negocios-dueno-empresa-oficina_1303-15851.jpg"
-                                        alt="Retail Admin">
+                                    <img src="https://image.freepik.com/foto-gratis/hombre-negocios-dueno-empresa-oficina_1303-15851.jpg" alt="Retail Admin">
                                     <span class="status offline"></span>
                                 </div>
                                 <p class="name-time">
@@ -53,8 +51,7 @@
                             </li>
                             <li class="person" data-chat="person3">
                                 <div class="user">
-                                    <img src="https://image.freepik.com/foto-gratis/retrato-guapo-sonriente-elegante-joven-modelo-vestido-camisa-cuadros-roja-hombre-moda-posando_158538-4910.jpg"
-                                        alt="Retail Admin">
+                                    <img src="https://image.freepik.com/foto-gratis/retrato-guapo-sonriente-elegante-joven-modelo-vestido-camisa-cuadros-roja-hombre-moda-posando_158538-4910.jpg" alt="Retail Admin">
                                     <span class="status busy"></span>
                                 </div>
                                 <p class="name-time">
@@ -67,7 +64,7 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
                     <div class="selected-user">
-                        <span>To: <span class="name">Patricia Alejandra González</span></span>
+                        <span>Para: <span class="name">Patricia Alejandra González</span></span>
                     </div>
                     <div class="chat-container">
                         <ul class="chat-box chatContainerScroll">
@@ -77,18 +74,15 @@
                                     <div class="chat-name">Patricia</div>
                                 </div>
                                 <div class="chat-text">Hello, I'm Patricia.
-                                    <br>How can I help you today?
-                                </div>
+                                    <br>How can I help you today?</div>
                                 <div class="chat-hour">08:55</div>
                             </li>
                             <li class="chat-right">
                                 <div class="chat-hour">08:56</div>
                                 <div class="chat-text">Hi, Patricia
-                                    <br> I need more information about Developer Plan.
-                                </div>
+                                    <br> I need more information about Developer Plan.</div>
                                 <div class="chat-avatar">
-                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
-                                        alt="Retail Admin">
+                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
                                     <div class="chat-name">Sam</div>
                                 </div>
                             </li>
@@ -98,26 +92,21 @@
                                     <div class="chat-name">Patricia</div>
                                 </div>
                                 <div class="chat-text">Are we meeting today?
-                                    <br>Project has been already finished and I have results to show you.
-                                </div>
+                                    <br>Project has been already finished and I have results to show you.</div>
                                 <div class="chat-hour">08:57</div>
                             </li>
                             <li class="chat-right">
                                 <div class="chat-hour">08:59</div>
                                 <div class="chat-text">Well I am not sure.
-                                    <br>I have results to show you.
-                                </div>
+                                    <br>I have results to show you.</div>
                                 <div class="chat-avatar">
-                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
-                                        alt="Retail Admin">
+                                    <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
                                     <div class="chat-name">Sam</div>
                                 </div>
                             </li>
                         </ul>
-                        <small>{{ $usuario }}</small>
                         <div class="form-group mt-3 mb-0 d-flex justify-content-center align-items-center">
-                            <textarea class="form-control w-75" rows="3" placeholder="Escribe un mensaje..."
-                                wire:model="usuario"></textarea>
+                            <textarea class="form-control w-75" rows="3" placeholder="Escribe un mensaje..."></textarea>
                             <a class="send-msn ml-3" href="">
                                 <i class="fas fa-paper-plane"></i>
                             </a>
