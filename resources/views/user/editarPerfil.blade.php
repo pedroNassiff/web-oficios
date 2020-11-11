@@ -69,13 +69,13 @@
 											<div class="col-md-6" id="row-1-perf">
 													<div class="md-form mb-3">
 														<label for="nombre" class="">Nombres</label>
-															<input type="text" name="nombre" value="profesionalnombre" class="form-control" required="">
+															<input type="text" name="nombre" value="{{ auth()->user()->name }}" class="form-control" required="">
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="apellido" class="">Apellido</label>
-														<input type="text" id="apellido" name="apellido" value="profesionalapellido " class="form-control" required>
+														<input type="text" id="apellido" name="apellido" value="{{ auth()->user()->lastname }}" class="form-control" required>
 													</div>
 												</div>
 											</div>
@@ -86,13 +86,13 @@
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="dni" class="">DNI</label>
-														<input type="text" id="dni" name="dni" value="profesionaldni" class="form-control" required>
+														<input type="text" id="dni" name="dni" value="{{ auth()->user()->dni }}" class="form-control" required>
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="telefono" class="">Teléfono</label>
-														<input type="text" id="telefono" name="telefono" value="profesionaltelefono " class="form-control" required>
+														<input type="text" id="telefono" name="telefono" value="{{ auth()->user()->telefono }}" class="form-control" required>
 													</div>
 												</div>
 											</div>
@@ -102,7 +102,7 @@
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="email" class="">Email</label>
-														<input type="text" id="email" name="email" value="" class="form-control" required>
+														<input type="text" id="email" name="email" value="{{ auth()->user()->email }}" class="form-control" required>
 													</div>
 												</div>
 												<div class="col-md-6">
@@ -271,31 +271,8 @@
 								</div>	
 							</div>
 							<div role="tab-panel" class="tab-pane" id="notificaciones">
-								
-								<div role="alert" aria-live="assertive" aria-atomic="true" class="notificaciones1" data-autohide="false">
-								<div class="toast-header">
-									<strong class="mr-auto">ADMINISTRACIÓN</strong>
-									<small>Hace 15 minutos</small>
-									<button type="button" class="ml-2 mb-1 close" data-dismiss="notificaciones1" aria-label="Close">
-									
-									</button>
-								</div>
-								<div class="toast-body">
-									Cambio de Contraseña realizado con éxito
-								</div>
-								</div>
-								<div role="alert" aria-live="assertive" aria-atomic="true" class="notificaciones1" data-autohide="false">
-								<div class="toast-header">
-									<strong class="mr-auto">Cosme Fulanito</strong>
-									<small>Hace 30 minutos</small>
-									<button type="button" class="ml-2 mb-1 close" data-dismiss="notificaciones1" aria-label="Close">
-									
-									</button>
-								</div>
-								<div class="toast-body">
-									Solicitud de servicio
-								</div>
-								</div>
+								<h3>Notificaciones</h3>
+								<p>Seguridad  seguridadseguridadseguridadseguridad seguridad seguridad seguridad</p>
 							</div>
 							<div role="tab-panel" class="tab-pane" id="mensajes">
 								<h3>Mensajes</h3>
@@ -306,128 +283,8 @@
     <div class="content-wrapper">
 
         <!-- Row start -->
-        <div class="row gutters">
-
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-
-                <div class="card m-0 margCard">
-
-                    <!-- Row start -->
-                    <div class="row no-gutters">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
-                            <div class="users-container">
-                                <div class="chat-search-box">
-                                    <div class="input-group">
-                                        <input class="form-control" placeholder="Buscar">
-                                        <div class="input-group-btn">
-                                            <button type="button" class="btn-info btn hw-btn hvr-sweep-to-right">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="users">
-                                    <li class="person" data-chat="person1">
-                                        <div class="user">
-                                            <img src="https://image.freepik.com/foto-gratis/alegre-mujer-mediana-edad-cabello-rizado_1262-20859.jpg" alt="Retail Admin">
-                                            <span class="status busy"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">María Elena Perez</span>
-                                            <span class="time">15/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person" data-chat="person1">
-                                        <div class="user">
-                                            <img src="https://image.freepik.com/foto-gratis/hombre-negocios-dueno-empresa-oficina_1303-15851.jpg" alt="Retail Admin">
-                                            <span class="status offline"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Steve Bangalter</span>
-                                            <span class="time">15/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person active-user" data-chat="person2">
-                                        <div class="user">
-                                            <img src="../img/perfil_prueba.jpg" alt="Retail Admin">
-                                            <span class="status away"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name"> Patricia Alejandra Gonzalez</span>
-                                            <span class="time">12/02/2019</span>
-                                        </p>
-                                    </li>
-                                    <li class="person" data-chat="person3">
-                                        <div class="user">
-                                            <img src="https://image.freepik.com/foto-gratis/retrato-guapo-sonriente-elegante-joven-modelo-vestido-camisa-cuadros-roja-hombre-moda-posando_158538-4910.jpg" alt="Retail Admin">
-                                            <span class="status busy"></span>
-                                        </div>
-                                        <p class="name-time">
-                                            <span class="name">Joseph Larson</span>
-                                            <span class="time">11/02/2019</span>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
-                            <div class="selected-user">
-                                <span>Para: <span class="name">Patricia Alejandra González</span></span>
-                            </div>
-                            <div class="chat-container">
-                                <ul class="chat-box chatContainerScroll">
-                                    <li class="chat-left">
-                                        <div class="chat-avatar">
-                                            <img src="../img/perfil_prueba.jpg" alt="Retail Admin">
-                                            <div class="chat-name">Patricia</div>
-                                        </div>
-                                        <div class="chat-text">Hello, I'm Patricia.
-                                            <br>How can I help you today?</div>
-                                        <div class="chat-hour">08:55</div>
-                                    </li>
-                                    <li class="chat-right">
-                                        <div class="chat-hour">08:56</div>
-                                        <div class="chat-text">Hi, Patricia
-                                            <br> I need more information about Developer Plan.</div>
-                                        <div class="chat-avatar">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
-                                            <div class="chat-name">Sam</div>
-                                        </div>
-                                    </li>
-                                    <li class="chat-left">
-                                        <div class="chat-avatar">
-                                            <img src="../img/perfil_prueba.jpg" alt="Retail Admin">
-                                            <div class="chat-name">Patricia</div>
-                                        </div>
-                                        <div class="chat-text">Are we meeting today?
-                                            <br>Project has been already finished and I have results to show you.</div>
-                                        <div class="chat-hour">08:57</div>
-                                    </li>
-                                    <li class="chat-right">
-                                        <div class="chat-hour">08:59</div>
-                                        <div class="chat-text">Well I am not sure.
-                                            <br>I have results to show you.</div>
-                                        <div class="chat-avatar">
-                                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png" alt="Retail Admin">
-                                            <div class="chat-name">Sam</div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="form-group mt-3 mb-0 d-flex justify-content-center align-items-center">
-									<textarea class="form-control w-75" rows="3" placeholder="Escribe un mensaje..."></textarea>
-									<a class="send-msn ml-3" href="">
-										<i class="fas fa-paper-plane"></i>
-									</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row end -->
-                </div>
-
-            </div>
-
-        </div>
+		  {{-- chat component --}}
+		  @livewire('chat-form')
         <!-- Row end -->
 
     </div>

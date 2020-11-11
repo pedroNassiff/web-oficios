@@ -52,6 +52,7 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil/crear', 'ProfesionalController@crearPerfil');
 	Route::post('/perfil/guardar', 'ProfesionalController@guardarPerfil');
 	Route::get('/perfil/editar', 'ProfesionalController@editarPerfil');
+	Route::get('/miPerfil', 'Livewire\PrestadorController@render');
 	Route::post('/perfil/actualizar/{id}', 'ProfesionalController@actualizarPerfil');
 
 
