@@ -60,7 +60,13 @@
 													<input type="file" class="text-center center-block file-upload">
 												</div>
 											</div>
-												<div class="col-md-6" id="row-1-perf">
+											
+											</div>
+										</div>
+										<div class="col-form-perf">
+										<div class="row">
+											<div class="col-md-12 col-1-perfil">
+											<div class="col-md-6" id="row-1-perf">
 													<div class="md-form mb-3">
 														<label for="nombre" class="">Nombres</label>
 															<input type="text" name="nombre" value="profesionalnombre" class="form-control" required="">
@@ -74,9 +80,9 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-form-perf">
 										<div class="row">
 											<div class="col-md-12 col-1-perfil">
+											
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="dni" class="">DNI</label>
