@@ -15,7 +15,7 @@
 		<div class="row">
 			
 			
-			<div class="col-sm-8">
+			<div class="col-sm-12">
 				<div class="menu-perfil">
 					<div role="tabpanel">
 					<ul class="nav nav-tabs nav-tab-perfil" role="tablist">
@@ -149,12 +149,12 @@
 								</div>
 							<div role="tab-panel" class="tab-pane" id="seguridad">
 								<h3>Seguridad</h3>
-								<p>Cambiar contraseña:</p>	
-								<div class="row">  
-									<div class="col-md-12 col-md-offset-2">  
+								<h4 class="text-center">Cambiar contraseña</h4>	
+								<div class="row justify-content-center">  
+									<div class="col-md-6">  
 									  <div class="panel panel-default">  
 										{{-- <div class="panel-heading">Cambiar contraseña:</div>   --}}
-										<div class="panel-body">  
+										<div class="panel-body m-4">  
 										  <form class="form-horizontal" method="POST" role="form" action="">  
 											@if (count($errors) > 0)  
 											  <div class="alert alert-danger">  
@@ -168,9 +168,9 @@
 											{{ csrf_field() }}  
 											{{-- Current password --}}  
 											<div class="form-group{{ $errors->has('current_password') ? ' has-error' : '' }}">  
-											  <label for="current_password" class="col-md-4 control-label">Contraseña actual</label>  
+											  <label for="current_password" class="col-md-12 col-lg-4 control-label">Contraseña actual</label>  
 								
-											  <div class="col-md-6">  
+											  <div class="col-md-12 col-lg-6">  
 												<input id="current_password" type="password" class="form-control" name="current_password" required autofocus>  
 								
 												@if ($errors->has('current_password'))  
@@ -183,9 +183,9 @@
 								
 											{{-- New password --}}  
 											<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">  
-											  <label for="password" class="col-md-4 control-label">Nueva contraseña</label>  
+											  <label for="password" class="col-md-12 col-lg-6 control-label">Nueva contraseña</label>  
 								
-											  <div class="col-md-6">  
+											  <div class="col-md-12 col-lg-6">  
 												<input id="password" type="password" class="form-control" name="password" required>  
 								
 												@if ($errors->has('password'))  
@@ -198,22 +198,23 @@
 								
 											{{-- Confirm new password --}}  
 											<div class="form-group">  
-											  <label for="password-confirm" class="col-md-6 control-label">Confirmar contraseña</label>  
+											  <label for="password-confirm" class="col-md-12 col-lg-6 control-label">Confirmar contraseña</label>  
 								
-											  <div class="col-md-6">  
+											  <div class="col-md-12 col-lg-6">  
 												<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>  
 											  </div>  
 											</div>  
-								
+
 											{{-- Submit button --}}  
 											<div class="form-group">  
-											  <div class="col-md-6 col-md-offset-4">  
+											  <div class="col-md-12 col-lg-6">  
 												<button type="submit" class="btn hw-btn hvr-sweep-to-right">  
 												  Cambiar contraseña  
 												</button>  
 											  </div>  
 											</div>  
-								
+
+
 										  </form>  
 										</div>  
 										{{-- <div class="panel-footer">Hello</div>   --}}
@@ -342,7 +343,7 @@
                         </div>
                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
                             <div class="selected-user">
-                                <span>To: <span class="name">Patricia Alejandra González</span></span>
+                                <span>Para: <span class="name">Patricia Alejandra González</span></span>
                             </div>
                             <div class="chat-container">
                                 <ul class="chat-box chatContainerScroll">
