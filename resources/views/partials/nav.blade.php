@@ -107,7 +107,7 @@
                                 <a class="dropdown-item" href="/admin/inicio">Dashboard</a>
                                 @endif
                                 @if(auth()->user()->rol_id != 2)
-                                <a class="dropdown-item " href="/perfil">Mi Perfil</a>
+                                <a class="dropdown-item " href="/perfil/editar">Mi Perfil</a>
                                 @endif
                                 <a class="dropdown-item "  href="#"  onclick="event.preventDefault(); document.getElementById('form-post').submit();">Salir</a>
                         </div>
