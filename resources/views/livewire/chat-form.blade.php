@@ -1,10 +1,5 @@
 <div class="">
 
-    <a href="/" style="color: black;">
-        <h5 class="pb-0 mb-0"><strong>Live Chat with</strong></h5>
-        <h2 class="pt-0 mt-0"><strong>Laravel7 + LiveWire + Pusher</strong></h2>
-    </a>
-
     <!-- El Usuario -->
     <div class="form-group">
         <label for="usuario"><strong>Usuario</strong></label>

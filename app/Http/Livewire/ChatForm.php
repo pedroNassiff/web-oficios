@@ -69,7 +69,7 @@ class ChatForm extends Component
         ]);
 
         // Guardamos el mensaje en la BBDD
-        \App\Chat::create([
+        \App\Models\Chat::create([
             "usuario" => $this->usuario,
             "mensaje" => $this->mensaje
         ]);

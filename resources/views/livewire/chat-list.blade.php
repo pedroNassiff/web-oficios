@@ -36,7 +36,8 @@
         
         var channel = pusher.subscribe('chat-channel');
         
-        channel.bind('chat-event', function(data) {            
+        channel.bind('chat-event', function(data) {
+            console.log('========= 111 ===========');            
             window.livewire.emit('mensajeRecibido', data);
         });
         

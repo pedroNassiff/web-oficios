@@ -37,7 +37,7 @@ class ChatList extends Component
             // El contenido de la Push
             //$data = \json_decode(\json_encode($data));
             
-            $mensajes = \App\Chat::orderBy("created_at", "desc")->take(5)->get();
+            $mensajes = \App\Models\Chat::orderBy("created_at", "desc")->take(5)->get();
             //$this->mensajes = [];            
 
             foreach($mensajes as $mensaje)
@@ -54,8 +54,8 @@ class ChatList extends Component
                         "fecha" => $mensaje->created_at->diffForHumans()
                     ];
     
-                    array_unshift($this->mensajes, $item);                
-                    //array_push($this->mensajes, $item);                
+                    //array_unshift($this->mensajes, $item);                
+                    array_push($this->mensajes, $item);                
                 }
                 
             }

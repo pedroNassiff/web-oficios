@@ -283,8 +283,10 @@
     <div class="content-wrapper">
 
         <!-- Row start -->
-		  {{-- chat component --}}
-		  @livewire('chat-form')
+			{{-- chat component --}}
+			@livewire('chat-form')
+			{{-- chat component --}}
+			@livewire("chat-list")
         <!-- Row end -->
 
     </div>
