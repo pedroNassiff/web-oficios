@@ -95,7 +95,7 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
 
 	Route::post('/solicitarOficio/enviar', 'OficioController@nuevo');
-
+	
 });
 
 
@@ -150,6 +150,5 @@ Route::post('/users/store', [
 ]);
 
 //SEARCH
-Route::get('/search', function(){
-	return view('search');
-});
+
+Route::get('/search', 'SearchController@index');
