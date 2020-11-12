@@ -111,18 +111,16 @@
 				</select>
 			</div>
 				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-					<select class="form-control">
-						<option value="" disabled>Seleccionar</option>
+					<select class="form-control" id="list_oficio">
+						<option value="" disabled selected>Seleccionar</option>
 						@foreach ($listaoficio as $lista)
 							<option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
 						@endforeach
 					</select>					
 				</div>
 				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-					<select class="form-control">
-						<option value="value1">Option 1</option>
-						<option value="value2">Option 2</option>
-					</select>
+						<select id="list_especialidad" class="form-control">
+						</select>
 				</div>
 		</div>		
 			
@@ -287,7 +285,27 @@
 	</div>
 	
 </section>
-			
+
+<script  type="text/javascript">
+	$(document).ready(function(){
+		const listaoficio = @json($listaoficio);
+
+		function loadEspecialidades() {
+			$('#list_especialidad').find('option').remove();
+			var list_oficio_id = $('#list_oficio').val();
+			listaoficio.forEach(element => {
+				if ($.trim(list_oficio_id) == element.Oficio.id) {
+					$('#list_especialidad').append(`<option value="" selected>Seleccionar</option>`); 
+					element.Especialidades.forEach(especialidad => {
+						$('#list_especialidad').append(`<option value="${especialidad.id}">${especialidad.nombre}</option>`); 
+					});
+				}
+			});
+		}
+		loadEspecialidades();
+		$('#list_oficio').on('change', loadEspecialidades);
+	})
+</script>		
 <!-- nuevo -->
 
 <section class="shop-banner mb-5">
@@ -355,8 +373,6 @@
 		<a href="/ayuda" class="mresp btn btn2 hw-btn">Necesito Ayuda</a>
 	</div>
 </section>
-
-
 
 	{{-- Formulario oculto que se ejecuta al hacer click en "Salir" 
 					* Redirige a la ruta /logout con el método POST, ahí el controlador
