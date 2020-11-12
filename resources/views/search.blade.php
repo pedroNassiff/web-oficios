@@ -4,38 +4,43 @@
 @section('content')
     <section class="py-4" id="inscripcion">
         <div class="filters-container d-flex justify-content-center flex-column align-items-center" style="width: 100%; height: 205px; background-color: white;">
-		<div class="row text-center">
-			<h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
-		</div>
-		<div class="row d-flex justify-content-center  w-75 mb-4">
-				<div class="col-md-4">
-					<input type="text" placeholder="Nombre y Apellido" class="form-control">
-				</div>
-				<div class="col-md-4">
-					<select class="form-control">
-						<option value="value1">Option 1</option>
-						<option value="value2">Option 2</option>
-					</select>
-				</div>
-				<div class="col-md-4">
-					<select class="form-control">
-						<option value="value1">Option 1</option>
-						<option value="value2">Option 2</option>
-					</select>					
-				</div>
-		</div>		
-			
-		<div class="row d-flex justify-content-center w-75">
-				<div class="col-md-4">
-					<select class="form-control">
-						<option value="value1">Option 1</option>
-						<option value="value2">Option 2</option>
-					</select>
-				</div>
-				<div class="col-md-4">
-					<button class="btn hw-btn-orange hvr-sweep-to-right w-100">Buscar</button>
-				</div>
-		</div>
+            <div class="filters-container d-flex justify-content-center flex-column align-items-center">
+                <div class="row text-center">
+                    <h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
+                </div>
+                <div class="row d-flex justify-content-center w-75 mb-4">
+        
+                    <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
+                        <select class="form-control">
+                            <option value="" disabled>Seleccionar</option>
+                            @foreach ($localidades as $localidad)
+                            <option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                        <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
+                            <select class="form-control" id="list_oficio">
+                                <option value="" disabled selected>Seleccionar</option>
+                                @foreach ($listaoficio as $lista)
+                                    <option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
+                                @endforeach
+                            </select>					
+                        </div>
+                        <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
+                                <select id="list_especialidad" class="form-control">
+                                </select>
+                        </div>
+                </div>		
+                    
+                <div class="row d-flex justify-content-center w-75 mb-4">
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <input type="text" placeholder="Nombre y Apellido" class="form-control">
+                        </div>
+                        <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
+                            <button type="submit" class="btn hw-btn-orange hvr-sweep-to-right w-100" >Buscar</button>
+                        </div>
+                </div>  
+            </div>
 	</div>
     <div class="container" style="margin-bottom: 25px" id="results-cards-container">
 		<div class="row">
@@ -130,7 +135,27 @@
 
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX4NPHQOStt_DHvGVDbkbAWfL8XiG01s&callback"
   type="text/javascript"></script>
+<!-- select list_especialidad -->
+<script  type="text/javascript">
+	$(document).ready(function(){
+		const listaoficio = @json($listaoficio);
 
+		function loadEspecialidades() {
+			$('#list_especialidad').find('option').remove();
+			var list_oficio_id = $('#list_oficio').val();
+			listaoficio.forEach(element => {
+				if ($.trim(list_oficio_id) == element.Oficio.id) {
+					$('#list_especialidad').append(`<option value="" selected>Seleccionar</option>`); 
+					element.Especialidades.forEach(especialidad => {
+						$('#list_especialidad').append(`<option value="${especialidad.id}">${especialidad.nombre}</option>`); 
+					});
+				}
+			});
+		}
+		loadEspecialidades();
+		$('#list_oficio').on('change', loadEspecialidades);
+	})
+</script>	
   <script>
     var mapa = new google.maps.Map(document.getElementById('mapa'),{
 		center: {lat: -27.450977, lng: -58.986980}, 

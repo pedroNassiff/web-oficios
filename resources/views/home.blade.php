@@ -96,6 +96,8 @@
 
 
 <section class="py-3 oficios-section" id="filter">
+	<form id="form-post" action="/search" method="GET">
+		@csrf
 	<div class="filters-container d-flex justify-content-center flex-column align-items-center">
 		<div class="row text-center">
 			<h3 class="filter-title">¿QUÉ OFICIOS ESTÁS BUSCANDO?</h3>
@@ -129,11 +131,12 @@
 					<input type="text" placeholder="Nombre y Apellido" class="form-control">
 				</div>
 				<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-					<button class="btn hw-btn-orange hvr-sweep-to-right w-100">Buscar</button>
+					<button type="submit" class="btn hw-btn-orange hvr-sweep-to-right w-100" >Buscar</button>
 				</div>
 		</div>
 			
 	</div>
+</form>
 <!--  slider  2-->
 
 	 <!-- 
@@ -285,7 +288,7 @@
 	</div>
 	
 </section>
-
+<!-- select list_especialidad -->
 <script  type="text/javascript">
 	$(document).ready(function(){
 		const listaoficio = @json($listaoficio);
