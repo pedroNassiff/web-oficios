@@ -271,8 +271,31 @@
 								</div>	
 							</div>
 							<div role="tab-panel" class="tab-pane" id="notificaciones">
-								<h3>Notificaciones</h3>
-								<p>Seguridad  seguridadseguridadseguridadseguridad seguridad seguridad seguridad</p>
+								
+								<div role="alert" aria-live="assertive" aria-atomic="true" class="notificaciones1" data-autohide="false">
+								<div class="toast-header">
+									<strong class="mr-auto">ADMINISTRACIÓN</strong>
+									<small>Hace 15 minutos</small>
+									<button type="button" class="ml-2 mb-1 close" data-dismiss="notificaciones1" aria-label="Close">
+									
+									</button>
+								</div>
+								<div class="toast-body">
+									Cambio de Contraseña realizado con éxito
+								</div>
+								</div>
+								<div role="alert" aria-live="assertive" aria-atomic="true" class="notificaciones1" data-autohide="false">
+								<div class="toast-header">
+									<strong class="mr-auto">Cosme Fulanito</strong>
+									<small>Hace 30 minutos</small>
+									<button type="button" class="ml-2 mb-1 close" data-dismiss="notificaciones1" aria-label="Close">
+									
+									</button>
+								</div>
+								<div class="toast-body">
+									Solicitud de servicio
+								</div>
+								</div>
 							</div>
 							<div role="tab-panel" class="tab-pane" id="mensajes">
 								<h3>Mensajes</h3>

@@ -11207,6 +11207,10 @@ label {
   display: flex;
 }
 
+.toast-header {
+  border-bottom: 1px solid #e48f27;
+}
+
 .col-form-perf {
   margin-left: 24em;
   margin-top: -19em;
@@ -13188,6 +13192,10 @@ ul {
 
   .cont-fperfil {
     margin-left: -2em;
+  }
+
+  #notificaciones {
+    margin-bottom: 15em;
   }
 }
 
