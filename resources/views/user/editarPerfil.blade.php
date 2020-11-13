@@ -69,13 +69,13 @@
 											<div class="col-md-6" id="row-1-perf">
 													<div class="md-form mb-3">
 														<label for="nombre" class="">Nombres</label>
-															<input type="text" name="nombre" value="profesionalnombre" class="form-control" required="">
+															<input type="text" name="nombre" value="{{ auth()->user()->name }}" class="form-control" required="">
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="apellido" class="">Apellido</label>
-														<input type="text" id="apellido" name="apellido" value="profesionalapellido " class="form-control" required>
+														<input type="text" id="apellido" name="apellido" value="{{ auth()->user()->lastname }}" class="form-control" required>
 													</div>
 												</div>
 											</div>
@@ -86,13 +86,13 @@
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="dni" class="">DNI</label>
-														<input type="text" id="dni" name="dni" value="profesionaldni" class="form-control" required>
+														<input type="text" id="dni" name="dni" value="{{ auth()->user()->dni }}" class="form-control" required>
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="telefono" class="">Teléfono</label>
-														<input type="text" id="telefono" name="telefono" value="profesionaltelefono " class="form-control" required>
+														<input type="text" id="telefono" name="telefono" value="{{ auth()->user()->telefono }}" class="form-control" required>
 													</div>
 												</div>
 											</div>
@@ -102,7 +102,7 @@
 												<div class="col-md-6">
 													<div class="md-form mb-3">
 														<label for="email" class="">Email</label>
-														<input type="text" id="email" name="email" value="" class="form-control" required>
+														<input type="text" id="email" name="email" value="{{ auth()->user()->email }}" class="form-control" required>
 													</div>
 												</div>
 												<div class="col-md-6">

@@ -19,11 +19,7 @@ class CreatePrestadorTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             
             $table->string('descripcion');
-
-            $table->string('dni');
-            $table->string('telefono');
             $table->string('web')->nullable();
-
             $table->string('matricula')->nullable();
             $table->boolean('matriculado')->default(false);
            
