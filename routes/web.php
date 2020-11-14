@@ -151,4 +151,4 @@ Route::post('/users/store', [
 
 //SEARCH
 
-Route::get('/search', 'SearchController@index');
+Route::post('/search', 'SearchController@index');

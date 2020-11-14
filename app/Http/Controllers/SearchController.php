@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Prestador;
 use App\Models\Especialidad;
 use App\Models\Oficio;
+use App\Models\Address;
+use App\User;
 use App\Localidad;
 
 class SearchController extends Controller
@@ -16,13 +18,13 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        //$request->request->localidad
+        //DD($request->request);
+
         $localidades = Localidad::get();
-
 		$oficios = Oficio::get();
-
         $listaoficio = [];
         foreach ($oficios as $oficio) {
             if($oficio->id != 1){
@@ -42,7 +44,52 @@ class SearchController extends Controller
 			'users.name as nombre',
 			'users.lastname as apellido'
 		)
-		->get();
+        ->get();
+        
+        /* $localidadesSelecionada = Localidad::find($request['localidad']);
+        
+        $User = User::get();
+        $Address = Address::get();
+         */
+
+        //$localidadesSelecionada = Localidad::find($request['localidad'])->nombre;
+        
+        /* "localidad" => "10"
+        "oficio" => "2"
+        "especialidad" => "2"
+        "last_name" => "Rodigres"
+        "name" => "seba" */
+
+        if ($request['especialidad'] == null) {
+            $request['especialidad'] = 1;
+        }
+        $data = User::select(
+                'users.name', 
+                'users.lastname', 
+                'localidades.nombre as localidades' ,
+                'prestador.user_id as prestadorID',
+                'habilidades.id as habilidadesID',
+                'oficio.nombre as oficio',
+                'especialidad.nombre  as especialidad',
+            )
+            ->join('address', 'address.users_id', '=', 'users.id')
+            ->join('localidades', 'localidades.id', '=', 'address.localidades_id')
+
+            ->join('prestador', 'users.id', '=', 'prestador.user_id')
+            ->join('habilidades', 'prestador.id', '=', 'habilidades.prestador_id')
+            ->join('oficio', 'oficio.id', '=', 'habilidades.oficio_id')
+            ->join('especialidad', 'especialidad.id', '=', 'habilidades.especialidad_id')
+
+            ->where("localidades.id", $request['localidad'])
+            ->where("oficio.id", $request['oficio'])
+            ->where("especialidad.id", $request['especialidad'])
+            
+            ->where('users.name', 'like', '%' . $request['name'] . '%')
+            ->where('users.lastname', 'like', '%' . $request['lastname'] . '%')
+
+            ->get();
+        
+        DD($data);
 
     	return view(
     		'search',
