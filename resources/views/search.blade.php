@@ -55,19 +55,21 @@
             <div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
 				<div class="row d-flex justify-content-center">
                     @foreach ($resultados as $resultado)
-                    <div class="oficios-card pt-3">
-                        <div class="card-img-container d-flex justify-content-center">
-                            <div class="card-image"></div>
-                        </div>
-                        <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">{{ $resultado->name}} {{ $resultado->lastname}}</span>
-                            <span class="card-oficio">{{ $resultado->oficio}}</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>{{ $resultado->localidades}}</span>
-                        </div>
-                        <div class="card-overlay">
-                            <button class="card-btn">ver perfil</button>
-                        </div>
-				    </div>
+                    <a href="{{ url('/profesional/'.$resultado->prestadorID) }}" style="text-decoration: none;">
+                        <div class="oficios-card pt-3">
+                            <div class="card-img-container d-flex justify-content-center">
+                                <div class="card-image"></div>
+                            </div>
+                            <div class="card-info-container d-flex flex-column align-items-center">
+                                <span class="card-name">{{ $resultado->name}} {{ $resultado->lastname}}</span>
+                                <span class="card-oficio">{{ $resultado->oficio}}</span>
+                                <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>{{ $resultado->localidades}}</span>
+                            </div>
+                            <div class="card-overlay">
+                                <button class="card-btn">ver perfil</button>
+                            </div>
+				        </div>
+                    </a>
                     @endforeach
                 </div>
 			</div>
