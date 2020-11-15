@@ -34,8 +34,11 @@
                     
                 <div class="row d-flex justify-content-center w-75 mb-4">
                         <div class="col-md-4 d-flex justify-content-center">
-                            <input type="text" placeholder="Nombre y Apellido" class="form-control">
+                            <input type="text" placeholder="Apellido" name="last_name" class="form-control">
                         </div>
+                        <div class="col-md-4 d-flex justify-content-center">
+						    <input type="text" placeholder="Nombre" name="name" class="form-control">
+					    </div>
                         <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
                             <button type="submit" class="btn hw-btn-orange hvr-sweep-to-right w-100" >Buscar</button>
                         </div>
@@ -44,91 +47,34 @@
 	</div>
     <div class="container" style="margin-bottom: 25px" id="results-cards-container">
 		<div class="row">
-			<div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
+			@if(count($resultados) == 0)
+            <div class="alert alert-danger mt-4 ml-4" role="alert">
+                No se encontraron resultados que coincidan con tu búsqueda :(
+            </div>
+            @else
+            <div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
 				<div class="row d-flex justify-content-center">
+                    @foreach ($resultados as $resultado)
                     <div class="oficios-card pt-3">
                         <div class="card-img-container d-flex justify-content-center">
                             <div class="card-image"></div>
                         </div>
                         <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">Sebastián Rodriguez</span>
-                            <span class="card-oficio">Electricista</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
+                            <span class="card-name">{{ $resultado->name}} {{ $resultado->lastname}}</span>
+                            <span class="card-oficio">{{ $resultado->oficio}}</span>
+                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>{{ $resultado->localidades}}</span>
                         </div>
                         <div class="card-overlay">
                             <button class="card-btn">ver perfil</button>
                         </div>
 				    </div>
-                    <div class="oficios-card pt-3">
-                        <div class="card-img-container d-flex justify-content-center">
-                            <div class="card-image"></div>
-                        </div>
-                        <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">Sebastián Rodriguez</span>
-                            <span class="card-oficio">Electricista</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
-                        </div>
-                        <div class="card-overlay">
-                            <button class="card-btn">ver perfil</button>
-                        </div>
-				    </div>
-                    <div class="oficios-card pt-3">
-                        <div class="card-img-container d-flex justify-content-center">
-                            <div class="card-image"></div>
-                        </div>
-                        <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">Sebastián Rodriguez</span>
-                            <span class="card-oficio">Electricista</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
-                        </div>
-                        <div class="card-overlay">
-                            <button class="card-btn">ver perfil</button>
-                        </div>
-				    </div>
-                    <div class="oficios-card pt-3">
-                        <div class="card-img-container d-flex justify-content-center">
-                            <div class="card-image"></div>
-                        </div>
-                        <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">Sebastián Rodriguez</span>
-                            <span class="card-oficio">Electricista</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
-                        </div>
-                        <div class="card-overlay">
-                            <button class="card-btn">ver perfil</button>
-                        </div>
-				    </div>
-                    <div class="oficios-card pt-3">
-                        <div class="card-img-container d-flex justify-content-center">
-                            <div class="card-image"></div>
-                        </div>
-                        <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">Sebastián Rodriguez</span>
-                            <span class="card-oficio">Electricista</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
-                        </div>
-                        <div class="card-overlay">
-                            <button class="card-btn">ver perfil</button>
-                        </div>
-				    </div>
-                    <div class="oficios-card pt-3">
-                        <div class="card-img-container d-flex justify-content-center">
-                            <div class="card-image"></div>
-                        </div>
-                        <div class="card-info-container d-flex flex-column align-items-center">
-                            <span class="card-name">Sebastián Rodriguez</span>
-                            <span class="card-oficio">Electricista</span>
-                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>Margarita Belén</span>
-                        </div>
-                        <div class="card-overlay">
-                            <button class="card-btn">ver perfil</button>
-                        </div>
-				    </div>
+                    @endforeach
                 </div>
 			</div>
 			<div class="col-md-4 map-container">
 				<div id="mapa"></div>
 			</div>
+            @endif
 		</div>
 	</div>
     </section>

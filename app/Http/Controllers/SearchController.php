@@ -81,7 +81,7 @@ class SearchController extends Controller
             ->where("localidades.id", $request['localidad'])
             ->where("oficio.id", $request['oficio'])
             ->where('users.name', 'like', '%' . $request['name'] . '%')
-            ->where('users.lastname', 'like', '%' . $request['lastname'] . '%')
+            ->where('users.lastname', 'like', '%' . $request['last_name'] . '%')
 
             ->get();
         }else{
@@ -104,13 +104,13 @@ class SearchController extends Controller
             ->where("oficio.id", $request['oficio'])
             ->where("especialidad.id", $request['especialidad'])
             ->where('users.name', 'like', '%' . $request['name'] . '%')
-            ->where('users.lastname', 'like', '%' . $request['lastname'] . '%')
+            ->where('users.lastname', 'like', '%' . $request['last_name'] . '%')
             ->get();
         }
 
         
         
-        DD($data);
+        //DD($data);
 
     	return view(
     		'search',

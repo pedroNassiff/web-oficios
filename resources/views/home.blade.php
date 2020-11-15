@@ -114,7 +114,7 @@
 				</div>
 					<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
 						<select class="form-control" id="list_oficio" name="oficio">
-							<option value="" disabled selected>Seleccionar</option>
+							<option value="" disabled selected>Oficio</option>
 							@foreach ($listaoficio as $lista)
 								<option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
 							@endforeach
@@ -122,6 +122,7 @@
 					</div>
 					<div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
 							<select id="list_especialidad" class="form-control" name="especialidad">
+							<option value="" disabled selected>Especialidad</option>
 							</select>
 					</div>
 			</div>
