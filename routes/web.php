@@ -43,9 +43,7 @@ Route::get('/ayuda', function(){
 	return view('faq');
 });
 
-Route::get('/prestador', function(){
-	return view('prestadorPerfil');
-});
+Route::get('/prestador/{id}', 'PrestadorController@show');
 
 Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil', 'ProfesionalController@miPerfil')->name('perfil');

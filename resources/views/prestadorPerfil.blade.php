@@ -14,7 +14,7 @@
                     <img src="img/perfil_prueba.jpg" class="rounded-circle" alt="Foto de perfil">
                 </div>
                 <div class="name-prestador">
-                    <h3 class="text-center">Patricia Alejandra González</h3>
+                    <h3 class="text-center">{{ $prestador->nombre }} {{ $prestador->apellido }}</h3>
                 </div>
                 <div class="opciones-prestador">
                     <div class="opc-prestador">
@@ -42,15 +42,15 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="info-prestador mt-3">
-                            <h3>Costurería</h3>
+                            <h3>{{ $prestador->oficio }}</h3>
                             <p>Arreglos en general</p>
-                            <p class="text-justify">Confeccionamos y arreglamos todo tipo de prendas. Recibimos tu idea u orden de producción; si es necesario desarrollamos el diseño del producto; compramos o recibimos los materiales, los cortamos y los cosemos. Además, podemos, planchar, doblar, empacar y etiquetar el producto final para su venta al público.</p>
+                            <p class="text-justify">{{ $prestador->descripcion }}</p>
                         </div>
                     
                         <div class="contact-prestador">
-                            <p><i class="fas fa-map-marker-alt"></i> Resistencia, Chaco</p>                      
-                            <p><i class="fas fa-phone-alt"></i> 3624 123456</p>
-                            <p><i class="fas fa-envelope-open-text"></i> patricia@gmail.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> {{ $prestador->localidad }}, Chaco</p>                      
+                            <p><i class="fas fa-phone-alt"></i> {{ $prestador->telefono }}</p>
+                            <p><i class="fas fa-envelope-open-text"></i> {{ $prestador->email }}</p>
                         </div>
                     </div>
                     <div class="col-6 d-flex align-items-center">

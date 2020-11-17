@@ -63,7 +63,7 @@
             <div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
 				<div class="row d-flex justify-content-center">
                     @foreach ($resultados as $resultado)
-                    <a href="{{ url('/profesional/'.$resultado->prestadorID) }}" style="text-decoration: none;">
+                    <a href="{{ url('/prestador/'.$resultado->prestadorID) }}" style="text-decoration: none;">
                         <div class="oficios-card pt-3">
                             <div class="card-img-container d-flex justify-content-center">
                                 <div class="card-image"></div>
