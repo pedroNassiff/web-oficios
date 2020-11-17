@@ -12,9 +12,13 @@
         
                     <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
                         <select class="form-control">
-                            <option value="" disabled>Seleccionar</option>
-                            @foreach ($localidades as $localidad)
-                            <option value="{{ $localidad->id }}">{{ $localidad->nombre }}</option>
+                            
+                            @foreach ($localidades as $loc)
+                                @if ($loc->id == $localidad)
+                                <option value="{{ $loc->id }}" selected>{{ $loc->nombre }}</option>
+                                @else
+                                <option value="{{ $loc->id }}">{{ $loc->nombre }}</option>
+                                @endif    
                             @endforeach
                         </select>
                     </div>
@@ -22,7 +26,11 @@
                             <select class="form-control" id="list_oficio">
                                 <option value="" disabled selected>Seleccionar</option>
                                 @foreach ($listaoficio as $lista)
+                                    @if($lista['Oficio']->id == $oficio)
+                                    <option value="{{$lista['Oficio']->id }}" selected>{{$lista['Oficio']->nombre }}</option>
+                                    @else
                                     <option value="{{$lista['Oficio']->id }}">{{$lista['Oficio']->nombre }}</option>
+                                    @endif
                                 @endforeach
                             </select>					
                         </div>
@@ -34,10 +42,10 @@
                     
                 <div class="row d-flex justify-content-center w-75 mb-4">
                         <div class="col-md-4 d-flex justify-content-center">
-                            <input type="text" placeholder="Apellido" name="last_name" class="form-control">
+                            <input type="text" placeholder="Apellido" name="last_name" class="form-control" value="{{ $apellido }}">
                         </div>
                         <div class="col-md-4 d-flex justify-content-center">
-						    <input type="text" placeholder="Nombre" name="name" class="form-control">
+						    <input type="text" placeholder="Nombre" name="name" class="form-control" value="{{ $nombre }}">
 					    </div>
                         <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
                             <button type="submit" class="btn hw-btn-orange hvr-sweep-to-right w-100" >Buscar</button>

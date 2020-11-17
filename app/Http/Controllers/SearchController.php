@@ -60,8 +60,12 @@ class SearchController extends Controller
         "last_name" => "Rodigres"
         "name" => "seba" */
 
+        
+        // contendra el resultado del filtrado de usuarios
         $data = [];
         
+        //si el valor del campo especialidad es nulo se omite la busqueda por especialidad
+        //en caso contrario se incluye a especialidad en la busqueda    
         if ($request['especialidad'] == null) {
             $data = User::select(
                 'users.name', 
@@ -110,7 +114,8 @@ class SearchController extends Controller
 
         
         
-        //DD($data);
+        //DD($request['oficio']);
+
 
     	return view(
     		'search',
@@ -118,7 +123,12 @@ class SearchController extends Controller
     		 'localidades' => $localidades,
     		 'listaoficio' => $listaoficio,
              'prestadores' => $prestadores,
-             'resultados'  => $data
+             'resultados'  => $data,
+             'nombre'      => $request['name'],
+             'apellido'    => $request['last_name'],
+             'localidad'   => $request['localidad'],
+             'oficio'      => $request['oficio'],
+             'especialidad'=> $request['especialidad']
     		]
     	);
     }
