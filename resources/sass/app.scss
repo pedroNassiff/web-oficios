@@ -157,13 +157,6 @@ label {
   color: #e48f27;
 }
 
-.fa-user {
-  color: white;
-  font-size: x-large;
-}
-.fa-user:hover {
-  color: #78bc57;
-}
 
 #Ini-reg {
   border-radius: 1px solid white !important;
@@ -250,6 +243,45 @@ label {
 .contenido-tabla {
   overflow-y: scroll;
   height: 425px;
+}
+.card {
+  overflow: hidden;
+
+}
+
+.card-block .rotate {
+  z-index: 8;
+  float: right;
+  height: 100%;
+}
+.card-orange{
+  background-color: #e48f27;
+}
+.card-inverse{
+  border-radius: 10px !important;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63) !important;
+}
+.card-block {
+  padding: 10% 0% 0% 5%;
+}
+
+.card-block h1{
+  font-size: 75px;
+}
+
+.card-block .rotate i {
+  color: rgba(20, 20, 20, 0.15);
+  position: absolute;
+  left: 0;
+  left: auto;
+  right: -10px;
+  bottom: 0;
+  display: block;
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+  -ms-transform: rotate(-44deg);
+  transform: rotate(-44deg);
 }
 //administracion-especialidades
 .col-oficio {
@@ -789,7 +821,7 @@ section#filter .imagen-card-filter {
 .neo-title {
   font-weight: bold;
   font-size: 40px;
-  color: #0e263e;
+  color: #e48f27;
   margin-top: -5%;
 }
 
@@ -1031,7 +1063,16 @@ section#inscripcion .desc {
 .card-register {
   width: 39em;
 }
-
+.espacio{
+  padding: 47px 0px;
+}
+.espacio h2{
+  font-family: "Roboto", sans-serif;
+  color: #6d6d6d;
+}
+.login-links span{
+  color: #6d6d6d;
+}
 .register-swiper {
   width: 100%;
   padding-top: 30px;
@@ -1828,6 +1869,7 @@ ul {
 .modal-content-color {
   background-color: white;
   border-top: solid 5px #e48f27;
+  margin-bottom: 15%;
 }
 .modal.show .modal-dialog {
   margin-top: 6%;
@@ -1846,7 +1888,6 @@ ul {
   margin: 20px auto;
 }
 .modal-title,
-.login-links > span,
 .modal-body > .md-form > label {
   color: #02093b;
 }

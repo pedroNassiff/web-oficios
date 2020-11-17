@@ -6,7 +6,6 @@
 <section class="py-4">
 
     <div class="container">
-    <div class="card-header-register">{{ __('Registrarse') }}</div>
         <div class="row">
             <div class="col">
                  <div class="card-register">
@@ -45,9 +44,8 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card-register">
-                    
-
+                <div class="card-register espacio">
+                    <h2 class="text-center">Registrarse</h2>
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -125,6 +123,10 @@
                                     <button type="submit" class="btn hw-btn btn-default hvr-sweep-to-right" id="boton-registrar">
                                         {{ __('Registrarte') }}
                                     </button>
+                                </div>
+                                <div class="login-links text-center">
+                                    <span>¿Ya tenés una cuenta?</span>
+                                    <a class="links-formulario" href="{{ route('login') }}">Iniciar sesión</a>
                                 </div>
                             </div>
                         </form>
