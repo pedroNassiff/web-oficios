@@ -43,15 +43,14 @@ Route::get('/ayuda', function(){
 	return view('faq');
 });
 
-Route::get('/prestador', function(){
-	return view('prestadorPerfil');
-});
+Route::get('/prestador/{id}', 'PrestadorController@show');
 
 Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil', 'ProfesionalController@miPerfil')->name('perfil');
 	Route::get('/perfil/crear', 'ProfesionalController@crearPerfil');
 	Route::post('/perfil/guardar', 'ProfesionalController@guardarPerfil');
 	Route::get('/perfil/editar', 'ProfesionalController@editarPerfil');
+	Route::get('/miPerfil', 'Livewire\PrestadorController@render');
 	Route::post('/perfil/actualizar/{id}', 'ProfesionalController@actualizarPerfil');
 
 
@@ -94,7 +93,7 @@ Route::group(['middleware'=>'auth'], function(){
 	Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
 
 	Route::post('/solicitarOficio/enviar', 'OficioController@nuevo');
-
+	
 });
 
 
@@ -149,6 +148,5 @@ Route::post('/users/store', [
 ]);
 
 //SEARCH
-Route::get('/search', function(){
-	return view('search');
-});
+
+Route::post('/search', 'SearchController@index');
