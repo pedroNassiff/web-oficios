@@ -11663,6 +11663,17 @@ section#filter .imagen-card-filter {
   color: white;
 }
 
+.borde-circular {
+  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+  border: solid 1px white;
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .card-oficio-new {
   background-color: white;
   border-radius: 15px;
@@ -11671,9 +11682,11 @@ section#filter .imagen-card-filter {
   max-width: 168px;
 }
 
-.card-logo-oficios {
-  width: 55px;
-  height: 49px;
+.card-logo-oficio {
+  width: 50px;
+  height: 50px;
+  color: #02093b;
+  font-size: 50px;
 }
 
 .card-nombre-oficio {
@@ -11683,7 +11696,7 @@ section#filter .imagen-card-filter {
 .card-cantidad-prof {
   font-weight: lighter;
   font-style: italic;
-  color: orange;
+  color: #e48f27;
 }
 
 .oficios-section {

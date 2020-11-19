@@ -10,34 +10,61 @@
             <div class="col">
                  <div class="card-register">
                     <div class="swiper-container register-swiper">
-                            <div class="swiper-wrapper">
-                                    
-                                <div class="swiper-slide rounded shadow" style="background-image: url(/img/electricidad.png);">
-                                    <h2 class="titulo-card" >Electricidad</h2>
-                                    <h3 class="nombre-card">Roberto Díaz</h3>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide rounded shadow card-oficio-new d-flex flex-column justify-content-center align-items-center" style="background-image: url(/img/electricidad2.png);">
+                                <div class="borde-circular mt-5">
+                                    <img src="foco.svg" alt="" class="card-logo-oficio" width="55px" height="49px">
                                 </div>
-                                <div class="swiper-slide rounded shadow" style="background-image: url(/img/cuidadora.png);">
-                                    <h2 class="titulo-card" >Cuidado de personas</h2>
-                                    <h3 class="nombre-card">Belén Perez</h3>
+                                <div class="justify-content-center d-flex flex-column text-center">
+                                    <span class="titulo-card">Electricidad</span>
+                                    <span class="card-cantidad-prof"><strong>18</strong> prestadores</span>
                                 </div>
-                                <div class="swiper-slide rounded shadow" style="background-image: url(/img/albanileria.png);">
-                                    <h2 class="titulo-card" >Albañilería</h2>
-                                    <h3 class="nombre-card">Pablo Ruíz</h3>
-                                </div>
-                                <div class="swiper-slide rounded shadow" style="background-image: url(/img/electronica.png);">
-                                    <h2 class="titulo-card" >Electrónica</h2>
-                                    <h3 class="nombre-card">Gonzalo Baéz</h3>
-                                </div>
-                                <div class="swiper-slide rounded shadow" style="background-image: url(/img/tapiceria.png);">
-                                    <h2 class="titulo-card" >Tapicería</h2>
-                                    <div class="text-center">
-                                        <h3 class="nombre-card">Diana Ortiz</h3>
-                                    </div>
-                                </div>
-                            <div class="swiper-slide rounded shadow" style="background-image: url(/img/mecanica.png);">
-                                <h2 class="titulo-card" >Mecánica de autos</h2>
-                                <h3 class="nombre-card">Franco Lopez</h3>
                             </div>
+                            <div class="swiper-slide rounded shadow card-oficio-new d-flex flex-column justify-content-center align-items-center" style="background-image: url(/img/plomeria2.png);">
+                                <div class="borde-circular mt-5">
+                                    <i class="fas fa-wrench card-logo-oficio"></i>
+                                </div>
+                                <div class="justify-content-center d-flex flex-column text-center">
+                                    <span class="titulo-card">Plomería</span>
+                                    <span class="card-cantidad-prof"><strong>15</strong> prestadores</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded shadow card-oficio-new d-flex flex-column justify-content-center align-items-center" style="background-image: url(/img/pinturas2.png);">
+                                <div class="borde-circular mt-5">
+                                    <i class="fas fa-paint-roller card-logo-oficio"></i>
+                                </div>
+                                <div class="justify-content-center d-flex flex-column text-center">
+                                    <span class="titulo-card">Pinturas</span>
+                                    <span class="card-cantidad-prof"><strong>9</strong> prestadores</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded shadow card-oficio-new d-flex flex-column justify-content-center align-items-center" style="background-image: url(/img/jardineria2.png);">
+                                <div class="borde-circular mt-5">
+                                    <i class="fab fa-pagelines card-logo-oficio ml-3"></i>
+                                </div>
+                                <div class="justify-content-center d-flex flex-column text-center">
+                                    <span class="titulo-card">Jardinería</span>
+                                    <span class="card-cantidad-prof"><strong>9</strong> prestadores</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded shadow card-oficio-new d-flex flex-column justify-content-center align-items-center" style="background-image: url(/img/exterminador.png);">
+                                <div class="borde-circular mt-5">
+                                    <i class="fas fa-spray-can card-logo-oficio"></i>
+                                </div>
+                                <div class="justify-content-center d-flex flex-column text-center">
+                                    <span class="titulo-card">Exterminación de plagas</span>
+                                    <span class="card-cantidad-prof"><strong>5</strong> prestadores</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded shadow card-oficio-new d-flex flex-column justify-content-center align-items-center" style="background-image: url(/img/cuidadora2.png);">
+                                <div class="borde-circular mt-5">
+                                    <i class="fas fa-heartbeat card-logo-oficio"></i>
+                                </div>
+                                <div class="justify-content-center d-flex flex-column text-center">
+                                    <span class="titulo-card">Cuidado de personas</span>
+                                    <span class="card-cantidad-prof"><strong>17</strong> prestadores</span>
+                                </div>
+                            </div>        
                             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>      
                         </div>
                     </div>
