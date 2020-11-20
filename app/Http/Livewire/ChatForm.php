@@ -3,7 +3,9 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Chat;
 use App\Events\NuevoMensaje;
+use Illuminate\Support\Facades\Auth;
 
 class ChatForm extends Component
 {
@@ -12,12 +14,6 @@ class ChatForm extends Component
     public $usuario;
     public $mensaje;
 
-    // Generar datos para pruebas
-    private $faker;
-    
-    // Mantenemos estos valores actualizados en 
-    // la barra de direcciones...
-    // Ej.: https://your-app.com/?usuario=Pedro
     protected $updatesQueryString = ['usuario'];   
     
     // Eventos Recibidos
@@ -26,15 +22,13 @@ class ChatForm extends Component
     // Cuando se Inicia el Componente (antes de Render)
     public function mount()
     {                
-        // Instanciamos Faker
-        $this->faker = \Faker\Factory::create();       
-
+       
         // Obtenemos el valor de usuario de la barra de direcciones
         // si no existe, generamos uno con Faker
-        $this->usuario = request()->query('usuario', $this->usuario) ?? $this->faker->name;                         
+        $this->usuario = Auth::user()->name;                         
 
         // Generamos el primer texto de prueba
-        $this->mensaje = $this->faker->realtext(20);
+        $this->mensaje = "";
     }
     
     // Cuando el otro componente nos solicitan el usuario    
@@ -56,7 +50,6 @@ class ChatForm extends Component
     {
         // Solo validamos el campo que genera el update
         $validatedData = $this->validateOnly($field, [
-            'usuario' => 'required',
             'mensaje' => 'required',
         ]);
     }
@@ -64,12 +57,11 @@ class ChatForm extends Component
     public function enviarMensaje()
     {                
         $validatedData = $this->validate([
-            'usuario' => 'required',
             'mensaje' => 'required',
         ]);
 
         // Guardamos el mensaje en la BBDD
-        \App\Models\Chat::create([
+        Chat::create([
             "usuario" => $this->usuario,
             "mensaje" => $this->mensaje
         ]);
@@ -77,15 +69,14 @@ class ChatForm extends Component
         // Generamos el evento para Pusher
         // Enviamos en la "push" el usuario y mensaje (aunque en este ejemplo no lo utilizamos)
         // pero nos vale para comprobar en PusherDebug (y por consola) lo que llega...
-        event(new \App\Events\NuevoMensaje($this->usuario, $this->mensaje));
+        event(new NuevoMensaje($this->usuario, $this->mensaje));
         
         // Este evento es para que lo reciba el componente
         // por Javascript y muestre el ALERT BOOSTRAP de "enviado"
         $this->emit('enviadoOK', $this->mensaje);
         
         // Creamos un nuevo texto aleatorio (para el próximo mensaje)
-        $this->faker = \Faker\Factory::create();       
-        $this->mensaje = $this->faker->realtext(20);
+        $this->mensaje = "";
     
     }    
 
