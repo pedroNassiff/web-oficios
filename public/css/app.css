@@ -11072,15 +11072,6 @@ label {
   color: #e48f27;
 }
 
-.fa-user {
-  color: white;
-  font-size: x-large;
-}
-
-.fa-user:hover {
-  color: #78bc57;
-}
-
 #Ini-reg {
   border-radius: 1px solid white !important;
 }
@@ -11174,6 +11165,44 @@ label {
 .contenido-tabla {
   overflow-y: scroll;
   height: 425px;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card-block .rotate {
+  z-index: 8;
+  float: right;
+  height: 100%;
+}
+
+.card-orange {
+  background-color: #e48f27;
+}
+
+.card-inverse {
+  border-radius: 10px !important;
+  box-shadow: 1px 3px 4px 0px rgba(140, 140, 140, 0.63) !important;
+}
+
+.card-block {
+  padding: 10% 0% 0% 5%;
+}
+
+.card-block h1 {
+  font-size: 75px;
+}
+
+.card-block .rotate i {
+  color: rgba(20, 20, 20, 0.15);
+  position: absolute;
+  left: 0;
+  left: auto;
+  right: -10px;
+  bottom: 0;
+  display: block;
+  transform: rotate(-44deg);
 }
 
 .col-oficio {
@@ -11634,6 +11663,17 @@ section#filter .imagen-card-filter {
   color: white;
 }
 
+.borde-circular {
+  border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+  border: solid 1px white;
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .card-oficio-new {
   background-color: white;
   border-radius: 15px;
@@ -11642,9 +11682,11 @@ section#filter .imagen-card-filter {
   max-width: 168px;
 }
 
-.card-logo-oficios {
-  width: 55px;
-  height: 49px;
+.card-logo-oficio {
+  width: 50px;
+  height: 50px;
+  color: #02093b;
+  font-size: 50px;
 }
 
 .card-nombre-oficio {
@@ -11654,7 +11696,7 @@ section#filter .imagen-card-filter {
 .card-cantidad-prof {
   font-weight: lighter;
   font-style: italic;
-  color: orange;
+  color: #e48f27;
 }
 
 .oficios-section {
@@ -11731,7 +11773,7 @@ section#filter .imagen-card-filter {
 .neo-title {
   font-weight: bold;
   font-size: 40px;
-  color: #0e263e;
+  color: #e48f27;
   margin-top: -5%;
 }
 
@@ -12038,6 +12080,19 @@ section#inscripcion .desc {
 
 .card-register {
   width: 39em;
+}
+
+.espacio {
+  padding: 47px 0px;
+}
+
+.espacio h2 {
+  font-family: "Roboto", sans-serif;
+  color: #6d6d6d;
+}
+
+.login-links span {
+  color: #6d6d6d;
 }
 
 .register-swiper {
@@ -12824,6 +12879,7 @@ ul {
 .modal-content-color {
   background-color: white;
   border-top: solid 5px #e48f27;
+  margin-bottom: 15%;
 }
 
 .modal.show .modal-dialog {
@@ -12845,7 +12901,6 @@ ul {
 }
 
 .modal-title,
-.login-links > span,
 .modal-body > .md-form > label {
   color: #02093b;
 }
