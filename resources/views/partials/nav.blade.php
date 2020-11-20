@@ -105,8 +105,11 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 @if(auth()->user()->rol_id == 2)
                                 <a class="dropdown-item" href="/admin/inicio">Dashboard</a>
+                                <a class="dropdown-item " href="/perfil/editar">Notificaciones <span class="badge">1</span></a>
+
                                 @endif
                                 @if(auth()->user()->rol_id != 2)
+                                <a class="dropdown-item " href="/perfil/editar">Notificaciones <span class="badge">1</span></a>
                                 <a class="dropdown-item " href="/perfil/editar">Mi Perfil</a>
                                 @endif
                                 <a class="dropdown-item "  href="#"  onclick="event.preventDefault(); document.getElementById('form-post').submit();">Salir</a>
