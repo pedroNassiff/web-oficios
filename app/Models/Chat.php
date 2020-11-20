@@ -8,6 +8,6 @@ class Chat extends Model
 {
     protected $table = "chat";
     protected $fillable = [
-        "usuario", "mensaje"
+        "send_user_id", "received_user_id", "mensaje"
     ];
 }

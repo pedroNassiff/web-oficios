@@ -10,41 +10,18 @@ use Illuminate\Support\Facades\Auth;
 class ChatForm extends Component
 {
     // Estas propiedades son publicas
-    // y se pueden utilizar directamente desde la vista
-    public $usuario;
-    public $mensaje;
 
-    protected $updatesQueryString = ['usuario'];   
+    public $mensaje;
+    public $usuario;
     
-    // Eventos Recibidos
-    protected $listeners = ['solicitaUsuario'];
 
     // Cuando se Inicia el Componente (antes de Render)
     public function mount()
     {                
-       
-        // Obtenemos el valor de usuario de la barra de direcciones
-        // si no existe, generamos uno con Faker
-        $this->usuario = Auth::user()->name;                         
-
-        // Generamos el primer texto de prueba
+        $this->usuario = Auth::user();     
         $this->mensaje = "";
     }
-    
-    // Cuando el otro componente nos solicitan el usuario    
-    public function solicitaUsuario()
-    {
-        // Lo emitimos por evento
-        $this->emit('cambioUsuario', $this->usuario);
-    }
-
-    // Cuando actualizamos el nombre de usuario
-    public function updatedUsuario()
-    {
-        // Notificamos al otro componente el cambio
-        $this->emit('cambioUsuario', $this->usuario);
-    }
-
+     
     // Se produce cuando se actualiza cualquier dato por Binding
     public function updated($field)
     {
@@ -62,7 +39,8 @@ class ChatForm extends Component
 
         // Guardamos el mensaje en la BBDD
         Chat::create([
-            "usuario" => $this->usuario,
+            "send_user_id" => $this->usuario->id,
+            "received_user_id" => $this->usuario->id,
             "mensaje" => $this->mensaje
         ]);
         

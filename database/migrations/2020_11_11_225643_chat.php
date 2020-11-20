@@ -10,7 +10,8 @@ class Chat extends Migration
     {
         Schema::create('chat', function (Blueprint $table) {
             $table->id();
-            $table->string("usuario");
+            $table->string("send_user_id");
+            $table->string("received_user_id");
             $table->text("mensaje");
             $table->timestamps();
         });

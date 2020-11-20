@@ -2,7 +2,10 @@
 
 namespace App\Http\Livewire;
 
+
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use App\Models\Chat;
 
 class ChatList extends Component
 {
@@ -16,8 +19,7 @@ class ChatList extends Component
     {
         $ultimoId = 0;
         $this->mensajes = [];                       
-        
-        $this->usuario = request()->query('usuario', $this->usuario) ?? "";                   
+        $this->usuario = Auth::user()->name;                      
     }
 
     public function  mensajeRecibido($data)
@@ -37,7 +39,7 @@ class ChatList extends Component
             // El contenido de la Push
             //$data = \json_decode(\json_encode($data));
             
-            $mensajes = \App\Models\Chat::orderBy("created_at", "desc")->take(5)->get();
+            $mensajes = Chat::orderBy("created_at", "desc")->take(5)->get();
             //$this->mensajes = [];            
 
             foreach($mensajes as $mensaje)
