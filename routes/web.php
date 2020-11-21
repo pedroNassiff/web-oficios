@@ -150,3 +150,4 @@ Route::post('/users/store', [
 //SEARCH
 
 Route::post('/search', 'SearchController@index');
+Route::post('/searchbyajax', 'SearchController@searchByAjax');

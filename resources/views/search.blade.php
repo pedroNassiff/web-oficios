@@ -61,7 +61,7 @@
             </div>
             @else
             <div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
-				<div class="row d-flex justify-content-center">
+				<div class="row d-flex justify-content-center" id="cards-container">
                     @foreach ($resultados as $resultado)
                     <a href="{{ url('/prestador/'.$resultado->prestadorID) }}" style="text-decoration: none;">
                         <div class="oficios-card pt-3">
@@ -112,13 +112,76 @@
 		$('#list_oficio').on('change', loadEspecialidades);
 
         $('#btn-buscar').on('click', function(){
-            console.log(
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')     
+                }
+            }); 
+
+            /* console.log(
                 $('#localidad option:selected').val(),
                 $('#list_oficio option:selected').val(),
                 $('#list_especialidad option:selected').val(),
                 $('#nombre').val(),
                 $('#apellido').val(),
-            );
+            ); */
+
+            let localidad = $('#localidad option:selected').val(),
+                oficio = $('#list_oficio option:selected').val(),
+                especialidad = $('#list_especialidad option:selected').val(),
+                nombre = $('#nombre').val(),
+                apellido = $('#apellido').val()
+
+            $.ajax({
+                url:'/searchbyajax',
+                data:{
+                    'localidad': localidad,
+                    'oficio': oficio,
+                    'especialidad' : especialidad,
+                    'nombre' : nombre,
+                    'apellido' : apellido
+                    },
+                type:'POST',
+                success: function (response) {
+                    console.log(response);
+                    $('#cards-container').html("")
+
+                    let data = response
+                    console.log("DATA",data[0].name)
+                    let elements = $();
+
+                    data.forEach( x => {
+                        elements = elements.add(
+                            `<a href="/prestador/${x.prestadorID}" style="text-decoration: none;">
+                                <div class="oficios-card pt-3">
+                                    <div class="card-img-container d-flex justify-content-center">
+                                        <div class="card-image"></div>
+                                    </div>
+                                    <div class="card-info-container d-flex flex-column align-items-center">
+                                        <span class="card-name">${x.name} ${x.lastname}</span>
+                                        <span class="card-oficio">${x.oficio}</span>
+                                        <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>${x.localidades}</span>
+                                    </div>
+                                    <div class="card-overlay">
+                                        <button class="card-btn">ver perfil</button>
+                                    </div>
+                                </div>
+                            </a>`
+                        );
+                    });
+                    
+                    $('#cards-container').append(elements);
+                },
+                statusCode: {
+                    404: function() {
+                        alert('web not found');
+                    }
+                },
+                error:function(error){
+                    console.log(error)
+                }
+            });
         })
 	})
 </script>	
