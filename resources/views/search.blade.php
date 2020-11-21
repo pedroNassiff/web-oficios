@@ -10,7 +10,7 @@
                 </div>
                 <div class="row d-flex justify-content-center w-75 mb-4">
         
-                    <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
+                    <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center" id="localidad">
                         <select class="form-control">
                             
                             @foreach ($localidades as $loc)
@@ -42,13 +42,13 @@
                     
                 <div class="row d-flex justify-content-center w-75 mb-4">
                         <div class="col-md-4 d-flex justify-content-center">
-                            <input type="text" placeholder="Apellido" name="last_name" class="form-control" value="{{ $apellido }}">
+                            <input type="text" placeholder="Apellido" name="last_name" class="form-control" value="{{ $apellido }}" id="apellido">
                         </div>
                         <div class="col-md-4 d-flex justify-content-center">
-						    <input type="text" placeholder="Nombre" name="name" class="form-control" value="{{ $nombre }}">
+						    <input type="text" placeholder="Nombre" name="name" class="form-control" value="{{ $nombre }}" id="nombre">
 					    </div>
                         <div class="col-md-4 col-sm-10 col-xs-11 d-flex justify-content-center">
-                            <button type="submit" class="btn hw-btn-orange hvr-sweep-to-right w-100" >Buscar</button>
+                            <button type="submit" class="btn hw-btn-orange hvr-sweep-to-right w-100" id="btn-buscar">Buscar</button>
                         </div>
                 </div>  
             </div>
@@ -110,6 +110,16 @@
 		}
 		loadEspecialidades();
 		$('#list_oficio').on('change', loadEspecialidades);
+
+        $('#btn-buscar').on('click', function(){
+            console.log(
+                $('#localidad option:selected').val(),
+                $('#list_oficio option:selected').val(),
+                $('#list_especialidad option:selected').val(),
+                $('#nombre').val(),
+                $('#apellido').val(),
+            );
+        })
 	})
 </script>	
   <script>
