@@ -382,13 +382,10 @@
                 "cron",
                 "schedule"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/dragonmantank/cron-expression/issues",
                 "source": "https://github.com/dragonmantank/cron-expression/tree/v2.3.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "funding": [
                 {
                     "url": "https://github.com/dragonmantank",
@@ -453,13 +450,10 @@
                 "validation",
                 "validator"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
                 "source": "https://github.com/egulias/EmailValidator/tree/2.1.24"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "funding": [
                 {
                     "url": "https://github.com/egulias",
@@ -520,13 +514,10 @@
                 "proxy",
                 "trusted proxy"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/fideloper/TrustedProxy/issues",
                 "source": "https://github.com/fideloper/TrustedProxy/tree/4.4.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-10-22T13:48:01+00:00"
         },
         {
@@ -672,13 +663,10 @@
                 "rest",
                 "web service"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
                 "source": "https://github.com/guzzle/guzzle/tree/6.5"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-06-16T21:01:06+00:00"
         },
         {
@@ -730,13 +718,10 @@
             "keywords": [
                 "promise"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
                 "source": "https://github.com/guzzle/promises/tree/1.4.0"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-09-30T07:37:28+00:00"
         },
         {
@@ -808,13 +793,10 @@
                 "uri",
                 "url"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
                 "source": "https://github.com/guzzle/psr7/tree/1.7.0"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
@@ -973,13 +955,10 @@
                 "framework",
                 "laravel"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-11-03T14:12:58+00:00"
         },
         {
@@ -1044,13 +1023,10 @@
                 "laravel",
                 "psysh"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/laravel/tinker/issues",
                 "source": "https://github.com/laravel/tinker/tree/v2.5.0"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-10-29T13:07:12+00:00"
         },
         {
@@ -1102,13 +1078,10 @@
                 "laravel",
                 "ui"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/laravel/ui/issues",
                 "source": "https://github.com/laravel/ui/tree/v2.5.0"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-11-03T19:45:19+00:00"
         },
         {
@@ -1346,13 +1319,10 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
                 "source": "https://github.com/thephpleague/mime-type-detection/tree/1.5.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "funding": [
                 {
                     "url": "https://github.com/frankdejonge",
@@ -1364,8 +1334,6 @@
                 }
             ],
             "time": "2020-10-18T11:50:25+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "livewire/livewire",
@@ -1438,7 +1406,6 @@
                 }
             ],
             "time": "2020-11-17T14:58:56+00:00"
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
         },
         {
             "name": "monolog/monolog",
@@ -1678,13 +1645,10 @@
                 "parser",
                 "php"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.2"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-09-26T10:30:38+00:00"
         },
         {
@@ -1746,9 +1710,6 @@
                 "serialization",
                 "serialize"
             ],
-<<<<<<< HEAD
-            "time": "2020-11-07T02:01:34+00:00"
-=======
             "support": {
                 "issues": "https://github.com/opis/closure/issues",
                 "source": "https://github.com/opis/closure/tree/3.6.1"
@@ -1890,7 +1851,6 @@
                 "source": "https://github.com/paragonie/sodium_compat/tree/v1.13.0"
             },
             "time": "2020-03-20T21:48:09+00:00"
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
         },
         {
             "name": "phpoption/phpoption",
@@ -2457,13 +2417,10 @@
                 "queue",
                 "set"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
                 "source": "https://github.com/ramsey/collection/tree/1.1.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "funding": [
                 {
                     "url": "https://github.com/ramsey",
@@ -2621,13 +2578,10 @@
                 "laravel",
                 "sendgrid"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/s-ichikawa/laravel-sendgrid-driver/issues",
                 "source": "https://github.com/s-ichikawa/laravel-sendgrid-driver/tree/master"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-07-15T23:51:12+00:00"
         },
         {
@@ -3211,22 +3165,6 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2020-09-07T11:33:47+00:00"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "v5.1.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "e70eb5a69c2ff61ea135a13d2266e8914a67b3a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/e70eb5a69c2ff61ea135a13d2266e8914a67b3a0",
-                "reference": "e70eb5a69c2ff61ea135a13d2266e8914a67b3a0",
-=======
             "time": "2020-10-24T12:01:57+00:00"
         },
         {
@@ -3241,7 +3179,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/41db680a15018f9c1d4b23516059633ce280ca33",
                 "reference": "41db680a15018f9c1d4b23516059633ce280ca33",
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
                 "shasum": ""
             },
             "require": {
@@ -3251,8 +3188,6 @@
                 "symfony/http-client-implementation": ""
             },
             "type": "library",
-<<<<<<< HEAD
-=======
             "extra": {
                 "branch-version": "2.3",
                 "branch-alias": {
@@ -3263,7 +3198,6 @@
                     "url": "https://github.com/symfony/contracts"
                 }
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "autoload": {
                 "psr-4": {
                     "Symfony\\Contracts\\HttpClient\\": ""
@@ -3310,85 +3244,6 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2020-10-24T12:01:57+00:00"
-        },
-        {
-            "name": "symfony/http-client-contracts",
-            "version": "v2.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-client-contracts.git",
-                "reference": "41db680a15018f9c1d4b23516059633ce280ca33"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/41db680a15018f9c1d4b23516059633ce280ca33",
-                "reference": "41db680a15018f9c1d4b23516059633ce280ca33",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5"
-            },
-            "suggest": {
-                "symfony/http-client-implementation": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-version": "2.3",
-                "branch-alias": {
-                    "dev-main": "2.3-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\HttpClient\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Generic abstractions related to HTTP clients",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-=======
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-10-14T17:08:19+00:00"
         },
         {
@@ -4997,13 +4852,10 @@
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
@@ -5363,15 +5215,12 @@
                 "laravel",
                 "page"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "docs": "https://flareapp.io/docs/ignition-for-laravel/introduction",
                 "forum": "https://twitter.com/flareappio",
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-11-17T09:18:51+00:00"
         },
         {
@@ -5421,13 +5270,10 @@
                 "flare",
                 "ignition"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/facade/ignition-contracts/issues",
                 "source": "https://github.com/facade/ignition-contracts/tree/1.0.2"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-10-16T08:27:54+00:00"
         },
         {
@@ -5489,13 +5335,10 @@
                 "throwable",
                 "whoops"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
                 "source": "https://github.com/filp/whoops/tree/2.9.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-11-01T12:00:00+00:00"
         },
         {
@@ -5546,13 +5389,10 @@
                 "faker",
                 "fixtures"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/fzaninotto/Faker/issues",
                 "source": "https://github.com/fzaninotto/Faker/tree/v1.9.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "abandoned": true,
             "time": "2019-12-12T13:22:17+00:00"
         },
@@ -5601,13 +5441,10 @@
             "keywords": [
                 "test"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/hamcrest/hamcrest-php/issues",
                 "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.0.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
@@ -5676,13 +5513,10 @@
                 "test double",
                 "testing"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/mockery/mockery/issues",
                 "source": "https://github.com/mockery/mockery/tree/master"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-08-11T18:10:13+00:00"
         },
         {
@@ -5731,13 +5565,10 @@
                 "object",
                 "object graph"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
                 "source": "https://github.com/myclabs/DeepCopy/tree/1.10.2"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "funding": [
                 {
                     "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
@@ -5991,13 +5822,10 @@
                 "reflection",
                 "static analysis"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionCommon/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionCommon/tree/2.x"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-06-27T09:03:43+00:00"
         },
         {
@@ -6050,13 +5878,10 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-09-03T19:13:55+00:00"
         },
         {
@@ -6102,13 +5927,10 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.4.0"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-09-17T18:55:26+00:00"
         },
         {
@@ -6172,13 +5994,10 @@
                 "spy",
                 "stub"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
                 "source": "https://github.com/phpspec/prophecy/tree/1.12.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-09-29T09:10:42+00:00"
         },
         {
@@ -6447,13 +6266,10 @@
             "keywords": [
                 "tokenizer"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-token-stream/issues",
                 "source": "https://github.com/sebastianbergmann/php-token-stream/tree/3.1.1"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
@@ -7255,13 +7071,10 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/theseer/tokenizer/issues",
                 "source": "https://github.com/theseer/tokenizer/tree/master"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "funding": [
                 {
                     "url": "https://github.com/theseer",
@@ -7317,13 +7130,10 @@
                 "check",
                 "validate"
             ],
-<<<<<<< HEAD
-=======
             "support": {
                 "issues": "https://github.com/webmozart/assert/issues",
                 "source": "https://github.com/webmozart/assert/tree/master"
             },
->>>>>>> 672982ff0398672e3194cb592facde8f2e441218
             "time": "2020-07-08T17:02:28+00:00"
         }
     ],
