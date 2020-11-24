@@ -6,11 +6,13 @@ namespace App\Http\Livewire;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use App\Models\Chat;
+use App\User;
 
 class ChatList extends Component
 {
     public $usuario;
     public $mensajes;
+    public $userChatList;
     protected $ultimoId;
         
     protected $listeners = ['mensajeRecibido', 'cambioUsuario'];
@@ -18,8 +20,17 @@ class ChatList extends Component
     public function mount()
     {
         $ultimoId = 0;
-        $this->mensajes = [];                       
-        $this->usuario = Auth::user()->name;                      
+        $this->usuario = Auth::user();
+        $this->mensajes = [];
+
+        $this->userChatList = Chat::select(
+                                'users.name', 
+                                'users.lastname',
+                                'users.id',
+                            )
+                            ->join('users', 'users.id', '=', 'chat.send_user_id')
+                            ->where('chat.send_user_id', '=', $this->usuario->id)->get();  
+                       
     }
 
     public function  mensajeRecibido($data)
@@ -30,6 +41,13 @@ class ChatList extends Component
     public function cambioUsuario($usuario)
     {
         $this->usuario = $usuario;
+    }
+
+    public function seleccionarChat($id)
+    {
+        $this->mensajes =  Chat::where([['received_user_id','=',$id],['send_user_id','=', $this->usuario->id]])
+                                ->orWhere([['send_user_id','=',$id],['received_user_id','=', $this->usuario->id]])
+                            ->orderBy("created_at", "desc")->take(5)->get(); 
     }
 
     public function actualizarMensajes($data)

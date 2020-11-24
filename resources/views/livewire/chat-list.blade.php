@@ -13,46 +13,18 @@
                 </div>
             </div>
             <ul class="users">
-                <li class="person" data-chat="person1">
-                    <div class="user">
-                        <img src="https://image.freepik.com/foto-gratis/alegre-mujer-mediana-edad-cabello-rizado_1262-20859.jpg" alt="Retail Admin">
-                        <span class="status busy"></span>
-                    </div>
-                    <p class="name-time">
-                        <span class="name">María Elena Perez</span>
-                        <span class="time">15/02/2019</span>
-                    </p>
-                </li>
-                <li class="person" data-chat="person1">
-                    <div class="user">
-                        <img src="https://image.freepik.com/foto-gratis/hombre-negocios-dueno-empresa-oficina_1303-15851.jpg" alt="Retail Admin">
-                        <span class="status offline"></span>
-                    </div>
-                    <p class="name-time">
-                        <span class="name">Steve Bangalter</span>
-                        <span class="time">15/02/2019</span>
-                    </p>
-                </li>
-                <li class="person active-user" data-chat="person2">
-                    <div class="user">
-                        <img src="../img/perfil_prueba.jpg" alt="Retail Admin">
-                        <span class="status away"></span>
-                    </div>
-                    <p class="name-time">
-                        <span class="name"> Patricia Alejandra Gonzalez</span>
-                        <span class="time">12/02/2019</span>
-                    </p>
-                </li>
-                <li class="person" data-chat="person3">
-                    <div class="user">
-                        <img src="https://image.freepik.com/foto-gratis/retrato-guapo-sonriente-elegante-joven-modelo-vestido-camisa-cuadros-roja-hombre-moda-posando_158538-4910.jpg" alt="Retail Admin">
-                        <span class="status busy"></span>
-                    </div>
-                    <p class="name-time">
-                        <span class="name">Joseph Larson</span>
-                        <span class="time">11/02/2019</span>
-                    </p>
-                </li>
+                @foreach($userChatList as $userList) 
+                    <li class="person active-user" data-chat="person2">
+                        <div class="user">
+                            <img src="../img/perfil_prueba.jpg" alt="Retail Admin">
+                            <span class="status away"></span>
+                        </div>
+                        <p class="name-time">
+                            <span class="name"> Patricia Alejandra Gonzalez</span>
+                            <span class="time">12/02/2019</span>
+                        </p>
+                    </li>
+                @endforeach      
             </ul>
         </div>
     </div>
