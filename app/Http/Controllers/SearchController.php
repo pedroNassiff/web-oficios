@@ -134,6 +134,67 @@ class SearchController extends Controller
     }
 
     /**
+     * Muestra los resultados de la busqueda desde la vista search
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function searchByAjax(Request $request)
+    {
+        // contendra el resultado del filtrado de usuarios
+        $data = [];
+        
+        //si el valor del campo especialidad es nulo se omite la busqueda por especialidad
+        //en caso contrario se incluye a especialidad en la busqueda    
+        if ($request['especialidad'] == null) {
+            $data = User::select(
+                'users.name', 
+                'users.lastname', 
+                'localidades.nombre as localidades' ,
+                'prestador.user_id as prestadorID',
+                'habilidades.id as habilidadesID',
+                'oficio.nombre as oficio',
+                'especialidad.nombre  as especialidad'
+            )
+            ->join('address', 'address.users_id', '=', 'users.id')
+            ->join('localidades', 'localidades.id', '=', 'address.localidades_id')
+            ->join('prestador', 'users.id', '=', 'prestador.user_id')
+            ->join('habilidades', 'prestador.id', '=', 'habilidades.prestador_id')
+            ->join('oficio', 'oficio.id', '=', 'habilidades.oficio_id')
+            ->join('especialidad', 'especialidad.id', '=', 'habilidades.especialidad_id')
+            ->where("localidades.id", $request['localidad'])
+            ->where("oficio.id", $request['oficio'])
+            ->where('users.name', 'like', '%' . $request['nombre'] . '%')
+            ->where('users.lastname', 'like', '%' . $request['apellido'] . '%')
+
+            ->get();
+        }else{
+            $data = User::select(
+                'users.name', 
+                'users.lastname', 
+                'localidades.nombre as localidades' ,
+                'prestador.user_id as prestadorID',
+                'habilidades.id as habilidadesID',
+                'oficio.nombre as oficio',
+                'especialidad.nombre  as especialidad'
+            )
+            ->join('address', 'address.users_id', '=', 'users.id')
+            ->join('localidades', 'localidades.id', '=', 'address.localidades_id')
+            ->join('prestador', 'users.id', '=', 'prestador.user_id')
+            ->join('habilidades', 'prestador.id', '=', 'habilidades.prestador_id')
+            ->join('oficio', 'oficio.id', '=', 'habilidades.oficio_id')
+            ->join('especialidad', 'especialidad.id', '=', 'habilidades.especialidad_id')
+            ->where("localidades.id", $request['localidad'])
+            ->where("oficio.id", $request['oficio'])
+            ->where("especialidad.id", $request['especialidad'])
+            ->where('users.name', 'like', '%' . $request['nombre'] . '%')
+            ->where('users.lastname', 'like', '%' . $request['apellido'] . '%')
+            ->get();
+        }
+
+        return $data;
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
