@@ -27,14 +27,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/profesional/{id}', 'ProfesionalController@mostrarPerfil');
 
-Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
-
-Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
-
-Route::get('/OficioNuevo', function(){
-	return view ('solicitarOficio');
-});
-
 Route::get('/acuerdo', function(){
 	return view ('terminos_y_condiciones');
 });
@@ -51,11 +43,14 @@ Route::get('/ayuda', function(){
 	return view('faq');
 });
 
+Route::get('/prestador/{id}', 'PrestadorController@show');
+
 Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil', 'ProfesionalController@miPerfil')->name('perfil');
 	Route::get('/perfil/crear', 'ProfesionalController@crearPerfil');
 	Route::post('/perfil/guardar', 'ProfesionalController@guardarPerfil');
 	Route::get('/perfil/editar', 'ProfesionalController@editarPerfil');
+	Route::get('/miPerfil', 'Livewire\PrestadorController@render');
 	Route::post('/perfil/actualizar/{id}', 'ProfesionalController@actualizarPerfil');
 
 
@@ -68,7 +63,7 @@ Route::group(['middleware'=>'auth'], function(){
 
 		//localidades
 		Route::get('/admin/indexLocalidad', 'LocalidadesController@index')->name('perfil');
-		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('perfil');
+		Route::post('/admin/storeLocalidad', 'LocalidadesController@store')->name('perfil1');
 		Route::get('/admin/destroyLocalidad/{id}', 'LocalidadesController@destroy')->name('localidades.destroyLocalidad');
 
 		//Oficio
@@ -76,6 +71,7 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::post('/admin/storeOficio', 'OficioController@store')->name('oficio.storeOficio');
 		Route::get('/admin/destroyOficio/{id}', 'OficioController@destroy')->name('oficio.destroyOficio');
 		Route::get('/admin/altaOficio', 'OficioController@index')->name('admin.altaOficio');//La misma ruta para añadir especialidad
+		
 
 		//Especialidad
 		Route::get('/admin/indexEspecialidad', 'EspecialidadController@index')->name('especialidad.indexEspecialidad');
@@ -83,8 +79,21 @@ Route::group(['middleware'=>'auth'], function(){
 		Route::get('/admin/destroyEspecialidad/{id}', 'EspecialidadController@destroy')->name('especialidad.destroyEspecialidad');
 		//solicitudes
 		Route::get('/admin/solicitudes', 'AdminController@solicitudes')->name('admin.solicitudes');
+		Route::get('/admin/solicitudAceptada', 'AdminController@solicitudAceptada');
+		Route::get('/admin/solicitudNegada', 'AdminController@solicitudNegada');
 	});
 
+
+	//SOLICITAR ENVIO
+	Route::get('/OficioNuevo', function(){
+		return view ('solicitarOficio');
+	});
+	Route::get('/inscripcion', 'InscripcionController@mostrarFormulario');
+
+	Route::post('/inscripcion/enviar', 'InscripcionController@enviar');
+
+	Route::post('/solicitarOficio/enviar', 'OficioController@nuevo');
+	
 });
 
 
@@ -137,3 +146,8 @@ Route::post('/users/store', [
 	'uses' => 'UserController@store',
 	'as' => 'users.store'
 ]);
+
+//SEARCH
+
+Route::post('/search', 'SearchController@index');
+Route::post('/searchbyajax', 'SearchController@searchByAjax');

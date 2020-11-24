@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Models\Prestador;
+use App\Mail\EmailSolicitud;
+use Illuminate\Support\Facades\Mail;
 
 use Illuminate\Http\Request;
 
@@ -33,13 +35,24 @@ class AdminController extends Controller
 	
 	public function solicitudes(){
 
-        $prestadores = Prestador::join('users', 'users.id', '=', 'prestador.user_id')->get();
-
+		$prestadores = Prestador::join('users', 'users.id', '=', 'prestador.user_id')->get();
 		//dd($prestadores);
-        return view('admin.solicitudes', 
-        [ 
-			'prestadores' => $prestadores,
-        ]);
+        return view('admin.solicitudes', ['prestadores' => $prestadores]);
+	}
 
+	public function solicitudAceptada(Request $request){
+		$prestadores = Prestador::find($request->id);
+		$prestadores->habilitado = 1;
+		if($prestadores->save()){
+			//enviar mail 
+			$user = User::find($prestadores->user_id);
+			Mail::to($user->email)->send(new EmailSolicitud($user));
+		}
+		return back();
+	}
+
+	public function solicitudNegada(Request $request){
+		//enviar mail informando de uqe no se acepto la solicitud
+		return back();
 	}
 }

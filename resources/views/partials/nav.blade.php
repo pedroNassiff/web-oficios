@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="text-center">
-                        <a href="#" class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27!important; color:white;" data-toggle="modal" data-target="#modalLoginForm" role="button" aria-haspopup="true" aria-expanded="false" id="btn-logreg">Ingresar | Registrarse</a>
+                        <a href="#" class="btn hvr-sweep-to-right outline" style="border: 1px solid  #e48f27; color:white;" data-toggle="modal" data-target="#modalLoginForm" role="button" aria-haspopup="true" aria-expanded="false" id="btn-logreg">Ingresar | Registrarse</a>
                     </div>
                 </li>
                 @endguest
@@ -105,9 +105,12 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 @if(auth()->user()->rol_id == 2)
                                 <a class="dropdown-item" href="/admin/inicio">Dashboard</a>
+                                <a class="dropdown-item " href="/perfil/editar">Notificaciones <span class="badge">1</span></a>
+
                                 @endif
                                 @if(auth()->user()->rol_id != 2)
-                                <a class="dropdown-item " href="/perfil">Mi Perfil</a>
+                                <a class="dropdown-item " href="/perfil/editar">Notificaciones <span class="badge">1</span></a>
+                                <a class="dropdown-item " href="/perfil/editar">Mi Perfil</a>
                                 @endif
                                 <a class="dropdown-item "  href="#"  onclick="event.preventDefault(); document.getElementById('form-post').submit();">Salir</a>
                         </div>
