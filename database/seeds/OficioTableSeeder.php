@@ -13,6 +13,10 @@ class OficioTableSeeder extends Seeder
     public function run()
     {
         $rubro = new Oficio();
+        $rubro->nombre = " ";
+        $rubro->save();
+        
+        $rubro = new Oficio();
         $rubro->nombre = "Electricista";
         $rubro->save();
 
