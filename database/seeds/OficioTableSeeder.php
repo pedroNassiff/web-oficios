@@ -13,11 +13,11 @@ class OficioTableSeeder extends Seeder
     public function run()
     {
         $rubro = new Oficio();
-        $rubro->nombre = " ";
+        $rubro->nombre = "Electricista";
         $rubro->save();
 
         $rubro = new Oficio();
-        $rubro->nombre = "Electricista";
+        $rubro->nombre = "Carpintería";
         $rubro->save();
 
         $rubro = new Oficio();
@@ -26,10 +26,6 @@ class OficioTableSeeder extends Seeder
 
         $rubro = new Oficio();
         $rubro->nombre = "Gasista";
-        $rubro->save();
-
-        $rubro = new Oficio();
-        $rubro->nombre = "Carpintería";
         $rubro->save();
 
         $rubro = new Oficio();
