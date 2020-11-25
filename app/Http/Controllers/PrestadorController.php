@@ -54,7 +54,7 @@ class PrestadorController extends Controller
                 'localidades.nombre as localidad' ,
                 'prestador.user_id as prestadorID',
                 'prestador.descripcion',
-                'prestador.telefono',
+                'users.telefono',
                 'prestador.web',
                 'habilidades.id as habilidadesID',
                 'oficio.nombre as oficio',
