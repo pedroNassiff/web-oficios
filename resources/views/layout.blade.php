@@ -27,7 +27,11 @@
     @livewireScripts
 </head>
 
-<body>
+<body class="hidden">
+    <!-- Loader -->
+    <div class="centrado" id="onload">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
     <div id="app" class="d-flex flex-column  justify-content-between">
         <header>
             @include('partials.nav')
@@ -46,6 +50,13 @@
     
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        window.onload = function(){
+            $('#onload').fadeOut();
+            $('body').removeClass('hidden');
+        }
+    </script>
 
 
 </body>
