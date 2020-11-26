@@ -56,9 +56,16 @@
     <div class="container" style="margin-bottom: 25px" id="results-cards-container">
 		<div class="row">
 			@if(count($resultados) == 0)
-            <div class="alert alert-danger mt-4 ml-4" role="alert">
-                No se encontraron resultados que coincidan con tu búsqueda :(
-            </div>
+            <div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
+				<div class="row d-flex justify-content-center" id="cards-container">
+                    <div class="mt-4 ml-4" style="color:grey;">
+                        No se encontraron resultados que coincidan con tu búsqueda :(
+                    </div>    
+                </div>
+			</div>
+			<div class="col-md-4 map-container">
+				<div id="mapa"></div>
+			</div>
             @else
             <div class="col-md-7 col-sm-10 col-xs-12 d-flex justify-content-center mt-3">
 				<div class="row d-flex justify-content-center" id="cards-container">
@@ -119,19 +126,17 @@
                 }
             }); 
 
-            /* console.log(
-                $('#localidad option:selected').val(),
-                $('#list_oficio option:selected').val(),
-                $('#list_especialidad option:selected').val(),
-                $('#nombre').val(),
-                $('#apellido').val(),
-            ); */
-
             let localidad = $('#localidad option:selected').val(),
                 oficio = $('#list_oficio option:selected').val(),
                 especialidad = $('#list_especialidad option:selected').val(),
                 nombre = $('#nombre').val(),
                 apellido = $('#apellido').val()
+            
+            $('#btn-buscar').html(`
+                <span>
+                    <img src="/spinner.svg">
+                </span>
+            `)
 
             $.ajax({
                 url:'/searchbyajax',
@@ -146,32 +151,47 @@
                 success: function (response) {
                     console.log(response);
                     $('#cards-container').html("")
-
+                    
                     let data = response
-                    console.log("DATA",data[0].name)
+                    
                     let elements = $();
 
-                    data.forEach( x => {
-                        elements = elements.add(
-                            `<a href="/prestador/${x.prestadorID}" style="text-decoration: none;">
-                                <div class="oficios-card pt-3">
-                                    <div class="card-img-container d-flex justify-content-center">
-                                        <div class="card-image"></div>
+                    if(data.length != 0){
+                        data.forEach( x => {
+                            elements = elements.add(
+                                `<a href="/prestador/${x.prestadorID}" style="text-decoration: none;">
+                                    <div class="oficios-card pt-3">
+                                        <div class="card-img-container d-flex justify-content-center">
+                                            <div class="card-image"></div>
+                                        </div>
+                                        <div class="card-info-container d-flex flex-column align-items-center">
+                                            <span class="card-name">${x.name} ${x.lastname}</span>
+                                            <span class="card-oficio">${x.oficio}</span>
+                                            <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>${x.localidades}</span>
+                                        </div>
+                                        <div class="card-overlay">
+                                            <button class="card-btn">ver perfil</button>
+                                        </div>
                                     </div>
-                                    <div class="card-info-container d-flex flex-column align-items-center">
-                                        <span class="card-name">${x.name} ${x.lastname}</span>
-                                        <span class="card-oficio">${x.oficio}</span>
-                                        <span class="card-localidad"> <img src="/location-icon.svg" width="9px" style="{margin-right: 2px;}"/>${x.localidades}</span>
-                                    </div>
-                                    <div class="card-overlay">
-                                        <button class="card-btn">ver perfil</button>
-                                    </div>
-                                </div>
-                            </a>`
-                        );
-                    });
+                                </a>`
+                            );
+                        });
+                    }else{
+                         $('#cards-container').html(`
+                            <div class="row">
+                                <div class="mt-4 ml-4" style="color:grey;">
+                                    No se encontraron resultados que coincidan con tu búsqueda :(
+                                </div>   
+                            </div>
+                        `)
+                    }
                     
                     $('#cards-container').append(elements);
+                    $('#btn-buscar').html(`
+                        <span>
+                            Buscar
+                        </span>
+                    `)
                 },
                 statusCode: {
                     404: function() {
